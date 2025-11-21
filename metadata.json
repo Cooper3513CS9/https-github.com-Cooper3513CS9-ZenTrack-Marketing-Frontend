@@ -1,0 +1,5 @@
+{
+  "name": "ZenTrack",
+  "description": "Intelligent voorraadbeheer voor Nederlandse praktijken. ZenTrack leert van je facturen, verwacht leveringen, verifieert pakbonnen en waarschuwt voor expiries.",
+  "requestFramePermissions": []
+}
