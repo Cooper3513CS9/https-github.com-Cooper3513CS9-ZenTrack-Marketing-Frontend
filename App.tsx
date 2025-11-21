@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Process } from './components/Process';
@@ -21,11 +21,44 @@ import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { PrivacyPolicy } from './components/legal/PrivacyPolicy';
 import { Terms } from './components/legal/Terms';
 import { CookieConsent } from './components/legal/CookieConsent';
-import { ViewState, User } from './types';
+import { User } from './types';
 
 const App: React.FC = () => {
-  const [currentView, setCurrentView] = useState<ViewState>('landing');
+  const [currentView, setCurrentView] = useState<string>('landing');
   const [user, setUser] = useState<User | null>(null);
+
+  // --- ROUTER LOGIC ---
+  // Handles browser back button and deep linking
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      
+      if (hash.startsWith('dashboard')) {
+        if (user) {
+           setCurrentView('dashboard');
+        } else {
+           window.location.hash = 'auth';
+        }
+      } else if (hash === 'auth') {
+        setCurrentView('auth');
+      } else if (hash === 'register') {
+        setCurrentView('register');
+      } else if (hash === 'legal-privacy') {
+        setCurrentView('legal-privacy');
+      } else if (hash === 'legal-terms') {
+        setCurrentView('legal-terms');
+      } else {
+        setCurrentView('landing');
+      }
+    };
+
+    // Check initial hash
+    handleHashChange();
+
+    // Listen for changes
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, [user]);
 
   const handleLogin = () => {
     // Simulate successful login
@@ -33,32 +66,27 @@ const App: React.FC = () => {
       id: '1',
       name: 'Dr. Janssen',
       email: 'info@huisartsenpraktijk.nl',
-      phoneNumber: '+31612345678', // MessageBird User Number
+      phoneNumber: '+31612345678',
       role: 'admin'
     });
-    setCurrentView('dashboard');
-    window.scrollTo(0, 0);
+    window.location.hash = 'dashboard'; 
   };
 
   const handleLogout = () => {
     setUser(null);
-    setCurrentView('landing');
-    window.scrollTo(0, 0);
+    window.location.hash = '';
   };
 
   const navigateToRegister = () => {
-    setCurrentView('register');
-    window.scrollTo(0, 0);
+    window.location.hash = 'register';
   };
 
   const navigateToLogin = () => {
-    setCurrentView('auth');
-    window.scrollTo(0, 0);
+    window.location.hash = 'auth';
   };
 
   const navigateToLegal = (view: string) => {
-      if (view === 'legal-privacy') setCurrentView('legal-privacy');
-      if (view === 'legal-terms') setCurrentView('legal-terms');
+      window.location.hash = view;
   };
 
   // View Rendering Logic
@@ -70,7 +98,7 @@ const App: React.FC = () => {
     return (
       <LoginPage 
         onLoginSuccess={handleLogin} 
-        onBack={() => setCurrentView('landing')} 
+        onBack={() => window.location.hash = ''} 
       />
     );
   }
@@ -79,18 +107,18 @@ const App: React.FC = () => {
       return (
           <RegisterPage 
             onRegisterSuccess={handleLogin}
-            onLoginClick={() => setCurrentView('auth')}
-            onBack={() => setCurrentView('landing')}
+            onLoginClick={() => window.location.hash = 'auth'}
+            onBack={() => window.location.hash = ''}
           />
       );
   }
 
   if (currentView === 'legal-privacy') {
-      return <PrivacyPolicy onBack={() => setCurrentView('landing')} />;
+      return <PrivacyPolicy onBack={() => window.location.hash = ''} />;
   }
 
   if (currentView === 'legal-terms') {
-      return <Terms onBack={() => setCurrentView('landing')} />;
+      return <Terms onBack={() => window.location.hash = ''} />;
   }
 
   // Landing Page
@@ -98,34 +126,15 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-white text-slate-900 font-sans relative">
       <Header onLoginClick={navigateToLogin} />
       <main>
-        {/* 1. ATTENTION: The Big Promise */}
         <Hero onCtaClick={navigateToRegister} />
-        
-        {/* 2. AGITATION: The Pain Points (Problem) */}
         <PainPoints />
-
-        {/* 3. SOLUTION: How it works daily */}
         <Process />
-
-        {/* 4. PROOF: Interactive Demo */}
         <WhatsAppDemo />
-
-        {/* 5. DEPTH: Detailed Features */}
         <Features />
-
-        {/* 6. CONTROL: Reassurance for the Manager (Desktop View) */}
         <ManagerDashboardSection />
-
-        {/* 7. LOGIC: Financial Argument */}
         <ROICalculator />
-
-        {/* 8. OFFER: Pricing */}
         <Pricing onRegisterClick={navigateToRegister} />
-
-        {/* 9. ACTION: Final Call to Action (Scan to start) */}
         <DirectOnboarding onSmsClick={navigateToLogin} />
-
-        {/* 10. TRUST & SUPPORT: About & FAQ */}
         <AboutSection />
         <FAQ />
         <ContactSection />

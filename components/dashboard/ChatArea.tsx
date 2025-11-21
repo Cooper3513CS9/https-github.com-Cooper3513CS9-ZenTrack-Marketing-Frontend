@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, Paperclip, Camera, MoreVertical, Phone, Search, Loader2, Check, CheckCheck } from 'lucide-react';
+import { Send, Paperclip, Camera, MoreVertical, Phone, Search, Loader2, Check, CheckCheck, ArrowLeft } from 'lucide-react';
 import { ChatMessage, MessageStatus } from '../../types';
 import { chatWithEmma } from '../../services/geminiService';
 import { birdService } from '../../services/messageBirdService';
@@ -8,6 +8,7 @@ import { birdService } from '../../services/messageBirdService';
 interface ChatAreaProps {
   messages: ChatMessage[];
   setMessages: React.Dispatch<React.SetStateAction<ChatMessage[]>>;
+  onBack?: () => void;
 }
 
 // Helper to render WhatsApp ticks
@@ -19,7 +20,7 @@ const StatusTicks: React.FC<{ status?: MessageStatus }> = ({ status }) => {
   return null;
 };
 
-export const ChatArea: React.FC<ChatAreaProps> = ({ messages, setMessages }) => {
+export const ChatArea: React.FC<ChatAreaProps> = ({ messages, setMessages, onBack }) => {
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -88,7 +89,12 @@ export const ChatArea: React.FC<ChatAreaProps> = ({ messages, setMessages }) => 
     <div className="flex-1 flex flex-col h-screen bg-[#efeae2] relative">
        {/* Chat Header */}
        <div className="bg-[#f0f2f5] px-4 py-3 flex items-center justify-between border-b border-[#d1d7db]">
-         <div className="flex items-center gap-4">
+         <div className="flex items-center gap-3 sm:gap-4">
+            {onBack && (
+              <button onClick={onBack} className="lg:hidden -ml-2 p-2 text-slate-600 hover:bg-slate-200 rounded-full transition-colors">
+                  <ArrowLeft className="w-5 h-5" />
+              </button>
+            )}
             <div className="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center text-white font-bold text-lg shadow-sm">
               Z
             </div>

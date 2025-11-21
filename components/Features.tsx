@@ -4,7 +4,7 @@ import { TrendingUp, DollarSign, Clock, Radar, UserCheck, QrCode, Briefcase } fr
 
 export const Features: React.FC = () => {
   return (
-    <section id="waarom" className="py-20 bg-white scroll-mt-24">
+    <section id="features" className="py-20 bg-white scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row gap-12 items-center">
           

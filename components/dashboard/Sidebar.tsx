@@ -1,5 +1,6 @@
+
 import React, { useState } from 'react';
-import { MessageSquare, Box, ClipboardList, Settings, LogOut, Menu, X, LayoutDashboard } from 'lucide-react';
+import { MessageSquare, Box, ClipboardList, Settings, LogOut, Menu, X, LayoutDashboard, FileText, Radar, Truck, Users } from 'lucide-react';
 import { User } from '../../types';
 import { Logo } from '../Logo';
 
@@ -18,7 +19,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentUser, onLogout, current
     { id: 'dashboard', icon: LayoutDashboard, label: 'Dashboard', badge: pendingAlerts },
     { id: 'chat', icon: MessageSquare, label: 'Emma Chat' },
     { id: 'inventory', icon: Box, label: 'Voorraad' },
+    { id: 'invoices', icon: FileText, label: 'Facturen' },
     { id: 'orders', icon: ClipboardList, label: 'Bestellingen' },
+    { id: 'suppliers', icon: Truck, label: 'Leveranciers' },
+    { id: 'expiry', icon: Radar, label: 'Expiratie Radar' },
+    { id: 'team', icon: Users, label: 'Team' },
     { id: 'settings', icon: Settings, label: 'Instellingen' },
   ];
 
@@ -57,7 +62,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentUser, onLogout, current
           <span className="text-xl font-bold text-white tracking-tight">ZenTrack</span>
         </div>
 
-        <div className="px-4 py-4">
+        <div className="px-4 py-4 flex-1 overflow-y-auto">
             <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 px-2">Navigatie</p>
             <nav className="space-y-1">
             {navItems.map((item) => (
@@ -78,7 +83,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentUser, onLogout, current
                     <div className="ml-auto w-1.5 h-1.5 bg-white rounded-full" />
                 )}
                 {item.badge ? (
-                   <div className="ml-auto bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm animate-pulse">
+                   <div className="ml-auto bg-red-50 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm animate-pulse">
                       {item.badge}
                    </div>
                 ) : null}

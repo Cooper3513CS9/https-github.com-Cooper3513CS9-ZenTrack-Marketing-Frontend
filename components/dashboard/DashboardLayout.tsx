@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Sidebar } from './Sidebar';
 import { ChatArea } from './ChatArea';
 import { RightPanel } from './RightPanel';
@@ -7,6 +7,10 @@ import { DashboardHome } from './DashboardHome';
 import { InventoryView } from './InventoryView';
 import { OrdersView } from './OrdersView';
 import { SettingsView } from './SettingsView';
+import { InvoicesView } from './InvoicesView';
+import { ExpiryView } from './ExpiryView';
+import { SuppliersView } from './SuppliersView';
+import { TeamView } from './TeamView';
 import { User, ChatMessage } from '../../types';
 
 interface DashboardLayoutProps {
@@ -16,7 +20,7 @@ interface DashboardLayoutProps {
 
 export const DashboardLayout: React.FC<DashboardLayoutProps> = ({ user, onLogout }) => {
   const [currentView, setCurrentView] = useState<string>('dashboard');
-  const [hasPendingApproval, setHasPendingApproval] = useState(true); // Global state for the demo flow
+  const [hasPendingApproval, setHasPendingApproval] = useState(true);
   
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
@@ -28,6 +32,28 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({ user, onLogout
     }
   ]);
 
+  // Sync with Hash URL
+  useEffect(() => {
+    const handleHash = () => {
+        const hash = window.location.hash;
+        // Expected format: #dashboard/viewName
+        if (hash.startsWith('#dashboard/')) {
+            const view = hash.split('/')[1];
+            if (view) setCurrentView(view);
+        } else if (hash === '#dashboard') {
+            setCurrentView('dashboard');
+        }
+    };
+
+    handleHash(); // Initial check
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
+
+  const navigate = (viewId: string) => {
+      window.location.hash = viewId === 'dashboard' ? 'dashboard' : `dashboard/${viewId}`;
+  };
+
   const handleApproveOrder = () => {
       setHasPendingApproval(false);
   };
@@ -35,19 +61,27 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({ user, onLogout
   const renderContent = () => {
       switch(currentView) {
           case 'chat':
-              return <ChatArea messages={messages} setMessages={setMessages} />;
+              return <ChatArea messages={messages} setMessages={setMessages} onBack={() => navigate('dashboard')} />;
           case 'inventory':
-              return <InventoryView />;
+              return <InventoryView onBack={() => navigate('dashboard')} />;
           case 'orders':
-              return <OrdersView />;
+              return <OrdersView onBack={() => navigate('dashboard')} />;
+          case 'invoices':
+              return <InvoicesView onBack={() => navigate('dashboard')} />;
+          case 'expiry':
+              return <ExpiryView onBack={() => navigate('dashboard')} />;
+          case 'suppliers':
+              return <SuppliersView onBack={() => navigate('dashboard')} />;
+          case 'team':
+              return <TeamView onBack={() => navigate('dashboard')} />;
           case 'settings':
-              return <SettingsView />;
+              return <SettingsView onBack={() => navigate('dashboard')} onLogout={onLogout} />;
           case 'dashboard':
           default:
               return (
                 <DashboardHome 
                     user={user} 
-                    onNavigate={setCurrentView} 
+                    onNavigate={navigate} 
                     hasPendingApproval={hasPendingApproval}
                     onApproveOrder={handleApproveOrder}
                 />
@@ -61,7 +95,7 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({ user, onLogout
         currentUser={user} 
         onLogout={onLogout} 
         currentView={currentView}
-        onNavigate={setCurrentView}
+        onNavigate={navigate}
         pendingAlerts={hasPendingApproval ? 1 : 0}
       />
       

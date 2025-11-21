@@ -1,12 +1,35 @@
 
-import React from 'react';
-import { User, Bell, Shield, Smartphone, LogOut } from 'lucide-react';
+import React, { useState } from 'react';
+import { User, Bell, Smartphone, LogOut, Check, ArrowLeft, Save } from 'lucide-react';
 
-export const SettingsView: React.FC = () => {
+interface Props {
+    onBack?: () => void;
+    onLogout?: () => void;
+}
+
+export const SettingsView: React.FC<Props> = ({ onBack, onLogout }) => {
+  const [saved, setSaved] = useState(false);
+
+  const handleSave = () => {
+      setSaved(true);
+      setTimeout(() => setSaved(false), 2000);
+  };
+
   return (
     <div className="p-4 md:p-8 h-full overflow-y-auto max-w-3xl">
-      <h2 className="text-2xl font-bold text-slate-900 mb-2">Instellingen</h2>
-      <p className="text-slate-500 mb-8">Beheer uw account, notificaties en koppelingen.</p>
+      
+      {/* Mobile Header */}
+      <div className="lg:hidden flex items-center gap-3 mb-6">
+         <button onClick={onBack} className="p-2 bg-white border border-slate-200 rounded-lg text-slate-600">
+            <ArrowLeft className="w-5 h-5" />
+         </button>
+         <h2 className="text-xl font-bold text-slate-900">Instellingen</h2>
+      </div>
+
+      <div className="hidden lg:block mb-8">
+        <h2 className="text-2xl font-bold text-slate-900 mb-2">Instellingen</h2>
+        <p className="text-slate-500">Beheer uw account, notificaties en koppelingen.</p>
+      </div>
 
       <div className="space-y-6">
         {/* Profile Section */}
@@ -38,13 +61,17 @@ export const SettingsView: React.FC = () => {
             <Bell className="w-5 h-5 text-emerald-600" /> Notificaties
           </h3>
           <div className="space-y-3">
-            <label className="flex items-center justify-between p-3 bg-slate-50 rounded-xl cursor-pointer">
-              <span className="text-slate-700 font-medium">Expiratie Radar (WhatsApp)</span>
-              <input type="checkbox" defaultChecked className="w-5 h-5 accent-emerald-600" />
+            <label className="flex items-center justify-between p-3 bg-slate-50 rounded-xl cursor-pointer hover:bg-slate-100 transition-colors">
+              <span className="text-slate-700 font-medium text-sm">Expiratie Radar (WhatsApp)</span>
+              <input type="checkbox" defaultChecked className="w-5 h-5 accent-emerald-600 rounded" />
             </label>
-            <label className="flex items-center justify-between p-3 bg-slate-50 rounded-xl cursor-pointer">
-              <span className="text-slate-700 font-medium">Wekelijks voorraadrapport per mail</span>
-              <input type="checkbox" defaultChecked className="w-5 h-5 accent-emerald-600" />
+            <label className="flex items-center justify-between p-3 bg-slate-50 rounded-xl cursor-pointer hover:bg-slate-100 transition-colors">
+              <span className="text-slate-700 font-medium text-sm">Wekelijks voorraadrapport per mail</span>
+              <input type="checkbox" defaultChecked className="w-5 h-5 accent-emerald-600 rounded" />
+            </label>
+            <label className="flex items-center justify-between p-3 bg-slate-50 rounded-xl cursor-pointer hover:bg-slate-100 transition-colors">
+              <span className="text-slate-700 font-medium text-sm">Pakbon afwijkingen alert</span>
+              <input type="checkbox" defaultChecked className="w-5 h-5 accent-emerald-600 rounded" />
             </label>
           </div>
         </div>
@@ -68,8 +95,26 @@ export const SettingsView: React.FC = () => {
           </div>
         </div>
 
-        <div className="pt-4">
-          <button className="w-full py-3 text-red-500 font-medium bg-red-50 rounded-xl hover:bg-red-100 transition-colors flex items-center justify-center gap-2">
+        {/* Save Actions */}
+        <div className="flex items-center justify-end gap-4 pt-2">
+            {saved && (
+                <span className="text-emerald-600 text-sm font-bold flex items-center gap-1 animate-fade-in">
+                    <Check className="w-4 h-4" /> Opgeslagen
+                </span>
+            )}
+            <button 
+                onClick={handleSave}
+                className="px-6 py-3 bg-slate-900 text-white rounded-xl font-bold text-sm hover:bg-slate-800 transition-colors flex items-center gap-2"
+            >
+                <Save className="w-4 h-4" /> Wijzigingen Opslaan
+            </button>
+        </div>
+
+        <div className="pt-8 border-t border-slate-200">
+          <button 
+            onClick={onLogout}
+            className="w-full py-3 text-red-500 font-medium bg-red-50 rounded-xl hover:bg-red-100 transition-colors flex items-center justify-center gap-2"
+          >
              <LogOut className="w-5 h-5" /> Uitloggen
           </button>
         </div>

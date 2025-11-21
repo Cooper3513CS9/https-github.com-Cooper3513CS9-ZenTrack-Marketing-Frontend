@@ -72,3 +72,24 @@ export interface Order {
   items: number;
   total: string;
 }
+
+export interface Supplier {
+  id: string;
+  name: string;
+  email: string;
+  phone: string;
+  lead_time_days: number;
+  min_order_value: number;
+  delivery_costs: number;
+  status: 'active' | 'inactive';
+}
+
+export interface TeamMember {
+  id: string;
+  name: string;
+  email: string;
+  role: 'owner' | 'manager' | 'assistant';
+  status: 'active' | 'offline';
+  lastActive: string;
+  avatar: string;
+}
