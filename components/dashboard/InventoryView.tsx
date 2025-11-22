@@ -18,8 +18,9 @@ export const InventoryView: React.FC<Props> = ({ onBack }) => {
   const fetchInventory = async () => {
     setLoading(true);
     try {
-      const isConfigured = !supabase.supabaseUrl.includes('your-project');
-      
+      const isConfigured = !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
+                          !process.env.NEXT_PUBLIC_SUPABASE_URL.includes('your-project');
+
       if (isConfigured) {
           const { data, error } = await supabase
             .from('inventory_items')
@@ -27,7 +28,7 @@ export const InventoryView: React.FC<Props> = ({ onBack }) => {
             .order('status', { ascending: true });
 
           if (error) throw error;
-          
+
           if (data && data.length > 0) {
               setItems(data as InventoryItem[]);
               setConnectionStatus('connected');
