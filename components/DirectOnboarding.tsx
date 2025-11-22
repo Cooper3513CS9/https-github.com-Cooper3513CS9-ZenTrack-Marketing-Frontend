@@ -1,3 +1,4 @@
+"use client";
 
 import React from 'react';
 import { QrCode, Smartphone, ArrowRight, Zap, Check } from 'lucide-react';

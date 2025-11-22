@@ -1,3 +1,4 @@
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import { FileText, ClipboardCheck, Smartphone, Radar, ArrowRight, Clock, ChevronRight } from 'lucide-react';

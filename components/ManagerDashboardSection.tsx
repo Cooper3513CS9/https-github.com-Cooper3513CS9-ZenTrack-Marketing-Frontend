@@ -1,3 +1,4 @@
+"use client";
 
 import React from 'react';
 import { LayoutDashboard, CheckCircle2, BarChart3, Users, ArrowRight } from 'lucide-react';

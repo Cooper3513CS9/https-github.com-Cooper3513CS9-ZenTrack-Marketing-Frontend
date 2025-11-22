@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, MessageCircle, CheckCircle, Sparkles, FileText } from 'lucide-react';
 import { AiScheduler } from './AiScheduler';

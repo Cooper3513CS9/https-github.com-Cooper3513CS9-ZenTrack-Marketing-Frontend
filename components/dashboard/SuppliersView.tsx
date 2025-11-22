@@ -1,3 +1,4 @@
+"use client";
 
 import React from 'react';
 import { Truck, Mail, Phone, Plus, MoreVertical, Clock, Euro, Search, Edit2, ArrowLeft } from 'lucide-react';

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import { Plus, Check, Trash2, Circle } from 'lucide-react';
 import { Task } from '../types';

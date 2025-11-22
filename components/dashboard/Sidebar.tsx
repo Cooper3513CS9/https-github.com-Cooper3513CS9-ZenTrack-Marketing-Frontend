@@ -1,6 +1,7 @@
+"use client";
 
 import React, { useState } from 'react';
-import { MessageSquare, Box, ClipboardList, Settings, LogOut, Menu, X, LayoutDashboard, FileText, Radar, Truck, Users } from 'lucide-react';
+import { MessageSquare, Box, ClipboardList, Settings, LogOut, Menu, X, LayoutDashboard, FileText, Radar, Truck, Users, Building2 } from 'lucide-react';
 import { User } from '../../types';
 import { Logo } from '../Logo';
 
@@ -24,6 +25,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentUser, onLogout, current
     { id: 'suppliers', icon: Truck, label: 'Leveranciers' },
     { id: 'expiry', icon: Radar, label: 'Expiratie Radar' },
     { id: 'team', icon: Users, label: 'Team' },
+    { id: 'zorggroep', icon: Building2, label: 'Zorggroep' },
     { id: 'settings', icon: Settings, label: 'Instellingen' },
   ];
 

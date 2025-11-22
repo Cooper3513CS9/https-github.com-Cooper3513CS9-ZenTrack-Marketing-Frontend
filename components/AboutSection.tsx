@@ -1,3 +1,4 @@
+"use client";
 
 import React from 'react';
 import { Users, ShieldCheck, Heart, Layers } from 'lucide-react';

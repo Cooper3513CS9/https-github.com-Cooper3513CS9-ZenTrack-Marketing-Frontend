@@ -1,3 +1,4 @@
+"use client";
 
 import React from 'react';
 import { AlertTriangle, Clock, Trash2, Calendar, CheckCircle2, ArrowLeft } from 'lucide-react';

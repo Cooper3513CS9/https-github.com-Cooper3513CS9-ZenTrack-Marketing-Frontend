@@ -1,3 +1,4 @@
+"use client";
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, CheckCircle, Loader2, Bot, CalendarDays } from 'lucide-react';

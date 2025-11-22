@@ -1,3 +1,4 @@
+"use client";
 
 import React from 'react';
 import { AlertTriangle, TrendingUp, Heart, Users, ShieldCheck, Battery, BellRing } from 'lucide-react';

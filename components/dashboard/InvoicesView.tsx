@@ -1,3 +1,4 @@
+"use client";
 
 import React from 'react';
 import { FileText, CheckCircle2, Clock, AlertCircle, Download, Search, Filter, ArrowUpRight, Sparkles, ArrowLeft } from 'lucide-react';

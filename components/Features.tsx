@@ -1,3 +1,4 @@
+"use client";
 
 import React from 'react';
 import { TrendingUp, DollarSign, Clock, Radar, UserCheck, QrCode, Briefcase } from 'lucide-react';

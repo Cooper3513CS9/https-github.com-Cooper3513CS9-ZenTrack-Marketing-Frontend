@@ -1,3 +1,4 @@
+"use client";
 
 import React from 'react';
 import { Users, FileSpreadsheet, AlertOctagon, Coffee, ArrowRight, XCircle, CheckCircle2 } from 'lucide-react';

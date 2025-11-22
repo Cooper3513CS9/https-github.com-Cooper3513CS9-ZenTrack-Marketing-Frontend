@@ -1,3 +1,4 @@
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import { MessageSquare, ShieldCheck, Smartphone, UserCheck, Camera, Sparkles, CheckCircle2, FileText, Pill, Box, Briefcase, ScanLine } from 'lucide-react';
@@ -207,12 +208,11 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 leading-tight mb-6">
-              Je broekzak is je magazijn. <span className="text-emerald-600 block">Via WhatsApp of SMS.</span>
+              Slim voorraadbeheer. <span className="text-emerald-600 block">Gewoon via WhatsApp.</span>
             </h1>
             
             <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-xl">
-              Maak een foto van een factuur, pakbon of medicijnverpakking. ZenTrack regelt de rest: van houdbaarheid tot prijscontrole. 
-              Geen ingewikkelde software, maar krachtige functies gebouwd rondom het gemak van een foto.
+              Maak een foto van een factuur, product of pakbon en ZenTrack regelt de rest. Geen nieuwe software leren, geen inlogcodes zoeken. Jij houdt de regie op het dashboard.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">

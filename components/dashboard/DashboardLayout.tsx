@@ -1,3 +1,4 @@
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import { Sidebar } from './Sidebar';
@@ -11,6 +12,7 @@ import { InvoicesView } from './InvoicesView';
 import { ExpiryView } from './ExpiryView';
 import { SuppliersView } from './SuppliersView';
 import { TeamView } from './TeamView';
+import { GroupDashboardView } from './GroupDashboardView';
 import { User, ChatMessage } from '../../types';
 
 interface DashboardLayoutProps {
@@ -74,6 +76,8 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({ user, onLogout
               return <SuppliersView onBack={() => navigate('dashboard')} />;
           case 'team':
               return <TeamView onBack={() => navigate('dashboard')} />;
+          case 'zorggroep':
+              return <GroupDashboardView onBack={() => navigate('dashboard')} />;
           case 'settings':
               return <SettingsView onBack={() => navigate('dashboard')} onLogout={onLogout} />;
           case 'dashboard':

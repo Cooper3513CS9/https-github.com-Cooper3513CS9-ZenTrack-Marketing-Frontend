@@ -1,3 +1,4 @@
+"use client";
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Camera, Paperclip, Loader2, Sparkles, RefreshCw, FileText, CheckCircle2, ScanLine, CheckCheck, Mail, QrCode, Briefcase, Box } from 'lucide-react';

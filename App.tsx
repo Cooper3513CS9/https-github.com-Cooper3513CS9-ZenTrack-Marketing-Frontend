@@ -11,6 +11,7 @@ import { ROICalculator } from './components/ROICalculator';
 import { Pricing } from './components/Pricing';
 import { AboutSection } from './components/AboutSection';
 import { ContactSection } from './components/ContactSection';
+import { BlogSection } from './components/BlogSection';
 import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
 import { LoginPage } from './components/auth/LoginPage';
@@ -136,6 +137,7 @@ const App: React.FC = () => {
         <Pricing onRegisterClick={navigateToRegister} />
         <DirectOnboarding onSmsClick={navigateToLogin} />
         <AboutSection />
+        <BlogSection />
         <FAQ />
         <ContactSection />
       </main>

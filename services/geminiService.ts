@@ -2,10 +2,24 @@
 import { GoogleGenAI } from "@google/genai";
 import { Task, MoodLog, ChatMessage } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY || process.env.API_KEY;
+const ai = apiKey ? new GoogleGenAI({ apiKey }) : null;
+
+const isApiConfigured = (): boolean => {
+  return !!apiKey && apiKey !== 'dummy-key';
+};
 
 export const analyzeInvoiceAction = async (invoiceText: string): Promise<string> => {
   try {
+    if (!isApiConfigured()) {
+      console.warn("Gemini API not configured. Using fallback response.");
+      return "✅ Bericht ontvangen. Ik ben bezig met het verwerken van de gegevens.";
+    }
+
+    if (!ai) {
+      return "✅ Bericht ontvangen. Ik ben bezig met het verwerken van de gegevens.";
+    }
+
     const prompt = `
       Jij bent ZenTrack, een slimme AI assistent voor medisch voorraadbeheer die communiceert via WhatsApp.
       
@@ -55,9 +69,13 @@ export const analyzeInvoiceAction = async (invoiceText: string): Promise<string>
 
 export const getZenAdvice = async (tasks: Task[], recentMood: MoodLog | null): Promise<string> => {
   try {
+    if (!isApiConfigured() || !ai) {
+      return "Focus op het nu en neem even rust.";
+    }
+
     const taskSummary = tasks.map(t => `- ${t.text} (${t.completed ? 'completed' : 'pending'})`).join('\n');
-    const moodSummary = recentMood 
-      ? `Recente stemming score: ${recentMood.score}/5. ${recentMood.note ? `Notitie: ${recentMood.note}` : ''}` 
+    const moodSummary = recentMood
+      ? `Recente stemming score: ${recentMood.score}/5. ${recentMood.note ? `Notitie: ${recentMood.note}` : ''}`
       : "Geen recente stemming gelogd.";
 
     const prompt = `
@@ -89,6 +107,10 @@ export const getZenAdvice = async (tasks: Task[], recentMood: MoodLog | null): P
 
 export const chatWithEmma = async (history: ChatMessage[], newMessage: string): Promise<string> => {
   try {
+    if (!isApiConfigured() || !ai) {
+      return "Sorry, ik kon even geen verbinding maken. Probeer het zo nog eens.";
+    }
+
     const context = history.map(m => `${m.sender === 'user' ? 'Gebruiker' : 'Emma'}: ${m.text}`).join('\n');
     
     const prompt = `
@@ -121,6 +143,10 @@ export const chatWithEmma = async (history: ChatMessage[], newMessage: string): 
 
 export const scheduleDemoInteraction = async (history: {role: 'user' | 'model', text: string}[], userInput: string): Promise<string> => {
   try {
+    if (!isApiConfigured() || !ai) {
+      return "Excuses, ik kan momenteel mijn agenda niet laden. Stuur een appje naar 06-23885227.";
+    }
+
     const prompt = `
       Jij bent de AI Planning Assistent van ZenTrack (genaamd Jord's Assistent).
       
