@@ -33,7 +33,7 @@ export const ManagerDashboardSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-white text-lg">Jij geeft de 'Go'</h4>
-                  <p className="text-slate-400 text-sm">AI zet de bestelling klaar. Jij klikt op 'Goedkeuren'. Tot die tijd gaat er niets de deur uit.</p>
+                  <p className="text-slate-400 text-sm">ZenTrack zet de bestelling klaar. Jij klikt op 'Goedkeuren'. Tot die tijd gaat er niets de deur uit.</p>
                 </div>
               </div>
 

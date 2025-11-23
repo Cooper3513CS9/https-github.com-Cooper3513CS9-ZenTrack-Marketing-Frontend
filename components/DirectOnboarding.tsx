@@ -30,7 +30,7 @@ export const DirectOnboarding: React.FC<DirectOnboardingProps> = ({ onSmsClick }
             </h2>
             
             <p className="text-xl text-slate-300 max-w-xl leading-relaxed">
-              Vergeet account managers, contracten en lange registratieformulieren. Scan de code en onze AI (Jord) zet je account direct op.
+              Vergeet account managers, contracten en lange registratieformulieren. Scan de code en start direct. Regel je account in 1 minuut via onze beveiligde digitale intake.
             </p>
 
             <div className="space-y-4">

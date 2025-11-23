@@ -263,7 +263,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
 
         {/* Trust Badges */}
         <div className="mt-20 pt-10 border-t border-slate-800 flex flex-wrap justify-center gap-8 md:gap-16 text-slate-500 text-sm font-medium">
-            <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> 14 dagen gratis proberen</span>
+            <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Direct opzegbaar</span>
             <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Geen setup kosten</span>
             <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Data op Nederlandse servers</span>
         </div>
