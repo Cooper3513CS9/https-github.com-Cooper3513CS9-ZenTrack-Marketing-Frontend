@@ -3,10 +3,5 @@
     "name": "zentrack-marketing",
     "description": "ZenTrack Marketing Website - Landing page",
     "framework": "nextjs"
-  },
-  "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "outputDirectory": ".next",
-  "publicSource": "./public"
+  }
 }
