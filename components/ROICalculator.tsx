@@ -93,11 +93,11 @@ export const ROICalculator: React.FC = () => {
           {/* Calculator Card */}
           <div className="flex-1 w-full max-w-xl bg-slate-50 rounded-[2.5rem] p-8 border border-slate-200 shadow-2xl relative overflow-hidden">
              {/* Payback Badge - Dynamic Colors */}
-             <div className={`absolute top-6 right-0 px-4 py-1.5 rounded-l-xl font-bold text-xs uppercase tracking-wider shadow-sm border-l border-y animate-fade-in ${getBadgeStyle(savings.paybackDays)}`}>
+             <div className={`absolute -top-1 right-0 px-4 py-1.5 rounded-l-xl font-bold text-xs uppercase tracking-wider shadow-sm border-l border-b animate-fade-in ${getBadgeStyle(savings.paybackDays)}`}>
                 Terugverdiend in {savings.paybackDays} dagen
              </div>
 
-             <div className="space-y-8 mb-8 mt-2">
+             <div className="space-y-8 mb-8 mt-14">
                 {/* Slider 1: Spend */}
                 <div>
                    <div className="flex justify-between mb-2 items-end">
