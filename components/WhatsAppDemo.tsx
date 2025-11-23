@@ -76,7 +76,7 @@ export const WhatsAppDemo: React.FC = () => {
         CONTEXT: De marktprijs voor Nitril M is momenteel rond de € 6,50. Signaleer dit.
       `;
     } else if (scenario === 'packing_slip') {
-      userText = "Foto van verzendlabel";
+      userText = "Foto van pakbon";
       invoiceContent = `
         PAKBON SCAN:
         Order Ref: #PO-2291
@@ -210,7 +210,7 @@ export const WhatsAppDemo: React.FC = () => {
               >
                 <div className="bg-emerald-900 p-2 rounded-lg"><CheckCircle2 className="w-5 h-5 text-emerald-300"/></div>
                 <div>
-                    <span className="block text-sm font-bold">4. Pakketlabel Check</span>
+                    <span className="block text-sm font-bold">4. Pakbon Verificatie</span>
                     <span className="text-xs opacity-70">Controleer op tekorten</span>
                 </div>
               </button>

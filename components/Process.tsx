@@ -30,7 +30,7 @@ const timelineSteps = [
     id: 2,
     time: "14:00",
     title: "Levering & Tracking",
-    description: "Ping! 'Je bestelling wordt bezorgd.' Bij aankomst scan je het pakketlabel. ZenTrack checkt direct of er items missen in de levering.",
+    description: "Ping! 'Je bestelling wordt bezorgd.' Bij aankomst scan je de pakbon in de doos. ZenTrack checkt direct of er items missen in de levering.",
     icon: ClipboardCheck,
     color: "bg-purple-500",
     textColor: "text-purple-600",
