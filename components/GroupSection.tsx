@@ -24,14 +24,14 @@ export const GroupSection: React.FC = () => {
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
               <strong className="text-slate-900">Geef uw locaties rust, krijg zelf de regie.</strong><br/>
-              ZenTrack is het operationele platform dat compliance borgt, inkoop harmoniseert en uw personeel op 40+ locaties ontzorgt.
+              ZenTrack is het operationele platform dat logistiek borgt, inkoop harmoniseert en uw personeel op 40+ locaties ontzorgt.
             </p>
         </div>
 
         <div className="flex flex-col lg:flex-row items-start gap-16 mb-24">
           
-          {/* Visual Side - Dashboard Preview (Premium Card) */}
-          <div className="flex-1 w-full sticky top-24">
+          {/* Visual Side - Dashboard Preview (CORRECTED VISUALS) */}
+          <div className="flex-1 w-full lg:sticky lg:top-24">
              <div className="bg-white rounded-[2.5rem] p-2 border border-slate-200 shadow-2xl shadow-purple-900/5 relative overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-700">
                 <div className="bg-slate-50 rounded-[2rem] border border-slate-100 overflow-hidden p-6 md:p-8">
                    
@@ -49,49 +49,42 @@ export const GroupSection: React.FC = () => {
                       </div>
                    </div>
 
-                   {/* Insight Cards inside the visual */}
+                   {/* Insight Cards (UPDATED to Price/Transfers) */}
                    <div className="space-y-4">
-                      {/* Alert Card */}
+                      {/* Card 1: Price Alert (CFO Trigger) */}
                       <div className="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm flex items-start gap-4 relative overflow-hidden">
                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-red-500"></div>
                          <div className="p-2.5 bg-red-50 rounded-xl text-red-500 shrink-0">
-                            <ShieldCheck className="w-5 h-5" />
+                            <TrendingUp className="w-5 h-5" />
                          </div>
                          <div>
-                            <p className="text-[10px] font-bold text-red-600 uppercase tracking-wider mb-1">Compliance Signaal</p>
-                            <p className="text-sm font-bold text-slate-900 leading-snug mb-2">3 locaties hebben verlopen medicatie in de kast.</p>
-                            <div className="flex items-center gap-2 text-xs text-red-600 font-bold cursor-pointer hover:underline">
-                               Bekijk details {'&'} adviseer <ArrowRight className="w-3 h-3" />
+                            <p className="text-[10px] font-bold text-red-600 uppercase tracking-wider mb-1">Prijs Alert</p>
+                            <p className="text-sm font-bold text-slate-900 leading-snug mb-2">
+                                Handschoenen M: Locatie A €12,50 vs Locatie B €15,00.
+                            </p>
+                            <div className="text-xs text-slate-500 font-medium bg-red-50 px-2 py-1 rounded inline-block text-red-700">
+                                Potentiële besparing: €12.000/jaar
                             </div>
                          </div>
                       </div>
 
-                      {/* Metrics Card */}
-                      <div className="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm">
-                         <div className="flex justify-between items-center mb-4">
-                            <span className="text-sm font-medium text-slate-600">Leveringsbetrouwbaarheid</span>
-                            <span className="text-lg font-bold text-emerald-600">98.5%</span>
+                      {/* Card 2: Transfer Suggestion (Operational Trigger) */}
+                      <div className="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm flex items-start gap-4">
+                         <div className="p-2.5 bg-blue-50 rounded-xl text-blue-600 shrink-0">
+                            <ArrowRight className="w-5 h-5" />
                          </div>
-                         {/* Fake Chart Bars */}
-                         <div className="space-y-3">
-                            <div>
-                                <div className="flex justify-between text-xs text-slate-500 mb-1">
-                                    <span>Contract A</span>
-                                    <span className="font-bold">100%</span>
-                                </div>
-                                <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-                                    <div className="h-full bg-emerald-500 w-full"></div>
-                                </div>
+                         <div>
+                            <div className="flex justify-between items-center mb-1">
+                                <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wider">Transfer Suggestie</span>
                             </div>
-                            <div>
-                                <div className="flex justify-between text-xs text-slate-500 mb-1">
-                                    <span>Contract B</span>
-                                    <span className="font-bold">94%</span>
-                                </div>
-                                <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-                                    <div className="h-full bg-emerald-500 w-[94%]"></div>
-                                </div>
+                            <div className="flex items-center gap-2 mb-2 text-sm font-bold text-slate-800">
+                                <span>Purmerend (480)</span>
+                                <ArrowRight className="w-3 h-3 text-slate-400" />
+                                <span>Castricum (12)</span>
                             </div>
+                            <p className="text-xs text-slate-500 leading-relaxed">
+                                Overschot verplaatsen voorkomt spoedbestelling.
+                            </p>
                          </div>
                       </div>
                    </div>
@@ -110,9 +103,9 @@ export const GroupSection: React.FC = () => {
                     <ShieldCheck className="w-7 h-7" />
                     </div>
                     <div>
-                    <h4 className="font-bold text-slate-900 text-xl mb-2">1. Kwaliteit {'&'} Veiligheid</h4>
+                    <h4 className="font-bold text-slate-900 text-xl mb-2">1. Logistieke Zekerheid</h4>
                     <p className="text-slate-600 leading-relaxed">
-                        Borg patiëntveiligheid over de hele keten. ZenTrack signaleert <strong>centraal</strong> wanneer kritieke voorraden opraken of expireren. U heeft de controle over compliance.
+                        Borg dat de juiste materialen altijd aanwezig zijn. ZenTrack signaleert <strong>centraal</strong> wanneer kritieke voorraden opraken.
                     </p>
                     </div>
                 </div>
@@ -126,7 +119,7 @@ export const GroupSection: React.FC = () => {
                     <div>
                     <h4 className="font-bold text-slate-900 text-xl mb-2">2. Strategische Data</h4>
                     <p className="text-slate-600 leading-relaxed">
-                        Transformeer onderbuikgevoel naar harde data. Weet precies wat het totale verbruik is voor betere contractafspraken, zonder de autonomie van de locatie aan te tasten.
+                        Transformeer onderbuikgevoel naar harde data. Weet precies wat het totale verbruik is voor betere contractafspraken.
                     </p>
                     </div>
                 </div>
@@ -140,19 +133,19 @@ export const GroupSection: React.FC = () => {
                     <div>
                     <h4 className="font-bold text-slate-900 text-xl mb-2">3. Goed Werkgeverschap</h4>
                     <p className="text-slate-600 leading-relaxed">
-                        Verlaag de werkdruk voor uw 150+ medewerkers. Geen administratieve rompslomp meer, maar een tool die voor hen werkt. Dat is investeren in uw mensen.
+                        Verlaag de werkdruk voor uw medewerkers. Geen administratieve rompslomp meer, maar een tool die voor hen werkt.
                     </p>
                     </div>
                 </div>
               </div>
             </div>
 
-            <div className="mt-12 pt-8 border-t border-slate-200">
-               <button 
+            <div className="mt-12 pt-8 border-t border-slate-200 text-center">
+               <button
                  onClick={scrollToContact}
                  className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-bold transition-all flex items-center gap-3 shadow-lg hover:shadow-xl hover:-translate-y-1"
                >
-                  Plan een strategische sessie 
+                  Plan een strategische sessie
                   <ArrowRight className="w-5 h-5" />
                </button>
             </div>
