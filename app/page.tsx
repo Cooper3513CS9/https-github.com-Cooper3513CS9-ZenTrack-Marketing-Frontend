@@ -50,7 +50,7 @@ export default function LandingPage() {
          <GroupSection />
          <ROICalculator />
          <Pricing onRegisterClick={navigateToRegister} />
-         <DirectOnboarding onSmsClick={navigateToLogin} />
+         <DirectOnboarding onSmsClick={navigateToRegister} />
          <AboutSection />
          <FAQ />
          <ContactSection />
