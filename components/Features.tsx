@@ -40,7 +40,7 @@ export const Features: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-bold text-slate-900">Dokterstassen & Koffers</h3>
                   <p className="text-slate-600 text-sm mt-1">
-                    Foto van de open tas voor vertrek. ZenTrack herkent wat er mist (bv. Hechtsetjes) en zet het op de bestellijst.
+                    Maak een foto van de inhoud van je tas. ZenTrack telt de voorraad (bv. 1 hechtset over) en zet een bestelvoorstel klaar. Jij geeft de 'Go'.
                     <span className="block mt-1 text-blue-600 font-medium text-xs">→ Nooit meer misgrijpen tijdens een visite.</span>
                   </p>
                 </div>
