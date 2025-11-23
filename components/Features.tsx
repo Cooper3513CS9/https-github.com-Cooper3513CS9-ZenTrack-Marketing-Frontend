@@ -26,8 +26,8 @@ export const Features: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-bold text-slate-900">Human in the Loop</h3>
                   <p className="text-slate-600 text-sm mt-1">
-                    ZenTrack doet <strong>nooit</strong> iets automatisch. Je krijgt altijd een berichtje met een voorstel.
-                    <span className="block mt-1 text-emerald-600 font-medium text-xs">→ Jij zegt 'Ja' of 'Nee'. Jij hebt de controle.</span>
+                    ZenTrack stelt voor, jij beslist. Een factuur met Nitril Handschoenen? Emma wijst op de prijs en jij zegt 'Ja' of 'Nee' voordat iets besteld wordt.
+                    <span className="block mt-1 text-emerald-600 font-medium text-xs">→ "Jij hebt altijd 100% controle. Emma is je assistent, niet je baas."</span>
                   </p>
                 </div>
               </div>
@@ -54,8 +54,8 @@ export const Features: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-bold text-slate-900">Expiratie Radar</h3>
                   <p className="text-slate-600 text-sm mt-1">
-                    Scan steriele materialen bij binnenkomst. ZenTrack berekent de datum en stuurt een <strong>WhatsApp bericht</strong> voordat het verloopt.
-                    <span className="block mt-1 text-orange-600 font-medium text-xs">→ "Let op: Hechtdraad verloopt volgende maand"</span>
+                    Scan een doosje met steriele geneesmiddelen (bijv. Ethilon hechtdraad). ZenTrack leest de houdbaarheidsdatum automatisch en stuurt je een WhatsApp waarschuwing maanden voordat het verloopt.
+                    <span className="block mt-1 text-orange-600 font-medium text-xs">→ "Staat genoteerd. Je krijgt een seintje in juni voordat het verloopt."</span>
                   </p>
                 </div>
               </div>
@@ -68,8 +68,8 @@ export const Features: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-bold text-slate-900">Pakbon Verificatie</h3>
                   <p className="text-slate-600 text-sm mt-1">
-                    Scan het label op de doos. ZenTrack checkt direct of de levering compleet is en matcht dit met je bestelling.
-                    <span className="block mt-1 text-green-600 font-medium text-xs">→ Mismatch? Wij maken de claim-mail voor je.</span>
+                    Scan het verzendlabel van je pakket. ZenTrack vergelijkt wat erin zit met je originele bestelling en waarschuwt je direct als er tekorten zijn.
+                    <span className="block mt-1 text-green-600 font-medium text-xs">→ "Let op: Er missen 2 dozen handschoenen. Zal ik een claim voorbereiden?"</span>
                   </p>
                 </div>
               </div>
