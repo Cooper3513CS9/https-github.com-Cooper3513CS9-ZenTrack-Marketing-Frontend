@@ -24,11 +24,11 @@ export default function LandingPage() {
   const router = useRouter();
 
   const navigateToRegister = () => {
-    router.push('/auth/register');
+    router.push('https://app.zentrack.nl/sign-up');
   };
 
   const navigateToLogin = () => {
-    router.push('/auth/login');
+    router.push('https://app.zentrack.nl/sign-in');
   };
 
   const navigateToLegal = (view: string) => {
