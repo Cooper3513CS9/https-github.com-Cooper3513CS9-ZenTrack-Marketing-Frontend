@@ -113,7 +113,7 @@ export const DoctorBagView: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center gap-6">
           <div className="flex-1">
             <h2 className="text-lg font-bold text-slate-900 mb-2">Nieuwe Tas Checken?</h2>
-            <p className="text-slate-600">Upload een foto van de open dokterstas. ZenTrack analyseert automatisch de inhoud en zet ontbrekende items op de bestellijst.</p>
+            <p className="text-slate-600">Maak een foto van de inhoud van je tas. ZenTrack telt de voorraad (bv. 1 hechtset over) en zet een bestelvoorstel klaar. Jij geeft de 'Go'.</p>
           </div>
           <button className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors whitespace-nowrap">
             <Camera className="w-5 h-5" />
