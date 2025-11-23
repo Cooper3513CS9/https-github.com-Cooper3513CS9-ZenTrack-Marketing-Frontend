@@ -13,5 +13,7 @@
   "/dashboard/suppliers/page": "app/dashboard/suppliers/page.js",
   "/dashboard/team/page": "app/dashboard/team/page.js",
   "/dashboard/zorggroep/page": "app/dashboard/zorggroep/page.js",
+  "/legal/privacy/page": "app/legal/privacy/page.js",
+  "/legal/terms/page": "app/legal/terms/page.js",
   "/page": "app/page.js"
 }
