@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, Camera, Paperclip, Loader2, Sparkles, RefreshCw, FileText, CheckCircle2, ScanLine, CheckCheck, Mail, QrCode, Briefcase, Box } from 'lucide-react';
+import { Send, Camera, Paperclip, Loader2, Sparkles, RefreshCw, FileText, CheckCircle2, ScanLine, CheckCheck, QrCode, Briefcase, Box } from 'lucide-react';
 import { analyzeInvoiceAction } from '../services/geminiService';
+import { Logo } from './Logo';
 
 interface Message {
   id: string;
@@ -45,18 +46,14 @@ export const WhatsAppDemo: React.FC = () => {
   const handleSimulateUpload = async (scenario: 'invoice' | 'packing_slip' | 'medication' | 'qr' | 'bag') => {
     if (isTyping || uploadingState !== 'idle') return;
 
-    // 1. Start Upload Simulation
     setUploadingState('uploading');
-    
-    // Simulate progress bar
     for (let i = 0; i <= 100; i += 10) {
         setUploadProgress(i);
         await new Promise(r => setTimeout(r, 50));
     }
 
-    // 2. Start Scanning Simulation
     setUploadingState('scanning');
-    await new Promise(r => setTimeout(r, 1500)); // Scanning delay
+    await new Promise(r => setTimeout(r, 1500));
 
     setUploadingState('idle');
     setUploadProgress(0);
@@ -65,20 +62,41 @@ export const WhatsAppDemo: React.FC = () => {
     let invoiceContent = "";
 
     if (scenario === 'invoice') {
-      userText = "Factuur_Nov_Medline.pdf";
-      invoiceContent = "FACTUUR: Medline. 52 dozen Nitril handschoenen M à €12,50. Totaal €650. Analyseer patronen.";
+      userText = "Foto van factuur #2025-882";
+      // Realistic invoice data with Nitril Gloves priced slightly high to trigger AI advice
+      invoiceContent = `
+        FACTUUR ANALYSE:
+        Datum: 21-11-2025
+        Regels:
+        1. Nitril Onderzoekshandschoenen Maat M (Poedervrij) - 10 dozen - € 8,95/st
+        2. Onderzoekspapier 50cm - 6 rollen - € 6,50/st
+        3. Injectiespuiten 5ml - 200 stuks - € 0,12/st
+        Totaal excl BTW: € 152,50
+
+        CONTEXT: De marktprijs voor Nitril M is momenteel rond de € 6,50. Signaleer dit.
+      `;
     } else if (scenario === 'packing_slip') {
-      userText = "Foto van pakketlabel";
-      invoiceContent = "PAKBON_LABEL: Verzendlabel gescand. Match met bestelling #88291. Resultaat: Mismatch! Besteld: 10 dozen Nitril Handschoenen. Label gewicht/aantal: komt overeen met 8 dozen. 2 dozen missen.";
+      userText = "Foto van verzendlabel";
+      invoiceContent = `
+        PAKBON SCAN:
+        Order Ref: #PO-2291
+        Inhoud doos:
+        - 8x Nitril Handschoenen L
+        - 2x Handdesinfectie 500ml
+
+        MATCH CHECK:
+        Oorspronkelijke bestelling: 10x Nitril Handschoenen L.
+        Resultaat: Er missen 2 dozen handschoenen.
+      `;
     } else if (scenario === 'medication') {
       userText = "Foto doosje Hechtdraad";
-      invoiceContent = "MEDICIJN: Hechtdraad Ethilon 3-0. Batch #B2910. Steriel tot: 01-08-2026. Huidige datum: Nov 2025.";
+      invoiceContent = "MEDICIJN SCAN: Ethilon 3-0 (Zwart). Batch: #LOT-B291. Steriele houdbaarheid tot: 01-08-2026. Huidige datum: Nov 2025. Status: Veilig.";
     } else if (scenario === 'bag') {
-      userText = "Foto van inhoud visite tas";
-      invoiceContent = "DOCTOR_BAG: Foto van open tas. Herkenning: 2 Hechtsets, 1 strip Diclofenac. Standaard lijst: 3 Hechtsets, 2 Diclofenac.";
+      userText = "Foto van inhoud dokterstas";
+      invoiceContent = "DOCTOR_BAG: Visitetas Check. Gevonden: 1x Bloeddrukmeter, 1x Stethoscoop, 0x Adrenaline Ampul (Kritiek!), 1x Glucosemeter. Advies: Vul Adrenaline direct aan.";
     } else {
-      userText = "Foto van QR Code op Plank";
-      invoiceContent = "QR_KAMER_SCAN: QR_LOC_BEHANDEL_1. Product: Alcohol 70%.";
+      userText = "QR Scan: Kast 2, Plank 1";
+      invoiceContent = "QR_KAMER_SCAN: Locatie herkend: Behandelruimte 1. Product: Alcohol 70%. Huidige voorraad in systeem: 2. Vraag de gebruiker om de nieuwe telling.";
     }
 
     // Add User Message
@@ -141,15 +159,15 @@ export const WhatsAppDemo: React.FC = () => {
           <div className="flex-1">
             <div className="flex items-center gap-2 text-emerald-300 font-semibold mb-4">
               <Sparkles className="w-5 h-5" />
-              <span>Live AI Demo</span>
+              <span>Live Demo</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Ervaar de kracht van AI in je broekzak</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Ervaar het gemak</h2>
             <p className="text-lg text-emerald-100 mb-8 leading-relaxed">
               Simuleer een echte situatie. ZenTrack herkent labels, scant dokterstassen en checkt steriele datums.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <button 
+              <button
                 onClick={() => handleSimulateUpload('invoice')}
                 disabled={isTyping || uploadingState !== 'idle'}
                 className="bg-white text-emerald-900 hover:bg-emerald-50 px-4 py-4 rounded-xl font-semibold transition-colors flex items-center justify-start gap-3 disabled:opacity-50 text-left"
@@ -157,11 +175,11 @@ export const WhatsAppDemo: React.FC = () => {
                 <div className="bg-emerald-100 p-2 rounded-lg"><FileText className="w-5 h-5 text-emerald-600"/></div>
                 <div>
                     <span className="block text-sm font-bold">1. Simuleer Factuur</span>
-                    <span className="text-xs opacity-70">Data analyse & prijscheck</span>
+                    <span className="text-xs opacity-70">Nitril handschoenen & Analyse</span>
                 </div>
               </button>
-              
-              <button 
+
+              <button
                 onClick={() => handleSimulateUpload('bag')}
                 disabled={isTyping || uploadingState !== 'idle'}
                 className="bg-emerald-800 border border-emerald-700 hover:bg-emerald-700 text-white px-4 py-4 rounded-xl font-semibold transition-colors flex items-center justify-start gap-3 disabled:opacity-50 text-left"
@@ -173,7 +191,7 @@ export const WhatsAppDemo: React.FC = () => {
                 </div>
               </button>
 
-              <button 
+              <button
                 onClick={() => handleSimulateUpload('medication')}
                 disabled={isTyping || uploadingState !== 'idle'}
                 className="bg-emerald-800 border border-emerald-700 hover:bg-emerald-700 text-white px-4 py-4 rounded-xl font-semibold transition-colors flex items-center justify-start gap-3 disabled:opacity-50 text-left"
@@ -184,8 +202,8 @@ export const WhatsAppDemo: React.FC = () => {
                     <span className="text-xs opacity-70">Steriele datum & alert</span>
                 </div>
               </button>
-              
-              <button 
+
+              <button
                 onClick={() => handleSimulateUpload('packing_slip')}
                 disabled={isTyping || uploadingState !== 'idle'}
                 className="bg-emerald-800 border border-emerald-700 hover:bg-emerald-700 text-white px-4 py-4 rounded-xl font-semibold transition-colors flex items-center justify-start gap-3 disabled:opacity-50 text-left"
@@ -210,8 +228,8 @@ export const WhatsAppDemo: React.FC = () => {
               
               {/* WhatsApp Header */}
               <div className="bg-[#075E54] p-4 pt-10 flex items-center gap-3 text-white z-10">
-                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#075E54] font-bold text-lg">
-                  Z
+                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                  <Logo className="w-6 h-6" variant="avatar" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold text-base">ZenTrack</h3>
@@ -295,7 +313,7 @@ export const WhatsAppDemo: React.FC = () => {
                             <div className="absolute inset-0 flex flex-col justify-center items-center z-10">
                                 <div className="w-full h-0.5 bg-blue-500 shadow-[0_0_10px_#3b82f6] animate-scan-vertical absolute top-0"></div>
                                 <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-lg flex items-center gap-1">
-                                    <ScanLine className="w-3 h-3" /> AI Analyse
+                                    <ScanLine className="w-3 h-3" /> Verwerken
                                 </span>
                             </div>
                         </div>
