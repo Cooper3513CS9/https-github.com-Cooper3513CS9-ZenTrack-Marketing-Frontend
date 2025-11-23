@@ -14,7 +14,7 @@ export default function RegisterRoute() {
   return (
     <RegisterPage
       onRegisterSuccess={handleRegisterSuccess}
-      onLoginClick={() => router.push('https://app.zentrack.nl/sign-in')}
+      onLoginClick={() => router.push('https://zentrack.nl/sign-in')}
       onBack={() => router.push('/')}
     />
   );
