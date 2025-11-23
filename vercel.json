@@ -4,13 +4,6 @@
     "description": "ZenTrack Marketing Website - Landing page",
     "framework": "nextjs"
   },
-  "domains": [
-    {
-      "domain": "zentrack.nl",
-      "production": true,
-      "staging": false
-    }
-  ],
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
