@@ -5,9 +5,10 @@ import { Logo } from './Logo';
 
 interface HeaderProps {
   onLoginClick: () => void;
+  onRegisterClick?: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onLoginClick }) => {
+export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
@@ -55,7 +56,7 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick }) => {
           <div className="hidden md:flex items-center gap-4">
             <button onClick={onLoginClick} className="text-sm font-medium text-slate-600 hover:text-emerald-600">Inloggen</button>
             <button
-              onClick={onLoginClick}
+              onClick={onRegisterClick}
               className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all flex items-center gap-2 shadow-lg shadow-emerald-600/20"
             >
               Gratis proberen <ArrowRight className="w-4 h-4" />
@@ -90,7 +91,7 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick }) => {
             ))}
             <div className="pt-4 mt-4 border-t border-slate-100 flex flex-col gap-3">
                 <button onClick={handleLogin} className="text-center py-2 text-slate-600 font-medium">Inloggen</button>
-                <button onClick={handleLogin} className="bg-emerald-600 text-white py-3 rounded-xl text-center font-semibold">
+                <button onClick={() => { setIsMenuOpen(false); onRegisterClick?.(); }} className="bg-emerald-600 text-white py-3 rounded-xl text-center font-semibold">
                     Gratis proberen
                 </button>
             </div>

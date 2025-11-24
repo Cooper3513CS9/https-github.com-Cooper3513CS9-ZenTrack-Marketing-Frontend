@@ -26,11 +26,11 @@ export default function LandingPage() {
   const router = useRouter();
 
   const navigateToRegister = () => {
-    router.push('https://app.zentrack.nl/sign-up');
+    router.push('https://zentrack.nl/auth/register?utm_source=cta&utm_campaign=homepage');
   };
 
   const navigateToLogin = () => {
-    router.push('https://app.zentrack.nl/sign-in');
+    router.push('https://zentrack.nl/auth/login');
   };
 
   const navigateToLegal = (view: string) => {
@@ -41,7 +41,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans relative">
-      <Header onLoginClick={navigateToLogin} />
+      <Header onLoginClick={navigateToLogin} onRegisterClick={navigateToRegister} />
       <main>
          <Hero onCtaClick={navigateToRegister} />
          <OnboardingSteps />
