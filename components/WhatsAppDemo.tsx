@@ -62,41 +62,129 @@ export const WhatsAppDemo: React.FC = () => {
     let invoiceContent = "";
 
     if (scenario === 'invoice') {
-      userText = "Foto van factuur #2025-882";
-      // Realistic invoice data with Nitril Gloves priced slightly high to trigger AI advice
+      userText = "📄 Factuur Mediq - Nov 2025";
+      // Realistic invoice from major supplier with price comparison opportunity
       invoiceContent = `
-        FACTUUR ANALYSE:
+        FACTUUR ANALYSE - MEDIQ:
         Datum: 21-11-2025
-        Regels:
-        1. Nitril Onderzoekshandschoenen Maat M (Poedervrij) - 10 dozen - € 8,95/st
-        2. Onderzoekspapier 50cm - 6 rollen - € 6,50/st
-        3. Injectiespuiten 5ml - 200 stuks - € 0,12/st
-        Totaal excl BTW: € 152,50
+        Leverancier: Mediq Groep
+        Ordernummer: #ORD-2025-882
 
-        CONTEXT: De marktprijs voor Nitril M is momenteel rond de € 6,50. Signaleer dit.
+        Regels:
+        1. Nitril Onderzoekshandschoenen Maat M (Poedervrij) - 10 dozen - € 8,95/dozen
+        2. Onderzoekspapier Rollen 50cm - 6 rollen - € 6,50/rol
+        3. Injectiespuiten BD 5ml - 200 stuks - € 0,12/stuk
+        4. Alcohol 70% Desinfectans 500ml - 4 flessen - € 4,20/fles
+
+        Subtotaal: € 152,50
+        BTW 21%: € 32,03
+        Totaal: € 184,53
+
+        ANALYSE: Nitril M momenteel € 8,95/dz bij Mediq.
+        Concurrenten (123inkt, Wibra Groep): € 6,50-7,20/dz
+        Potentiële maandelijkse besparing: €12-25 per bestelling
       `;
     } else if (scenario === 'packing_slip') {
-      userText = "Foto van pakbon";
+      userText = "📦 Pakbon - Mediq bestelling aangekomen";
       invoiceContent = `
-        PAKBON SCAN:
-        Order Ref: #PO-2291
-        Inhoud doos:
-        - 8x Nitril Handschoenen L
-        - 2x Handdesinfectie 500ml
+        PAKBON VERIFICATIE - DHL TRACKING #2025-HS-1829:
+        Leverancier: Mediq Groep
+        Aflever Datum: 21-11-2025 | Aankomst: 09:47
 
-        MATCH CHECK:
-        Oorspronkelijke bestelling: 10x Nitril Handschoenen L.
-        Resultaat: Er missen 2 dozen handschoenen.
+        INHOUD GESCAND:
+        Doos 1 van 1:
+        ✅ Nitril Handschoenen Maat L - 8 dozen (verwacht: 10 dozen)
+        ✅ Handdesinfectie 500ml - 2 flessen (verwacht: 2 flessen)
+        ❌ Gaasjes Steriel 5x5cm - 0 dozen (verwacht: 5 dozen)
+
+        ANALYSE:
+        Status: MISMATCH GEDETECTEERD
+        ❌ 2 dozen Nitril L ontbreken
+        ❌ 5 dozen Gaasjes niet ontvangen (KRITIEK!)
+
+        Waarschijnlijke oorzaak: Uit voorraad bij leverancier.
+        Actie: Claim-mail aanmaken + Alternatieve leverancier zoeken?
       `;
     } else if (scenario === 'medication') {
-      userText = "Foto doosje Hechtdraad";
-      invoiceContent = "MEDICIJN SCAN: Ethilon 3-0 (Zwart). Batch: #LOT-B291. Steriele houdbaarheid tot: 01-08-2026. Huidige datum: Nov 2025. Status: Veilig.";
+      userText = "🏥 Barcode scan: Hechtdraad Ethilon";
+      invoiceContent = `
+        STERIEL PRODUCT SCAN - BARCODE:
+        Product: Ethilon 3-0 Hechtdraad (Zwart) - Steriel Verpakt
+        Fabrikant: JOHNSON & JOHNSON
+        Batch Nummer: LOT-B291
+        Serienummer: ETHYB291-2024-NOV
+
+        HOUDBAARHEID:
+        Steriel totaal: 01-08-2026
+        Huidige datum: 21-11-2025
+        Resterende houdbaarheid: 8 maanden 11 dagen ✅ VEILIG
+
+        VOORRAADBEHEER:
+        Huida in systeem: 3 dozen
+        Kritieke voorraad grens: 2 dozen
+        Status: OK (geen alert nodig)
+
+        ALERT INGESTELD:
+        Reminder op 01-06-2026 (2 maanden voor expiratie)
+      `;
     } else if (scenario === 'bag') {
-      userText = "Foto van inhoud dokterstas";
-      invoiceContent = "DOCTOR_BAG: Visitetas Check. Gevonden: 1x Bloeddrukmeter, 1x Stethoscoop, 0x Adrenaline Ampul (Kritiek!), 1x Glucosemeter. Advies: Vul Adrenaline direct aan.";
+      userText = "👜 Visitetas check - Huisbezoeken voorbereiding";
+      invoiceContent = `
+        HUISARTSENTAS INVENTARIS SCAN:
+        Foto analyse compleet | Beeldherkenning AI: 94% nauwkeurig
+
+        ✅ AANWEZIG:
+        ✓ Bloeddrukmeter (digitaal) - 1x
+        ✓ Stethoscoop - 1x
+        ✓ Glucosemeter - 1x met 10 teststrips
+        ✓ Thermometer - 1x
+        ✓ Otoscoop/Otoscopie - 1x
+        ✓ Handdoeken desinfectans wipes - 1 pak (7/10 over)
+
+        ❌ ONTBREEKT:
+        ✗ Adrenaline Ampul 0,3mg (KRITIEK!)
+        ✗ Elastische drukverband 6cm - alleen 1 beschikbaar, minstens 2 nodig
+        ⚠️ Paracetamol 500mg tabletten - Stock onvoldoende (2 tablets over, min. 10 nodig)
+
+        BEVEILIGINGSSTATUS: 🚨 ONVEILIG VOOR HUISBEZOEKEN
+        Ontbrekende medicatie: Adrenaline is CRITICA voor cardiale noodsituaties!
+
+        AANBEVELING: Zet deze items DIRECT klaar in de assistentenkamer:
+        1. Adrenaline Ampul (prioriteit: HOOG)
+        2. Drukverband 6cm (prioriteit: MIDDEL)
+        3. Paracetamol tabletten (prioriteit: LAAG)
+
+        Geschatte klaarmaaktijd: 5 minuten
+      `;
     } else {
-      userText = "QR Scan: Kast 2, Plank 1";
-      invoiceContent = "QR_KAMER_SCAN: Locatie herkend: Behandelruimte 1. Product: Alcohol 70%. Huidige voorraad in systeem: 2. Vraag de gebruiker om de nieuwe telling.";
+      userText = "🔍 QR scan: Behandelkamer - voorraadcheck";
+      invoiceContent = `
+        QR LOCATIE SCAN - VOORRAAD INVENTARISATIE:
+        Locatie ID: TR-001
+        Locatie: Behandelruimte 1 - Medicijnkast 2, Plank 1
+        Scan Moment: 21-11-2025 | 14:32 uur
+
+        PRODUCT HERKEND:
+        Artikel: Alcohol 70% Desinfectans - 500ml fles
+        Fabrikant: Ecolab
+        Barcode: EAN-8718789046502
+        In Systeem Registered: 2 flessen
+
+        VOORRAADCHECK:
+        Fysieke toestand: 2 flessen aanwezig ✓ CORRECT
+        Aantekening: 1 fles is voor 70% leeg (350ml)
+        Aanbeveling: Vervang 1 volle fles
+
+        BIJZONDERHEDEN:
+        Vervaldatum: 31-12-2026 (nog 13 maanden geldig) ✅
+        Opslag optimaal: Donkere plek, koel, droog ✓
+        Gebruikstatus: Matig gebruik (afgelopen week 2x gebruikt)
+
+        SYSTEMUPDATE:
+        Voorraadstatus: COMPLEET
+        Volgende inventaris: Automatisch gepland voor 21-12-2025
+        Alert: Geen urgent aanvulling nodig
+      `;
     }
 
     // Add User Message
