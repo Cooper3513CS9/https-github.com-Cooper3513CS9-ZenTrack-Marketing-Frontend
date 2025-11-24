@@ -1,7 +1,8 @@
 "use client";
 
 import React from 'react';
-import { QrCode, Smartphone, ArrowRight, Zap, Check } from 'lucide-react';
+import Image from 'next/image';
+import { Smartphone, ArrowRight, Zap, Check } from 'lucide-react';
 
 interface DirectOnboardingProps {
   onSmsClick: () => void;
@@ -73,13 +74,17 @@ export const DirectOnboarding: React.FC<DirectOnboardingProps> = ({ onSmsClick }
           {/* Desktop QR Card (Hidden on mobile) */}
           <div className="hidden lg:block flex-1">
             <div className="bg-white p-8 rounded-[2.5rem] shadow-2xl max-w-md mx-auto transform rotate-2 hover:rotate-0 transition-transform duration-500 border-8 border-slate-800">
-              <div className="bg-slate-900 rounded-2xl p-8 aspect-square flex items-center justify-center mb-6 relative group cursor-pointer overflow-hidden">
-                 {/* Simulated QR Code */}
-                 <div className="absolute inset-0 bg-white p-4 opacity-90 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center">
-                    <QrCode className="w-48 h-48 text-slate-900" />
-                    <p className="mt-4 font-bold text-slate-900">Scan mij</p>
-                 </div>
-                 
+              <div className="relative group cursor-pointer mb-6">
+                 {/* Real QR Code Image */}
+                 <Image
+                    src="/qr-codes/onboarding-qr.png"
+                    alt="Scan to start onboarding"
+                    width={320}
+                    height={320}
+                    priority
+                    className="w-full rounded-2xl"
+                 />
+
                  {/* Scan effect line */}
                  <div className="absolute top-0 left-0 w-full h-1 bg-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.8)] animate-[scan_3s_ease-in-out_infinite]"></div>
               </div>
