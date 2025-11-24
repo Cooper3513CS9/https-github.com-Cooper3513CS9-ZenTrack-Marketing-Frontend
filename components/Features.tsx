@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { TrendingUp, DollarSign, Clock, Radar, UserCheck, QrCode, Briefcase } from 'lucide-react';
+import { TrendingUp, DollarSign, Clock, Radar, UserCheck, QrCode, Briefcase, Share2 } from 'lucide-react';
 
 export const Features: React.FC = () => {
   return (
@@ -70,6 +70,20 @@ export const Features: React.FC = () => {
                   <p className="text-slate-600 text-sm mt-1">
                     Scan het verzendlabel van je pakket. ZenTrack vergelijkt wat erin zit met je originele bestelling en waarschuwt je direct als er tekorten zijn.
                     <span className="block mt-1 text-green-600 font-medium text-xs">→ "Let op: Er missen 2 dozen handschoenen. Zal ik een claim voorbereiden?"</span>
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 4: Social Sharing (NEW) */}
+              <div className="flex gap-4 px-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600">
+                  <Share2 className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-slate-900">Tip je Collega's</h3>
+                  <p className="text-slate-600 text-sm mt-1">
+                    Goede deal gevonden bij leverancier? Deel de productlink direct vanuit ZenTrack via WhatsApp naar je collega's in het netwerk.
+                    <span className="block mt-1 text-purple-600 font-medium text-xs">→ "Handschoenen M nu €2.50 goedkoper. Zal ik jou de link sturen?"</span>
                   </p>
                 </div>
               </div>

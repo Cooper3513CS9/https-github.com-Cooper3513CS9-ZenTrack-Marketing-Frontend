@@ -104,7 +104,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "/Users/rbeute/Downloads/https-github.com-Cooper3513CS9-Frontend-nieuw",
+    "outputFileTracingRoot": "/Users/rbeute/zentrack-nextjs-marketing",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -294,11 +294,11 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "/Users/rbeute/Downloads/https-github.com-Cooper3513CS9-Frontend-nieuw"
+      "root": "/Users/rbeute/zentrack-nextjs-marketing"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "/Users/rbeute/Downloads/https-github.com-Cooper3513CS9-Frontend-nieuw",
+  "appDir": "/Users/rbeute/zentrack-nextjs-marketing",
   "relativeAppDir": "",
   "files": [
     ".next/routes-manifest.json",

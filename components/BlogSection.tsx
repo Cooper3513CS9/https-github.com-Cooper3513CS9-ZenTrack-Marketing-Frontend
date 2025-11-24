@@ -1,5 +1,7 @@
+"use client";
+
 import React from 'react';
-import { ArrowRight, BookOpen, Shield, TrendingUp, MessageSquare } from 'lucide-react';
+import { ArrowRight, BookOpen, Shield, TrendingUp } from 'lucide-react';
 
 export const BlogSection: React.FC = () => {
   const articles = [
@@ -99,16 +101,16 @@ export const BlogSection: React.FC = () => {
            <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
 
            <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-white mb-2">Geen tijd om te lezen?</h3>
-              <p className="text-slate-400 max-w-xl">
-                 Ontvang de "Tip van de Week" direct in WhatsApp. Korte, praktische adviezen voor praktijkmanagers. Geen spam, wel waarde.
-              </p>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">Meer vragen?</h3>
+              <p className="text-slate-300">Koppel WhatsApp en chat direct met ons team.</p>
            </div>
 
-           <button className="relative z-10 bg-[#25D366] hover:bg-[#20bd5a] text-white px-6 py-3 rounded-xl font-bold transition-colors flex items-center gap-2 shadow-lg shadow-emerald-900/20 whitespace-nowrap">
-              <MessageSquare className="w-5 h-5" />
-              Aanmelden Updates
-           </button>
+           <a
+              href="https://wa.me/31623885227?text=Ik%20heb%20vragen%20over%20ZenTrack"
+              className="relative z-10 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold px-6 py-3 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap"
+           >
+              Open WhatsApp <ArrowRight className="w-4 h-4" />
+           </a>
         </div>
 
       </div>

@@ -19,6 +19,8 @@ import { DirectOnboarding } from '@/components/DirectOnboarding';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { CookieConsent } from '@/components/legal/CookieConsent';
 import { GroupSection } from '@/components/GroupSection';
+import { OnboardingSteps } from '@/components/OnboardingSteps';
+import { BlogSection } from '@/components/BlogSection';
 
 export default function LandingPage() {
   const router = useRouter();
@@ -42,6 +44,7 @@ export default function LandingPage() {
       <Header onLoginClick={navigateToLogin} />
       <main>
          <Hero onCtaClick={navigateToRegister} />
+         <OnboardingSteps />
          <PainPoints />
          <Process />
          <WhatsAppDemo />
@@ -52,6 +55,7 @@ export default function LandingPage() {
          <Pricing onRegisterClick={navigateToRegister} />
          <DirectOnboarding />
          <AboutSection />
+         <BlogSection />
          <FAQ />
          <ContactSection />
        </main>

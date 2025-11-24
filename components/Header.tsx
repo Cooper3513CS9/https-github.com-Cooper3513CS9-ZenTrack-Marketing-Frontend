@@ -14,6 +14,7 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick }) => {
     { name: 'Waarom', href: '#waarom' },
     { name: 'Hoe het werkt', href: '#hoe-het-werkt' },
     { name: 'Prijzen', href: '#prijzen' },
+    { name: 'Inzichten', href: '#inzichten' },
     { name: 'Over Ons', href: '#over-ons' },
     { name: 'Contact', href: '#contact' },
   ];

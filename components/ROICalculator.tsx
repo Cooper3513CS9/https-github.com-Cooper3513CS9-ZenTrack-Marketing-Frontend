@@ -7,8 +7,9 @@ export const ROICalculator: React.FC = () => {
   const [monthlySpend, setMonthlySpend] = useState(1000);
   const [hoursPerWeek, setHoursPerWeek] = useState(2);
   const [hourlyRate, setHourlyRate] = useState(45);
-  const [emergencyOrders, setEmergencyOrders] = useState(2); // New metric
-  
+  const [emergencyOrders, setEmergencyOrders] = useState(2);
+  const [savingsPercentage, setSavingsPercentage] = useState(5); // Default conservative 5%
+
   const [savings, setSavings] = useState({
     waste: 0,
     time: 0,
@@ -18,8 +19,8 @@ export const ROICalculator: React.FC = () => {
   });
 
   useEffect(() => {
-    // 1. Waste/Price Optimization: 8% savings on spend
-    const wasteSavings = (monthlySpend * 12) * 0.08;
+    // 1. Waste/Price Optimization: Variable % savings on spend
+    const wasteSavings = (monthlySpend * 12) * (savingsPercentage / 100);
     
     // 2. Time Savings: ZenTrack automates ~70%
     const timeSavings = (hoursPerWeek * 52 * hourlyRate) * 0.70;
@@ -41,7 +42,7 @@ export const ROICalculator: React.FC = () => {
       total: total,
       paybackDays: paybackDays < 365 ? paybackDays : 365
     });
-  }, [monthlySpend, hoursPerWeek, hourlyRate, emergencyOrders]);
+  }, [monthlySpend, hoursPerWeek, hourlyRate, emergencyOrders, savingsPercentage]);
 
   // Helper for dynamic badge styling
   const getBadgeStyle = (days: number) => {
@@ -75,7 +76,7 @@ export const ROICalculator: React.FC = () => {
                     </div>
                     <div>
                         <h4 className="font-bold text-slate-900 text-lg">Inkoopvoordeel</h4>
-                        <p className="text-sm text-slate-500">8% besparing door prijsvergelijking en minder verspilling.</p>
+                        <p className="text-sm text-slate-500">Besparing door prijsvergelijking en minder verspilling.</p>
                     </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -110,6 +111,29 @@ export const ROICalculator: React.FC = () => {
                      value={monthlySpend}
                      onChange={(e) => setMonthlySpend(parseInt(e.target.value))}
                      className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600"
+                   />
+                </div>
+
+                {/* Slider 1.5: Savings % */}
+                <div>
+                   <div className="flex justify-between mb-2 items-end">
+                      <label className="text-sm font-bold text-slate-700 flex items-center gap-2">
+                         Geschatte inkoopbesparing
+                         <div className="group relative">
+                            <AlertCircle className="w-3 h-3 text-slate-400 cursor-help" />
+                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 bg-slate-800 text-white text-[10px] p-2 rounded hidden group-hover:block">
+                               Conservatief: 5% | Gemiddeld: 8% | Optimistisch: 12%
+                            </div>
+                         </div>
+                      </label>
+                      <span className="font-mono font-bold text-slate-900 bg-white px-2 py-1 rounded border border-slate-200">{savingsPercentage}%</span>
+                   </div>
+                   <input
+                     type="range"
+                     min="0" max="15" step="1"
+                     value={savingsPercentage}
+                     onChange={(e) => setSavingsPercentage(parseInt(e.target.value))}
+                     className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-purple-500"
                    />
                 </div>
 
