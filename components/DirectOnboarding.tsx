@@ -2,13 +2,11 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Smartphone, ArrowRight, Zap, Check } from 'lucide-react';
+import { Smartphone, Zap, Check } from 'lucide-react';
 
-interface DirectOnboardingProps {
-  onSmsClick: () => void;
-}
+interface DirectOnboardingProps {}
 
-export const DirectOnboarding: React.FC<DirectOnboardingProps> = ({ onSmsClick }) => {
+export const DirectOnboarding: React.FC<DirectOnboardingProps> = () => {
   return (
     <section className="py-20 bg-slate-900 text-white overflow-hidden relative">
       {/* Background Accents */}
@@ -51,8 +49,8 @@ export const DirectOnboarding: React.FC<DirectOnboardingProps> = ({ onSmsClick }
 
             <div className="pt-6">
                {/* Mobile Button */}
-              <div className="lg:hidden mb-4">
-                <a 
+              <div className="lg:hidden">
+                <a
                   href="https://wa.me/31623885227?text=Hi%20ZenTrack,%20ik%20wil%20graag%20starten!"
                   className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white text-lg font-bold py-4 rounded-xl flex items-center justify-center gap-3 shadow-lg shadow-emerald-900/20 transition-transform active:scale-95"
                 >
@@ -60,14 +58,6 @@ export const DirectOnboarding: React.FC<DirectOnboardingProps> = ({ onSmsClick }
                   Open WhatsApp Direct
                 </a>
               </div>
-              
-              {/* Fallback Link - Safety Net for Navigation */}
-              <button 
-                onClick={onSmsClick}
-                className="text-sm text-slate-400 hover:text-white hover:underline flex items-center gap-2 transition-colors"
-              >
-                Liever via SMS code inloggen? Klik hier <ArrowRight className="w-3 h-3" />
-              </button>
             </div>
           </div>
 
