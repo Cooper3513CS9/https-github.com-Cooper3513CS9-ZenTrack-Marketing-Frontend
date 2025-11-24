@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // URL to encode in QR code
-const URL = 'https://zentrack.nl/auth/register?utm_source=qr&utm_campaign=10sec-onboarding';
+const URL = 'https://app.zentrack.nl/sign-up?utm_source=qr&utm_campaign=10sec-onboarding';
 
 // Output directory
 const outputDir = path.join(__dirname, '../public/qr-codes');
