@@ -26,11 +26,11 @@ export default function LandingPage() {
   const router = useRouter();
 
   const navigateToRegister = () => {
-    router.push('https://app.zentrack.nl/auth/register?utm_source=cta&utm_campaign=homepage');
+    router.push('https://zentrack.nl/auth/register?utm_source=cta&utm_campaign=homepage');
   };
 
   const navigateToLogin = () => {
-    router.push('https://app.zentrack.nl/auth/login');
+    router.push('https://zentrack.nl/auth/login');
   };
 
   const navigateToLegal = (view: string) => {
