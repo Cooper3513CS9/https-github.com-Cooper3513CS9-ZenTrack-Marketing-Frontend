@@ -1,7 +1,6 @@
 {
-  "projectSettings": {
-    "name": "zentrack-marketing",
-    "description": "ZenTrack Marketing Website - Landing page",
-    "framework": "nextjs"
-  }
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "nodeVersion": "20.x"
 }
