@@ -121,8 +121,8 @@ export const ROICalculator: React.FC = () => {
                          Geschatte inkoopbesparing
                          <div className="group relative">
                             <AlertCircle className="w-3 h-3 text-slate-400 cursor-help" />
-                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 bg-slate-800 text-white text-[10px] p-2 rounded hidden group-hover:block">
-                               Conservatief: 5% | Gemiddeld: 8% | Optimistisch: 12%
+                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 bg-slate-800 text-white text-[10px] p-2 rounded hidden group-hover:block">
+                               Conservatief: 5% | Gemiddeld: 10% | Ambitie: 20-30%
                             </div>
                          </div>
                       </label>
@@ -130,7 +130,7 @@ export const ROICalculator: React.FC = () => {
                    </div>
                    <input
                      type="range"
-                     min="0" max="15" step="1"
+                     min="0" max="30" step="1"
                      value={savingsPercentage}
                      onChange={(e) => setSavingsPercentage(parseInt(e.target.value))}
                      className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-purple-500"
