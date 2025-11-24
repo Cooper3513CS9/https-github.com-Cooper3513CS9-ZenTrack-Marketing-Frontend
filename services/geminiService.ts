@@ -9,9 +9,44 @@ const isApiConfigured = (): boolean => {
   return !!apiKey && apiKey !== 'dummy-key';
 };
 
+// Helper function to extract specific items and details from invoice content
+const extractInvoiceDetails = (invoiceText: string): { items: string[]; savings?: string; missingItems?: string[] } => {
+  const lines = invoiceText.split('\n');
+  const items: string[] = [];
+  let savings: string | undefined;
+  const missingItems: string[] = [];
+
+  for (const line of lines) {
+    // Extract items (lines with numbers and prices)
+    if (line.match(/^\s*\d+\.\s+/)) {
+      const itemMatch = line.match(/^[\s\d.]+([^€-]+?)(?:\s*-\s*\d+\s+\w+)?\s*(?:-\s*€|[€])/);
+      if (itemMatch) {
+        items.push(itemMatch[1].trim());
+      }
+    }
+    // Extract savings amount
+    if (line.includes('besparing') || line.includes('goedkoper')) {
+      const savingMatch = line.match(/€[\d,]+/);
+      if (savingMatch) {
+        savings = savingMatch[0];
+      }
+    }
+    // Extract missing items
+    if (line.includes('❌') || line.includes('ontbreekt') || line.includes('niet ontvangen')) {
+      const missingMatch = line.match(/[-•]\s*([^(\n]+)/);
+      if (missingMatch) {
+        missingItems.push(missingMatch[1].trim());
+      }
+    }
+  }
+
+  return { items, savings, missingItems };
+};
+
 // Helper function to generate smart fallback responses based on invoice content
 const generateSmartFallback = (invoiceText: string): string => {
   const text = invoiceText.toLowerCase();
+  const details = extractInvoiceDetails(invoiceText);
 
   // Detect scenario type
   const isMedicationScan = text.includes('barcode') || text.includes('houdbaarheid') || text.includes('steriel');
@@ -20,45 +55,79 @@ const generateSmartFallback = (invoiceText: string): string => {
   const isQrScan = text.includes('qr') || text.includes('locatie scan') || text.includes('inventarisatie');
 
   if (isMedicationScan) {
-    // Extract expiration info if available
+    // Extract product name and expiration
+    const productMatch = invoiceText.match(/Product:\s*([^\n]+)/i);
+    const productName = productMatch ? productMatch[1].trim() : 'dit product';
+
     if (text.includes('kritiek')) {
-      return "🚨 **Kritiek Alert!**\n\nDeze medicatie verloopt binnenkort. Voeg direct aan je bestellijst toe!\n\n⏰ Remainder ingesteld.";
+      return `🚨 **Kritiek Alert!**\n\n${productName} verloopt binnenkort.\n\n❌ Direct aanvullen nodig!\n📧 Automatische reminder actief\n⏰ Alert: 2 maanden voor expiratie`;
     } else if (text.includes('veilig')) {
-      return "✅ **Houdbaarheid OK**\n\nDeze medicatie is veilig. Je bent automatisch op de hoogte als het vervaldatum nadert.\n\n📌 Alert: 2 maanden voor expiratie";
+      return `✅ **Houdbaarheid OK**\n\n${productName} is veilig tot 2026.\n\n📌 Automatische reminder ingesteld\n🟢 Status: Goed opgeslagen`;
     }
   }
 
   if (isPackingSlip) {
     if (text.includes('mismatch') || text.includes('ontbreken') || text.includes('niet ontvangen')) {
-      return "⚠️ **Mismatch Gedetecteerd!**\n\nJe hebt niet alles ontvangen wat je besteld had:\n\n❌ Items ontbreken\n📧 Automatisch claim-email aangemaakt\n💡 Suggestie: Bestel bij alternatieve leverancier?";
+      let missingList = '';
+      if (details.missingItems && details.missingItems.length > 0) {
+        missingList = details.missingItems.map(item => `❌ ${item}`).join('\n');
+      } else {
+        missingList = '❌ Enkele items ontbreken';
+      }
+
+      return `⚠️ **Mismatch Gedetecteerd!**\n\n${missingList}\n\n📧 Automatisch claim-email aangemaakt\n💡 Alternatieve leverancier zoeken?`;
     } else {
-      return "✅ **Pakbon Geverifieerd**\n\nAlle items ontvangen en in systeem opgeslagen.\n\n📦 Voorraad automatisch bijgewerkt";
+      return "✅ **Pakbon Geverifieerd**\n\nAlle items ontvangen ✓\n\n📦 Voorraad automatisch bijgewerkt\n🟢 Klaar voor gebruik";
     }
   }
 
   if (isDoctorBag) {
     if (text.includes('onveilig') || text.includes('kritiek')) {
-      return "🚨 **Visitetas is ONVEILIG!**\n\nKritieke medicatie ontbreekt:\n\n❌ Adrenaline onvoldoende\n⚠️ Verbandmateriaal tekort\n\n⏰ Klaarmaaktijd: 5 minuten";
+      let criticalItems = '';
+      if (text.includes('adrenaline')) {
+        criticalItems += '❌ Adrenaline onvoldoende\n';
+      }
+      if (text.includes('drukverband')) {
+        criticalItems += '⚠️ Drukverband tekort\n';
+      }
+
+      return `🚨 **Visitetas ONVEILIG!**\n\n${criticalItems || '❌ Kritieke items ontbreken\n'}\n⏰ Klaarmaaktijd: 5 minuten max`;
     } else if (text.includes('ontbreekt')) {
-      return "⚠️ **Aanvulling Nodig**\n\nJe tas mist enkele items:\n\n❌ Items toevoegen\n✓ Check in 5 minuten\n\nReady voor huisbezoeken!";
+      return "⚠️ **Enkele Items Nodig**\n\nTas is bijna compleet.\n\n✓ Voeg ontbrekende items toe\n✓ Check in 5 minuten\n\n🟢 Ready voor huisbezoeken!";
     }
   }
 
   if (isQrScan) {
+    const productMatch = invoiceText.match(/Artikel:\s*([^\n-]+)/i);
+    const productName = productMatch ? productMatch[1].trim() : 'dit product';
+
     if (text.includes('compleet') || text.includes('correct')) {
-      return "✅ **Voorraad Klopt Compleet**\n\nAlles aanwezig en correct opgeslagen.\n\n📅 Volgende inventaris: 21-12-2025\n🟢 Status: GOED";
-    } else if (text.includes('leeg')) {
-      return "⚠️ **Artikel Bijna Op**\n\nDit artikel gaat binnen 5 dagen op.\n\n📋 Automatisch op bestellijst gezet\n💡 Suggestie: Vandaag al bestellen?";
+      return `✅ **Voorraad Compleet**\n\n${productName}\n\n📅 Volgende check: 21-12-2025\n🟢 Status: CORRECT`;
+    } else if (text.includes('leeg') || text.includes('70%') || text.includes('onvoldoende')) {
+      return `⚠️ **Artikel Bijna Op**\n\n${productName} gaat binnenkort op.\n\n📋 Automatisch op bestellijst\n💡 Vandaag al bestellen?`;
     }
   }
 
-  // Generic smart response based on content
+  // Factuur/Invoice scenario - most detailed
   if (text.includes('analyse') || text.includes('factuur')) {
-    return "✅ **Factuur Verwerkt!**\n\n📊 Analyse uitgevoerd\n💰 Prijsvergelijking opgeslagen\n💡 Bespaaropportuniteit gedetecteerd\n\nWil je details zien?";
+    let itemList = '';
+    if (details.items && details.items.length > 0) {
+      itemList = details.items.slice(0, 2).map(item => `• ${item}`).join('\n');
+      if (details.items.length > 2) {
+        itemList += `\n• +${details.items.length - 2} meer...`;
+      }
+    }
+
+    let savingInfo = '';
+    if (details.savings) {
+      savingInfo = `\n💰 Besparing gedetecteerd: ${details.savings}`;
+    }
+
+    return `✅ **Factuur Verwerkt!**\n\n${itemList || 'Alle items gescand'}\n📊 Analyse opgeslagen${savingInfo}\n\n💡 Prijsvergelijking beschikbaar`;
   }
 
   // Ultimate fallback
-  return "✅ **Verwerking Compleet**\n\nDe gegevens zijn gescand en opgeslagen in je systeem.\n\n🤖 Verdere actie: Zie suggesties hierboven";
+  return "✅ **Verwerking Compleet**\n\nDe informatie is gescand en opgeslagen.\n\n🤖 Details beschikbaar in je dashboard";
 };
 
 export const analyzeInvoiceAction = async (invoiceText: string): Promise<string> => {
