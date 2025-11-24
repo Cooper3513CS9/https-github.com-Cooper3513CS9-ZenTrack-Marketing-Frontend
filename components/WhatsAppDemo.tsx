@@ -62,33 +62,33 @@ export const WhatsAppDemo: React.FC = () => {
     let invoiceContent = "";
 
     if (scenario === 'invoice') {
-      userText = "📄 Factuur Mediq - Nov 2025";
+      userText = "📄 Factuur Leverancier A - Nov 2025";
       // Realistic invoice from major supplier with price comparison opportunity
       invoiceContent = `
-        FACTUUR ANALYSE - MEDIQ:
+        FACTUUR ANALYSE - LEVERANCIER A:
         Datum: 21-11-2025
-        Leverancier: Mediq Groep
+        Leverancier: Supplier A BV
         Ordernummer: #ORD-2025-882
 
         Regels:
         1. Nitril Onderzoekshandschoenen Maat M (Poedervrij) - 10 dozen - € 8,95/dozen
         2. Onderzoekspapier Rollen 50cm - 6 rollen - € 6,50/rol
-        3. Injectiespuiten BD 5ml - 200 stuks - € 0,12/stuk
+        3. Injectiespuiten 5ml - 200 stuks - € 0,12/stuk
         4. Alcohol 70% Desinfectans 500ml - 4 flessen - € 4,20/fles
 
         Subtotaal: € 152,50
         BTW 21%: € 32,03
         Totaal: € 184,53
 
-        ANALYSE: Nitril M momenteel € 8,95/dz bij Mediq.
-        Concurrenten (123inkt, Wibra Groep): € 6,50-7,20/dz
+        ANALYSE: Nitril M momenteel € 8,95/dz bij Leverancier A.
+        Concurrenten (Leverancier B, Leverancier C): € 6,50-7,20/dz
         Potentiële maandelijkse besparing: €12-25 per bestelling
       `;
     } else if (scenario === 'packing_slip') {
-      userText = "📦 Pakbon - Mediq bestelling aangekomen";
+      userText = "📦 Pakbon - Leverancier A bestelling aangekomen";
       invoiceContent = `
-        PAKBON VERIFICATIE - DHL TRACKING #2025-HS-1829:
-        Leverancier: Mediq Groep
+        PAKBON VERIFICATIE - TRACKING #2025-HS-1829:
+        Leverancier: Supplier A BV
         Aflever Datum: 21-11-2025 | Aankomst: 09:47
 
         INHOUD GESCAND:
@@ -106,13 +106,13 @@ export const WhatsAppDemo: React.FC = () => {
         Actie: Claim-mail aanmaken + Alternatieve leverancier zoeken?
       `;
     } else if (scenario === 'medication') {
-      userText = "🏥 Barcode scan: Hechtdraad Ethilon";
+      userText = "🏥 Barcode scan: Hechtdraad steriel";
       invoiceContent = `
         STERIEL PRODUCT SCAN - BARCODE:
-        Product: Ethilon 3-0 Hechtdraad (Zwart) - Steriel Verpakt
-        Fabrikant: JOHNSON & JOHNSON
+        Product: Hechtdraad 3-0 (Zwart) - Steriel Verpakt
+        Fabrikant: Medische Supplier X
         Batch Nummer: LOT-B291
-        Serienummer: ETHYB291-2024-NOV
+        Serienummer: HT3-0-2024-NOV
 
         HOUDBAARHEID:
         Steriel totaal: 01-08-2026
@@ -120,7 +120,7 @@ export const WhatsAppDemo: React.FC = () => {
         Resterende houdbaarheid: 8 maanden 11 dagen ✅ VEILIG
 
         VOORRAADBEHEER:
-        Huida in systeem: 3 dozen
+        Aantal in systeem: 3 dozen
         Kritieke voorraad grens: 2 dozen
         Status: OK (geen alert nodig)
 
@@ -166,7 +166,7 @@ export const WhatsAppDemo: React.FC = () => {
 
         PRODUCT HERKEND:
         Artikel: Alcohol 70% Desinfectans - 500ml fles
-        Fabrikant: Ecolab
+        Fabrikant: Supplier B
         Barcode: EAN-8718789046502
         In Systeem Registered: 2 flessen
 
