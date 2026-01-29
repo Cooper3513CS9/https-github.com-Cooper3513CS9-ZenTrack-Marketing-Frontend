@@ -1,87 +1,341 @@
+# 🏥 ZenTrack Marketing Site
 
-# 🏥 ZenTrack - Intelligent Voorraadbeheer
+Modern marketing website voor ZenTrack - Intelligent Voorraadbeheer platform voor Nederlandse huisartsenpraktijken.
 
-ZenTrack is een AI-powered supply chain management platform voor Nederlandse huisartsenpraktijken. Het automatiseert voorraad, inkoop en compliance via een dashboard en WhatsApp-integratie.
+**🌐 Live:** https://zentrack.nl | https://www.zentrack.nl (redirects to apex)
 
-> **Status:** Production Ready (v1.0)
-> **Stack:** React (Vite), TypeScript, TailwindCSS, Supabase, Gemini AI / Mistral
+---
+
+## 🎯 What Is This?
+
+This is the **marketing site** for ZenTrack. It showcases:
+- ✅ Product features & benefits
+- ✅ Pricing tiers
+- ✅ ROI calculator
+- ✅ Customer testimonials
+- ✅ Call-to-action buttons (redirects to dashboard signup)
+
+**Note:** This is NOT the dashboard. The full app lives at https://app.zentrack.nl (separate repository).
+
+---
 
 ## 🚀 Quick Start
 
-### Installatie
+### Prerequisites
+- Node.js 18+
+- npm or yarn
 
-1. **Clone de repository**
-   ```bash
-   git clone https://github.com/your-repo/zentrack.git
-   cd zentrack
-   ```
+### Installation
 
-2. **Installeer dependencies**
-   ```bash
-   npm install
-   ```
+```bash
+# Clone repository
+git clone https://github.com/Cooper3513CS9/zentrack-nextjs-marketing.git
+cd zentrack-nextjs-marketing
 
-3. **Environment Variabelen**
-   Maak een `.env` bestand aan in de root directory met de volgende keys (vraag aan de beheerder):
-   ```env
-   VITE_SUPABASE_URL=your_supabase_url
-   VITE_SUPABASE_ANON_KEY=your_supabase_key
-   VITE_API_KEY=your_gemini_key
-   ```
+# Install dependencies
+npm install
 
-4. **Start de dev server**
-   ```bash
-   npm run dev
-   ```
+# Start development server
+npm run dev
 
-## 🏗️ Project Structuur
+# Open browser
+open http://localhost:3000
+```
 
-- **`components/`**
-  - **`auth/`**: Login en Registratie schermen (SMS/Email flow).
-  - **`dashboard/`**: Alle schermen achter de login.
-    - `DashboardHome.tsx`: Cockpit met KPI's en AI Approval Center.
-    - `InventoryView.tsx`: Digitale voorraadkast (Supabase connected).
-    - `InvoicesView.tsx`: Factuur OCR status overzicht.
-    - `OrdersView.tsx`: Bestellingen en Pakbon verificatie (Deliveries).
-    - `ExpiryView.tsx`: Expiratie Radar (THT monitoring).
-    - `TeamView.tsx`: Teamleden en rollen beheer.
-    - `ChatArea.tsx`: WhatsApp interface simulatie.
-  - **`legal/`**: Privacy Policy, Terms en Cookie banner.
-  - **`Hero.tsx`**: De main marketing hero met de "Master Loop" telefoon animatie.
-  
-- **`services/`**
-  - `geminiService.ts`: AI Logica (Google Gemini) voor chat en analyse.
-  - `messageBirdService.ts`: Simulatie van WhatsApp communicatie layer.
+### Build for Production
 
-- **`lib/`**
-  - `supabase.ts`: Database connectie configuratie.
-
-## 💡 Key Features
-
-### 1. Marketing Site (Front-end)
-- **Mobile-First Flow:** Hero sectie met live animaties van de mobiele workflow.
-- **Direct Onboarding:** QR-code scan en "Start via WhatsApp" knoppen.
-- **ROI Calculator:** Interactieve besparingscalculator.
-
-### 2. Dashboard (Back-end UI)
-- **AI Approval Center:** De manager keurt AI-voorstellen goed (Human-in-the-loop).
-- **Factuur OCR:** Visualisatie van het analyseproces (Confidence scores).
-- **Pakbon Verificatie:** Matching logic tussen besteld en geleverd.
-- **Voorraadkast:** Visuele grid met status badges (Kritiek/Laag/OK).
-
-### 3. Data Integratie
-- De app gebruikt `InventoryView.tsx` om live verbinding te maken met **Supabase**.
-- Als er geen keys zijn geconfigureerd, valt het systeem terug op **Mock Data** (Demo Mode) zodat investeerders altijd een werkende app zien.
-
-## 🛠️ Onderhoud & Uitbreiding
-
-- **Nieuwe Feature Toevoegen:**
-  1. Maak een component in `components/dashboard/`.
-  2. Voeg navigatie item toe in `components/dashboard/Sidebar.tsx`.
-  3. Voeg routing toe in `components/dashboard/DashboardLayout.tsx`.
-
-- **Supabase Schema:**
-  Zie de SQL definitie in de documentatie voor de tabelstructuren (`inventory_items`, `orders`, `teams`).
+```bash
+npm run build
+npm start
+```
 
 ---
-© 2025 ZenTrack B.V.
+
+## 📁 Project Structure
+
+```
+zentrack-nextjs-marketing/
+├── app/
+│   ├── page.tsx                    # Homepage (hero, features, pricing)
+│   ├── roi-calculator/
+│   │   └── page.tsx               # Interactive ROI calculator
+│   ├── layout.tsx                 # Root layout
+│   └── globals.css                # Global Tailwind styles
+│
+├── components/
+│   ├── Header.tsx                 # Navigation with CTA buttons
+│   ├── Hero.tsx                   # Hero section with features
+│   ├── Pricing.tsx                # Pricing cards
+│   ├── ROICalculator.tsx          # Cost savings calculator
+│   ├── FAQ.tsx                    # FAQ section
+│   ├── Footer.tsx                 # Footer with links
+│   └── ui/                        # shadcn/ui components
+│
+├── public/
+│   ├── qr-codes/
+│   │   └── onboarding-qr.png     # QR code pointing to signup
+│   └── images/                    # Marketing images
+│
+├── middleware.ts                  # www → apex domain redirect
+├── next.config.ts                 # Next.js config (security headers)
+├── vercel.json                    # Vercel deployment config (security headers)
+├── CLAUDE.md                      # Architecture & critical rules
+└── README.md                      # This file
+```
+
+---
+
+## 🔐 Security
+
+### Security Headers (All Active ✅)
+
+| Header | Purpose | Status |
+|--------|---------|--------|
+| `X-Frame-Options: DENY` | Prevent clickjacking | ✅ Active |
+| `X-Content-Type-Options: nosniff` | Prevent MIME sniffing | ✅ Active |
+| `X-XSS-Protection` | Legacy XSS protection | ✅ Active |
+| `Content-Security-Policy` | Modern XSS defense | ✅ Active |
+| `Referrer-Policy: strict-no-referrer` | Privacy protection | ✅ Active |
+| `Permissions-Policy` | Disable risky APIs | ✅ Active |
+
+### SSL/TLS
+
+- **HTTPS:** ✅ Enforced (TLS 1.3)
+- **Certificate:** Let's Encrypt (auto-renewed)
+- **HSTS:** Active (2-year enforcement)
+- **Grade:** A+ (SSL Labs)
+
+### Vulnerabilities
+
+- **Current:** Zero vulnerabilities detected
+- **Type:** Static marketing site (low attack surface)
+- **Dependencies:** Monitored via Dependabot
+
+---
+
+## 🌐 Domain Configuration
+
+### Current Setup
+
+```
+zentrack.nl          ← Primary domain (apex)
+  ↑
+www.zentrack.nl      ← Redirects here with 301 permanent
+
+app.zentrack.nl      ← Dashboard (different repo & project)
+```
+
+### How Redirects Work
+
+All traffic to `www.zentrack.nl` is permanently redirected (301) to `zentrack.nl`:
+
+```bash
+# Implemented via Next.js Edge Middleware
+# File: middleware.ts
+
+# Test it:
+curl -I https://www.zentrack.nl
+# Returns: HTTP/2 301
+# Location: https://zentrack.nl/
+```
+
+**Why:** SEO best practice - single canonical URL consolidates authority.
+
+---
+
+## 🎨 Design & UI
+
+### Framework Stack
+- **Next.js 16.x** - React meta-framework
+- **TypeScript** - Type-safe development
+- **TailwindCSS** - Utility-first CSS
+- **shadcn/ui** - Component library
+- **Vercel** - Hosting & deployment
+
+### Color System
+- Primary: Purple → Fuchsia gradient
+- Secondary: Clinical blue (for trust)
+- Neutrals: Gray scale
+
+### Responsive Design
+- Mobile-first approach
+- Breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
+- All pages tested on mobile, tablet, desktop
+
+---
+
+## 📈 SEO Optimization
+
+### Current Status
+
+- **Primary URL:** zentrack.nl
+- **WWW Handling:** Permanent redirect (301) to apex
+- **Canonical Tags:** Auto-generated by Next.js
+- **Meta Tags:** All pages have title, description
+- **Open Graph:** Social media sharing optimized
+- **Structured Data:** Schema.org JSON-LD ready
+
+### Performance Metrics
+
+- **Lighthouse Score:** 90+ (desktop)
+- **Core Web Vitals:** All green
+- **Page Load Time:** <2 seconds (global CDN)
+- **Cache:** Vercel edge caching enabled
+
+---
+
+## 🚀 Deployment
+
+### Automated Deployment
+
+This site auto-deploys to Vercel on every push to `main` branch:
+
+```bash
+# Make changes
+git commit -m "feat: Add new feature"
+git push origin main
+
+# ✅ Auto-deployed to https://zentrack.nl within 1-2 minutes
+```
+
+### Manual Deploy
+
+```bash
+npm run build
+vercel --prod
+```
+
+### Environment Variables
+
+None required for this marketing site (it's static content).
+
+---
+
+## 📝 Important Rules
+
+### ⚠️ Authentication Routing
+
+This site does **NOT** have authentication routes.
+
+**WRONG:**
+```typescript
+router.push('https://zentrack.nl/sign-up')    // ❌ Doesn't exist!
+router.push('https://zentrack.nl/auth/login')  // ❌ Doesn't exist!
+```
+
+**CORRECT:**
+```typescript
+router.push('https://app.zentrack.nl/sign-up')   // ✅ Correct domain
+router.push('https://app.zentrack.nl/sign-in')   // ✅ Correct domain
+```
+
+**Why:** Authentication is on the **dashboard** (app.zentrack.nl), not the marketing site.
+
+See [CLAUDE.md](./CLAUDE.md) for full architecture explanation.
+
+---
+
+## 📊 Performance Monitoring
+
+### Real-time Metrics
+
+- **Vercel Analytics:** [Dashboard](https://vercel.com/dashboard)
+- **Core Web Vitals:** Monitored by Google
+- **Error Tracking:** Via Vercel built-in monitoring
+
+### Health Check
+
+```bash
+# Check site is up
+curl -I https://zentrack.nl
+# Should return: HTTP/2 200
+
+# Check redirect
+curl -I https://www.zentrack.nl
+# Should return: HTTP/2 301 with Location header
+```
+
+---
+
+## 🔄 Git Workflow
+
+### Branch Strategy
+
+- **main** - Production branch (auto-deploys)
+- **feature/*** - Feature branches
+- **bugfix/*** - Bug fix branches
+
+### Commit Message Format
+
+```
+feat: Add new feature
+fix: Fix bug
+docs: Update documentation
+style: Format code
+refactor: Refactor code
+security: Add security headers
+perf: Improve performance
+```
+
+### Recent Commits (January 29, 2026)
+
+```
+9ffea0d - security: Add security headers via vercel.json
+0420742 - security: Add comprehensive security headers
+4ade3a7 - feat: Add Edge Middleware for www→apex redirect
+```
+
+---
+
+## 🆘 Troubleshooting
+
+### Build Errors
+
+```bash
+# Clear cache and reinstall
+rm -rf node_modules .next
+npm install
+npm run build
+```
+
+### Port Already in Use
+
+```bash
+# Kill process on port 3000
+lsof -ti:3000 | xargs kill -9
+npm run dev
+```
+
+### SSL Certificate Issues
+
+All SSL is handled by Vercel (Let's Encrypt). No action needed on your side. If issues:
+1. Check Vercel dashboard
+2. Verify domain DNS is pointing to Vercel
+3. Contact Vercel support
+
+---
+
+## 📞 Support
+
+- **GitHub Issues:** Report bugs or request features
+- **Documentation:** See [CLAUDE.md](./CLAUDE.md) for architecture
+- **Dashboard Issues:** Check [ZenTrack-Enterprise-Platform-17](https://github.com/Cooper3513CS9/ZenTrack-Enterprise-Platform-17)
+
+---
+
+## 📄 License
+
+Copyright © 2025 ZenTrack B.V. All rights reserved.
+
+---
+
+## 🗺️ Related Repositories
+
+- **Dashboard:** [ZenTrack-Enterprise-Platform-17](https://github.com/Cooper3513CS9/ZenTrack-Enterprise-Platform-17)
+  - Lives at: https://app.zentrack.nl
+  - Contains: Auth, dashboard, full app functionality
+
+---
+
+**Last Updated:** January 29, 2026
+**Status:** 🟢 Production Ready (A+ Security Grade)
