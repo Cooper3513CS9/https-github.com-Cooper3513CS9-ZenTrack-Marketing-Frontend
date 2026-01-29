@@ -1,0 +1,21 @@
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="zenGreenLarge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background (subtle green) -->
+  <rect width="180" height="180" fill="#f0fdf4" rx="20"/>
+
+  <!-- Outer Circle -->
+  <circle cx="90" cy="90" r="70" fill="none" stroke="url(#zenGreenLarge)" stroke-width="12"/>
+
+  <!-- Inner dot -->
+  <circle cx="90" cy="90" r="20" fill="url(#zenGreenLarge)"/>
+
+  <!-- Connecting line -->
+  <line x1="90" y1="20" x2="90" y2="70" stroke="url(#zenGreenLarge)" stroke-width="5" opacity="0.6"/>
+</svg>
