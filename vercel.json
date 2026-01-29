@@ -1,5 +1,12 @@
 {
   "buildCommand": "npm run build",
   "installCommand": "npm install",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "redirects": [
+    {
+      "source": "https://www.zentrack.nl/:path*",
+      "destination": "https://zentrack.nl/:path*",
+      "permanent": true
+    }
+  ]
 }
