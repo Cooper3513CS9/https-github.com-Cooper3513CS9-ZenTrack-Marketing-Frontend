@@ -6,7 +6,7 @@ interface LogoProps {
   variant?: 'default' | 'white' | 'avatar';
 }
 
-export const Logo: React.FC<LogoProps> = ({ className = "w-8 h-8", variant = 'default' }) => {
+export const Logo: React.FC<LogoProps> = ({ className = "w-10 h-10", variant = 'default' }) => {
   // Official ZenTrack Brandbook Logo
   // Design: Control layer positioning - "Wat hier doorheen gaat, is gecontroleerd en afgesloten"
   //
@@ -24,8 +24,8 @@ export const Logo: React.FC<LogoProps> = ({ className = "w-8 h-8", variant = 'de
     <Image
       src={logoSrc}
       alt="ZenTrack Logo - Healthcare Procurement Control Layer"
-      width={32}
-      height={32}
+      width={40}
+      height={40}
       className={className}
       priority
     />
