@@ -1,21 +1,45 @@
-<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="zenGreenLarge" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#059669;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
-    </linearGradient>
-  </defs>
+<svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Solid Background Badge - Emerald green with rounded corners -->
+  <rect width="180" height="180" rx="40" fill="#059669"/>
 
-  <!-- Background (subtle green) -->
-  <rect width="180" height="180" fill="#f0fdf4" rx="20"/>
+  <!-- 3D Isometric Box (User Approved Design) - Scaled up for 180x180 -->
+  <g transform="translate(36, 45) scale(2.7)">
+    <!-- Top face -->
+    <path
+      d="M0 8L12 2L24 8L12 14Z"
+      fill="none"
+      stroke="white"
+      stroke-width="2"
+      stroke-linejoin="round"
+    />
 
-  <!-- Outer Circle -->
-  <circle cx="90" cy="90" r="70" fill="none" stroke="url(#zenGreenLarge)" stroke-width="12"/>
+    <!-- Left face -->
+    <path
+      d="M0 8L0 20L12 26L12 14Z"
+      fill="none"
+      stroke="white"
+      stroke-width="2"
+      stroke-linejoin="round"
+    />
 
-  <!-- Inner dot -->
-  <circle cx="90" cy="90" r="20" fill="url(#zenGreenLarge)"/>
+    <!-- Right face -->
+    <path
+      d="M12 14L24 8L24 20L12 26Z"
+      fill="none"
+      stroke="white"
+      stroke-width="2"
+      stroke-linejoin="round"
+    />
 
-  <!-- Connecting line -->
-  <line x1="90" y1="20" x2="90" y2="70" stroke="url(#zenGreenLarge)" stroke-width="5" opacity="0.6"/>
+    <!-- Checkmark - Enhanced visibility with drop shadow -->
+    <path
+      d="M8 6L11.2 10L18 3.2"
+      stroke="white"
+      stroke-width="3.4"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"
+      style="filter: drop-shadow(0 0.8px 1.2px rgba(0, 0, 0, 0.5))"
+    />
+  </g>
 </svg>
