@@ -5,7 +5,7 @@ interface LogoProps {
   variant?: 'default' | 'white' | 'avatar';
 }
 
-export const Logo: React.FC<LogoProps> = ({ className = "w-8 h-8", variant = 'default' }) => {
+export const Logo: React.FC<LogoProps> = ({ className = "w-12 h-12", variant = 'default' }) => {
   // The Solid Zen Box
   // A solid background badge gives the logo visual weight (mass) so it doesn't look "lost" next to text.
   // Inside is a clear, bold box with a checkmark.
