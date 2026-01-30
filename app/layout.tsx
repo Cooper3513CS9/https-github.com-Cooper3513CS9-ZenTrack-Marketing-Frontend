@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   description: "Slim voorraadbeheer voor huisartsen",
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon.svg', type: 'image/svg+xml' }
+      { url: '/favicon.ico?v=2', sizes: 'any' },
+      { url: '/favicon.svg?v=2', type: 'image/svg+xml' }
     ],
-    apple: '/apple-touch-icon.svg',
+    apple: '/apple-touch-icon.svg?v=2',
   },
 };
 
