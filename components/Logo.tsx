@@ -24,46 +24,44 @@ export const Logo: React.FC<LogoProps> = ({ className = "w-12 h-12", variant = '
        {/* Solid Background Badge - Gives weight */}
        <rect width="40" height="40" rx="10" fill={bgFill} />
 
-       {/* Centered Icon - Premium 3D Isometric Box with Professional Shading */}
-       <g transform="translate(6, 8)">
-          {/* Left face - Darkest (furthest back) */}
+       {/* Centered Icon - 3D Isometric Box (User Approved Design) */}
+       <g transform="translate(8, 10)">
+          {/* Top face (bovenkant) */}
           <path
-            d="M0 10L0 22L10 28L10 16Z"
-            fill={isWhiteVariant ? 'rgba(5, 150, 105, 0.12)' : 'rgba(255, 255, 255, 0.12)'}
+            d="M0 8L12 2L24 8L12 14Z"
+            fill="none"
             stroke={iconStroke}
-            strokeWidth="2.5"
-            strokeLinecap="round"
+            strokeWidth="2"
             strokeLinejoin="round"
           />
 
-          {/* Right face - Medium depth */}
+          {/* Left face */}
           <path
-            d="M10 16L18 12L18 24L10 28Z"
-            fill={isWhiteVariant ? 'rgba(5, 150, 105, 0.20)' : 'rgba(255, 255, 255, 0.20)'}
+            d="M0 8L0 20L12 26L12 14Z"
+            fill="none"
             stroke={iconStroke}
-            strokeWidth="2.5"
-            strokeLinecap="round"
+            strokeWidth="2"
             strokeLinejoin="round"
           />
 
-          {/* Top face - Lightest (closest to viewer) */}
+          {/* Right face */}
           <path
-            d="M0 10L10 6L18 12L10 16Z"
-            fill={isWhiteVariant ? 'rgba(5, 150, 105, 0.28)' : 'rgba(255, 255, 255, 0.28)'}
+            d="M12 14L24 8L24 20L12 26Z"
+            fill="none"
             stroke={iconStroke}
-            strokeWidth="2.5"
-            strokeLinecap="round"
+            strokeWidth="2"
             strokeLinejoin="round"
           />
 
-          {/* Checkmark - BOLD hero element with shadow */}
+          {/* Checkmark - Enhanced visibility with drop shadow */}
           <path
-            d="M9 10L11.5 13L17 7"
+            d="M8 6L11.2 10L18 3.2"
             stroke={iconStroke}
-            strokeWidth="3"
+            strokeWidth="3.4"
             strokeLinecap="round"
             strokeLinejoin="round"
-            style={{ filter: 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2))' }}
+            fill="none"
+            style={{ filter: 'drop-shadow(0 0.8px 1.2px rgba(0, 0, 0, 0.5))' }}
           />
        </g>
     </svg>
