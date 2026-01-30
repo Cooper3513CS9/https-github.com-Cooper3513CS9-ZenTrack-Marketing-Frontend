@@ -24,27 +24,41 @@ export const Logo: React.FC<LogoProps> = ({ className = "w-12 h-12", variant = '
        {/* Solid Background Badge - Gives weight */}
        <rect width="40" height="40" rx="10" fill={bgFill} />
 
-       {/* Centered Icon - Open Envelope with Checkmark */}
-       <g transform="translate(4, 6)">
-          {/* Envelope outline */}
+       {/* Centered Icon - 3D Isometric Box with Checkmark */}
+       <g transform="translate(7, 10)">
+          {/* Left face - parallelogram */}
           <path
-            d="M2 4L16 2L30 4L30 24C30 25.1046 29.1046 26 28 26H4C2.89543 26 2 25.1046 2 24V4Z"
+            d="M0 8L0 20L8 24L8 12Z"
             stroke={iconStroke}
-            strokeWidth="2"
+            strokeWidth="1.5"
+            fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          {/* Envelope flap - open diagonal */}
+
+          {/* Right face - parallelogram */}
           <path
-            d="M2 4L16 12L30 4"
+            d="M8 12L16 8L16 20L8 24Z"
             stroke={iconStroke}
-            strokeWidth="2"
+            strokeWidth="1.5"
+            fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          {/* Checkmark on envelope */}
+
+          {/* Top face (open box view) - parallelogram */}
           <path
-            d="M12 8L15 11L21 5"
+            d="M0 8L8 4L16 8L8 12Z"
+            stroke={iconStroke}
+            strokeWidth="1.5"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+
+          {/* Checkmark emerging from box */}
+          <path
+            d="M10 6L12 9L18 2"
             stroke={iconStroke}
             strokeWidth="2.5"
             strokeLinecap="round"
