@@ -24,29 +24,29 @@ export const Logo: React.FC<LogoProps> = ({ className = "w-12 h-12", variant = '
        {/* Solid Background Badge - Gives weight */}
        <rect width="40" height="40" rx="10" fill={bgFill} />
 
-       {/* Centered Icon - Maximized size (no padding) */}
-       <g transform="translate(8, 8)">
-          {/* Box Shape */}
+       {/* Centered Icon - Open Package/Envelope with Checkmark */}
+       <g transform="translate(6, 8)">
+          {/* Left side of envelope */}
           <path
-            d="M4 10L12 6L20 10V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V10Z"
+            d="M2 6L14 2L26 6V18C26 19.6569 24.6569 21 23 21H5C3.34315 21 2 19.6569 2 18V6Z"
             stroke={iconStroke}
-            strokeWidth="2.5"
+            strokeWidth="1.8"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          {/* Inner Flap */}
+          {/* Envelope flap - diagonal from top left to middle */}
           <path
-            d="M4 10L12 14L20 10"
+            d="M2 6L14 11L26 6"
             stroke={iconStroke}
-            strokeWidth="2.5"
+            strokeWidth="1.8"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          {/* Checkmark - Popping out/over */}
+          {/* Checkmark - prominent on top right */}
           <path
-            d="M15 5L18 8L23 3"
+            d="M19 3L22 6L28 0"
             stroke={iconStroke}
-            strokeWidth="3"
+            strokeWidth="2.2"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
