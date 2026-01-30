@@ -24,45 +24,46 @@ export const Logo: React.FC<LogoProps> = ({ className = "w-12 h-12", variant = '
        {/* Solid Background Badge - Gives weight */}
        <rect width="40" height="40" rx="10" fill={bgFill} />
 
-       {/* Centered Icon - 3D Isometric Box with Checkmark */}
-       <g transform="translate(7, 10)">
-          {/* Left face - parallelogram */}
+       {/* Centered Icon - Premium 3D Isometric Box with Professional Shading */}
+       <g transform="translate(6, 8)">
+          {/* Left face - Darkest (furthest back) */}
           <path
-            d="M0 8L0 20L8 24L8 12Z"
-            stroke={iconStroke}
-            strokeWidth="1.5"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-
-          {/* Right face - parallelogram */}
-          <path
-            d="M8 12L16 8L16 20L8 24Z"
-            stroke={iconStroke}
-            strokeWidth="1.5"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-
-          {/* Top face (open box view) - parallelogram */}
-          <path
-            d="M0 8L8 4L16 8L8 12Z"
-            stroke={iconStroke}
-            strokeWidth="1.5"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-
-          {/* Checkmark emerging from box */}
-          <path
-            d="M10 6L12 9L18 2"
+            d="M0 10L0 22L10 28L10 16Z"
+            fill={isWhiteVariant ? 'rgba(5, 150, 105, 0.12)' : 'rgba(255, 255, 255, 0.12)'}
             stroke={iconStroke}
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
+          />
+
+          {/* Right face - Medium depth */}
+          <path
+            d="M10 16L18 12L18 24L10 28Z"
+            fill={isWhiteVariant ? 'rgba(5, 150, 105, 0.20)' : 'rgba(255, 255, 255, 0.20)'}
+            stroke={iconStroke}
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+
+          {/* Top face - Lightest (closest to viewer) */}
+          <path
+            d="M0 10L10 6L18 12L10 16Z"
+            fill={isWhiteVariant ? 'rgba(5, 150, 105, 0.28)' : 'rgba(255, 255, 255, 0.28)'}
+            stroke={iconStroke}
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+
+          {/* Checkmark - BOLD hero element with shadow */}
+          <path
+            d="M9 10L11.5 13L17 7"
+            stroke={iconStroke}
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            style={{ filter: 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2))' }}
           />
        </g>
     </svg>
