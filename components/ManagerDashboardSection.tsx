@@ -1,7 +1,8 @@
 "use client";
 
 import React from 'react';
-import { LayoutDashboard, CheckCircle2, BarChart3, Users, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import { LayoutDashboard, CheckCircle2, BarChart3, Users } from 'lucide-react';
 
 export const ManagerDashboardSection: React.FC = () => {
   return (
@@ -64,66 +65,19 @@ export const ManagerDashboardSection: React.FC = () => {
             {/* Glow effect */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
             
-            <div className="relative mx-auto bg-slate-800 rounded-t-3xl border-[12px] border-slate-800 border-b-0 shadow-2xl max-w-[600px]">
-                <div className="bg-slate-900 rounded-t-xl overflow-hidden aspect-[16/10] relative border-b border-slate-700/50">
-                   {/* Mock UI */}
-                   <div className="absolute inset-0 bg-slate-50 flex flex-col">
-                      {/* Header */}
-                      <div className="h-12 bg-white border-b border-slate-200 flex items-center justify-between px-4">
-                          <div className="flex items-center gap-2">
-                             <div className="w-6 h-6 bg-emerald-600 rounded flex items-center justify-center text-white font-bold text-xs">Z</div>
-                             <span className="font-bold text-slate-800 text-sm">ZenTrack Dashboard</span>
-                          </div>
-                          <div className="flex items-center gap-3">
-                             <div className="w-20 h-2 bg-slate-100 rounded-full"></div>
-                             <div className="w-8 h-8 bg-slate-200 rounded-full"></div>
-                          </div>
-                      </div>
-                      {/* Body */}
-                      <div className="flex-1 p-4 flex gap-4">
-                          {/* Sidebar */}
-                          <div className="w-40 hidden md:block space-y-2">
-                             <div className="h-8 w-full bg-emerald-50 rounded-lg border border-emerald-100"></div>
-                             <div className="h-8 w-full bg-white rounded-lg"></div>
-                             <div className="h-8 w-full bg-white rounded-lg"></div>
-                             <div className="h-8 w-full bg-white rounded-lg"></div>
-                          </div>
-                          {/* Content */}
-                          <div className="flex-1 space-y-4">
-                             {/* Cards */}
-                             <div className="grid grid-cols-3 gap-3">
-                                <div className="h-20 bg-white rounded-xl border border-slate-200 shadow-sm p-3">
-                                   <div className="w-8 h-8 bg-orange-100 rounded-lg mb-2"></div>
-                                   <div className="w-12 h-2 bg-slate-100 rounded"></div>
-                                </div>
-                                <div className="h-20 bg-white rounded-xl border border-slate-200 shadow-sm p-3">
-                                   <div className="w-8 h-8 bg-emerald-100 rounded-lg mb-2"></div>
-                                   <div className="w-16 h-2 bg-slate-100 rounded"></div>
-                                </div>
-                                <div className="h-20 bg-white rounded-xl border border-slate-200 shadow-sm p-3">
-                                   <div className="w-8 h-8 bg-blue-100 rounded-lg mb-2"></div>
-                                   <div className="w-10 h-2 bg-slate-100 rounded"></div>
-                                </div>
-                             </div>
-                             {/* Action Card */}
-                             <div className="h-32 bg-slate-800 rounded-xl shadow-lg p-4 flex items-center gap-4 relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-10 -mt-10"></div>
-                                <div className="flex-1">
-                                   <div className="w-32 h-3 bg-slate-600 rounded mb-2"></div>
-                                   <div className="w-48 h-2 bg-slate-700 rounded"></div>
-                                </div>
-                                <div className="w-24 h-8 bg-emerald-500 rounded-lg shadow-lg shadow-emerald-900/20"></div>
-                             </div>
-                             {/* List */}
-                             <div className="flex-1 bg-white rounded-xl border border-slate-200 shadow-sm p-4 space-y-2">
-                                <div className="w-32 h-4 bg-slate-100 rounded mb-4"></div>
-                                <div className="h-8 w-full border-b border-slate-50"></div>
-                                <div className="h-8 w-full border-b border-slate-50"></div>
-                                <div className="h-8 w-full border-b border-slate-50"></div>
-                             </div>
-                          </div>
-                      </div>
-                   </div>
+            <div className="relative mx-auto max-w-[600px]">
+                {/* Laptop Frame */}
+                <div className="bg-slate-800 rounded-t-3xl border-[12px] border-slate-800 border-b-0 shadow-2xl">
+                  <div className="bg-slate-900 rounded-t-xl overflow-hidden aspect-[16/10] relative border-b border-slate-700/50">
+                    <Image
+                      src="/images/dashboard-screenshot.png"
+                      alt="ZenTrack Dashboard - Real-time voorraadbeheer met WhatsApp integratie"
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 768px) 100vw, 600px"
+                      priority
+                    />
+                  </div>
                 </div>
                 {/* Laptop Base */}
                 <div className="bg-slate-800 h-4 rounded-b-xl mx-auto w-full shadow-2xl relative">
