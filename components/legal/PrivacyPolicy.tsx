@@ -85,7 +85,7 @@ export const PrivacyPolicy: React.FC<Props> = ({ onBack }) => {
                     <p className="text-slate-600 text-sm leading-relaxed">
                         Voor vragen over privacy of het uitoefenen van uw rechten (inzage, correctie, verwijdering) kunt u contact opnemen met onze Functionaris Gegevensbescherming:
                         <br/><br/>
-                        <strong>ZenTrack B.V.</strong><br/>
+                        <strong>ZenTrack (i.o.)</strong><br/>
                         T.a.v. Privacy Officer<br/>
                         Stationsplein 1<br/>
                         3511 ED Utrecht<br/>

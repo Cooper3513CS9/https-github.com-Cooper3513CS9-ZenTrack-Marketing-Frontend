@@ -61,8 +61,8 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate }) => {
                   </button>
               </li>
               <li className="pt-2 text-slate-500 text-xs">
-                  KvK: 12345678<br/>
-                  BTW: NL876543210B01
+                  KvK: i.o.<br/>
+                  BTW: i.o.
               </li>
             </ul>
           </div>
@@ -82,7 +82,7 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate }) => {
         </div>
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-          <p>© 2025 ZenTrack B.V. Alle rechten voorbehouden.</p>
+          <p>© 2025 ZenTrack. Alle rechten voorbehouden.</p>
           <p>Data op Nederlandse servers (ISO 27001) • AVG/GDPR Compliant</p>
         </div>
       </div>
