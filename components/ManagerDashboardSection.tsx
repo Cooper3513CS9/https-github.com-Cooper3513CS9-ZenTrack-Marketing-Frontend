@@ -65,7 +65,7 @@ export const ManagerDashboardSection: React.FC = () => {
             {/* Glow effect */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
             
-            <div className="relative mx-auto max-w-[600px]">
+            <div className="relative mx-auto max-w-[750px]">
                 {/* Laptop Frame */}
                 <div className="bg-slate-800 rounded-t-3xl border-[12px] border-slate-800 border-b-0 shadow-2xl">
                   <div className="bg-slate-900 rounded-t-xl overflow-hidden aspect-[16/10] relative border-b border-slate-700/50">
@@ -74,7 +74,7 @@ export const ManagerDashboardSection: React.FC = () => {
                       alt="ZenTrack Dashboard - Real-time voorraadbeheer met WhatsApp integratie"
                       fill
                       className="object-cover object-top"
-                      sizes="(max-width: 768px) 100vw, 600px"
+                      sizes="(max-width: 768px) 100vw, 750px"
                       priority
                     />
                   </div>
