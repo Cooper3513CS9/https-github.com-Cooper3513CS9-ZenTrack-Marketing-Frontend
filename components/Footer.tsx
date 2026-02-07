@@ -41,6 +41,14 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate }) => {
             <ul className="space-y-3 text-sm">
               <li><a href="#waarom" className="hover:text-emerald-400 transition-colors">Waarom ZenTrack</a></li>
               <li><a href="#hoe-het-werkt" className="hover:text-emerald-400 transition-colors">Hoe het werkt</a></li>
+              <li>
+                <a href="/expiratie-radar" className="hover:text-emerald-400 transition-colors flex items-center gap-2">
+                  Expiratie Radar
+                  <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-bold bg-emerald-600 text-white">
+                    Gratis
+                  </span>
+                </a>
+              </li>
               <li><a href="#prijzen" className="hover:text-emerald-400 transition-colors">Prijzen</a></li>
               <li><a href="#demo" className="hover:text-emerald-400 transition-colors">Live Demo</a></li>
             </ul>

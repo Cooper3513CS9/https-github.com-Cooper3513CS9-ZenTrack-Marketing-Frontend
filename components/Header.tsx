@@ -12,10 +12,10 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
+    { name: 'Expiratie Radar', href: '/expiratie-radar', badge: 'Gratis' },
     { name: 'Waarom', href: '#waarom' },
     { name: 'Hoe het werkt', href: '#hoe-het-werkt' },
     { name: 'Prijzen', href: '#prijzen' },
-    { name: 'Inzichten', href: '#inzichten' },
     { name: 'Over Ons', href: '#over-ons' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -45,9 +45,14 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors"
+                className="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors flex items-center gap-1.5"
               >
                 {item.name}
+                {'badge' in item && item.badge && (
+                  <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-700 border border-emerald-200">
+                    {item.badge}
+                  </span>
+                )}
               </a>
             ))}
           </nav>
@@ -84,9 +89,14 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
                 key={item.name}
                 href={item.href}
                 onClick={handleMobileNav}
-                className="block px-3 py-3 text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-emerald-600 rounded-lg"
+                className="flex items-center gap-2 px-3 py-3 text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-emerald-600 rounded-lg"
               >
                 {item.name}
+                {'badge' in item && item.badge && (
+                  <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-700 border border-emerald-200">
+                    {item.badge}
+                  </span>
+                )}
               </a>
             ))}
             <div className="pt-4 mt-4 border-t border-slate-100 flex flex-col gap-3">

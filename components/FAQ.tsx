@@ -22,6 +22,18 @@ export const FAQ: React.FC = () => {
     {
       question: "Wat als ik er niet uitkom?",
       answer: "Dan app je Jord. Letterlijk. Als pilot partner heb je een directe lijn met de founders. Geen ticketsysteem, maar gewoon een antwoord."
+    },
+    {
+      question: "Wat is de Expiratie Radar?",
+      answer: "De Expiratie Radar is een gratis tool die vervaldatums van je medische producten bijhoudt. Je voegt producten toe via WhatsApp (foto of commando) en ZenTrack waarschuwt je automatisch als iets bijna verloopt. Met het verkeerslicht systeem zie je in een oogopslag welke producten aandacht nodig hebben."
+    },
+    {
+      question: "Is de Expiratie Radar echt gratis?",
+      answer: "Ja, 100% gratis voor maximaal 25 producten gedurende 6 maanden. Geen creditcard nodig, geen verplichtingen. Na 6 maanden of bij meer dan 25 producten kun je upgraden naar een betaald plan, maar dat is volledig optioneel."
+    },
+    {
+      question: "Hoe voeg ik producten toe aan de Expiratie Radar?",
+      answer: "Er zijn 3 manieren: (1) Stuur een foto van het etiket via WhatsApp — ZenTrack leest automatisch het product en de vervaldatum, (2) Typ het VERVAL commando in WhatsApp (bijv. 'VERVAL handschoenen mrt 2026'), of (3) Voeg producten handmatig toe via het dashboard."
     }
   ];
 
@@ -54,7 +66,7 @@ export const FAQ: React.FC = () => {
               
               <div 
                 className={`px-6 text-slate-600 leading-relaxed overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? 'max-h-48 pb-6 opacity-100' : 'max-h-0 opacity-0'
+                  openIndex === index ? 'max-h-96 pb-6 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
                 {faq.answer}
