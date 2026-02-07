@@ -13,10 +13,10 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
 
   const navItems = [
     { name: 'Expiratie Radar', href: '/expiratie-radar', badge: 'Gratis' },
-    { name: 'Waarom', href: '#waarom' },
-    { name: 'Hoe het werkt', href: '#hoe-het-werkt' },
+    { name: 'Factuur Scanner', href: '/factuur-scanner' },
+    { name: 'Voorraad Beheer', href: '/voorraad-beheer' },
+    { name: 'Slim Bestellen', href: '/slim-bestellen' },
     { name: 'Prijzen', href: '#prijzen' },
-    { name: 'Over Ons', href: '#over-ons' },
     { name: 'Contact', href: '#contact' },
   ];
 

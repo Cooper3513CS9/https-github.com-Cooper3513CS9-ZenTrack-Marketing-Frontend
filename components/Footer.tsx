@@ -39,8 +39,6 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate }) => {
           <div>
             <h4 className="text-white font-semibold mb-6">Product</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="#waarom" className="hover:text-emerald-400 transition-colors">Waarom ZenTrack</a></li>
-              <li><a href="#hoe-het-werkt" className="hover:text-emerald-400 transition-colors">Hoe het werkt</a></li>
               <li>
                 <a href="/expiratie-radar" className="hover:text-emerald-400 transition-colors flex items-center gap-2">
                   Expiratie Radar
@@ -49,8 +47,12 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate }) => {
                   </span>
                 </a>
               </li>
+              <li><a href="/factuur-scanner" className="hover:text-emerald-400 transition-colors">Factuur Scanner</a></li>
+              <li><a href="/pakbon-verificatie" className="hover:text-emerald-400 transition-colors">Pakbon Verificatie</a></li>
+              <li><a href="/slim-bestellen" className="hover:text-emerald-400 transition-colors">Slim Bestellen</a></li>
+              <li><a href="/voorraad-beheer" className="hover:text-emerald-400 transition-colors">Voorraad Beheer</a></li>
+              <li><a href="/npa-accreditatie" className="hover:text-emerald-400 transition-colors">NPA Accreditatie</a></li>
               <li><a href="#prijzen" className="hover:text-emerald-400 transition-colors">Prijzen</a></li>
-              <li><a href="#demo" className="hover:text-emerald-400 transition-colors">Live Demo</a></li>
             </ul>
           </div>
 
