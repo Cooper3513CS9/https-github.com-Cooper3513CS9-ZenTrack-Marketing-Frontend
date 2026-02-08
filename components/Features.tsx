@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Radar, ScanLine, PackageCheck, Boxes, TrendingDown, ShieldCheck, UserCheck, ArrowRight, Clock } from 'lucide-react';
+import { Radar, ScanLine, PackageCheck, Boxes, TrendingDown, ShieldCheck, UserCheck, ArrowRight, Clock, Calculator } from 'lucide-react';
 
 const features = [
   {
@@ -59,7 +59,7 @@ const features = [
   },
   {
     title: 'Slim Bestellen',
-    description: 'Vergelijk prijzen bij 3+ leveranciers. ZenTrack stelt de beste bestelling voor op basis van uw verbruik.',
+    description: 'Prijsinzicht uit het netwerk. ZenTrack vergelijkt factuurdata en herinnert u wanneer het tijd is om bij te bestellen.',
     href: '/slim-bestellen',
     icon: TrendingDown,
     iconBg: 'bg-amber-100',
@@ -72,7 +72,7 @@ const features = [
   },
   {
     title: 'NPA Accreditatie',
-    description: 'Altijd audit-proof. Automatische registratie voor NPA-visitaties en IGJ-compliance.',
+    description: 'Uw NPA-dossier groeit automatisch mee. Voorraad, expiraties en leveringen — altijd gedocumenteerd.',
     href: '/npa-accreditatie',
     icon: ShieldCheck,
     iconBg: 'bg-violet-100',
@@ -82,6 +82,19 @@ const features = [
     cardBg: 'bg-white',
     isHighlighted: false,
     ctaText: 'Meer info',
+  },
+  {
+    title: 'Besparingscalculator',
+    description: 'Wat levert ZenTrack uw praktijk op? Reken het uit met uw eigen cijfers — in 30 seconden.',
+    href: '/#calculator',
+    icon: Calculator,
+    iconBg: 'bg-emerald-100',
+    iconColor: 'text-emerald-600',
+    ctaColor: 'text-emerald-600',
+    cardBorder: 'border-2 border-emerald-200',
+    cardBg: 'bg-emerald-50/30',
+    isHighlighted: false,
+    ctaText: 'Bereken uw besparing',
   },
 ];
 

@@ -8,7 +8,7 @@ import { Logo } from '@/components/Logo'
 import {
   ShieldCheck, Camera, ClipboardList, AlertTriangle, Clock, Shield, MessageCircle,
   Check, X, ArrowRight, Smartphone, CheckCircle2, ChevronRight, FileCheck,
-  Award, BookOpen, Download
+  Award, BookOpen
 } from 'lucide-react'
 
 export default function NpaAccreditatiePage() {
@@ -57,7 +57,7 @@ export default function NpaAccreditatiePage() {
                   <p className="flex items-center gap-1.5"><Check className="w-3 h-3 text-emerald-500 shrink-0" /> <span>Audit trail beschikbaar</span></p>
                 </div>
                 <div className="mt-2 bg-emerald-50 p-1.5 rounded border border-emerald-100 text-[10px] text-emerald-700 font-bold">
-                  Score: 100% — Klaar voor visitatie!
+                  4 domeinen actief — dossier up-to-date ✓
                 </div>
               </div>
             </div>
@@ -69,22 +69,22 @@ export default function NpaAccreditatiePage() {
             <div className="flex justify-end mb-3">
               <div className="bg-[#DCF8C6] p-2.5 rounded-lg rounded-tr-none max-w-[90%] shadow-sm text-xs">
                 <div className="flex items-center gap-2 mb-1 pb-1 border-b border-emerald-200/50">
-                  <Download className="w-3 h-3 text-emerald-600" />
-                  <span className="font-bold text-[10px] text-emerald-800">RAPPORT</span>
+                  <FileCheck className="w-3 h-3 text-emerald-600" />
+                  <span className="font-bold text-[10px] text-emerald-800">DOSSIER</span>
                 </div>
-                <p className="text-slate-700">Genereer het accreditatie rapport.</p>
+                <p className="text-slate-700">Toon het NPA dossier overzicht.</p>
               </div>
             </div>
             <div className="flex justify-start">
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
-                <p className="font-bold text-slate-800 mb-2">Rapport gegenereerd</p>
+                <p className="font-bold text-slate-800 mb-2">Dossier overzicht</p>
                 <div className="space-y-1.5 text-slate-600">
-                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-blue-500 shrink-0" /> <span>Voorraadbeheer documentatie</span></p>
-                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-blue-500 shrink-0" /> <span>Expiratie controle logboek</span></p>
-                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-blue-500 shrink-0" /> <span>Leverancier audit trail</span></p>
+                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-blue-500 shrink-0" /> <span>Voorraadbeheer documentatie ✓</span></p>
+                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-blue-500 shrink-0" /> <span>Expiratie controle logboek ✓</span></p>
+                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-blue-500 shrink-0" /> <span>Leverancier audit trail ✓</span></p>
                 </div>
                 <div className="mt-2 bg-blue-50 p-1.5 rounded border border-blue-100 text-[10px] text-blue-700 font-bold">
-                  PDF klaar — download via dashboard
+                  Overzicht beschikbaar in dashboard
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@ export default function NpaAccreditatiePage() {
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-yellow-500 shrink-0"></span> <span>Jaarlijkse sterilisatie controle (maart)</span></p>
                 </div>
                 <div className="mt-2 bg-emerald-50 p-1.5 rounded border border-emerald-100 text-[10px] text-emerald-700">
-                  <span className="font-bold">8 van 10</span> NPA criteria voldoen. 2 aandachtspunten.
+                  <span className="font-bold">4 NPA domeinen</span> gedekt. 2 aandachtspunten.
                 </div>
               </div>
             </div>
@@ -163,17 +163,17 @@ export default function NpaAccreditatiePage() {
               <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
                 <div className="inline-flex items-center gap-2 bg-violet-50 border border-violet-100 text-violet-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
                   <ShieldCheck className="w-4 h-4" />
-                  <span>Automatische NPA documentatie</span>
+                  <span>NPA-conforme werkprocessen</span>
                 </div>
 
                 <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
-                  Altijd Audit-Proof.<br />
+                  Uw NPA-Dossier Groeit Automatisch Mee.<br />
                   <span className="text-emerald-600">Zonder Paniek voor de Visitatie.</span>
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
-                  ZenTrack genereert automatisch de NPA-conforme documentatie uit uw dagelijkse werkprocessen. Geen extra werk.
-                  <strong className="text-slate-900 block mt-2">Altijd klaar. In een klik een rapport.</strong>
+                  ZenTrack legt automatisch uw voorraad, expiraties en leveringen vast — de basis voor uw NPA-accreditatie. Geen extra werk.
+                  <strong className="text-slate-900 block mt-2">Wij vullen de mappen, u doet de zorg.</strong>
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
@@ -189,8 +189,8 @@ export default function NpaAccreditatiePage() {
                 </div>
 
                 <div className="mt-10 flex flex-wrap items-center justify-center md:justify-start gap-6 text-sm text-slate-500 font-medium">
-                  <span className="flex items-center gap-2"><Award className="w-4 h-4" /> NPA Conform</span>
-                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> GDPR Compliant</span>
+                  <span className="flex items-center gap-2"><Award className="w-4 h-4" /> NPA Ready</span>
+                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> AVG & NEN 7510 Proof</span>
                   <span className="flex items-center gap-2"><Smartphone className="w-4 h-4" /> Via WhatsApp</span>
                 </div>
               </div>
@@ -275,9 +275,9 @@ export default function NpaAccreditatiePage() {
                 },
                 {
                   step: '3',
-                  title: 'Rapport met een klik',
-                  desc: 'Genereer het NPA-conforme accreditatierapport. Print of mail het direct naar de visitator.',
-                  icon: Download,
+                  title: 'Dossier groeit automatisch',
+                  desc: 'Elke factuur, expiratie-check en levering voedt uw NPA-dossier. Geen extra werk — het gebeurt terwijl u werkt.',
+                  icon: FileCheck,
                   color: 'bg-emerald-500',
                 },
               ].map((item, i) => (
@@ -299,9 +299,9 @@ export default function NpaAccreditatiePage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                Wat zit in het rapport
+                Wat wordt automatisch vastgelegd
               </h2>
-              <p className="text-lg text-slate-600">Alles wat de visitator nodig heeft — automatisch gegenereerd.</p>
+              <p className="text-lg text-slate-600">De administratieve basis voor uw NPA-visitatie — zonder extra werk.</p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -356,10 +356,10 @@ export default function NpaAccreditatiePage() {
                   <h3 className="text-lg font-bold text-slate-900">Met NPA Accreditatie</h3>
                 </div>
                 <div className="space-y-3">
-                  <FeatureCheck text="Altijd audit-proof — zero voorbereiding" highlighted />
+                  <FeatureCheck text="Audit-dossier bouwt zich automatisch op" highlighted />
                   <FeatureCheck text="Automatische documentatie uit dagelijks gebruik" />
                   <FeatureCheck text="Complete audit trail met timestamps" />
-                  <FeatureCheck text="NPA rapport genereren met een klik" />
+                  <FeatureCheck text="NPA documentatie altijd actueel" />
                   <FeatureCheck text="Proactieve herinneringen voor controles" />
                 </div>
               </div>
@@ -372,14 +372,14 @@ export default function NpaAccreditatiePage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
               <ShieldCheck className="w-4 h-4" />
-              <span>Altijd klaar voor de visitatie</span>
+              <span>Uw administratie op orde</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Nooit meer paniek<br />
               <span className="text-emerald-400">voor de NPA visitatie.</span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-              Gebruik ZenTrack voor uw dagelijkse voorraadbeheer. De accreditatie documentatie wordt automatisch aangemaakt.
+              Gebruik ZenTrack voor uw dagelijkse voorraadbeheer. Uw NPA-dossier wordt automatisch opgebouwd uit elke factuur en controle.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <button

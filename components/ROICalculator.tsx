@@ -52,7 +52,7 @@ export const ROICalculator: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-white overflow-hidden border-t border-slate-100">
+    <section id="calculator" className="py-20 bg-white overflow-hidden border-t border-slate-100 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           
@@ -76,7 +76,7 @@ export const ROICalculator: React.FC = () => {
                     </div>
                     <div>
                         <h4 className="font-bold text-slate-900 text-lg">Inkoopvoordeel</h4>
-                        <p className="text-sm text-slate-500">Besparing door prijsvergelijking en minder verspilling.</p>
+                        <p className="text-sm text-slate-500">Besparing door inzicht uit factuurdata van het hele netwerk.</p>
                     </div>
                 </div>
                 <div className="flex items-start gap-4">

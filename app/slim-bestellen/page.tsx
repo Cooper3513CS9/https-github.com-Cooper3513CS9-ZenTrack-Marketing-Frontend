@@ -6,9 +6,9 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { Logo } from '@/components/Logo'
 import {
-  TrendingDown, Camera, ClipboardList, AlertTriangle, Clock, Shield, MessageCircle,
-  Check, X, ArrowRight, Smartphone, CheckCircle2, ChevronRight, Search,
-  BarChart3, ShoppingCart, DollarSign
+  TrendingDown, ClipboardList, AlertTriangle, Clock, Shield,
+  Check, X, ArrowRight, Smartphone, Search,
+  BarChart3, ShoppingCart, Euro
 } from 'lucide-react'
 
 export default function SlimBestellenPage() {
@@ -42,21 +42,21 @@ export default function SlimBestellenPage() {
               <div className="bg-[#DCF8C6] p-2.5 rounded-lg rounded-tr-none max-w-[90%] shadow-sm text-xs">
                 <div className="flex items-center gap-2 mb-1 pb-1 border-b border-emerald-200/50">
                   <Search className="w-3 h-3 text-emerald-600" />
-                  <span className="font-bold text-[10px] text-emerald-800">PRIJS CHECK</span>
+                  <span className="font-bold text-[10px] text-emerald-800">VOORRAAD CHECK</span>
                 </div>
-                <p className="text-slate-700">Wat kost handschoenen nitryl M?</p>
+                <p className="text-slate-700">Hoe staat het met handschoenen nitryl M?</p>
               </div>
             </div>
             <div className="flex justify-start">
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
-                <p className="font-bold text-slate-800 mb-2">Prijsvergelijking</p>
+                <p className="font-bold text-slate-800 mb-2">Verbruiksanalyse</p>
                 <div className="space-y-1.5 text-slate-600">
-                  <p className="flex items-center justify-between"><span>Mediq</span> <span className="font-bold">€12,50/doos</span></p>
-                  <p className="flex items-center justify-between"><span>Henry Schein</span> <span className="font-bold text-emerald-600">€10,90/doos</span></p>
-                  <p className="flex items-center justify-between"><span>Pharmaline</span> <span className="font-bold">€11,75/doos</span></p>
+                  <p className="flex items-center justify-between"><span>Voorraad</span> <span className="font-bold">4 dozen</span></p>
+                  <p className="flex items-center justify-between"><span>Verbruik/maand</span> <span className="font-bold">~12 dozen</span></p>
+                  <p className="flex items-center justify-between"><span>Laatste bestelling</span> <span className="font-bold text-emerald-600">3 weken geleden</span></p>
                 </div>
                 <div className="mt-2 bg-emerald-50 p-1.5 rounded border border-emerald-100 text-[10px] text-emerald-700 font-bold">
-                  Besparing: €1,60/doos bij Henry Schein
+                  Advies: over 5 dagen bijbestellen
                 </div>
               </div>
             </div>
@@ -69,21 +69,21 @@ export default function SlimBestellenPage() {
               <div className="bg-[#DCF8C6] p-2.5 rounded-lg rounded-tr-none max-w-[90%] shadow-sm text-xs">
                 <div className="flex items-center gap-2 mb-1 pb-1 border-b border-emerald-200/50">
                   <ShoppingCart className="w-3 h-3 text-emerald-600" />
-                  <span className="font-bold text-[10px] text-emerald-800">BESTEL TIP</span>
+                  <span className="font-bold text-[10px] text-emerald-800">BESTELMOMENT</span>
                 </div>
                 <p className="text-slate-700">Wat moet ik bestellen?</p>
               </div>
             </div>
             <div className="flex justify-start">
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
-                <p className="font-bold text-slate-800 mb-2">Bestelsuggestie</p>
+                <p className="font-bold text-slate-800 mb-2">Bestelherinnering</p>
                 <div className="space-y-1.5 text-slate-600">
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-red-500 shrink-0"></span> <span className="font-bold">Handschoenen M</span> <span className="text-[10px] text-red-500">(op!)</span></p>
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span> <span>Injectienaald 21G</span> <span className="text-[10px] text-orange-500">(bijna op)</span></p>
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-yellow-500 shrink-0"></span> <span>Pleisterstrips</span> <span className="text-[10px] text-slate-400">(3 dozen)</span></p>
                 </div>
                 <div className="mt-2 bg-blue-50 p-1.5 rounded border border-blue-100 text-[10px] text-blue-700 font-bold">
-                  Tip: Bundel bij Henry Schein = €24 besparing
+                  Tip: U bestelt deze 3 producten vaak samen — alles in één keer?
                 </div>
               </div>
             </div>
@@ -96,22 +96,22 @@ export default function SlimBestellenPage() {
               <div className="bg-[#DCF8C6] p-2.5 rounded-lg rounded-tr-none max-w-[90%] shadow-sm text-xs">
                 <div className="flex items-center gap-2 mb-1 pb-1 border-b border-emerald-200/50">
                   <BarChart3 className="w-3 h-3 text-emerald-600" />
-                  <span className="font-bold text-[10px] text-emerald-800">BESPARING</span>
+                  <span className="font-bold text-[10px] text-emerald-800">OVERZICHT</span>
                 </div>
-                <p className="text-slate-700">Hoeveel heb ik bespaard?</p>
+                <p className="text-slate-700">Hoeveel tijd heb ik bespaard?</p>
               </div>
             </div>
             <div className="flex justify-start">
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
-                <p className="font-bold text-slate-800 mb-2">Besparingsoverzicht Q4</p>
+                <p className="font-bold text-slate-800 mb-2">Kwartaaloverzicht Q4</p>
                 <div className="space-y-1.5 text-slate-600">
-                  <p className="flex items-center justify-between"><span>Prijsverschillen gevonden</span> <span className="font-bold">47</span></p>
-                  <p className="flex items-center justify-between"><span>Bestellingen geoptimaliseerd</span> <span className="font-bold">12</span></p>
-                  <p className="flex items-center justify-between"><span>Dubbele bestellingen voorkomen</span> <span className="font-bold">3</span></p>
+                  <p className="flex items-center justify-between"><span>Spoedbestellingen voorkomen</span> <span className="font-bold">12</span></p>
+                  <p className="flex items-center justify-between"><span>Prijsverschillen gesignaleerd</span> <span className="font-bold">8</span></p>
+                  <p className="flex items-center justify-between"><span>Verlopen voorraad voorkomen</span> <span className="font-bold">5</span></p>
                 </div>
                 <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-[10px] text-slate-500">Totale besparing Q4</span>
-                  <span className="font-bold text-emerald-600 text-sm">€1.240</span>
+                  <span className="text-[10px] text-slate-500">Besparing Q4</span>
+                  <span className="font-bold text-emerald-600 text-sm">€840 + 38 uur</span>
                 </div>
               </div>
             </div>
@@ -164,17 +164,17 @@ export default function SlimBestellenPage() {
               <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
                 <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-100 text-amber-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
                   <TrendingDown className="w-4 h-4" />
-                  <span>9.000+ producten vergeleken</span>
+                  <span>9.000+ producten beheerd</span>
                 </div>
 
                 <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
-                  Nooit Meer Te Veel<br />
-                  <span className="text-emerald-600">Betalen voor Supplies.</span>
+                  Slimmer Bestellen.<br />
+                  <span className="text-emerald-600">Meer Overzicht. Minder Kosten.</span>
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
-                  ZenTrack vergelijkt automatisch prijzen bij meerdere leveranciers en geeft bestelsuggesties op basis van uw verbruik.
-                  <strong className="text-slate-900 block mt-2">Bespaar tot €4.800 per jaar. Zonder extra werk.</strong>
+                  ZenTrack analyseert uw facturen en bestelhistorie. U ziet wat u verbruikt, wat u betaalt en wanneer u moet bijbestellen.
+                  <strong className="text-slate-900 block mt-2">Bespaar tijd én geld. Zonder extra werk.</strong>
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
@@ -190,8 +190,8 @@ export default function SlimBestellenPage() {
                 </div>
 
                 <div className="mt-10 flex flex-wrap items-center justify-center md:justify-start gap-6 text-sm text-slate-500 font-medium">
-                  <span className="flex items-center gap-2"><DollarSign className="w-4 h-4" /> Tot €4.800/jaar besparing</span>
-                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> GDPR Compliant</span>
+                  <span className="flex items-center gap-2"><Euro className="w-4 h-4" /> Prijsinzicht uit uw facturen</span>
+                  <span className="flex items-center gap-2"><Clock className="w-4 h-4" /> 3 uur/week tijdwinst</span>
                   <span className="flex items-center gap-2"><Smartphone className="w-4 h-4" /> Via WhatsApp</span>
                 </div>
               </div>
@@ -204,32 +204,32 @@ export default function SlimBestellenPage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                Herkenbaar? <span className="text-red-500">Dit gaat mis.</span>
+                Herkenbaar? <span className="text-red-500">Dit kost u tijd.</span>
               </h2>
-              <p className="text-lg text-slate-600">De meeste praktijken betalen te veel — zonder het te weten.</p>
+              <p className="text-lg text-slate-600">De meeste praktijken besteden uren per week aan handmatig voorraadbeheer.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
-                  icon: DollarSign,
-                  title: 'Altijd dezelfde leverancier',
-                  desc: 'U bestelt al jaren bij dezelfde leverancier uit gewoonte. Maar is dat nog steeds de beste prijs?',
+                  icon: Clock,
+                  title: 'Bestellen kost te veel tijd',
+                  desc: 'Voorraad checken, lijstjes maken, inloggen bij de webshop, handmatig bestellen. Elke week opnieuw.',
                   color: 'text-red-500',
                   bg: 'bg-red-50',
                   border: 'border-red-100',
                 },
                 {
                   icon: AlertTriangle,
-                  title: 'Stille prijsverhogingen',
-                  desc: 'Leveranciers verhogen geleidelijk hun prijzen. Zonder monitoring betaalt u maanden te veel.',
+                  title: 'Geen inzicht in wat u betaalt',
+                  desc: 'Praktijken betalen vaak 15-40% meer dan collega\'s voor dezelfde producten. Maar wie vergelijkt dat?',
                   color: 'text-orange-500',
                   bg: 'bg-orange-50',
                   border: 'border-orange-100',
                 },
                 {
-                  icon: Clock,
-                  title: 'Geen tijd om te vergelijken',
-                  desc: '3 webshops openen, prijzen opzoeken, vergelijken, bestellen. Kost een uur per bestelling.',
+                  icon: ClipboardList,
+                  title: 'Elke praktijk is een eiland',
+                  desc: 'Uw buurpraktijk betaalt misschien €3 minder per doos. Maar zonder netwerk weet u dat niet.',
                   color: 'text-yellow-600',
                   bg: 'bg-yellow-50',
                   border: 'border-yellow-100',
@@ -269,15 +269,15 @@ export default function SlimBestellenPage() {
                 },
                 {
                   step: '2',
-                  title: 'Prijzen automatisch vergeleken',
-                  desc: 'ZenTrack vergelijkt 9.000+ producten bij meerdere leveranciers. U krijgt altijd de beste prijs.',
+                  title: 'Prijsinzicht uit het netwerk',
+                  desc: 'ZenTrack vergelijkt factuurdata van honderden praktijken. U ziet direct of u te veel betaalt — anoniem en veilig.',
                   icon: Search,
                   color: 'bg-orange-500',
                 },
                 {
                   step: '3',
-                  title: 'Bestelsuggestie via WhatsApp',
-                  desc: 'U krijgt een melding: "Handschoenen bijna op. Beste prijs: Henry Schein €10,90." Een tik = besteld.',
+                  title: 'Bestelherinnering via WhatsApp',
+                  desc: 'U krijgt een melding: "Handschoenen bijna op — over 5 dagen bijbestellen." Eén tik = besteld.',
                   icon: ShoppingCart,
                   color: 'bg-emerald-500',
                 },
@@ -302,15 +302,15 @@ export default function SlimBestellenPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
                 Waar u bespaart
               </h2>
-              <p className="text-lg text-slate-600">Prijsverschillen van 15-40% zijn geen uitzondering.</p>
+              <p className="text-lg text-slate-600">Tijd besparen én inkoopkosten verlagen — door de kracht van het netwerk.</p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { label: 'Prijsvergelijking', desc: 'Meerdere leveranciers', icon: '🔍', bg: 'bg-amber-50', border: 'border-amber-200' },
-                { label: 'Bundelkorting', desc: 'Slim combineren', icon: '📦', bg: 'bg-emerald-50', border: 'border-emerald-200' },
-                { label: 'Timing', desc: 'Bestel op juiste moment', icon: '⏰', bg: 'bg-blue-50', border: 'border-blue-200' },
-                { label: 'Duplicaten', desc: 'Voorkomen dubbel bestellen', icon: '🚫', bg: 'bg-purple-50', border: 'border-purple-200' },
+                { label: 'Prijsinzicht', desc: 'Zie wat collega-praktijken betalen', icon: '💰', bg: 'bg-amber-50', border: 'border-amber-200' },
+                { label: 'Verbruiksanalyse', desc: 'Weet wat u verbruikt', icon: '📊', bg: 'bg-emerald-50', border: 'border-emerald-200' },
+                { label: 'Bestelherinnering', desc: 'Nooit meer te laat bestellen', icon: '🔔', bg: 'bg-blue-50', border: 'border-blue-200' },
+                { label: 'Netwerk voordeel', desc: 'Data van honderden praktijken', icon: '🤝', bg: 'bg-purple-50', border: 'border-purple-200' },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-5 border ${item.border} text-center`}>
                   <div className="text-2xl mb-3">{item.icon}</div>
@@ -340,11 +340,11 @@ export default function SlimBestellenPage() {
                   <h3 className="text-lg font-bold text-slate-900">Zonder Slim Bestellen</h3>
                 </div>
                 <div className="space-y-3">
-                  <FeatureX text="Altijd dezelfde leverancier, ook al is het duurder" />
-                  <FeatureX text="Geen zicht op prijswijzigingen" />
-                  <FeatureX text="Een uur per week kwijt aan vergelijken" />
+                  <FeatureX text="Geen idee wat collega-praktijken betalen" />
+                  <FeatureX text="Geen overzicht over verbruik en prijstrends" />
+                  <FeatureX text="Uren per week kwijt aan bestelbeheer" />
                   <FeatureX text="Te veel bestellen of te laat bestellen" />
-                  <FeatureX text="Dubbele bestellingen door miscommunicatie" />
+                  <FeatureX text="Elke praktijk onderhandelt alleen" />
                 </div>
               </div>
 
@@ -357,11 +357,11 @@ export default function SlimBestellenPage() {
                   <h3 className="text-lg font-bold text-slate-900">Met Slim Bestellen</h3>
                 </div>
                 <div className="space-y-3">
-                  <FeatureCheck text="Automatische prijsvergelijking bij 3+ leveranciers" highlighted />
-                  <FeatureCheck text="Direct melding bij prijswijzigingen" />
-                  <FeatureCheck text="Bestelsuggesties op basis van verbruik" />
-                  <FeatureCheck text="Optimale bestelmomenten (op tijd, niet te vroeg)" />
-                  <FeatureCheck text="Besparingsoverzicht per kwartaal" />
+                  <FeatureCheck text="Prijsinzicht uit factuurdata van honderden praktijken" highlighted />
+                  <FeatureCheck text="Automatische bestelherinneringen op basis van verbruik" />
+                  <FeatureCheck text="Direct melding bij lage voorraad of naderende vervaldatums" />
+                  <FeatureCheck text="Netwerk-brede prijstrends en bespaarkansen" />
+                  <FeatureCheck text="Kwartaaloverzicht: besparing + tijdwinst" />
                 </div>
               </div>
             </div>
@@ -373,14 +373,14 @@ export default function SlimBestellenPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
               <TrendingDown className="w-4 h-4" />
-              <span>Bespaar tot €4.800 per jaar</span>
+              <span>Profiteer van het netwerk</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Slim inkopen?<br />
-              <span className="text-emerald-400">ZenTrack doet het rekenwerk.</span>
+              Slim bestellen?<br />
+              <span className="text-emerald-400">Samen sterker inkopen.</span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-              Na een paar facturen kent ZenTrack uw verbruik. Daarna krijgt u automatisch de beste prijs bij elke bestelling.
+              Hoe meer praktijken meedoen, hoe beter het inzicht. ZenTrack analyseert factuurdata van het hele netwerk — u profiteert van elke factuur die wordt gescand.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <button
