@@ -13,7 +13,7 @@ const featureDropdownItems = [
   { name: 'Factuur Scanner', href: '/factuur-scanner', icon: ScanLine, description: 'AI-gestuurde factuurverwerking' },
   { name: 'Pakbon Verificatie', href: '/pakbon-verificatie', icon: PackageCheck, description: 'Leveringen direct controleren' },
   { name: 'Voorraad Beheer', href: '/voorraad-beheer', icon: Boxes, description: 'Real-time per locatie' },
-  { name: 'Slim Bestellen', href: '/slim-bestellen', icon: TrendingDown, description: 'Inkoopinzicht uit het netwerk' },
+  { name: 'Slim Bestellen', href: '/slim-bestellen', icon: TrendingDown, description: 'Inkoopinzicht uit collega-praktijken' },
   { name: 'NPA Accreditatie', href: '/npa-accreditatie', icon: ShieldCheck, description: 'Uw NPA-dossier op orde' },
 ];
 

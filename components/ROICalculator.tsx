@@ -76,7 +76,7 @@ export const ROICalculator: React.FC = () => {
                     </div>
                     <div>
                         <h4 className="font-bold text-slate-900 text-lg">Inkoopvoordeel</h4>
-                        <p className="text-sm text-slate-500">Besparing door inzicht uit factuurdata van het hele netwerk.</p>
+                        <p className="text-sm text-slate-500">Besparing door inzicht uit factuurdata van collega-praktijken.</p>
                     </div>
                 </div>
                 <div className="flex items-start gap-4">

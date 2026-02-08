@@ -229,7 +229,7 @@ export default function SlimBestellenPage() {
                 {
                   icon: ClipboardList,
                   title: 'Elke praktijk is een eiland',
-                  desc: 'Uw buurpraktijk betaalt misschien €3 minder per doos. Maar zonder netwerk weet u dat niet.',
+                  desc: 'Uw buurpraktijk betaalt misschien minder — maar zonder inzicht weet u dat niet.',
                   color: 'text-yellow-600',
                   bg: 'bg-yellow-50',
                   border: 'border-yellow-100',
@@ -269,8 +269,8 @@ export default function SlimBestellenPage() {
                 },
                 {
                   step: '2',
-                  title: 'Prijsinzicht uit het netwerk',
-                  desc: 'ZenTrack vergelijkt factuurdata van honderden praktijken. U ziet direct of u te veel betaalt — anoniem en veilig.',
+                  title: 'Prijsinzicht uit collega-praktijken',
+                  desc: 'ZenTrack vergelijkt factuurdata van collega-praktijken. U ziet direct of u te veel betaalt — anoniem en veilig.',
                   icon: Search,
                   color: 'bg-orange-500',
                 },
@@ -302,7 +302,7 @@ export default function SlimBestellenPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
                 Waar u bespaart
               </h2>
-              <p className="text-lg text-slate-600">Tijd besparen én inkoopkosten verlagen — door de kracht van het netwerk.</p>
+              <p className="text-lg text-slate-600">Tijd besparen én inkoopkosten verlagen — door inzicht uit collega-praktijken.</p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -310,7 +310,7 @@ export default function SlimBestellenPage() {
                 { label: 'Prijsinzicht', desc: 'Zie wat collega-praktijken betalen', icon: '💰', bg: 'bg-amber-50', border: 'border-amber-200' },
                 { label: 'Verbruiksanalyse', desc: 'Weet wat u verbruikt', icon: '📊', bg: 'bg-emerald-50', border: 'border-emerald-200' },
                 { label: 'Bestelherinnering', desc: 'Nooit meer te laat bestellen', icon: '🔔', bg: 'bg-blue-50', border: 'border-blue-200' },
-                { label: 'Netwerk voordeel', desc: 'Data van honderden praktijken', icon: '🤝', bg: 'bg-purple-50', border: 'border-purple-200' },
+                { label: 'Collectief inzicht', desc: 'Data van collega-praktijken', icon: '🤝', bg: 'bg-purple-50', border: 'border-purple-200' },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-5 border ${item.border} text-center`}>
                   <div className="text-2xl mb-3">{item.icon}</div>
@@ -344,7 +344,7 @@ export default function SlimBestellenPage() {
                   <FeatureX text="Geen overzicht over verbruik en prijstrends" />
                   <FeatureX text="Uren per week kwijt aan bestelbeheer" />
                   <FeatureX text="Te veel bestellen of te laat bestellen" />
-                  <FeatureX text="Elke praktijk onderhandelt alleen" />
+                  <FeatureX text="Elke praktijk staat er alleen voor" />
                 </div>
               </div>
 
@@ -357,10 +357,10 @@ export default function SlimBestellenPage() {
                   <h3 className="text-lg font-bold text-slate-900">Met Slim Bestellen</h3>
                 </div>
                 <div className="space-y-3">
-                  <FeatureCheck text="Prijsinzicht uit factuurdata van honderden praktijken" highlighted />
+                  <FeatureCheck text="Prijsinzicht uit factuurdata van collega-praktijken" highlighted />
                   <FeatureCheck text="Automatische bestelherinneringen op basis van verbruik" />
                   <FeatureCheck text="Direct melding bij lage voorraad of naderende vervaldatums" />
-                  <FeatureCheck text="Netwerk-brede prijstrends en bespaarkansen" />
+                  <FeatureCheck text="Prijstrends uit collega-praktijken en bespaarkansen" />
                   <FeatureCheck text="Kwartaaloverzicht: besparing + tijdwinst" />
                 </div>
               </div>
@@ -373,14 +373,14 @@ export default function SlimBestellenPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
               <TrendingDown className="w-4 h-4" />
-              <span>Profiteer van het netwerk</span>
+              <span>Profiteer van inzicht uit collega-praktijken</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Slim bestellen?<br />
               <span className="text-emerald-400">Samen sterker inkopen.</span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-              Hoe meer praktijken meedoen, hoe beter het inzicht. ZenTrack analyseert factuurdata van het hele netwerk — u profiteert van elke factuur die wordt gescand.
+              Hoe meer collega-praktijken meedoen, hoe beter het inzicht. ZenTrack analyseert factuurdata anoniem — u profiteert van elke factuur die wordt gescand.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <button
