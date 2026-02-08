@@ -85,7 +85,7 @@ export default function FactuurScannerPage() {
                   <p className="flex items-center gap-1.5"><Check className="w-3 h-3 text-emerald-500 shrink-0" /> <span>Voorraad bijgewerkt</span></p>
                 </div>
                 <div className="mt-2 bg-blue-50 p-1.5 rounded border border-blue-100 text-[10px] text-blue-700 font-bold">
-                  Prijswijziging: Handschoenen +€0,40/doos
+                  Alle prijzen opgeslagen in uw dossier
                 </div>
               </div>
             </div>
@@ -98,22 +98,21 @@ export default function FactuurScannerPage() {
               <div className="bg-[#DCF8C6] p-2.5 rounded-lg rounded-tr-none max-w-[90%] shadow-sm text-xs">
                 <div className="flex items-center gap-2 mb-1 pb-1 border-b border-emerald-200/50">
                   <FileText className="w-3 h-3 text-emerald-600" />
-                  <span className="font-bold text-[10px] text-emerald-800">OVERZICHT</span>
+                  <span className="font-bold text-[10px] text-emerald-800">VERVAL STATUS</span>
                 </div>
-                <p className="text-slate-700">Facturen deze maand?</p>
+                <p className="text-slate-700">Verval status</p>
               </div>
             </div>
             <div className="flex justify-start">
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
-                <p className="font-bold text-slate-800 mb-2">Factuuroverzicht — Januari</p>
+                <p className="font-bold text-slate-800 mb-2">Expiratie Overzicht</p>
                 <div className="space-y-1.5 text-slate-600">
-                  <p className="flex items-center justify-between"><span>Mediq</span> <span className="font-bold">€2.340</span></p>
-                  <p className="flex items-center justify-between"><span>Henry Schein</span> <span className="font-bold">€1.875</span></p>
-                  <p className="flex items-center justify-between"><span>Pharmaline</span> <span className="font-bold">€412</span></p>
+                  <p className="flex items-center justify-between"><span>Handschoenen L</span> <span className="font-bold text-amber-600">14 dagen</span></p>
+                  <p className="flex items-center justify-between"><span>NaCl 0,9%</span> <span className="font-bold text-emerald-600">48 dagen</span></p>
+                  <p className="flex items-center justify-between"><span>Hechtmateriaal</span> <span className="font-bold text-emerald-600">62 dagen</span></p>
                 </div>
-                <div className="mt-2 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[10px]">
-                  <span className="text-slate-500">Totaal januari</span>
-                  <span className="font-bold text-slate-900">€4.627</span>
+                <div className="mt-2 pt-1.5 border-t border-slate-100 text-[10px] text-slate-500">
+                  3 items in de gaten houden
                 </div>
               </div>
             </div>
@@ -170,7 +169,7 @@ export default function FactuurScannerPage() {
               <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
                 <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
                   <ScanLine className="w-4 h-4" />
-                  <span>AI-Powered OCR — 98% nauwkeurig</span>
+                  <span>AI-Powered OCR via Mistral AI</span>
                 </div>
 
                 <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
@@ -196,8 +195,8 @@ export default function FactuurScannerPage() {
                 </div>
 
                 <div className="mt-10 flex flex-wrap items-center justify-center md:justify-start gap-6 text-sm text-slate-500 font-medium">
-                  <span className="flex items-center gap-2"><Zap className="w-4 h-4" /> &lt;30 sec verwerking</span>
-                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> GDPR Compliant</span>
+                  <span className="flex items-center gap-2"><Zap className="w-4 h-4" /> Snel verwerkt</span>
+                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> AVG Proof</span>
                   <span className="flex items-center gap-2"><Smartphone className="w-4 h-4" /> Via WhatsApp</span>
                 </div>
               </div>
@@ -227,7 +226,7 @@ export default function FactuurScannerPage() {
                 {
                   icon: AlertTriangle,
                   title: 'Prijswijzigingen missen',
-                  desc: 'Leveranciers verhogen stilletjes de prijs. Zonder controle betaal je maanden te veel zonder het te weten.',
+                  desc: 'Leveranciers verhogen stilletjes de prijs. Zonder een overzicht van alle factuurprijzen merk je het pas maanden later.',
                   color: 'text-orange-500',
                   bg: 'bg-orange-50',
                   border: 'border-orange-100',
@@ -276,14 +275,14 @@ export default function FactuurScannerPage() {
                 {
                   step: '2',
                   title: 'AI herkent alles',
-                  desc: 'Productnamen, prijzen, aantallen, leverancier en factuurnummer worden automatisch geextraheerd. 98% nauwkeurig.',
+                  desc: 'Productnamen, prijzen, aantallen, leverancier en factuurnummer worden automatisch geëxtraheerd door Mistral AI.',
                   icon: Eye,
                   color: 'bg-orange-500',
                 },
                 {
                   step: '3',
                   title: 'Voorraad bijgewerkt',
-                  desc: 'Producten worden automatisch aan uw voorraad toegevoegd. Prijswijzigingen worden gedetecteerd en gemeld.',
+                  desc: 'Producten worden automatisch aan uw voorraad toegevoegd. Prijzen worden opgeslagen voor inzicht per leverancier.',
                   icon: CheckCircle2,
                   color: 'bg-emerald-500',
                 },
@@ -349,9 +348,9 @@ export default function FactuurScannerPage() {
                 <div className="space-y-3">
                   <FeatureX text="20+ minuten per factuur handmatig invoeren" />
                   <FeatureX text="Typefouten in productnamen en bedragen" />
-                  <FeatureX text="Prijswijzigingen ontdek je pas maanden later" />
+                  <FeatureX text="Prijsverschillen ontdek je pas maanden later" />
                   <FeatureX text="Geen overzicht van inkoop per leverancier" />
-                  <FeatureX text="Dubbele facturen worden niet gedetecteerd" />
+                  <FeatureX text="Geen audit trail — wie heeft wat verwerkt?" />
                 </div>
               </div>
 
@@ -365,11 +364,11 @@ export default function FactuurScannerPage() {
                   <h3 className="text-lg font-bold text-slate-900">Met Factuur Scanner</h3>
                 </div>
                 <div className="space-y-3">
-                  <FeatureCheck text="Factuur verwerkt in 30 seconden" highlighted />
-                  <FeatureCheck text="98% nauwkeurige AI herkenning" />
-                  <FeatureCheck text="Directe melding bij prijswijzigingen" />
-                  <FeatureCheck text="Compleet inkoopoverzicht per leverancier" />
-                  <FeatureCheck text="Automatische duplicaat detectie" />
+                  <FeatureCheck text="Factuur verwerkt in seconden — niet minuten" highlighted />
+                  <FeatureCheck text="AI herkent producten, prijzen en leveranciers" />
+                  <FeatureCheck text="Prijzen per product opgeslagen voor inzicht" />
+                  <FeatureCheck text="Voorraad automatisch bijgewerkt na scan" />
+                  <FeatureCheck text="Volledig audit trail van elke factuur" />
                 </div>
               </div>
             </div>
@@ -388,7 +387,7 @@ export default function FactuurScannerPage() {
               <span className="text-emerald-400">Probeer de Factuur Scanner.</span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-              Upload uw eerste factuur via WhatsApp en zie binnen 30 seconden het resultaat. Alle producten, prijzen en leveranciers — automatisch.
+              Upload uw eerste factuur via WhatsApp en zie direct het resultaat. Alle producten, prijzen en leveranciers — automatisch herkend.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <button
@@ -404,7 +403,7 @@ export default function FactuurScannerPage() {
             <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-slate-500 font-medium">
               <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> 14 dagen gratis</span>
               <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Via WhatsApp</span>
-              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Nederlandse servers</span>
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Europese servers (EU)</span>
             </div>
           </div>
         </section>
