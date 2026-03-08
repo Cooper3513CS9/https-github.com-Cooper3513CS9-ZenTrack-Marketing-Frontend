@@ -44,8 +44,8 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
       const monthlyTotal = (locations * pricePerLoc) + dashboardFee;
       const yearlyTotal = monthlyTotal * 12;
 
-      // ROI Calculation (Conservative: ~5x return based on docs)
-      const estimatedSavings = yearlyTotal * 5.2;
+      // ROI Calculation (Conservative: ~3x return estimate)
+      const estimatedSavings = yearlyTotal * 3;
       const roi = Math.round(((estimatedSavings - yearlyTotal) / yearlyTotal) * 100);
 
       setEnterpriseData({
@@ -75,11 +75,11 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                     </div>
                     <div>
                         <h3 className="font-bold text-white text-lg">Pilot Partner Worden?</h3>
-                        <p className="text-slate-400 text-sm">Nog 15 plekken beschikbaar. Start gratis en ontvang 50% lifetime korting op betaalde plannen.</p>
+                        <p className="text-slate-400 text-sm">Word een van de eerste praktijken. Start gratis en ontvang 50% korting als early adopter.</p>
                     </div>
                 </div>
                 <button onClick={onRegisterClick} className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 rounded-xl font-bold text-sm transition-colors shadow-lg shadow-emerald-900/20 whitespace-nowrap">
-                    Claim Pilot Plek →
+                    Word Early Adopter →
                 </button>
             </div>
         </div>
@@ -177,7 +177,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                     <div className="bg-white text-slate-900 rounded-3xl p-8 border border-emerald-500 shadow-xl relative transform lg:-translate-y-4 flex flex-col">
                         <div className="absolute top-0 left-0 w-full h-1.5 bg-emerald-500"></div>
                         <div className="absolute top-4 right-4 bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-                            Meest Gekozen
+                            Aanbevolen
                         </div>
                         <div className="mb-6">
                             <div className="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center mb-4 text-emerald-600">
@@ -310,9 +310,10 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                             <span className="text-2xl font-bold text-purple-400">€{enterpriseData.monthlyTotal.toLocaleString('nl-NL')}</span>
                         </div>
                         <div className="flex justify-between items-center">
-                            <span className="text-sm text-slate-400">Geschatte jaarlijkse besparing</span>
+                            <span className="text-sm text-slate-400">Indicatieve jaarlijkse besparing *</span>
                             <span className="text-sm font-bold text-emerald-400">~ €{enterpriseData.savings.toLocaleString('nl-NL')}</span>
                         </div>
+                        <p className="text-[10px] text-slate-500 mt-2">* Indicatie op basis van branchegemiddelden. Werkelijke besparing verschilt per praktijk.</p>
                     </div>
 
                     <button onClick={onRegisterClick} className="w-full py-4 rounded-xl bg-purple-600 text-white font-bold hover:bg-purple-500 transition-colors shadow-lg shadow-purple-900/20">

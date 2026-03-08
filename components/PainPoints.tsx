@@ -44,7 +44,7 @@ export const PainPoints: React.FC = () => {
             Herken je deze <span className="text-red-500 decoration-red-200 underline decoration-4 underline-offset-4">frustraties?</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Je bent niet de enige. 80% van de praktijken worstelt met verouderde processen die onnodig veel energie kosten.
+            Je bent niet de enige. Veel praktijken worstelen met verouderde processen die onnodig veel energie kosten.
           </p>
         </div>
 
