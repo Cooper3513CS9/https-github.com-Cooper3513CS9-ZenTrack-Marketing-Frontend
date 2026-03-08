@@ -187,7 +187,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
           <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
             <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
               <CheckCircle2 className="w-4 h-4" />
-              <span>Geverifieerd Platform voor Huisartsen</span>
+              <span>Gebouwd voor Nederlandse Huisartspraktijken</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">

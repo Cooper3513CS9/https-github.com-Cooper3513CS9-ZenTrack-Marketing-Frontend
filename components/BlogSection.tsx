@@ -6,9 +6,9 @@ import { ArrowRight, BookOpen, Shield, TrendingUp } from 'lucide-react';
 export const BlogSection: React.FC = () => {
   const articles = [
     {
-      category: "Onderzoek",
+      category: "Inzicht",
       title: "De verborgen kosten van 'grijze' voorraad",
-      excerpt: "Uit data van 50 praktijken blijkt dat 15% van de medische verbruiksartikelen verloopt voordat het gebruikt wordt. Een analyse van de financiële impact.",
+      excerpt: "Uit brancheonderzoek blijkt dat tot 15% van medische verbruiksartikelen verloopt voordat het gebruikt wordt. Wat betekent dit financieel voor uw praktijk?",
       date: "18 Nov 2025",
       readTime: "4 min",
       image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800",
@@ -25,8 +25,8 @@ export const BlogSection: React.FC = () => {
     },
     {
       category: "Praktijkmanagement",
-      title: "Van 12 naar 2 uur: Case Study Huisartsenpraktijk West",
-      excerpt: "Praktijkmanager Sarah vertelt hoe zij de logistieke stromen automatiseerde en wat dit deed met de werkdruk van haar assistentes.",
+      title: "Waarom voorraadbeheer meer tijd kost dan nodig",
+      excerpt: "De meeste praktijken besteden wekelijks uren aan handmatig bijhouden van voorraad en bestellingen. Hoe automatisering de werkdruk verlaagt.",
       date: "05 Nov 2025",
       readTime: "5 min",
       image: "https://images.unsplash.com/photo-1631217868269-dfc1c5c3e042?auto=format&fit=crop&q=80&w=800",
