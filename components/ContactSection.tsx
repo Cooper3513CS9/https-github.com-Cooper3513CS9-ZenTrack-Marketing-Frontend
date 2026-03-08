@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, MessageCircle, CheckCircle, Sparkles, FileText } from 'lucide-react';
-import { AiScheduler } from './AiScheduler';
+import { Mail, Phone, MapPin, MessageCircle, CheckCircle, FileText } from 'lucide-react';
+import { WhatsAppContact } from './WhatsAppContact';
 
 export const ContactSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'ai' | 'form'>('ai');
@@ -33,7 +33,7 @@ export const ContactSection: React.FC = () => {
                 <div>
                     <h2 className="text-3xl font-bold text-slate-900 mb-4">Neem contact op</h2>
                     <p className="text-slate-600">
-                        Klaar om uw voorraadbeheer te automatiseren? Laat onze AI direct een afspraak inplannen of stuur ons een bericht.
+                        Klaar om uw voorraadbeheer te automatiseren? Stuur een WhatsApp berichtje of vul het contactformulier in.
                     </p>
                 </div>
 
@@ -44,7 +44,7 @@ export const ContactSection: React.FC = () => {
                         </div>
                         <div>
                             <p className="font-bold text-slate-900">Telefoon & WhatsApp</p>
-                            <p className="text-slate-600">06-23885227</p>
+                            <p className="text-slate-600">06-10482270</p>
                             <p className="text-xs text-slate-400">Bereikbaar tijdens kantooruren</p>
                         </div>
                     </div>
@@ -76,12 +76,12 @@ export const ContactSection: React.FC = () => {
             <div className="lg:w-2/3">
                 {/* Tabs */}
                 <div className="flex mb-6 bg-slate-100 p-1 rounded-xl w-fit">
-                    <button 
+                    <button
                         onClick={() => setActiveTab('ai')}
                         className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${activeTab === 'ai' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
                     >
-                        <Sparkles className="w-4 h-4 text-emerald-500" />
-                        AI Planner (Snelst)
+                        <MessageCircle className="w-4 h-4 text-[#25D366]" />
+                        WhatsApp (Snelst)
                     </button>
                     <button 
                         onClick={() => setActiveTab('form')}
@@ -93,7 +93,7 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 {activeTab === 'ai' ? (
-                    <AiScheduler />
+                    <WhatsAppContact />
                 ) : (
                     <div className="bg-white rounded-3xl shadow-lg border border-slate-100 p-8 md:p-10">
                         {submitted ? (

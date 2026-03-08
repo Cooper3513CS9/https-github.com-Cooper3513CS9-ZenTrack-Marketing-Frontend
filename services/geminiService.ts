@@ -262,44 +262,4 @@ export const chatWithEmma = async (history: ChatMessage[], newMessage: string): 
   }
 };
 
-export const scheduleDemoInteraction = async (history: {role: 'user' | 'model', text: string}[], userInput: string): Promise<string> => {
-  try {
-    if (!isApiConfigured() || !ai) {
-      return "Excuses, ik kan momenteel mijn agenda niet laden. Stuur een appje naar 06-23885227.";
-    }
-
-    const prompt = `
-      Jij bent de AI Planning Assistent van ZenTrack (genaamd Jord's Assistent).
-      
-      DOEL: Check of de gebruiker een huisartsenpraktijk is en plan een demo.
-
-      STAP 1: Check of je de NAAM van de praktijk weet.
-      Zo niet -> Vraag: "Voor welke huisartsenpraktijk beheer je de voorraad?"
-      
-      STAP 2: Valideer de praktijk.
-      - Als de gebruiker een praktijknaam geeft, doe alsof je het checkt en zeg: "Check, [Naam] gevonden in het register. Welkom!"
-      - Als ze iets anders zeggen (bv groothandel), zeg vriendelijk dat ZenTrack exclusief voor huisartsen is.
-
-      STAP 3: Plan de demo.
-      - Vraag om emailadres.
-      - Stel 2 tijden voor.
-
-      Geschiedenis:
-      ${history.map(h => `${h.role}: ${h.text}`).join('\n')}
-
-      User: ${userInput}
-      
-      Jouw antwoord:
-    `;
-
-    const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
-      contents: prompt,
-    });
-
-    return response.text || "Kan ik je helpen met het plannen van een demo?";
-  } catch (error) {
-    console.error("Error in scheduling agent:", error);
-    return "Excuses, ik kan momenteel mijn agenda niet laden. Stuur een appje naar 06-23885227.";
-  }
-};
+// scheduleDemoInteraction removed — replaced by WhatsApp contact (WhatsAppContact.tsx)
