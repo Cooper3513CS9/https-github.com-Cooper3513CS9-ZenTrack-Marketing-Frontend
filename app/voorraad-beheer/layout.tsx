@@ -1,25 +1,28 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Voorraad Beheer — Zonder Excel, Zonder Stress | ZenTrack',
-  description: 'Voorraad bijhouden zonder Excel-lijstjes. ZenTrack biedt real-time inzicht per kast, kamer en locatie. Via WhatsApp of dashboard — altijd actueel.',
+  title: 'Voorraadbeheer Huisartspraktijk: Real-time Zonder Excel | ZenTrack',
+  description: 'Voorraadbeheer in huisartspraktijken kost gemiddeld 1-3 uur per week aan handmatig tellen en bestellen. ZenTrack vervangt Excel-lijsten door real-time tracking per kast, kamer en locatie via WhatsApp.',
   keywords: [
-    'voorraad beheer huisarts',
     'voorraadbeheer huisartspraktijk',
+    'voorraadbeheer huisarts',
     'voorraad bijhouden zonder excel',
-    'medische voorraad systeem',
+    'medische voorraad software',
     'voorraad tracking praktijk',
     'real-time voorraad overzicht',
-    'ZenTrack voorraad beheer',
-    'kasten beheer huisarts',
+    'digitaal voorraadbeheer zorg',
     'inventarisatie huisartspraktijk',
-    'voorraad per locatie',
+    'voorraad per locatie kast',
+    'WhatsApp voorraadbeheer',
   ],
   openGraph: {
-    title: 'Voorraad Beheer — Zonder Excel, Zonder Stress | ZenTrack',
-    description: 'Real-time voorraad inzicht per kast en locatie. Via WhatsApp of dashboard — altijd actueel.',
+    title: 'Voorraadbeheer Huisartspraktijk: Real-time Zonder Excel | ZenTrack',
+    description: 'Bespaar 1-3 uur per week. ZenTrack vervangt Excel-lijsten door real-time voorraadtracking per kast en locatie.',
     type: 'website',
     locale: 'nl_NL',
+  },
+  alternates: {
+    canonical: 'https://www.zentrack.nl/voorraad-beheer',
   },
 }
 

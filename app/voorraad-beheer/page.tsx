@@ -230,7 +230,7 @@ export default function VoorraadBeheerPage() {
                 {
                   icon: Clock,
                   title: 'Uren kwijt aan voorraadtellingen',
-                  desc: 'Elke week alle kasten langs. Per kamer, per kast, per plank. Kost 2-3 uur per telling.',
+                  desc: 'Elke week alle kasten langs. Per kamer, per kast, per plank. Kost 1-3 uur per telling.',
                   color: 'text-yellow-600',
                   bg: 'bg-yellow-50',
                   border: 'border-yellow-100',
@@ -343,7 +343,7 @@ export default function VoorraadBeheerPage() {
                 <div className="space-y-3">
                   <FeatureX text="Excel-lijsten die nooit up-to-date zijn" />
                   <FeatureX text="Pas bij gebruik ontdekken dat iets op is" />
-                  <FeatureX text="2-3 uur per week aan voorraadtellingen" />
+                  <FeatureX text="1-3 uur per week aan voorraadtellingen" />
                   <FeatureX text="Geen inzicht per kamer of locatie" />
                   <FeatureX text="Te veel bestellen uit angst voor tekort" />
                 </div>

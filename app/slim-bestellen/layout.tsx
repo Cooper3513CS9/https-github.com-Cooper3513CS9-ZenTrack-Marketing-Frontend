@@ -1,25 +1,28 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Slim Bestellen — Nooit Meer Te Veel Betalen | ZenTrack',
-  description: 'Vergelijk prijzen van 9.000+ medische producten bij meerdere leveranciers. ZenTrack vindt automatisch de beste prijs. Bespaar tot €4.800 per jaar.',
+  title: 'Slim Bestellen: Vergelijk Inkoopprijzen Medische Producten | ZenTrack',
+  description: 'Huisartspraktijken besteden gemiddeld €1.000-2.500/maand aan medische verbruiksartikelen. Prijsverschillen tussen leveranciers lopen op tot 40%. ZenTrack vergelijkt automatisch en signaleert besparingen.',
   keywords: [
-    'slim bestellen',
+    'slim bestellen huisarts',
     'medische producten prijsvergelijking',
-    'goedkoper inkopen huisarts',
-    'leverancier vergelijken',
+    'goedkoper inkopen huisartspraktijk',
+    'leverancier vergelijken zorg',
     'inkoopkosten besparen praktijk',
-    'beste prijs medische supplies',
-    'ZenTrack slim bestellen',
-    'automatisch bestellen huisarts',
-    'inkoopoptimalisatie zorg',
     'prijsintelligentie medisch',
+    'inkoopoptimalisatie huisarts',
+    'medische verbruiksartikelen vergelijken',
+    'leverancierskeuze huisarts',
+    'kostenbesparing huisartspraktijk',
   ],
   openGraph: {
-    title: 'Slim Bestellen — Bespaar tot €4.800/jaar | ZenTrack',
-    description: 'Vergelijk prijzen bij meerdere leveranciers. Bespaar automatisch op medische producten.',
+    title: 'Slim Bestellen: Vergelijk Inkoopprijzen | ZenTrack',
+    description: 'Prijsverschillen tot 40% tussen leveranciers. ZenTrack vergelijkt automatisch en signaleert besparingen voor huisartspraktijken.',
     type: 'website',
     locale: 'nl_NL',
+  },
+  alternates: {
+    canonical: 'https://www.zentrack.nl/slim-bestellen',
   },
 }
 
