@@ -27,7 +27,7 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate }) => {
             <div className="space-y-3 text-sm">
               <p className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" />
-                  <span>Stationsplein 1<br/>3511 ED Utrecht</span>
+                  <span>Kruisweg 9L<br/>3513 CS Utrecht</span>
               </p>
               <p className="flex items-center gap-3 hover:text-white transition-colors cursor-pointer">
                   <Phone className="w-4 h-4 text-emerald-500 shrink-0" /> 06-2388-5227

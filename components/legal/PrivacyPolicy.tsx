@@ -87,8 +87,8 @@ export const PrivacyPolicy: React.FC<Props> = ({ onBack }) => {
                         <br/><br/>
                         <strong>ZenTrack (i.o.)</strong><br/>
                         T.a.v. Privacy Officer<br/>
-                        Stationsplein 1<br/>
-                        3511 ED Utrecht<br/>
+                        Kruisweg 9L<br/>
+                        3513 CS Utrecht<br/>
                         privacy@zentrack.nl
                     </p>
                 </section>
