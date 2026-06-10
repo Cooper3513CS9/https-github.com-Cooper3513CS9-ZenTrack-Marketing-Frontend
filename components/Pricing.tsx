@@ -74,8 +74,8 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                         <Rocket className="w-6 h-6" />
                     </div>
                     <div>
-                        <h3 className="font-bold text-white text-lg">Pilot Partner Worden?</h3>
-                        <p className="text-slate-400 text-sm">Word een van de eerste praktijken. Start gratis en ontvang 50% korting als early adopter.</p>
+                        <h3 className="font-bold text-white text-lg">Early Adopter Worden?</h3>
+                        <p className="text-slate-400 text-sm">Word een van de eerste praktijken. Start gratis en ontvang 50% korting in je eerste jaar.</p>
                     </div>
                 </div>
                 <button onClick={onRegisterClick} className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 rounded-xl font-bold text-sm transition-colors shadow-lg shadow-emerald-900/20 whitespace-nowrap">
