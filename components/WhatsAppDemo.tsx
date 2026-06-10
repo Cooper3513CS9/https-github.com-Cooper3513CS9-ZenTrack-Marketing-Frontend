@@ -62,13 +62,13 @@ export const WhatsAppDemo: React.FC = () => {
     let invoiceContent = "";
 
     if (scenario === 'invoice') {
-      userText = "📄 Factuur Leverancier A - Nov 2025";
+      userText = "📄 Factuur Leverancier A - mei 2026";
       // Realistic invoice from major supplier with price comparison opportunity
       invoiceContent = `
         FACTUUR ANALYSE - LEVERANCIER A:
-        Datum: 21-11-2025
+        Datum: 06-06-2026
         Leverancier: Supplier A BV
-        Ordernummer: #ORD-2025-882
+        Ordernummer: #ORD-2026-882
 
         Regels:
         1. Nitril Onderzoekshandschoenen Maat M (Poedervrij) - 10 dozen - € 8,95/dozen
@@ -80,16 +80,16 @@ export const WhatsAppDemo: React.FC = () => {
         BTW 21%: € 32,03
         Totaal: € 184,53
 
-        ANALYSE: Nitril M momenteel € 8,95/dz bij Leverancier A.
-        Concurrenten (Leverancier B, Leverancier C): € 6,50-7,20/dz
-        Potentiële maandelijkse besparing: €12-25 per bestelling
+        INZICHT: je betaalt nu € 8,95/dz voor Nitril M.
+        Op basis van je eigen historie kun je hier besparen.
+        Geschatte besparing: €12-25 per bestelling
       `;
     } else if (scenario === 'packing_slip') {
       userText = "📦 Pakbon - Leverancier A bestelling aangekomen";
       invoiceContent = `
-        PAKBON VERIFICATIE - TRACKING #2025-HS-1829:
+        PAKBON-CONTROLE - TRACKING #2026-1829:
         Leverancier: Supplier A BV
-        Aflever Datum: 21-11-2025 | Aankomst: 09:47
+        Aflever Datum: 06-06-2026 | Aankomst: 09:47
 
         INHOUD GESCAND:
         Doos 1 van 1:
@@ -115,9 +115,9 @@ export const WhatsAppDemo: React.FC = () => {
         Serienummer: HT3-0-2024-NOV
 
         HOUDBAARHEID:
-        Steriel totaal: 01-08-2026
-        Huidige datum: 21-11-2025
-        Resterende houdbaarheid: 8 maanden 11 dagen ✅ VEILIG
+        Steriel totaal: 01-04-2027
+        Huidige datum: 06-06-2026
+        Resterende houdbaarheid: ruim 9 maanden ✅ VEILIG
 
         VOORRAADBEHEER:
         Aantal in systeem: 3 dozen
@@ -125,7 +125,7 @@ export const WhatsAppDemo: React.FC = () => {
         Status: OK (geen alert nodig)
 
         ALERT INGESTELD:
-        Reminder op 01-06-2026 (2 maanden voor expiratie)
+        Reminder op 01-02-2027 (2 maanden voor de vervaldatum)
       `;
     } else if (scenario === 'bag') {
       userText = "👜 Visitetas check - Huisbezoeken voorbereiding";
@@ -162,7 +162,7 @@ export const WhatsAppDemo: React.FC = () => {
         QR LOCATIE SCAN - VOORRAAD INVENTARISATIE:
         Locatie ID: TR-001
         Locatie: Behandelruimte 1 - Medicijnkast 2, Plank 1
-        Scan Moment: 21-11-2025 | 14:32 uur
+        Scan Moment: 06-06-2026 | 14:32 uur
 
         PRODUCT HERKEND:
         Artikel: Alcohol 70% Desinfectans - 500ml fles
@@ -176,13 +176,13 @@ export const WhatsAppDemo: React.FC = () => {
         Aanbeveling: Vervang 1 volle fles
 
         BIJZONDERHEDEN:
-        Vervaldatum: 31-12-2026 (nog 13 maanden geldig) ✅
+        Vervaldatum: 30-06-2027 (nog ruim een jaar geldig) ✅
         Opslag optimaal: Donkere plek, koel, droog ✓
         Gebruikstatus: Matig gebruik (afgelopen week 2x gebruikt)
 
         SYSTEMUPDATE:
         Voorraadstatus: COMPLEET
-        Volgende inventaris: Automatisch gepland voor 21-12-2025
+        Volgende inventaris: Automatisch gepland over 4 weken
         Alert: Geen urgent aanvulling nodig
       `;
     }

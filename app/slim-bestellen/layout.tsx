@@ -1,23 +1,23 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Slim Bestellen: Vergelijk Inkoopprijzen Medische Producten | ZenTrack',
-  description: 'Huisartspraktijken besteden gemiddeld €1.000-2.500/maand aan medische verbruiksartikelen. Prijsverschillen tussen leveranciers lopen op tot 40%. ZenTrack vergelijkt automatisch en signaleert besparingen.',
+  title: 'Slim Bestellen: Grip op je Inkoopkosten | ZenTrack',
+  description: 'Huisartspraktijken besteden gemiddeld €1.000-2.500/maand aan medische verbruiksartikelen. ZenTrack geeft je grip op wat je betaalt en signaleert waar je kunt besparen.',
   keywords: [
     'slim bestellen huisarts',
-    'medische producten prijsvergelijking',
-    'goedkoper inkopen huisartspraktijk',
-    'leverancier vergelijken zorg',
+    'grip op inkoopkosten huisarts',
+    'inkoopinzicht huisartspraktijk',
+    'medische verbruiksartikelen besparen',
     'inkoopkosten besparen praktijk',
-    'prijsintelligentie medisch',
+    'voorraad bestel-advies huisarts',
     'inkoopoptimalisatie huisarts',
-    'medische verbruiksartikelen vergelijken',
-    'leverancierskeuze huisarts',
+    'minder verspilling huisartspraktijk',
+    'bestellen via whatsapp huisarts',
     'kostenbesparing huisartspraktijk',
   ],
   openGraph: {
-    title: 'Slim Bestellen: Vergelijk Inkoopprijzen | ZenTrack',
-    description: 'Prijsverschillen tot 40% tussen leveranciers. ZenTrack vergelijkt automatisch en signaleert besparingen voor huisartspraktijken.',
+    title: 'Slim Bestellen: Grip op je Inkoopkosten | ZenTrack',
+    description: 'Krijg grip op wat je uitgeeft aan medische verbruiksartikelen. ZenTrack signaleert besparingen voor huisartspraktijken.',
     type: 'website',
     locale: 'nl_NL',
   },

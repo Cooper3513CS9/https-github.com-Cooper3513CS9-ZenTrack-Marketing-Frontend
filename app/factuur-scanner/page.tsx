@@ -53,7 +53,7 @@ export default function FactuurScannerPage() {
                 <p className="font-bold text-slate-800 mb-1">Factuur herkend!</p>
                 <div className="space-y-1 text-slate-600">
                   <p>Leverancier: <span className="font-bold text-slate-800">Mediq</span></p>
-                  <p>Factuurnr: <span className="font-mono text-[10px] bg-slate-100 px-1 rounded">MED-2025-4821</span></p>
+                  <p>Factuurnr: <span className="font-mono text-[10px] bg-slate-100 px-1 rounded">MED-2026-4821</span></p>
                   <p>Bedrag: <span className="font-bold text-emerald-600">€847,50</span></p>
                 </div>
                 <div className="mt-2 bg-emerald-50 p-1.5 rounded border border-emerald-100 text-[10px] text-emerald-700">
@@ -169,7 +169,7 @@ export default function FactuurScannerPage() {
               <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
                 <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
                   <ScanLine className="w-4 h-4" />
-                  <span>AI-Powered OCR via Mistral AI</span>
+                  <span>Facturen automatisch inlezen</span>
                 </div>
 
                 <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
@@ -275,7 +275,7 @@ export default function FactuurScannerPage() {
                 {
                   step: '2',
                   title: 'AI herkent alles',
-                  desc: 'Productnamen, prijzen, aantallen, leverancier en factuurnummer worden automatisch geëxtraheerd door Mistral AI.',
+                  desc: 'Productnamen, prijzen, aantallen, leverancier en factuurnummer worden automatisch herkend.',
                   icon: Eye,
                   color: 'bg-orange-500',
                 },

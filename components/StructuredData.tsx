@@ -49,7 +49,7 @@ const softwareApplicationSchema = {
   offers: [
     {
       "@type": "Offer",
-      name: "Starter",
+      name: "Kleine praktijk",
       price: "79",
       priceCurrency: "EUR",
       priceSpecification: {
@@ -63,12 +63,12 @@ const softwareApplicationSchema = {
           unitCode: "MON",
         },
       },
-      description: "Voor 1 huisartspraktijk",
+      description: "Voor de solo- of kleine praktijk",
       url: "https://app.zentrack.nl/sign-up",
     },
     {
       "@type": "Offer",
-      name: "Professional",
+      name: "Groepspraktijk",
       price: "149",
       priceCurrency: "EUR",
       priceSpecification: {
@@ -82,12 +82,12 @@ const softwareApplicationSchema = {
           unitCode: "MON",
         },
       },
-      description: "Voor meerdere locaties",
+      description: "Voor de groepspraktijk — dezelfde functies, tot 8 gebruikers",
       url: "https://app.zentrack.nl/sign-up",
     },
     {
       "@type": "Offer",
-      name: "Enterprise",
+      name: "Zorggroep",
       price: "249",
       priceCurrency: "EUR",
       priceSpecification: {
@@ -101,7 +101,7 @@ const softwareApplicationSchema = {
           unitCode: "MON",
         },
       },
-      description: "Voor zorggroepen",
+      description: "Voor zorggroepen en ketens — maatwerk per locatie",
       url: "https://app.zentrack.nl/sign-up",
     },
   ],
@@ -109,7 +109,7 @@ const softwareApplicationSchema = {
     "AI-factuurscanner via WhatsApp",
     "Real-time voorraadbeheer per kast en locatie",
     "Automatische expiratie-alerts (30/60/90 dagen)",
-    "Prijsvergelijking bij meerdere leveranciers",
+    "Inzicht in je eigen inkoopkosten",
     "NPA 3.0 accreditatie documentatie (Principe 13: middelen)",
     "Pakbon verificatie in 30 seconden",
   ],
@@ -180,7 +180,7 @@ const faqSchema = {
       name: "Wat kost ZenTrack?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "ZenTrack start vanaf EUR 79 per maand voor een enkele praktijk. Professional (meerdere locaties) kost EUR 149/maand en Enterprise (zorggroepen) EUR 249/maand. Je kunt 14 dagen gratis uitproberen zonder creditcard.",
+        text: "ZenTrack heeft een gratis Expiratie Radar (tot 25 producten). De Kleine praktijk kost EUR 79 per maand en de Groepspraktijk EUR 149 per maand — dezelfde functies, het verschil is de praktijkgrootte. Voor zorggroepen met meerdere locaties is er maatwerk. Gratis starten, geen creditcard nodig.",
       },
     },
     {
