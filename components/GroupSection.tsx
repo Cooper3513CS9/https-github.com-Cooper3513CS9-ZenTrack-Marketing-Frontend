@@ -17,7 +17,7 @@ export const GroupSection: React.FC = () => {
         <div className="text-center mb-20">
            <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-1.5 rounded-full text-sm font-bold mb-8 border border-purple-200 shadow-sm">
               <Network className="w-4 h-4" />
-              <span>ZenTrack Enterprise</span>
+              <span>ZenTrack voor Zorggroepen</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
               De slimme schakel tussen strategie en <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">de dagelijkse zorg.</span>

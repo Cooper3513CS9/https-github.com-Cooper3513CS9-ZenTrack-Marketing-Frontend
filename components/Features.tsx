@@ -59,7 +59,7 @@ const features = [
   },
   {
     title: 'Slim Bestellen',
-    description: 'Profiteer van inzicht uit collega-praktijken. ZenTrack vergelijkt factuurdata en herinnert u wanneer het tijd is om bij te bestellen.',
+    description: 'ZenTrack leert van je eigen factuurhistorie en herinnert u wanneer het tijd is om bij te bestellen — én wat u de vorige keer betaalde.',
     href: '/slim-bestellen',
     icon: TrendingDown,
     iconBg: 'bg-amber-100',

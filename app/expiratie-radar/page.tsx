@@ -358,7 +358,7 @@ export default function ExpiratieRadarPage() {
                     <span className="text-4xl font-bold text-slate-900">€0</span>
                     <span className="text-slate-500">/maand</span>
                   </div>
-                  <p className="text-sm text-slate-500 mt-1">6 maanden gratis, geen creditcard</p>
+                  <p className="text-sm text-slate-500 mt-1">6 maanden gratis · eerste 100 praktijken</p>
                 </div>
                 <button
                   onClick={navigateToRegister}
@@ -371,7 +371,7 @@ export default function ExpiratieRadarPage() {
                   <FeatureCheck text="Verkeerslicht systeem" />
                   <FeatureCheck text="WhatsApp alerts" />
                   <FeatureCheck text="Dashboard overzicht" />
-                  <FeatureCheck text="6 maanden gratis" />
+                  <FeatureCheck text="6 maanden gratis (eerste 100 praktijken)" />
                   <FeatureCheck text="Geen creditcard nodig" />
                 </div>
               </div>

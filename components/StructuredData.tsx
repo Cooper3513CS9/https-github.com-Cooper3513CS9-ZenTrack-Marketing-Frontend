@@ -172,7 +172,7 @@ const faqSchema = {
       name: "Is de Expiratie Radar echt gratis?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Ja, 100% gratis voor maximaal 25 producten gedurende 6 maanden. Geen creditcard nodig, geen verplichtingen.",
+        text: "Ja, 100% gratis voor maximaal 25 producten, gedurende 6 maanden, voor de eerste 100 praktijken. Geen creditcard nodig, geen verplichtingen.",
       },
     },
     {

@@ -44,7 +44,7 @@ export const ManagerDashboardSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-white text-lg">Kosten Analyse</h4>
-                  <p className="text-slate-400 text-sm">Zie direct hoeveel je bespaart door slimme leverancierskeuzes en minder verspilling.</p>
+                  <p className="text-slate-400 text-sm">Zie direct hoeveel je bespaart door minder verspilling en slimmer inkopen op basis van je eigen data.</p>
                 </div>
               </div>
 

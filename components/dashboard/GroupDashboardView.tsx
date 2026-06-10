@@ -21,7 +21,7 @@ export const GroupDashboardView: React.FC<Props> = ({ onBack }) => {
 
       <div className="flex justify-end mb-4">
           <div className="bg-white border border-slate-200 rounded-lg p-1 flex text-xs">
-              <button onClick={() => setViewMode('full')} className={`px-3 py-1.5 rounded-md font-bold transition-colors ${viewMode === 'full' ? 'bg-purple-100 text-purple-700' : 'text-slate-500'}`}>Full Enterprise</button>
+              <button onClick={() => setViewMode('full')} className={`px-3 py-1.5 rounded-md font-bold transition-colors ${viewMode === 'full' ? 'bg-purple-100 text-purple-700' : 'text-slate-500'}`}>Volledig overzicht</button>
               <button onClick={() => setViewMode('analytics')} className={`px-3 py-1.5 rounded-md font-bold transition-colors ${viewMode === 'analytics' ? 'bg-slate-100 text-slate-700' : 'text-slate-500'}`}>Analytics Only</button>
           </div>
       </div>
@@ -82,7 +82,7 @@ export const GroupDashboardView: React.FC<Props> = ({ onBack }) => {
                 <div className="absolute inset-0 bg-slate-50/80 backdrop-blur-[2px] flex flex-col items-center justify-center z-10 p-6 text-center">
                     <div className="bg-white p-4 rounded-full shadow-lg mb-3"><Lock className="w-6 h-6 text-slate-400" /></div>
                     <h3 className="font-bold text-slate-900 mb-1">Real-time Voorraad</h3>
-                    <p className="text-xs text-slate-500 max-w-xs mb-4">Upgrade naar ZenTrack Enterprise voor live transfers.</p>
+                    <p className="text-xs text-slate-500 max-w-xs mb-4">Upgrade naar ZenTrack voor Zorggroepen voor live transfers.</p>
                 </div>
             )}
             <div className="p-6 border-b border-slate-100"><h3 className="font-bold text-slate-900 flex items-center gap-2"><ArrowRight className="w-5 h-5 text-blue-600" /> Transfer Suggesties</h3></div>

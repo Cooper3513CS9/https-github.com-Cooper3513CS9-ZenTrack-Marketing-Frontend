@@ -29,7 +29,7 @@ export const FAQ: React.FC = () => {
     },
     {
       question: "Is de Expiratie Radar echt gratis?",
-      answer: "Ja, 100% gratis voor maximaal 25 producten gedurende 6 maanden. Geen creditcard nodig, geen verplichtingen. Na 6 maanden of bij meer dan 25 producten kun je upgraden naar een betaald plan, maar dat is volledig optioneel."
+      answer: "Ja, 100% gratis voor maximaal 25 producten, gedurende 6 maanden, voor de eerste 100 praktijken. Geen creditcard nodig, geen verplichtingen. Na 6 maanden of bij meer dan 25 producten kun je upgraden naar een betaald plan, maar dat is volledig optioneel."
     },
     {
       question: "Hoe voeg ik producten toe aan de Expiratie Radar?",

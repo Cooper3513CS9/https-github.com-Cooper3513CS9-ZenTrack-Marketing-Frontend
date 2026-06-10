@@ -138,11 +138,11 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                             <FeatureItem text="Vervaldatum alerts (WhatsApp)" />
                             <FeatureItem text="30-60-90 dagen waarschuwing" />
                             <FeatureItem text="Handmatig invoeren of scannen" />
-                            <FeatureItem text="Voor de eerste 100 praktijken" />
+                            <FeatureItem text="6 maanden gratis (eerste 100 praktijken)" />
                         </div>
                         <div className="mt-6 pt-4 border-t border-slate-700">
                             <p className="text-[11px] text-slate-500 leading-relaxed">
-                                Gratis tot 25 producten, voor de eerste 100 praktijken. Meer nodig? Upgrade naar Kleine praktijk vanaf €79/mnd.
+                                Gratis tot 25 producten, max 6 maanden, voor de eerste 100 praktijken. Meer nodig? Upgrade naar Kleine praktijk vanaf €79/mnd.
                             </p>
                         </div>
                     </div>
@@ -230,7 +230,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                                 <ul className="space-y-1.5 text-sm text-slate-400">
                                     <li className="flex items-start gap-2">
                                         <Check className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />
-                                        <span><strong className="text-slate-300">Gratis starten</strong> — De Expiratie Radar voor maximaal 25 producten, voor de eerste 100 praktijken. Geen creditcard nodig.</span>
+                                        <span><strong className="text-slate-300">Gratis starten</strong> — De Expiratie Radar voor maximaal 25 producten, max 6 maanden, voor de eerste 100 praktijken. Geen creditcard nodig.</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <Check className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />

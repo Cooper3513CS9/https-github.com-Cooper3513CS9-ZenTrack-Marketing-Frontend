@@ -76,7 +76,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
                               <Sparkles className="w-3 h-3" /> Optimalisatie kans
                            </p>
                            <p className="text-blue-800 leading-snug">
-                              Voor <span className="italic">Nitril Handschoenen M</span> is een inkoopvoordeel gedetecteerd.
+                              Voor <span className="italic">Nitril Handschoenen M</span> is op basis van je eigen historie een besparing mogelijk.
                            </p>
                            <div className="mt-2 flex gap-2">
                               <span className="text-[10px] bg-white border border-blue-200 px-2 py-1 rounded text-blue-600 cursor-pointer">Details?</span>

@@ -49,7 +49,7 @@ export const InvoicesView: React.FC<Props> = ({ onBack }) => {
             <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">AI Nauwkeurigheid</p>
             <p className="text-3xl font-bold text-slate-900">95.9%</p>
             <div className="mt-2 flex items-center gap-1 text-xs font-medium text-blue-600 bg-blue-50 w-fit px-2 py-1 rounded-md">
-               <Sparkles className="w-3 h-3" /> Mistral Vision Embeddings
+               <Sparkles className="w-3 h-3" /> Automatische herkenning
             </div>
          </div>
          <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
