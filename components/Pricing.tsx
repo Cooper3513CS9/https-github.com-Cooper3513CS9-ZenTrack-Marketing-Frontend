@@ -122,12 +122,13 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                                 <Radar className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-bold text-white">Expiratie Radar</h3>
-                            <p className="text-slate-400 text-sm mt-2">Nooit meer verlopen voorraad. Gratis starten.</p>
+                            <p className="text-slate-400 text-sm mt-2 min-h-[60px]">Nooit meer verlopen voorraad. Gratis starten.</p>
                         </div>
-                        <div className="mb-6">
+                        <div className="mb-4">
                             <span className="text-4xl font-bold text-white">€0</span>
                             <span className="text-slate-500">/mnd</span>
                         </div>
+                        <p className="text-sm font-semibold text-emerald-400 mb-6 min-h-[40px]">Jij voegt toe, ZenTrack waarschuwt op tijd.</p>
                         <Link
                             href="/expiratie-radar"
                             className="w-full py-3 rounded-xl border border-orange-500/50 text-white font-bold hover:bg-orange-600 hover:border-orange-600 transition-colors mb-8 flex items-center justify-center gap-2"
@@ -155,12 +156,13 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                                 <Shield className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-bold text-white">Kleine praktijk</h3>
-                            <p className="text-slate-400 text-sm mt-2">Voor de solo- of duopraktijk. Nooit meer misgrijpen of verlopen voorraad — visitatie-proof.</p>
+                            <p className="text-slate-400 text-sm mt-2 min-h-[60px]">Voor de solo- of duopraktijk. Nooit meer misgrijpen — visitatie-proof.</p>
                         </div>
-                        <div className="mb-6">
+                        <div className="mb-4">
                             <span className="text-4xl font-bold text-white">€79</span>
                             <span className="text-slate-500">/mnd</span>
                         </div>
+                        <p className="text-sm font-semibold text-emerald-400 mb-6 min-h-[40px]">Jij bestelt zelf, ZenTrack bewaakt en denkt mee.</p>
                         <button onClick={onRegisterClick} className="w-full py-3 rounded-xl border border-slate-600 text-white font-bold hover:bg-slate-700 transition-colors mb-8">
                             Start
                         </button>
@@ -187,12 +189,13 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                                 <Zap className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-bold text-slate-900">Groepspraktijk</h3>
-                            <p className="text-slate-500 text-sm mt-2">Meerdere huisartsen, één locatie. Eén overzicht voor het hele team — nooit meer dubbel besteld.</p>
+                            <p className="text-slate-500 text-sm mt-2 min-h-[60px]">Meerdere huisartsen, één locatie. Nooit meer dubbel besteld.</p>
                         </div>
-                        <div className="mb-6">
+                        <div className="mb-4">
                             <span className="text-4xl font-bold text-slate-900">€149</span>
                             <span className="text-slate-500">/mnd</span>
                         </div>
+                        <p className="text-sm font-semibold text-emerald-700 mb-6 min-h-[40px]">ZenTrack werkt vóór je: de bestelling staat klaar, jij tikt JA.</p>
                         <button onClick={onRegisterClick} className="w-full py-3 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-200 mb-8">
                             Start
                         </button>
