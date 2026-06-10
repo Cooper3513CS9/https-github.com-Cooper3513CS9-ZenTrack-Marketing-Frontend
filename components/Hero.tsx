@@ -9,12 +9,14 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
-  const [activeScenario, setActiveScenario] = useState(0);
-  
+  // Start meteen op scenario 1 (gevulde bubbel) en roteer 1→2→3→4→1.
+  // De lege "Klaar voor input…"-staat (case 0) blijft zo uit beeld.
+  const [activeScenario, setActiveScenario] = useState(1);
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveScenario((prev) => (prev + 1) % 5);
-    }, 6000); 
+      setActiveScenario((prev) => (prev % 4) + 1);
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 
