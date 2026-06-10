@@ -9,7 +9,7 @@ export const BlogSection: React.FC = () => {
       category: "Inzicht",
       title: "De verborgen kosten van 'grijze' voorraad",
       excerpt: "Uit brancheonderzoek blijkt dat tot 15% van medische verbruiksartikelen verloopt voordat het gebruikt wordt. Wat betekent dit financieel voor uw praktijk?",
-      date: "18 Nov 2025",
+      date: "20 mei 2026",
       readTime: "4 min",
       image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800",
       icon: TrendingUp
@@ -17,8 +17,8 @@ export const BlogSection: React.FC = () => {
     {
       category: "Wetgeving & Privacy",
       title: "AVG in de praktijk: Waarom WhatsApp veilig kan zijn",
-      excerpt: "Hoe ZenTrack voldoet aan de NEN7510 normering door data te scheiden van de interface. Een technische deep-dive in onze architectuur.",
-      date: "12 Nov 2025",
+      excerpt: "Hoe ZenTrack voldoet aan de NEN7510-norm voor de zorg, en waarom je geen patiëntgegevens via WhatsApp deelt. In gewone taal uitgelegd.",
+      date: "6 mei 2026",
       readTime: "6 min",
       image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
       icon: Shield
@@ -27,7 +27,7 @@ export const BlogSection: React.FC = () => {
       category: "Praktijkmanagement",
       title: "Waarom voorraadbeheer meer tijd kost dan nodig",
       excerpt: "De meeste praktijken besteden wekelijks uren aan handmatig bijhouden van voorraad en bestellingen. Hoe automatisering de werkdruk verlaagt.",
-      date: "05 Nov 2025",
+      date: "22 apr 2026",
       readTime: "5 min",
       image: "https://images.unsplash.com/photo-1631217868269-dfc1c5c3e042?auto=format&fit=crop&q=80&w=800",
       icon: BookOpen

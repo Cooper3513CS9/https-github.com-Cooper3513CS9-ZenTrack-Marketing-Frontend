@@ -53,7 +53,7 @@ export default function FactuurScannerPage() {
                 <p className="font-bold text-slate-800 mb-1">Factuur herkend!</p>
                 <div className="space-y-1 text-slate-600">
                   <p>Leverancier: <span className="font-bold text-slate-800">Mediq</span></p>
-                  <p>Factuurnr: <span className="font-mono text-[10px] bg-slate-100 px-1 rounded">MED-2025-4821</span></p>
+                  <p>Factuurnr: <span className="font-mono text-[10px] bg-slate-100 px-1 rounded">MED-2026-4821</span></p>
                   <p>Bedrag: <span className="font-bold text-emerald-600">€847,50</span></p>
                 </div>
                 <div className="mt-2 bg-emerald-50 p-1.5 rounded border border-emerald-100 text-[10px] text-emerald-700">

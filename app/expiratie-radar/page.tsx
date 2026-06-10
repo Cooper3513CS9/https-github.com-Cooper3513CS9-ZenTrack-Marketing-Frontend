@@ -107,7 +107,7 @@ export default function ExpiratieRadarPage() {
                 <p className="font-bold text-slate-800 mb-1">Foto herkend!</p>
                 <div className="space-y-1 text-slate-600">
                   <p>Omeprazol 20mg — Batch OM-892</p>
-                  <p>Houdbaar tot: <span className="font-bold text-orange-600">Juli 2025</span></p>
+                  <p>Houdbaar tot: <span className="font-bold text-orange-600">Juli 2026</span></p>
                 </div>
                 <div className="mt-2 flex items-center gap-1 text-[10px] text-orange-700 bg-orange-50 p-1.5 rounded border border-orange-100">
                   <div className="w-2 h-2 rounded-full bg-orange-500"></div>
