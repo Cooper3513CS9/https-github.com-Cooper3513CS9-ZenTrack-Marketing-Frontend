@@ -1,22 +1,22 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Factuur Scanner Huisarts: AI-OCR voor Medische Facturen | ZenTrack',
-  description: 'AI-factuurscanner voor huisartspraktijken. Upload een factuur via WhatsApp, ZenTrack herkent binnen 30 seconden alle producten, prijzen en leveranciers via OCR. Geen handmatig overtypen meer.',
+  title: 'Factuur Scanner Huisarts: Automatische Factuurherkenning | ZenTrack',
+  description: 'Factuurscanner voor huisartspraktijken. Upload een factuur via WhatsApp, ZenTrack herkent binnen 30 seconden alle producten, prijzen en leveranciers. Geen handmatig overtypen meer.',
   keywords: [
     'factuur scanner huisarts',
-    'factuur OCR medisch',
+    'factuurherkenning medisch',
     'medische facturen scannen',
     'automatisch facturen verwerken',
     'factuurherkenning huisartspraktijk',
     'leverancier facturen digitaliseren',
-    'OCR medische producten',
+    'automatische factuurverwerking',
     'factuurverwerking zorg',
     'inkoop facturen automatiseren',
     'WhatsApp factuur uploaden',
   ],
   openGraph: {
-    title: 'Factuur Scanner: AI-OCR voor Medische Facturen | ZenTrack',
+    title: 'Factuur Scanner: Automatische Factuurherkenning | ZenTrack',
     description: 'Upload een factuur via WhatsApp. AI herkent binnen 30 seconden alle producten, prijzen en leveranciers.',
     type: 'website',
     locale: 'nl_NL',

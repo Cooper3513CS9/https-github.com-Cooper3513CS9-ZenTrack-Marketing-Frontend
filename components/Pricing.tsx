@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Check, Rocket, Building2, Users, Crown, Zap, Shield, Radar, ArrowRight, Info } from 'lucide-react';
+import { Check, Rocket, Building2, Users, Zap, Shield, Radar, ArrowRight, Info } from 'lucide-react';
 
 interface PricingProps {
   onRegisterClick: () => void;
@@ -107,7 +107,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
             </div>
         </div>
 
-        {/* CONTENT: SOLO (4 Tiers) */}
+        {/* CONTENT: SOLO (3 Tiers) */}
         {activeTab === 'solo' && (
             <div className="animate-fade-in">
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -138,11 +138,11 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                             <FeatureItem text="Vervaldatum alerts (WhatsApp)" />
                             <FeatureItem text="30-60-90 dagen waarschuwing" />
                             <FeatureItem text="Handmatig invoeren of scannen" />
-                            <FeatureItem text="6 maanden gratis · tot 25 producten" />
+                            <FeatureItem text="Voor de eerste 100 praktijken" />
                         </div>
                         <div className="mt-6 pt-4 border-t border-slate-700">
                             <p className="text-[11px] text-slate-500 leading-relaxed">
-                                6 maanden gratis voor max 25 producten. Daarna of meer nodig? Upgrade naar Protect vanaf €79/mnd.
+                                Gratis tot 25 producten, voor de eerste 100 praktijken. Meer nodig? Upgrade naar Kleine praktijk vanaf €79/mnd.
                             </p>
                         </div>
                     </div>
@@ -153,23 +153,24 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                             <div className="w-12 h-12 bg-slate-700 rounded-2xl flex items-center justify-center mb-4 text-slate-300">
                                 <Shield className="w-6 h-6" />
                             </div>
-                            <h3 className="text-xl font-bold text-white">Protect</h3>
-                            <p className="text-slate-400 text-sm mt-2">Bescherm tegen leverfouten en onnodige kosten.</p>
+                            <h3 className="text-xl font-bold text-white">Kleine praktijk</h3>
+                            <p className="text-slate-400 text-sm mt-2">Voor de solo- of kleine praktijk.</p>
                         </div>
                         <div className="mb-6">
                             <span className="text-4xl font-bold text-white">€79</span>
                             <span className="text-slate-500">/mnd</span>
                         </div>
                         <button onClick={onRegisterClick} className="w-full py-3 rounded-xl border border-slate-600 text-white font-bold hover:bg-slate-700 transition-colors mb-8">
-                            Start met Beschermen
+                            Start
                         </button>
                         <div className="space-y-3 flex-1">
                             <FeatureItem text="Onbeperkt producten" highlighted />
-                            <FeatureItem text="Factuur upload & OCR" />
-                            <FeatureItem text="Pakbon verificatie" />
-                            <FeatureItem text="Missende items detectie" />
-                            <FeatureItem text="Expiratie tracking" />
-                            <FeatureItem text="Basis voorraad overzicht" />
+                            <FeatureItem text="Facturen automatisch inlezen" />
+                            <FeatureItem text="Pakbon verificatie + missende items" />
+                            <FeatureItem text="Voorraad & Expiratie Radar" />
+                            <FeatureItem text="WhatsApp-bestelflow (Emma)" />
+                            <FeatureItem text="Slim bestel-advies" />
+                            <FeatureItem text="Tot 3 gebruikers" />
                         </div>
                     </div>
 
@@ -183,50 +184,37 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                             <div className="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center mb-4 text-emerald-600">
                                 <Zap className="w-6 h-6" />
                             </div>
-                            <h3 className="text-xl font-bold text-slate-900">Control</h3>
-                            <p className="text-slate-500 text-sm mt-2">Complete supply chain controle & expiratie.</p>
+                            <h3 className="text-xl font-bold text-slate-900">Groepspraktijk</h3>
+                            <p className="text-slate-500 text-sm mt-2">Voor de groepspraktijk — de complete keten.</p>
                         </div>
                         <div className="mb-6">
                             <span className="text-4xl font-bold text-slate-900">€149</span>
                             <span className="text-slate-500">/mnd</span>
                         </div>
                         <button onClick={onRegisterClick} className="w-full py-3 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-200 mb-8">
-                            Kies Control
+                            Start
                         </button>
                         <div className="space-y-3 flex-1">
-                            <FeatureItem text="Alles uit Protect +" highlighted light />
-                            <FeatureItem text="Auto-factuur verwerking" light />
-                            <FeatureItem text="Real-time expiratie alerts" light />
-                            <FeatureItem text="WhatsApp Integratie (Emma)" light />
-                            <FeatureItem text="AI-bestelsuggesties" light />
-                            <FeatureItem text="Team toegang (8 users)" light />
+                            <FeatureItem text="Onbeperkt producten" highlighted light />
+                            <FeatureItem text="Facturen automatisch inlezen" light />
+                            <FeatureItem text="Pakbon verificatie + missende items" light />
+                            <FeatureItem text="Voorraad & Expiratie Radar" light />
+                            <FeatureItem text="WhatsApp-bestelflow (Emma)" light />
+                            <FeatureItem text="Slim bestel-advies" light />
+                            <FeatureItem text="Tot 8 gebruikers" light />
                         </div>
                     </div>
 
-                    {/* PLAN 3: OPTIMIZE */}
-                    <div className="bg-slate-800/50 rounded-3xl p-8 border border-slate-700 hover:border-purple-500 transition-colors flex flex-col">
-                        <div className="mb-6">
-                            <div className="w-12 h-12 bg-purple-900/50 rounded-2xl flex items-center justify-center mb-4 text-purple-400">
-                                <Crown className="w-6 h-6" />
-                            </div>
-                            <h3 className="text-xl font-bold text-white">Optimize</h3>
-                            <p className="text-slate-400 text-sm mt-2">Maximale efficiency & predictive ordering.</p>
+                    {/* Meerdere locaties → Zorggroep-tab (maatwerk) */}
+                    <div className="bg-slate-800/50 rounded-3xl p-8 border border-dashed border-purple-500/40 hover:border-purple-500 transition-colors flex flex-col justify-center text-center">
+                        <div className="w-12 h-12 bg-purple-900/50 rounded-2xl flex items-center justify-center mb-4 text-purple-400 mx-auto">
+                            <Building2 className="w-6 h-6" />
                         </div>
-                        <div className="mb-6">
-                            <span className="text-4xl font-bold text-white">€249</span>
-                            <span className="text-slate-500">/mnd</span>
-                        </div>
-                        <button onClick={onRegisterClick} className="w-full py-3 rounded-xl border border-slate-600 text-white font-bold hover:bg-purple-600 hover:border-purple-600 transition-colors mb-8">
-                            Kies Optimize
+                        <h3 className="text-xl font-bold text-white">Meerdere locaties?</h3>
+                        <p className="text-slate-400 text-sm mt-2 mb-6">Zorggroepen en ketens: centrale inkoop en maatwerk per locatie.</p>
+                        <button onClick={() => setActiveTab('group')} className="w-full py-3 rounded-xl border border-purple-500/50 text-white font-bold hover:bg-purple-600 hover:border-purple-600 transition-colors">
+                            Bekijk Zorggroep →
                         </button>
-                        <div className="space-y-3 flex-1">
-                            <FeatureItem text="Alles uit Control +" />
-                            <FeatureItem text="Predictive Ordering (ML)" />
-                            <FeatureItem text="Multi-locatie support" />
-                            <FeatureItem text="Leverancier prijsvergelijking" />
-                            <FeatureItem text="Custom rapportages" />
-                            <FeatureItem text="Priority Support (<2u)" />
-                        </div>
                     </div>
                 </div>
 
@@ -242,15 +230,15 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                                 <ul className="space-y-1.5 text-sm text-slate-400">
                                     <li className="flex items-start gap-2">
                                         <Check className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />
-                                        <span><strong className="text-slate-300">6 maanden gratis</strong> — Start direct met de Expiratie Radar voor maximaal 25 producten. Geen creditcard nodig.</span>
+                                        <span><strong className="text-slate-300">Gratis starten</strong> — De Expiratie Radar voor maximaal 25 producten, voor de eerste 100 praktijken. Geen creditcard nodig.</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <Check className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />
-                                        <span><strong className="text-slate-300">Na 6 maanden?</strong> — Upgrade naar Protect (€79/mnd) voor onbeperkt producten, factuurverwerking en pakbon checks.</span>
+                                        <span><strong className="text-slate-300">Klaar voor meer?</strong> — Upgrade naar Kleine praktijk (€79/mnd) voor onbeperkt producten, factuurverwerking en pakbon-checks.</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <Check className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />
-                                        <span><strong className="text-slate-300">Meer dan 25 producten?</strong> — Ook dan upgrade je naar Protect. Zo groei je mee wanneer jouw praktijk er klaar voor is.</span>
+                                        <span><strong className="text-slate-300">Grotere praktijk?</strong> — De Groepspraktijk (€149/mnd) heeft dezelfde functies voor tot 8 gebruikers. Zo groei je mee.</span>
                                     </li>
                                 </ul>
                             </div>
@@ -266,7 +254,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                 <div className="bg-slate-800 rounded-3xl p-8 border border-slate-700 shadow-2xl relative">
                     <div className="mb-8 text-center">
                         <div className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-purple-500/30">
-                            <Building2 className="w-4 h-4" /> Enterprise Calculator
+                            <Building2 className="w-4 h-4" /> Zorggroep Calculator
                         </div>
                         <h3 className="text-2xl font-bold text-white mb-2">Schaalvoordeel voor Zorggroepen</h3>
                         <p className="text-slate-400 text-sm">Hoe meer locaties, hoe lager de prijs per praktijk.</p>
