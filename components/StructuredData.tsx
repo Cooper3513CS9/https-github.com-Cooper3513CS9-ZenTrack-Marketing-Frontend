@@ -63,7 +63,7 @@ const softwareApplicationSchema = {
           unitCode: "MON",
         },
       },
-      description: "Voor de solo- of kleine praktijk",
+      description: "Voor de solo- of duopraktijk — de complete voorraad- en bestelflow; jij bestelt, ZenTrack helpt",
       url: "https://app.zentrack.nl/sign-up",
     },
     {
@@ -82,7 +82,7 @@ const softwareApplicationSchema = {
           unitCode: "MON",
         },
       },
-      description: "Voor de groepspraktijk — dezelfde functies, tot 8 gebruikers",
+      description: "Voor meerdere huisartsen op één locatie — ZenTrack zet bestellingen kant-en-klaar, koppelt al je leveranciers, leert je praktijk kennen en biedt team- en rollenbeheer",
       url: "https://app.zentrack.nl/sign-up",
     },
     {
@@ -180,7 +180,7 @@ const faqSchema = {
       name: "Wat kost ZenTrack?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "ZenTrack heeft een gratis Expiratie Radar (tot 25 producten). De Kleine praktijk kost EUR 79 per maand en de Groepspraktijk EUR 149 per maand — dezelfde functies, het verschil is de praktijkgrootte. Voor zorggroepen met meerdere locaties is er maatwerk. Gratis starten, geen creditcard nodig.",
+        text: "ZenTrack heeft een gratis Expiratie Radar (tot 25 producten). De Kleine praktijk (EUR 79 per maand) bevat de complete voorraad- en bestelflow voor de solo- of duopraktijk. De Groepspraktijk (EUR 149 per maand) voegt daar automatisch bestellingen klaarzetten, onbeperkt leveranciers koppelen, een meelerende assistent en team- en rollenbeheer aan toe. Voor zorggroepen met meerdere locaties is er maatwerk. Gratis starten, geen creditcard nodig.",
       },
     },
     {

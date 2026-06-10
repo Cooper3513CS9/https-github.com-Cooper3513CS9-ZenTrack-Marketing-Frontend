@@ -87,6 +87,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
         <div className="text-center mb-12">
            <h2 className="text-3xl md:text-5xl font-bold mb-4">Transparante Prijzen</h2>
            <p className="text-slate-400 text-lg">Start gratis. Upgrade wanneer je er klaar voor bent.</p>
+           <p className="text-slate-500 text-sm mt-3 max-w-2xl mx-auto">Een praktijk besteedt gemiddeld 3+ uur per week aan voorraad en bestellen — meer dan €400 per maand aan kostbare uren.</p>
         </div>
 
         {/* Tabs */}
@@ -154,7 +155,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                                 <Shield className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-bold text-white">Kleine praktijk</h3>
-                            <p className="text-slate-400 text-sm mt-2">Voor de solo- of kleine praktijk.</p>
+                            <p className="text-slate-400 text-sm mt-2">Voor de solo- of duopraktijk. Nooit meer misgrijpen of verlopen voorraad — visitatie-proof.</p>
                         </div>
                         <div className="mb-6">
                             <span className="text-4xl font-bold text-white">€79</span>
@@ -170,7 +171,8 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                             <FeatureItem text="Voorraad & Expiratie Radar" />
                             <FeatureItem text="Bestellen via WhatsApp (met Emma)" />
                             <FeatureItem text="Slim bestel-advies" />
-                            <FeatureItem text="Tot 3 gebruikers" />
+                            <FeatureItem text="1 leverancier koppelen" />
+                            <FeatureItem text="NPA-accreditatie dossier" />
                         </div>
                     </div>
 
@@ -185,7 +187,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                                 <Zap className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-bold text-slate-900">Groepspraktijk</h3>
-                            <p className="text-slate-500 text-sm mt-2">Voor de groepspraktijk — van factuur tot vervaldatum.</p>
+                            <p className="text-slate-500 text-sm mt-2">Meerdere huisartsen, één locatie. Eén overzicht voor het hele team — nooit meer dubbel besteld.</p>
                         </div>
                         <div className="mb-6">
                             <span className="text-4xl font-bold text-slate-900">€149</span>
@@ -195,13 +197,14 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                             Start
                         </button>
                         <div className="space-y-3 flex-1">
-                            <FeatureItem text="Onbeperkt producten" highlighted light />
-                            <FeatureItem text="Facturen automatisch inlezen" light />
-                            <FeatureItem text="Pakbon-controle: zie wat ontbreekt" light />
-                            <FeatureItem text="Voorraad & Expiratie Radar" light />
-                            <FeatureItem text="Bestellen via WhatsApp (met Emma)" light />
-                            <FeatureItem text="Slim bestel-advies" light />
-                            <FeatureItem text="Tot 8 gebruikers" light />
+                            <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Alles uit Kleine praktijk, plus:</p>
+                            <FeatureItem text="Nooit meer dubbel (of niet) besteld: het hele team ziet wat er loopt, één iemand keurt goed" highlighted light />
+                            <FeatureItem text="Auto-opvolgen: ZenTrack zet je bestelling kant-en-klaar, jij tikt JA" light />
+                            <FeatureItem text="Onbeperkt leveranciers — al je portalen in één flow" light />
+                            <FeatureItem text="Voorraad per behandelkamer + transfers" light />
+                            <FeatureItem text="Emma leert je praktijk kennen" light />
+                            <FeatureItem text="Kostenrapportage per kamer/leverancier" light />
+                            <FeatureItem text="Prioriteit support" light />
                         </div>
                     </div>
 
@@ -226,7 +229,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                                 <Info className="w-4 h-4" />
                             </div>
                             <div>
-                                <h4 className="font-bold text-white text-sm mb-2">Hoe werkt het gratis plan?</h4>
+                                <h4 className="font-bold text-white text-sm mb-2">Welk plan past bij jou?</h4>
                                 <ul className="space-y-1.5 text-sm text-slate-400">
                                     <li className="flex items-start gap-2">
                                         <Check className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />
@@ -234,11 +237,11 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <Check className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />
-                                        <span><strong className="text-slate-300">Klaar voor meer?</strong> — Upgrade naar Kleine praktijk (€79/mnd) voor onbeperkt producten, factuurverwerking en pakbon-checks.</span>
+                                        <span><strong className="text-slate-300">Kleine praktijk (€79/mnd)</strong> — De complete voorraad- en bestelflow voor de solo- of duopraktijk. Jij houdt de regie, ZenTrack doet het zware werk.</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <Check className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />
-                                        <span><strong className="text-slate-300">Grotere praktijk?</strong> — De Groepspraktijk (€149/mnd) heeft dezelfde functies voor tot 8 gebruikers. Zo groei je mee.</span>
+                                        <span><strong className="text-slate-300">Groepspraktijk (€149/mnd)</strong> — ZenTrack zet je bestellingen kant-en-klaar, koppelt al je leveranciers en leert je praktijk kennen. Met team- en rollenbeheer voor meerdere huisartsen op één locatie.</span>
                                     </li>
                                 </ul>
                             </div>
