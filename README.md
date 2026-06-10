@@ -4,6 +4,24 @@ Modern marketing website voor ZenTrack - Intelligent Voorraadbeheer platform voo
 
 **🌐 Live:** https://zentrack.nl | https://www.zentrack.nl (redirects to apex)
 
+**Laatst bijgewerkt:** 11 juni 2026
+
+---
+
+## 🆕 Laatste update (11 juni 2026) — Pricing-herpositionering + stealth-copy
+
+6 commits, alles live op zentrack.nl:
+
+- **Prijskaarten gedifferentieerd op waarde i.p.v. seats**: €79 = "Jij bestelt zelf, ZenTrack bewaakt en denkt mee" (1 leverancier, NPA-dossier) · €149 = "ZenTrack werkt vóór je" (auto-opvolgen, onbeperkt leveranciers, Emma leert je praktijk kennen, per-kamer voorraad, team/goedkeuren). Gebruikersaantallen (3/8) weg; pijn-taal subtitels + prijs-anker (3+ uur/week ≈ €400/mnd); kaart-uitlijning gefixt.
+- **Gratis-model overal gelijk**: 25 producten · max 6 maanden · eerste 100 praktijken (Pricing, FAQ, JSON-LD, expiratie-radar)
+- **Stealth**: "collega-praktijken"-prijsverhaal → "je eigen data" / "marktconforme prijs" (belofte behouden, mechanisme verborgen); "Mistral Vision Embeddings" verwijderd (stack-discretie)
+- **"Enterprise" → "Zorggroep"** in alle user-facing copy
+- **Hero**: telefoon start direct met gevulde WhatsApp-bubbel
+- **Banner**: "Pilot Partner" → "Early Adopter Worden? 50% korting in je eerste jaar"
+- **Infra**: duplicate Vercel-project `zentrack-marketing` Git-disconnected (dubbele builds verstopten de queue); `app.zentrack.nl/pricing` in de app-repo gelijkgetrokken met deze site
+
+Open: blogartikelen (Lees artikel-knoppen), trust-signalen (KvK, testimonial), Emma-kennisbank FAQ.
+
 ---
 
 ## 🎯 What Is This?
