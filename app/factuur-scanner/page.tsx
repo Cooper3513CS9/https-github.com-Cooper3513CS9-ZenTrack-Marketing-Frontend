@@ -169,7 +169,7 @@ export default function FactuurScannerPage() {
               <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
                 <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
                   <ScanLine className="w-4 h-4" />
-                  <span>Automatische factuurherkenning</span>
+                  <span>Facturen automatisch inlezen</span>
                 </div>
 
                 <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">

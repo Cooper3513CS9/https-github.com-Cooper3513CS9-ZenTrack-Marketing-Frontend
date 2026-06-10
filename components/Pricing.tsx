@@ -166,9 +166,9 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                         <div className="space-y-3 flex-1">
                             <FeatureItem text="Onbeperkt producten" highlighted />
                             <FeatureItem text="Facturen automatisch inlezen" />
-                            <FeatureItem text="Pakbon verificatie + missende items" />
+                            <FeatureItem text="Pakbon-controle: zie wat ontbreekt" />
                             <FeatureItem text="Voorraad & Expiratie Radar" />
-                            <FeatureItem text="WhatsApp-bestelflow (Emma)" />
+                            <FeatureItem text="Bestellen via WhatsApp (met Emma)" />
                             <FeatureItem text="Slim bestel-advies" />
                             <FeatureItem text="Tot 3 gebruikers" />
                         </div>
@@ -185,7 +185,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                                 <Zap className="w-6 h-6" />
                             </div>
                             <h3 className="text-xl font-bold text-slate-900">Groepspraktijk</h3>
-                            <p className="text-slate-500 text-sm mt-2">Voor de groepspraktijk — de complete keten.</p>
+                            <p className="text-slate-500 text-sm mt-2">Voor de groepspraktijk — van factuur tot vervaldatum.</p>
                         </div>
                         <div className="mb-6">
                             <span className="text-4xl font-bold text-slate-900">€149</span>
@@ -197,9 +197,9 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                         <div className="space-y-3 flex-1">
                             <FeatureItem text="Onbeperkt producten" highlighted light />
                             <FeatureItem text="Facturen automatisch inlezen" light />
-                            <FeatureItem text="Pakbon verificatie + missende items" light />
+                            <FeatureItem text="Pakbon-controle: zie wat ontbreekt" light />
                             <FeatureItem text="Voorraad & Expiratie Radar" light />
-                            <FeatureItem text="WhatsApp-bestelflow (Emma)" light />
+                            <FeatureItem text="Bestellen via WhatsApp (met Emma)" light />
                             <FeatureItem text="Slim bestel-advies" light />
                             <FeatureItem text="Tot 8 gebruikers" light />
                         </div>
