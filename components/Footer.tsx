@@ -107,7 +107,7 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate }) => {
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
           <p>© 2026 ZenTrack. Alle rechten voorbehouden.</p>
-          <p>Data op Nederlandse servers (ISO 27001) • AVG/GDPR Compliant</p>
+          <p>Data in EU-datacenters (Frankfurt/Amsterdam) • AVG-conform • Geen patiëntgegevens</p>
         </div>
       </div>
     </footer>

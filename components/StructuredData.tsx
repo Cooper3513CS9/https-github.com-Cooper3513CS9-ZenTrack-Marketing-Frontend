@@ -156,7 +156,7 @@ const faqSchema = {
       name: "Hoe zit het met privacy (AVG)?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Veiligheid staat voorop. Onze servers staan in Europa (Frankfurt/Amsterdam) en we verwerken geen patientgegevens. We voldoen aan alle ISO- en NEN-normen voor dataopslag.",
+        text: "Veiligheid staat voorop. Onze data staat in EU-datacenters (Frankfurt/Amsterdam) die ISO 27001-gecertificeerd zijn, en we verwerken geen patientgegevens. Je houdt zelf de regie: ZenTrack bestelt nooit zonder jouw akkoord.",
       },
     },
     {

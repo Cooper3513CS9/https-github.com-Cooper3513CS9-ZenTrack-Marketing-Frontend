@@ -17,11 +17,11 @@ export const FAQ: React.FC = () => {
     },
     {
       question: "Hoe zit het met privacy (AVG)?",
-      answer: "Veiligheid staat voorop. Onze servers staan in Europa (Frankfurt/Amsterdam) en we verwerken géén patiëntgegevens. We voldoen aan alle ISO- en NEN-normen voor dataopslag."
+      answer: "Veiligheid staat voorop. Onze data staat in EU-datacenters (Frankfurt/Amsterdam) die ISO 27001-gecertificeerd zijn, en we verwerken géén patiëntgegevens. Je houdt zelf de regie: ZenTrack bestelt nooit zonder jouw akkoord."
     },
     {
       question: "Wat als ik er niet uitkom?",
-      answer: "Dan app je Jord. Letterlijk. Als pilot partner heb je een directe lijn met de founders. Geen ticketsysteem, maar gewoon een antwoord."
+      answer: "Dan app je ons direct. Als early adopter heb je een directe lijn met de founders. Geen ticketsysteem, maar gewoon een antwoord."
     },
     {
       question: "Wat is de Expiratie Radar?",

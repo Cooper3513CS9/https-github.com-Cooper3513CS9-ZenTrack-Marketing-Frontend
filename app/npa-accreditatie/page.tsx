@@ -190,7 +190,7 @@ export default function NpaAccreditatiePage() {
 
                 <div className="mt-10 flex flex-wrap items-center justify-center md:justify-start gap-6 text-sm text-slate-500 font-medium">
                   <span className="flex items-center gap-2"><Award className="w-4 h-4" /> NPA Ready</span>
-                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> AVG & NEN 7510 Proof</span>
+                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> AVG-proof • Geen patiëntgegevens</span>
                   <span className="flex items-center gap-2"><Smartphone className="w-4 h-4" /> Via WhatsApp</span>
                 </div>
               </div>

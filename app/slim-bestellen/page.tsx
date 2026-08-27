@@ -221,7 +221,7 @@ export default function SlimBestellenPage() {
                 {
                   icon: AlertTriangle,
                   title: 'Geen inzicht in wat u betaalt',
-                  desc: 'Praktijken betalen vaak 15-40% meer dan collega\'s voor dezelfde producten. Maar wie vergelijkt dat?',
+                  desc: 'Voor hetzelfde product lopen leveranciersprijzen tientallen procenten uiteen. Maar wie heeft tijd om dat bij te houden?',
                   color: 'text-orange-500',
                   bg: 'bg-orange-50',
                   border: 'border-orange-100',
@@ -229,7 +229,7 @@ export default function SlimBestellenPage() {
                 {
                   icon: ClipboardList,
                   title: 'Elke praktijk is een eiland',
-                  desc: 'Uw buurpraktijk betaalt misschien minder — maar zonder inzicht weet u dat niet.',
+                  desc: 'Zonder marktreferentie weet u niet of uw prijs eerlijk is — u ziet alleen uw eigen factuur.',
                   color: 'text-yellow-600',
                   bg: 'bg-yellow-50',
                   border: 'border-yellow-100',
