@@ -2,6 +2,16 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  // Legacy auth/dashboard-routes leven alleen nog als code in deze repo;
+  // publiek horen ze op app.zentrack.nl (en de oude pagina's lekten
+  // techstack-namen in zichtbare tekst). Redirect alles permanent.
+  async redirects() {
+    return [
+      { source: '/auth/:path*', destination: 'https://app.zentrack.nl/sign-in', permanent: true },
+      { source: '/dashboard/:path*', destination: 'https://app.zentrack.nl', permanent: true },
+      { source: '/dashboard', destination: 'https://app.zentrack.nl', permanent: true },
+    ];
+  },
   images: {
     remotePatterns: [
       {
