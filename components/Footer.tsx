@@ -93,7 +93,7 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate }) => {
           {/* Kolom 5: CTA block (BEHOUDEN) */}
           <div id="beta" className="bg-slate-800 p-6 rounded-2xl border border-slate-700">
              <h4 className="text-white font-bold mb-2">Probeer ZenTrack</h4>
-             <p className="text-xs text-slate-400 mb-4">14 dagen gratis proberen. Geen creditcard nodig.</p>
+             <p className="text-xs text-slate-400 mb-4">Start met een gratis inkoop-check: upload je facturen en zie wat je te veel betaalt. Geen creditcard nodig.</p>
              <ul className="text-xs space-y-2 mb-6 text-slate-300">
                 <li>• 30 min onboarding call</li>
                 <li>• Upload eerste facturen</li>

@@ -401,7 +401,7 @@ export default function FactuurScannerPage() {
               </a>
             </div>
             <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-slate-500 font-medium">
-              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> 14 dagen gratis</span>
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Gratis inkoop-check</span>
               <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Via WhatsApp</span>
               <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Europese servers (EU)</span>
             </div>
