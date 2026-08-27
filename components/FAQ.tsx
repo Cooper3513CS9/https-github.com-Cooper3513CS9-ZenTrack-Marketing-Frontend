@@ -13,7 +13,7 @@ export const FAQ: React.FC = () => {
     },
     {
       question: "Werkt dit met mijn huidige leveranciers?",
-      answer: "Ja, 100%. Wij zijn onafhankelijk. Of je nu bestelt bij Medline, Henry Schein of de lokale apotheek: jij stuurt de factuur, wij verwerken de data."
+      answer: "Ja — wij zijn onafhankelijk en werken met vrijwel elke leverancier. Welke leverancier het ook is: jij uploadt de factuur, wij verwerken de data."
     },
     {
       question: "Hoe zit het met privacy (AVG)?",

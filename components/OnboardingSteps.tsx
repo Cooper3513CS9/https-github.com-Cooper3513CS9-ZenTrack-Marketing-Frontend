@@ -14,15 +14,15 @@ export const OnboardingSteps: React.FC = () => {
     },
     {
       id: 2,
-      title: "Upload één factuur",
-      description: "Sleep een PDF factuur in uw dashboard. Wij lezen uw bestelhistoriek en leveranciers automatisch in.",
+      title: "Upload uw facturen van het afgelopen kwartaal",
+      description: "Sleep uw PDF-facturen in uw dashboard — wij lezen bestelhistoriek en leveranciers automatisch in. Minder bij de hand? Begin gewoon met wat u heeft.",
       icon: UploadCloud,
       color: "bg-emerald-100 text-emerald-600"
     },
     {
       id: 3,
-      title: "Ontvang direct inzicht",
-      description: "Koppel WhatsApp en ontvang uw eerste voorraad- en bestelvoorstel. U bent live!",
+      title: "Ontvang uw inkoop-check",
+      description: "Zie direct wat u te veel betaalt en waar u kunt besparen. Hoe meer facturen, hoe scherper het beeld.",
       icon: MessageSquare,
       color: "bg-purple-100 text-purple-600"
     }

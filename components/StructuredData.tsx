@@ -148,7 +148,7 @@ const faqSchema = {
       name: "Werkt dit met mijn huidige leveranciers?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Ja, 100%. Wij zijn onafhankelijk. Of je nu bestelt bij Medline, Henry Schein of de lokale apotheek: jij stuurt de factuur, wij verwerken de data.",
+        text: "Ja — wij zijn onafhankelijk en werken met vrijwel elke leverancier. Welke leverancier het ook is: jij uploadt de factuur, wij verwerken de data.",
       },
     },
     {
