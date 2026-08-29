@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NPA Accreditatie Huisarts: Voorraadbeheer voor NPA 3.0 Visitatie | ZenTrack',
+  title: 'NPA Accreditatie Huisarts: Voorraadbeheer voor NPA 3.0 Visitatie',
   description: 'NPA-accreditatie (versie 3.0, Principe 13) vereist dat medische middelen geschikt en beschikbaar zijn. ZenTrack documenteert automatisch voorraad, expiraties en leveringen voor uw NPA-visitatie. Ruim 70% van huisartspraktijken heeft het NPA-keurmerk (bron: npacertificering.nl).',
   keywords: [
     'NPA accreditatie huisarts',

@@ -20,6 +20,7 @@ import { CookieConsent } from '@/components/legal/CookieConsent';
 import { GroupSection } from '@/components/GroupSection';
 import { OnboardingSteps } from '@/components/OnboardingSteps';
 import { BlogSection } from '@/components/BlogSection';
+import { HomeFaqStructuredData } from '@/components/StructuredData';
 
 export default function LandingPage() {
   const router = useRouter();
@@ -40,6 +41,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans relative">
+      <HomeFaqStructuredData />
       <Header onLoginClick={navigateToLogin} onRegisterClick={navigateToRegister} />
       <main>
          <Hero onCtaClick={navigateToRegister} />

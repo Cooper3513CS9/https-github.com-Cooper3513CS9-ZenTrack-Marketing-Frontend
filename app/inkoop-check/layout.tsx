@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Gratis Inkoop-check voor Huisartsenpraktijken | ZenTrack',
+  title: 'Gratis Inkoop-check voor Huisartsenpraktijken',
   description: 'Upload je eigen leveranciersfacturen en zie zwart-op-wit of je te veel betaalt — en hoeveel je kunt besparen. Gratis, zonder creditcard. Jouw facturen, jouw cijfers, jouw data.',
   keywords: [
     'inkoop check huisartsenpraktijk',

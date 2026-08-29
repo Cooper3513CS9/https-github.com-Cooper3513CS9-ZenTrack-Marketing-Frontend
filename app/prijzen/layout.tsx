@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Prijzen: wat kost ZenTrack? | ZenTrack',
+  title: 'Prijzen: wat kost ZenTrack?',
   description: 'ZenTrack kost €99 per locatie per maand (maandelijks opzegbaar); founding-praktijken betalen €79. De inkoop-check is gratis. Met 60-dagen-leveringsgarantie: wijzen wij minder besparing aan dan het abonnement kostte, dan krijg je het verschil terug.',
   keywords: [
     'zentrack prijzen',

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Expiratie Radar: Vervaldatum-bewaking via WhatsApp | ZenTrack',
+  title: 'Expiratie Radar: Vervaldatum-bewaking via WhatsApp',
   description: 'Vervaldatum-bewaking voor huisartsenpraktijken: foto van de verpakking, automatische WhatsApp-alerts 30, 14 en 7 dagen vooraf met kastlocatie. Onderdeel van ZenTrack Compleet — start met de gratis inkoop-check.',
   keywords: [
     'vervaldatum tracking medicijnen',

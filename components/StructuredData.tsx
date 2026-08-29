@@ -201,12 +201,18 @@ export function StructuredData() {
           __html: JSON.stringify(websiteSchema),
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
-      />
     </>
+  )
+}
+
+// Alleen op de homepage mounten — FAQPage-schema hoort op de pagina waar de FAQ zichtbaar is
+export function HomeFaqStructuredData() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(faqSchema),
+      }}
+    />
   )
 }

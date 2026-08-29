@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Pakbon Verificatie: Levering Controleren in 30 Seconden | ZenTrack',
+  title: 'Pakbon Verificatie: Levering Controleren in 30 Seconden',
   description: 'Controleer binnen 30 seconden of uw medische levering compleet is. ZenTrack vergelijkt automatisch pakbonnen met facturen en voorraad. Detecteer ontbrekende artikelen direct bij ontvangst.',
   keywords: [
     'pakbon verificatie huisarts',

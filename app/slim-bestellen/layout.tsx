@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Slim Bestellen: Grip op je Inkoopkosten | ZenTrack',
+  title: 'Slim Bestellen: Grip op je Inkoopkosten',
   description: 'Huisartspraktijken besteden gemiddeld €1.000-2.500/maand aan medische verbruiksartikelen. ZenTrack geeft je grip op wat je betaalt en signaleert waar je kunt besparen.',
   keywords: [
     'slim bestellen huisarts',
