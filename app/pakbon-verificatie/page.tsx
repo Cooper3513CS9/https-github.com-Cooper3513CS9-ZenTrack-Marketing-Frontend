@@ -170,7 +170,7 @@ export default function PakbonVerificatiePage() {
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
-                  Maak een foto van de pakbon — ZenTrack vergelijkt automatisch met uw facturen en voorraad.
+                  Maak een foto van de pakbon — ZenTrack vergelijkt automatisch met je facturen en voorraad.
                   <strong className="text-slate-900 block mt-2">Ontbrekende artikelen? Direct een melding.</strong>
                 </p>
 
@@ -203,7 +203,7 @@ export default function PakbonVerificatiePage() {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
                 Herkenbaar? <span className="text-red-500">Dit gaat mis.</span>
               </h2>
-              <p className="text-lg text-slate-600">Ontbrekende leveringen kosten u geld en tijd — elke week.</p>
+              <p className="text-lg text-slate-600">Ontbrekende leveringen kosten je geld en tijd — elke week.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {[
@@ -218,7 +218,7 @@ export default function PakbonVerificatiePage() {
                 {
                   icon: AlertTriangle,
                   title: 'Ontbrekende artikelen pas later ontdekt',
-                  desc: 'U merkt het pas als u het product nodig heeft. De leverancier zegt: "te laat om te claimen".',
+                  desc: 'Je merkt het pas als je het product nodig heeft. De leverancier zegt: "te laat om te claimen".',
                   color: 'text-orange-500',
                   bg: 'bg-orange-50',
                   border: 'border-orange-100',
@@ -226,7 +226,7 @@ export default function PakbonVerificatiePage() {
                 {
                   icon: Clock,
                   title: 'Verkeerde aantallen betaald',
-                  desc: '8 dozen besteld, 7 geleverd, 8 betaald. Zonder pakbon-factuur vergelijking betaalt u voor lucht.',
+                  desc: '8 dozen besteld, 7 geleverd, 8 betaald. Zonder pakbon-factuur vergelijking betaalt je voor lucht.',
                   color: 'text-yellow-600',
                   bg: 'bg-yellow-50',
                   border: 'border-yellow-100',
@@ -267,7 +267,7 @@ export default function PakbonVerificatiePage() {
                 {
                   step: '2',
                   title: 'Automatische vergelijking',
-                  desc: 'ZenTrack vergelijkt de pakbon met uw factuur en bestelling. Aantallen, producten, artikelnummers.',
+                  desc: 'ZenTrack vergelijkt de pakbon met je factuur en bestelling. Aantallen, producten, artikelnummers.',
                   icon: PackageSearch,
                   color: 'bg-orange-500',
                 },
@@ -350,7 +350,7 @@ export default function PakbonVerificatiePage() {
               <span className="text-emerald-400">Controleer in 30 seconden.</span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-              Foto maken, versturen, klaar. ZenTrack vergelijkt automatisch met uw facturen en meldt afwijkingen.
+              Foto maken, versturen, klaar. ZenTrack vergelijkt automatisch met je facturen en meldt afwijkingen.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <button

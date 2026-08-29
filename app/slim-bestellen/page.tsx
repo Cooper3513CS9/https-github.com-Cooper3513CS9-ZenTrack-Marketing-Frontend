@@ -83,7 +83,7 @@ export default function SlimBestellenPage() {
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-yellow-500 shrink-0"></span> <span>Pleisterstrips</span> <span className="text-[10px] text-slate-400">(3 dozen)</span></p>
                 </div>
                 <div className="mt-2 bg-blue-50 p-1.5 rounded border border-blue-100 text-[10px] text-blue-700 font-bold">
-                  Tip: U bestelt deze 3 producten vaak samen — alles in één keer?
+                  Tip: Je bestelt deze 3 producten vaak samen — alles in één keer?
                 </div>
               </div>
             </div>
@@ -173,7 +173,7 @@ export default function SlimBestellenPage() {
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
-                  ZenTrack analyseert uw facturen en bestelhistorie. U ziet wat u verbruikt, wat u betaalt en wanneer u moet bijbestellen.
+                  ZenTrack analyseert je facturen en bestelhistorie en zet bestelvoorstellen voor je klaar — goedkeuren is één JA via WhatsApp. Je ziet wat je verbruikt, wat je betaalt en wanneer je moet bijbestellen.
                   <strong className="text-slate-900 block mt-2">Bespaar tijd én geld. Zonder extra werk.</strong>
                 </p>
 
@@ -190,7 +190,7 @@ export default function SlimBestellenPage() {
                 </div>
 
                 <div className="mt-10 flex flex-wrap items-center justify-center md:justify-start gap-6 text-sm text-slate-500 font-medium">
-                  <span className="flex items-center gap-2"><Euro className="w-4 h-4" /> Prijsinzicht uit uw facturen</span>
+                  <span className="flex items-center gap-2"><Euro className="w-4 h-4" /> Prijsinzicht uit je facturen</span>
                   <span className="flex items-center gap-2"><Clock className="w-4 h-4" /> 3 uur/week tijdwinst</span>
                   <span className="flex items-center gap-2"><Smartphone className="w-4 h-4" /> Via WhatsApp</span>
                 </div>
@@ -204,7 +204,7 @@ export default function SlimBestellenPage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                Herkenbaar? <span className="text-red-500">Dit kost u tijd.</span>
+                Herkenbaar? <span className="text-red-500">Dit kost je tijd.</span>
               </h2>
               <p className="text-lg text-slate-600">De meeste praktijken besteden uren per week aan handmatig voorraadbeheer.</p>
             </div>
@@ -220,7 +220,7 @@ export default function SlimBestellenPage() {
                 },
                 {
                   icon: AlertTriangle,
-                  title: 'Geen inzicht in wat u betaalt',
+                  title: 'Geen inzicht in wat je betaalt',
                   desc: 'Voor hetzelfde product lopen leveranciersprijzen tientallen procenten uiteen. Maar wie heeft tijd om dat bij te houden?',
                   color: 'text-orange-500',
                   bg: 'bg-orange-50',
@@ -229,7 +229,7 @@ export default function SlimBestellenPage() {
                 {
                   icon: ClipboardList,
                   title: 'Elke praktijk is een eiland',
-                  desc: 'Zonder marktreferentie weet u niet of uw prijs eerlijk is — u ziet alleen uw eigen factuur.',
+                  desc: 'Zonder marktreferentie weet je niet of je prijs eerlijk is — je ziet alleen je eigen factuur.',
                   color: 'text-yellow-600',
                   bg: 'bg-yellow-50',
                   border: 'border-yellow-100',
@@ -263,21 +263,21 @@ export default function SlimBestellenPage() {
                 {
                   step: '1',
                   title: 'Verbruik wordt bijgehouden',
-                  desc: 'Via facturen en voorraadtellingen leert ZenTrack wat u gebruikt, hoeveel en wanneer.',
+                  desc: 'Via facturen en voorraadtellingen leert ZenTrack wat je gebruikt, hoeveel en wanneer.',
                   icon: BarChart3,
                   color: 'bg-amber-500',
                 },
                 {
                   step: '2',
                   title: 'Weet of je een eerlijke prijs betaalt',
-                  desc: 'ZenTrack toetst uw prijzen aan een marktreferentie. U ziet direct of u te veel betaalt — veilig en zonder gedoe.',
+                  desc: 'ZenTrack toetst je prijzen aan een marktreferentie. Je ziet direct of je te veel betaalt — veilig en zonder gedoe.',
                   icon: Search,
                   color: 'bg-orange-500',
                 },
                 {
                   step: '3',
                   title: 'Bestelherinnering via WhatsApp',
-                  desc: 'U krijgt een melding: "Handschoenen bijna op — over 5 dagen bijbestellen." Eén tik = besteld.',
+                  desc: 'Je krijgt een melding: "Handschoenen bijna op — over 5 dagen bijbestellen." Eén tik = besteld.',
                   icon: ShoppingCart,
                   color: 'bg-emerald-500',
                 },
@@ -300,7 +300,7 @@ export default function SlimBestellenPage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                Waar u bespaart
+                Waar je bespaart
               </h2>
               <p className="text-lg text-slate-600">Tijd besparen én inkoopkosten verlagen — met inzicht in marktconforme prijzen.</p>
             </div>
@@ -308,7 +308,7 @@ export default function SlimBestellenPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { label: 'Prijsinzicht', desc: 'Zie of je een marktconforme prijs betaalt', icon: '💰', bg: 'bg-amber-50', border: 'border-amber-200' },
-                { label: 'Verbruiksanalyse', desc: 'Weet wat u verbruikt', icon: '📊', bg: 'bg-emerald-50', border: 'border-emerald-200' },
+                { label: 'Verbruiksanalyse', desc: 'Weet wat je verbruikt', icon: '📊', bg: 'bg-emerald-50', border: 'border-emerald-200' },
                 { label: 'Bestelherinnering', desc: 'Nooit meer te laat bestellen', icon: '🔔', bg: 'bg-blue-50', border: 'border-blue-200' },
                 { label: 'Marktinzicht', desc: 'Prijzen getoetst aan de markt', icon: '🤝', bg: 'bg-purple-50', border: 'border-purple-200' },
               ].map((item, i) => (
@@ -380,7 +380,7 @@ export default function SlimBestellenPage() {
               <span className="text-emerald-400">Samen sterker inkopen.</span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-              ZenTrack houdt uw inkoop tegen het licht en laat zien waar het beter kan. Zo weet u zeker dat u nooit te veel betaalt.
+              ZenTrack houdt je inkoop tegen het licht en laat zien waar het beter kan. Zo weet je zeker dat je nooit te veel betaalt.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <button

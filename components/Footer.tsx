@@ -49,6 +49,7 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate }) => {
                   Expiratie Radar
                 </Link>
               </li>
+              <li><Link href="/inkoop-check" className="hover:text-emerald-400 transition-colors">Gratis Inkoop-check</Link></li>
               <li><a href="/#prijzen" className="hover:text-emerald-400 transition-colors">Prijzen</a></li>
             </ul>
           </div>

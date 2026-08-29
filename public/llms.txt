@@ -48,6 +48,7 @@ Nederlandse huisartsenpraktijken, gezondheidscentra en zorggroepen die tijd will
 ## Pagina's
 
 - [Homepage](https://www.zentrack.nl/)
+- [Gratis Inkoop-check](https://www.zentrack.nl/inkoop-check)
 - [Voorraadbeheer](https://www.zentrack.nl/voorraad-beheer)
 - [Factuur Scanner](https://www.zentrack.nl/factuur-scanner)
 - [Slim Bestellen](https://www.zentrack.nl/slim-bestellen)

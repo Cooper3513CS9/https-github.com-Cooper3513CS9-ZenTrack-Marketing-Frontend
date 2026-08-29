@@ -174,7 +174,7 @@ export default function VoorraadBeheerPage() {
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
-                  ZenTrack geeft real-time inzicht in uw voorraad per kast, kamer en locatie. Automatisch bijgewerkt bij elke factuur en telling.
+                  ZenTrack geeft real-time inzicht in je voorraad per kast, kamer en locatie. Automatisch bijgewerkt bij elke factuur en telling.
                   <strong className="text-slate-900 block mt-2">Altijd weten wat er is. Via WhatsApp of dashboard.</strong>
                 </p>
 
@@ -374,14 +374,14 @@ export default function VoorraadBeheerPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
               <Boxes className="w-4 h-4" />
-              <span>Altijd weten wat u op voorraad heeft</span>
+              <span>Altijd weten wat je op voorraad heeft</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Weg met Excel.<br />
               <span className="text-emerald-400">Welkom bij real-time inzicht.</span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-              Begin met uw eerste factuur of barcodescan. ZenTrack bouwt automatisch uw voorraadinzicht op.
+              Begin met je eerste factuur of barcodescan. ZenTrack bouwt automatisch je voorraadinzicht op.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <button

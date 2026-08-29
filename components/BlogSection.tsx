@@ -8,7 +8,7 @@ export const BlogSection: React.FC = () => {
     {
       category: "Inzicht",
       title: "De verborgen kosten van 'grijze' voorraad",
-      excerpt: "Uit brancheonderzoek blijkt dat tot 15% van medische verbruiksartikelen verloopt voordat het gebruikt wordt. Wat betekent dit financieel voor uw praktijk?",
+      excerpt: "Uit brancheonderzoek blijkt dat tot 15% van medische verbruiksartikelen verloopt voordat het gebruikt wordt. Wat betekent dit financieel voor je praktijk?",
       date: "20 mei 2026",
       readTime: "4 min",
       image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800",

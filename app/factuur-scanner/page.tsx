@@ -85,7 +85,7 @@ export default function FactuurScannerPage() {
                   <p className="flex items-center gap-1.5"><Check className="w-3 h-3 text-emerald-500 shrink-0" /> <span>Voorraad bijgewerkt</span></p>
                 </div>
                 <div className="mt-2 bg-blue-50 p-1.5 rounded border border-blue-100 text-[10px] text-blue-700 font-bold">
-                  Alle prijzen opgeslagen in uw dossier
+                  Alle prijzen opgeslagen in je dossier
                 </div>
               </div>
             </div>
@@ -234,7 +234,7 @@ export default function FactuurScannerPage() {
                 {
                   icon: Clock,
                   title: 'Geen inkoopoverzicht',
-                  desc: 'Hoeveel geeft u uit per leverancier? Per productcategorie? Zonder data geen inzicht — en geen besparingen.',
+                  desc: 'Hoeveel geeft je uit per leverancier? Per productcategorie? Zonder data geen inzicht — en geen besparingen.',
                   color: 'text-yellow-600',
                   bg: 'bg-yellow-50',
                   border: 'border-yellow-100',
@@ -282,7 +282,7 @@ export default function FactuurScannerPage() {
                 {
                   step: '3',
                   title: 'Voorraad bijgewerkt',
-                  desc: 'Producten worden automatisch aan uw voorraad toegevoegd. Prijzen worden opgeslagen voor inzicht per leverancier.',
+                  desc: 'Producten worden automatisch aan je voorraad toegevoegd. Prijzen worden opgeslagen voor inzicht per leverancier.',
                   icon: CheckCircle2,
                   color: 'bg-emerald-500',
                 },
@@ -387,7 +387,7 @@ export default function FactuurScannerPage() {
               <span className="text-emerald-400">Probeer de Factuur Scanner.</span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-              Upload uw eerste factuur via WhatsApp en zie direct het resultaat. Alle producten, prijzen en leveranciers — automatisch herkend.
+              Upload je eerste factuur via WhatsApp en zie direct het resultaat. Alle producten, prijzen en leveranciers — automatisch herkend.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <button

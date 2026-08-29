@@ -134,7 +134,7 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
               onClick={onRegisterClick}
               className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all flex items-center gap-2 shadow-lg shadow-emerald-600/20"
             >
-              Gratis proberen <ArrowRight className="w-4 h-4" />
+              Gratis inkoop-check <ArrowRight className="w-4 h-4" />
             </button>
           </div>
 
@@ -216,7 +216,7 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
             <div className="pt-4 mt-4 border-t border-slate-100 flex flex-col gap-3">
                 <button onClick={handleLogin} className="text-center py-2 text-slate-600 font-medium">Inloggen</button>
                 <button onClick={() => { setIsMenuOpen(false); setIsFeaturesOpen(false); onRegisterClick?.(); }} className="bg-emerald-600 text-white py-3 rounded-xl text-center font-semibold">
-                    Gratis proberen
+                    Gratis inkoop-check
                 </button>
             </div>
           </div>
