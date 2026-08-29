@@ -21,14 +21,14 @@ export default function InkoopCheckPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
               <FileSearch className="w-4 h-4" />
-              <span>Gratis — geen creditcard, geen verplichting</span>
+              <span>Gratis, zonder creditcard of verplichting</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
               De gratis inkoop-check.<br />
               <span className="text-emerald-600">Betaal je niet te veel?</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto">
-              Upload je eigen leveranciersfacturen en zie zwart-op-wit wat je te veel betaalt — en hoeveel je kunt besparen.
+              Upload je eigen leveranciersfacturen en zie zwart-op-wit wat je te veel betaalt en hoeveel je kunt besparen.
               <strong className="text-slate-900 block mt-2">Jouw facturen, jouw cijfers, jouw data.</strong>
             </p>
             <button onClick={navigateToRegister} className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-600/20 inline-flex items-center gap-2">
@@ -40,7 +40,7 @@ export default function InkoopCheckPage() {
         {/* ZO WERKT HET — DE LADDER */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Zo werkt het — in drie stappen</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Zo werkt het, in drie stappen</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
                 <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 mb-4">
@@ -61,7 +61,7 @@ export default function InkoopCheckPage() {
                   <Lock className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">3. Jij beslist wat erna komt</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">Het rapport toont wát er te besparen valt en hoevéél. Wil je ook zien wáár het goedkoper kan en het regelen met één JA via WhatsApp? Dat zit in het abonnement — met 60-dagen-leveringsgarantie.</p>
+                <p className="text-sm text-slate-600 leading-relaxed">Het rapport toont wát er te besparen valt en hoevéél. Wil je ook zien wáár het goedkoper kan en het regelen met één JA via WhatsApp? Dat zit in het abonnement, met 60-dagen-leveringsgarantie.</p>
               </div>
             </div>
           </div>
@@ -78,7 +78,7 @@ export default function InkoopCheckPage() {
                 <div>
                   <h3 className="font-bold text-slate-900 mb-3">Jouw cijfers zijn van jou</h3>
                   <ul className="space-y-2 text-sm text-slate-600">
-                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" /> Andere praktijken zien nooit jouw facturen, prijzen of naam — en we verkopen niets door</li>
+                    <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" /> Andere praktijken zien nooit jouw facturen, prijzen of naam, en we verkopen niets door</li>
                     <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" /> Geen patiëntgegevens, bewust geen koppeling met je HIS</li>
                     <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" /> Data op ISO 27001-gecertificeerde EU-infrastructuur; export of verwijderen kan altijd</li>
                     <li className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" /> Verwerkersovereenkomst op aanvraag via <a href="mailto:info@zentrack.nl" className="text-emerald-600 underline">info@zentrack.nl</a></li>

@@ -198,7 +198,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
             </h1>
             
             <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
-              Voorraad, bestellen en vervaldatums geregeld: je team appt een foto en Emma — je digitale collega — doet de rest. Jij keurt goed met één JA, en alles is vastgelegd voor de visitatie-map.
+              Voorraad, bestellen en vervaldatums geregeld: je team appt een foto en Emma, je digitale collega, doet de rest. Jij keurt goed met één JA, en alles is vastgelegd voor de visitatie-map.
               <strong className="text-slate-900 block mt-2">Start met de gratis inkoop-check: zie op je eigen facturen waar je te veel betaalt.</strong>
             </p>
 

@@ -7,7 +7,7 @@ import { Radar, ScanLine, PackageCheck, Boxes, TrendingDown, ShieldCheck, UserCh
 const features = [
   {
     title: 'Expiratie Radar',
-    description: 'Foto van de verpakking en de vervaldatum staat erin. WhatsApp-alert 30, 14 en 7 dagen vooraf — mét kastlocatie.',
+    description: 'Foto van de verpakking en de vervaldatum staat erin. WhatsApp-alert 30, 14 en 7 dagen vooraf, mét kastlocatie.',
     href: '/expiratie-radar',
     icon: Radar,
     iconBg: 'bg-orange-100',
@@ -59,7 +59,7 @@ const features = [
   },
   {
     title: 'Slim Bestellen',
-    description: 'ZenTrack leert van je eigen factuurhistorie en herinnert je wanneer het tijd is om bij te bestellen — én wat je de vorige keer betaalde.',
+    description: 'ZenTrack leert van je eigen factuurhistorie en herinnert je wanneer het tijd is om bij te bestellen, én wat je de vorige keer betaalde.',
     href: '/slim-bestellen',
     icon: TrendingDown,
     iconBg: 'bg-amber-100',
@@ -72,7 +72,7 @@ const features = [
   },
   {
     title: 'NPA Accreditatie',
-    description: 'Alles met een keurings- of vervaldatum bewaakt, met bewijsrapport voor je visitatie-map. Het datums-deel altijd aantoonbaar op orde.',
+    description: 'Alles met een keurings- of vervaldatum bewaakt, met bewijsrapport voor je visitatie-map. Het datums-deel is altijd aantoonbaar op orde.',
     href: '/npa-accreditatie',
     icon: ShieldCheck,
     iconBg: 'bg-violet-100',
@@ -85,7 +85,7 @@ const features = [
   },
   {
     title: 'Besparingscalculator',
-    description: 'Wat levert ZenTrack uw praktijk op? Reken het uit met uw eigen cijfers — in 30 seconden.',
+    description: 'Wat levert ZenTrack uw praktijk op? Reken het uit met je eigen cijfers, in 30 seconden.',
     href: '/#calculator',
     icon: Calculator,
     iconBg: 'bg-emerald-100',
@@ -112,7 +112,7 @@ export const Features: React.FC = () => {
             Wat kan ZenTrack voor <span className="text-emerald-600">uw praktijk</span>?
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Van factuurverwerking tot expiratiebeheer — ontdek alle mogelijkheden en start vandaag.
+            Van factuurverwerking tot expiratiebeheer: ontdek alle mogelijkheden en start vandaag.
           </p>
         </div>
 
@@ -192,7 +192,7 @@ export const Features: React.FC = () => {
                 <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
               </div>
               <h4 className="font-bold text-slate-900">Bestellen wordt JA appen</h4>
-              <p className="text-sm text-slate-500 mt-1">ZenTrack zet de bestelling klaar voordat jij weet dat het op is. Jij keurt goed met één JA via WhatsApp — er gaat nooit iets de deur uit zonder jouw akkoord.</p>
+              <p className="text-sm text-slate-500 mt-1">ZenTrack zet de bestelling klaar voordat jij weet dat het op is. Jij keurt goed met één JA via WhatsApp. Er gaat nooit iets de deur uit zonder jouw akkoord.</p>
             </div>
           </div>
 

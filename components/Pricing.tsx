@@ -19,7 +19,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Eén product. Eén prijs per locatie.</h2>
           <p className="text-slate-400 text-lg">Start met de gratis inkoop-check. Upgrade wanneer jij er klaar voor bent.</p>
-          <p className="text-slate-500 text-sm mt-3 max-w-2xl mx-auto">Een praktijk is al gauw uren per week kwijt aan bestellen, voorraad en vervaldatums — kostbare tijd van je team.</p>
+          <p className="text-slate-500 text-sm mt-3 max-w-2xl mx-auto">Een praktijk is al gauw uren per week kwijt aan bestellen, voorraad en vervaldatums. Kostbare tijd van je team.</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -65,26 +65,26 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                 <Zap className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-slate-900">ZenTrack Compleet</h3>
-              <p className="text-slate-500 text-sm mt-2 min-h-[60px]">Alles erin. Eén prijs per locatie — team en facturen onbeperkt.</p>
+              <p className="text-slate-500 text-sm mt-2 min-h-[60px]">Alles erin. Eén prijs per locatie, team en facturen onbeperkt.</p>
             </div>
             <div className="mb-1">
               <span className="text-4xl font-bold text-slate-900">€79</span>
               <span className="text-slate-500">/mnd per locatie</span>
             </div>
             <p className="text-xs text-slate-500 mb-4">Founding-tarief (12 maanden) · daarna geldt de lijstprijs van €99, maandelijks opzegbaar</p>
-            <p className="text-sm font-semibold text-emerald-700 mb-6 min-h-[40px]">ZenTrack zet je bestelling klaar — jij keurt goed met één JA via WhatsApp.</p>
+            <p className="text-sm font-semibold text-emerald-700 mb-6 min-h-[40px]">ZenTrack zet je bestelling klaar. Jij keurt goed met één JA via WhatsApp.</p>
             <button onClick={onRegisterClick} className="w-full py-3 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-200 mb-8">
               Begin met de gratis check
             </button>
             <div className="space-y-3 flex-1">
-              <FeatureItem text="Bestelvoorstellen klaar — goedkeuren is JA appen; bij aangesloten webshops plaatsen wij direct, anders ligt hij verzendklaar" highlighted light />
+              <FeatureItem text="Bestelvoorstellen staan klaar en goedkeuren is JA appen; bij aangesloten webshops plaatsen wij direct, anders ligt hij verzendklaar" highlighted light />
               <FeatureItem text="Prijsbewaking mét de namen: zie bij welke leverancier het goedkoper kan" light />
               <FeatureItem text="Vervaldatum-alerts via WhatsApp: 30, 14 en 7 dagen vooraf én op de dag zelf, mét kastlocatie" light />
               <FeatureItem text="Pakbon-foto → levering automatisch gecheckt" light />
               <FeatureItem text="Voorraad telt zichzelf bij via facturen en pakbonnen" light />
               <FeatureItem text="Alles vastgelegd: wie keurde wat goed, alle facturen doorzoekbaar" light />
               <FeatureItem text="Datums & documenten voor je visitatie-map, met bewijsrapport" light />
-              <FeatureItem text="Emma in dashboard én WhatsApp (jij bepaalt wie) — en ze onthoudt jullie afspraken" light />
+              <FeatureItem text="Emma in dashboard én WhatsApp (jij bepaalt wie), en ze onthoudt jullie afspraken" light />
               <FeatureItem text="Team onbeperkt, ieder een eigen rol" light />
             </div>
           </div>
@@ -99,9 +99,9 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
               <p className="text-slate-400 text-sm mt-2 min-h-[60px]">Gezondheidscentra, ketens en zorggroepen. Elke locatie (bezoekadres) telt als één ZenTrack.</p>
             </div>
             <div className="mb-4">
-              <span className="text-2xl font-bold text-white">5+ locaties: -15%</span>
+              <span className="text-2xl font-bold text-white">Staffelkorting op aanvraag</span>
             </div>
-            <p className="text-sm font-semibold text-purple-300 mb-6 min-h-[40px]">20+ locaties? Zorggroep-partnerschap op maat.</p>
+            <p className="text-sm font-semibold text-purple-300 mb-6 min-h-[40px]">Meer locaties, beter tarief. Zorggroepen: partnerschap op maat.</p>
             <a href="#contact" className="w-full py-3 rounded-xl border border-purple-500/50 text-white font-bold hover:bg-purple-600 hover:border-purple-600 transition-colors mb-8 flex items-center justify-center gap-2">
               Plan een gesprek <ArrowRight className="w-4 h-4" />
             </a>
@@ -125,11 +125,11 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                 <p className="text-sm text-slate-400 leading-relaxed">
                   Na 60 dagen maken we samen de balans op. Hebben wij minder besparing aangewezen dan je abonnement tot dan kostte?
                   Dan mag je per direct stoppen én betalen we je het verschil terug.
-                  <span className="text-slate-300"> Voorbeeld: abonnement kostte €158, wij wezen €110 aan — je krijgt €48 terug en je bent vrij.</span>
+                  <span className="text-slate-300"> Voorbeeld: abonnement kostte €158, wij wezen €110 aan. Je krijgt €48 terug en je bent vrij.</span>
                 </p>
                 <p className="text-xs text-slate-500 mt-3 leading-relaxed">
                   Voorwaarde: upload binnen 30 dagen je volledige inkoopadministratie van de afgelopen 12 maanden (alle leveranciers), zodat we eerlijk kunnen rekenen.
-                  De tijdwinst van je team rekenen we niet eens mee — die is de bonus. Volledige voorwaarden in onze algemene voorwaarden.
+                  De tijdwinst van je team rekenen we niet eens mee. Die is de bonus. Volledige voorwaarden in onze algemene voorwaarden.
                 </p>
               </div>
             </div>
@@ -148,15 +148,15 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                 <ul className="space-y-1.5 text-sm text-slate-400">
                   <li className="flex items-start gap-2">
                     <Check className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />
-                    <span><strong className="text-slate-300">Stap 1 — gratis inkoop-check.</strong> Upload je facturen en zie wat je te veel betaalt. Geen verplichting, jouw data blijft van jou.</span>
+                    <span><strong className="text-slate-300">Stap 1: gratis inkoop-check.</strong> Upload je facturen en zie wat je te veel betaalt. Geen verplichting, jouw data blijft van jou.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />
-                    <span><strong className="text-slate-300">Stap 2 — pas upgraden als het uit kan.</strong> De check laat éérst zien wat er te halen valt. Je koopt nooit blind.</span>
+                    <span><strong className="text-slate-300">Stap 2: pas upgraden als het uit kan.</strong> De check laat éérst zien wat er te halen valt. Je koopt nooit blind.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />
-                    <span><strong className="text-slate-300">Eén tarief, alles erin.</strong> Geen pakketten of verborgen modules — het verschil zit alleen in het aantal locaties.</span>
+                    <span><strong className="text-slate-300">Eén tarief, alles erin.</strong> Geen pakketten of verborgen modules: het verschil zit alleen in het aantal locaties.</span>
                   </li>
                 </ul>
               </div>

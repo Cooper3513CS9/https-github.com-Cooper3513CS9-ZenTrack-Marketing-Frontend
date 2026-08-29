@@ -56,7 +56,7 @@ export default function ExpiratieRadarPage() {
                 </div>
                 <div className="mt-2 flex items-center gap-1 text-[10px] text-slate-400 bg-emerald-50 p-1.5 rounded border border-emerald-100">
                   <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
-                  <span>Nog 13 maanden — alert staat klaar.</span>
+                  <span>Nog 13 maanden. Alert staat klaar.</span>
                 </div>
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function ExpiratieRadarPage() {
             </div>
             <div className="flex justify-start">
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
-                <p className="font-bold text-slate-800 mb-2">Expiratie Radar — 8 producten</p>
+                <p className="font-bold text-slate-800 mb-2">Expiratie Radar: 8 producten</p>
                 <div className="space-y-1.5 text-slate-600">
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-red-500 shrink-0"></span> <span className="font-bold text-red-600">Adrenaline auto-injector</span> <span className="text-[10px] text-red-500">(2 dagen!)</span></p>
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span> <span>Hechtmateriaal 3-0</span> <span className="text-[10px] text-orange-500">(3 weken)</span></p>
@@ -106,12 +106,12 @@ export default function ExpiratieRadarPage() {
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
                 <p className="font-bold text-slate-800 mb-1">Foto herkend!</p>
                 <div className="space-y-1 text-slate-600">
-                  <p>Omeprazol 20mg — Batch OM-892</p>
+                  <p>Omeprazol 20mg, Batch OM-892</p>
                   <p>Houdbaar tot: <span className="font-bold text-orange-600">Juli 2026</span></p>
                 </div>
                 <div className="mt-2 flex items-center gap-1 text-[10px] text-orange-700 bg-orange-50 p-1.5 rounded border border-orange-100">
                   <div className="w-2 h-2 rounded-full bg-orange-500"></div>
-                  <span className="font-bold">Nog 3 weken — bestel op tijd bij!</span>
+                  <span className="font-bold">Nog 3 weken: bestel op tijd bij!</span>
                 </div>
                 <div className="mt-1.5 bg-slate-50 p-1.5 rounded border border-slate-100 text-center cursor-pointer hover:bg-slate-100 transition-colors">
                   <span className="text-slate-700 font-bold text-[10px]">Toevoegen aan bestellijst</span>
@@ -184,7 +184,7 @@ export default function ExpiratieRadarPage() {
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
-                  Foto van de verpakking en de vervaldatum staat erin. Automatische WhatsApp-waarschuwing 30, 14 en 7 dagen vooraf én op de dag zelf — mét kastlocatie.
+                  Foto van de verpakking en de vervaldatum staat erin. Automatische WhatsApp-waarschuwing 30, 14 en 7 dagen vooraf én op de dag zelf, mét kastlocatie.
                   <strong className="text-slate-900 block mt-2">Je team appt, Emma bewaakt. Nooit meer een visitatie-bevinding op een verlopen ampul.</strong>
                 </p>
 
@@ -217,7 +217,7 @@ export default function ExpiratieRadarPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
                 Herkenbaar? <span className="text-red-500">Dit gaat mis.</span>
               </h2>
-              <p className="text-lg text-slate-600">Elke praktijk heeft ermee te maken — tot je er iets aan doet.</p>
+              <p className="text-lg text-slate-600">Elke praktijk heeft ermee te maken. Tot je er iets aan doet.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {[
@@ -240,7 +240,7 @@ export default function ExpiratieRadarPage() {
                 {
                   icon: Clock,
                   title: 'Elke week kastjes checken',
-                  desc: 'De assistente loopt wekelijks alle kasten langs. Kost uren per maand — en toch mis je dingen.',
+                  desc: 'De assistente loopt wekelijks alle kasten langs. Kost uren per maand, en toch mis je dingen.',
                   color: 'text-yellow-600',
                   bg: 'bg-yellow-50',
                   border: 'border-yellow-100',
@@ -340,13 +340,13 @@ export default function ExpiratieRadarPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
                 Onderdeel van <span className="text-emerald-600">ZenTrack Compleet</span>
               </h2>
-              <p className="text-lg text-slate-600">De Expiratie Radar zit in het abonnement — samen met bestelvoorstellen, voorraad, pakbon-controle en het visitatie-bewijsrapport.</p>
+              <p className="text-lg text-slate-600">De Expiratie Radar zit in het abonnement, samen met bestelvoorstellen, voorraad, pakbon-controle en het visitatie-bewijsrapport.</p>
             </div>
             <div className="bg-emerald-50 rounded-3xl p-8 border-2 border-emerald-200 max-w-2xl mx-auto">
               <div className="space-y-3 mb-8">
-                <FeatureCheck text="Foto van de verpakking — vervaldatum automatisch gelezen" />
+                <FeatureCheck text="Foto van de verpakking, vervaldatum automatisch gelezen" />
                 <FeatureCheck text="WhatsApp-alerts 30, 14 en 7 dagen vooraf én op de dag zelf" />
-                <FeatureCheck text="Kastlocatie in elke melding — je weet direct waar je moet zijn" />
+                <FeatureCheck text="Kastlocatie in elke melding: je weet direct waar je moet zijn" />
                 <FeatureCheck text="Verkeerslicht-overzicht in het dashboard" />
                 <FeatureCheck text="Bewijsrapport voor je visitatie-map" />
               </div>
@@ -375,7 +375,7 @@ export default function ExpiratieRadarPage() {
               <span className="text-emerald-400">over de datum.</span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-              Begin met de gratis inkoop-check — en zie meteen wat ZenTrack Compleet, mét de Expiratie Radar, voor je praktijk doet.
+              Begin met de gratis inkoop-check en zie meteen wat ZenTrack Compleet, mét de Expiratie Radar, voor je praktijk doet.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <button

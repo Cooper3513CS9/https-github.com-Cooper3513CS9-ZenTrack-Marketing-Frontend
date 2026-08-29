@@ -13,7 +13,7 @@ export const FAQ: React.FC = () => {
     },
     {
       question: "Werkt dit met mijn huidige leveranciers?",
-      answer: "Ja — wij zijn onafhankelijk en werken met vrijwel elke leverancier. Welke leverancier het ook is: jij uploadt de factuur, wij verwerken de data."
+      answer: "Ja, wij zijn onafhankelijk en werken met vrijwel elke leverancier. Welke leverancier het ook is: jij uploadt de factuur, wij verwerken de data."
     },
     {
       question: "Hoe zit het met privacy (AVG)?",
@@ -29,15 +29,15 @@ export const FAQ: React.FC = () => {
     },
     {
       question: "Wat is de 60-dagen-leveringsgarantie?",
-      answer: "Na 60 dagen maken we samen de balans op: heeft ZenTrack minder besparing aangewezen dan het abonnement tot dan kostte, dan mag je per direct stoppen én betalen we je het verschil terug. Voorwaarde: upload binnen 30 dagen je volledige inkoopadministratie van de afgelopen 12 maanden. De tijdwinst van je team rekenen we niet eens mee — die is de bonus."
+      answer: "Na 60 dagen maken we samen de balans op: heeft ZenTrack minder besparing aangewezen dan het abonnement tot dan kostte, dan mag je per direct stoppen én betalen we je het verschil terug. Voorwaarde: upload binnen 30 dagen je volledige inkoopadministratie van de afgelopen 12 maanden. De tijdwinst van je team rekenen we niet eens mee. Die is de bonus."
     },
     {
       question: "Wat telt als een locatie?",
-      answer: "Elk bezoekadres met een eigen voorraad telt als één locatie. Een gezondheidscentrum met drie vestigingen heeft dus drie ZenTrack-locaties. Binnen een locatie zijn team en facturen onbeperkt — iedereen een eigen inlog met een eigen rol."
+      answer: "Elk bezoekadres met een eigen voorraad telt als één locatie. Een gezondheidscentrum met drie vestigingen heeft dus drie ZenTrack-locaties. Binnen een locatie zijn team en facturen onbeperkt: iedereen een eigen inlog met een eigen rol."
     },
     {
       question: "Hoe werkt de vervaldatum-bewaking (Expiratie Radar)?",
-      answer: "Je team stuurt een foto van de verpakking via WhatsApp en ZenTrack leest de vervaldatum. Je krijgt automatisch een waarschuwing 30, 14 en 7 dagen vooraf én op de dag zelf — met de kastlocatie erbij, zodat je direct weet waar je moet zijn. Onderdeel van het ZenTrack Compleet-abonnement."
+      answer: "Je team stuurt een foto van de verpakking via WhatsApp en ZenTrack leest de vervaldatum. Je krijgt automatisch een waarschuwing 30, 14 en 7 dagen vooraf én op de dag zelf, met de kastlocatie erbij, zodat je direct weet waar je moet zijn. Onderdeel van het ZenTrack Compleet-abonnement."
     }
   ];
 

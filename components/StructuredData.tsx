@@ -126,7 +126,7 @@ const faqSchema = {
       name: "Wat kost ZenTrack?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "De inkoop-check is gratis. ZenTrack Compleet — met alles erin — kost EUR 99 per locatie per maand (maandelijks opzegbaar); het founding-tarief is EUR 79 per maand bij 12 maanden. Vanaf 5 locaties geldt 15% korting; voor zorggroepen met 20 of meer locaties is er een partnerschap op maat. Team en facturen zijn altijd onbeperkt.",
+        text: "De inkoop-check is gratis. ZenTrack Compleet — met alles erin — kost EUR 99 per locatie per maand (maandelijks opzegbaar); het founding-tarief is EUR 79 per maand bij 12 maanden. Voor meerdere locaties geldt een staffelkorting op aanvraag; voor zorggroepen is er een partnerschap op maat. Team en facturen zijn altijd onbeperkt.",
       },
     },
     {
