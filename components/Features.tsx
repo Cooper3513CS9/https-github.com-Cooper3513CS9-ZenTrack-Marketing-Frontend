@@ -7,7 +7,7 @@ import { Radar, ScanLine, PackageCheck, Boxes, TrendingDown, ShieldCheck, UserCh
 const features = [
   {
     title: 'Expiratie Radar',
-    description: 'Houd vervaldatums bij van 25 producten. Automatische WhatsApp alerts voordat iets verloopt.',
+    description: 'Foto van de verpakking en de vervaldatum staat erin. WhatsApp-alert 30, 14 en 7 dagen vooraf — mét kastlocatie.',
     href: '/expiratie-radar',
     icon: Radar,
     iconBg: 'bg-orange-100',
@@ -15,8 +15,8 @@ const features = [
     ctaColor: 'text-emerald-600',
     cardBorder: 'border-2 border-orange-200',
     cardBg: 'bg-orange-50/30',
-    isHighlighted: true,
-    ctaText: 'Start Gratis',
+    isHighlighted: false,
+    ctaText: 'Meer info',
   },
   {
     title: 'Factuur Scanner',
@@ -59,7 +59,7 @@ const features = [
   },
   {
     title: 'Slim Bestellen',
-    description: 'ZenTrack leert van je eigen factuurhistorie en herinnert u wanneer het tijd is om bij te bestellen — én wat u de vorige keer betaalde.',
+    description: 'ZenTrack leert van je eigen factuurhistorie en herinnert je wanneer het tijd is om bij te bestellen — én wat je de vorige keer betaalde.',
     href: '/slim-bestellen',
     icon: TrendingDown,
     iconBg: 'bg-amber-100',
@@ -135,7 +135,7 @@ export const Features: React.FC = () => {
               <Link key={feature.href} href={feature.href} className="group">
                 <div className={`relative ${feature.cardBg} ${feature.cardBorder} rounded-2xl p-6 h-full flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}>
 
-                  {/* Gratis Badge for Expiratie Radar */}
+                  {/* Optionele uitlicht-badge (momenteel geen kaart uitgelicht) */}
                   {feature.isHighlighted && (
                     <span className="absolute -top-3 -right-3 bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">
                       Gratis
