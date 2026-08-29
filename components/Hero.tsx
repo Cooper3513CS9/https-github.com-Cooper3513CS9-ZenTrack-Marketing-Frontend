@@ -193,13 +193,13 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
-              Slim voorraadbeheer. <br/>
-              <span className="text-emerald-600">Gewoon via WhatsApp.</span>
+              Nooit meer gedoe met bestellen,<br/>
+              <span className="text-emerald-600">voorraad en vervaldatums.</span>
             </h1>
             
             <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
-              Maak een foto van een factuur, product of pakbon en ZenTrack regelt de rest. Geen nieuwe software leren, geen inlogcodes zoeken. 
-              <strong className="text-slate-900 block mt-2">Jij houdt de regie op het dashboard.</strong>
+              Emma is een digitale collega voor je inkoop: je team appt haar foto&apos;s en vragen, jij keurt bestellingen goed met één JA — en alles is vastgelegd, klaar voor de visitatie-map.
+              <strong className="text-slate-900 block mt-2">Start met de gratis inkoop-check: zie op je eigen facturen waar je te veel betaalt.</strong>
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
@@ -207,7 +207,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
                 onClick={onCtaClick}
                 className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2"
               >
-                Start Gratis & Veilig
+                Start de gratis inkoop-check
                 <ArrowRight className="w-5 h-5" />
               </button>
               <a href="#features" className="w-full sm:w-auto px-8 py-4 rounded-xl text-slate-600 font-bold border border-slate-200 hover:bg-slate-50 transition-colors text-center">

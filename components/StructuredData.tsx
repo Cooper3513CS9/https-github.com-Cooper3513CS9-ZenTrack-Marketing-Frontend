@@ -1,7 +1,9 @@
 /**
  * Structured Data (JSON-LD) voor ZenTrack
  * Bevat Organization, SoftwareApplication, WebSite en FAQPage schema's
- * voor AI-zichtbaarheid en Google Rich Results
+ * voor AI-zichtbaarheid en Google Rich Results.
+ * BELANGRIJK: houd dit exact in lijn met de zichtbare site-teksten
+ * (Pricing.tsx, FAQ.tsx) en public/llms.txt — AI's citeren uit alle drie.
  */
 
 const organizationSchema = {
@@ -12,7 +14,7 @@ const organizationSchema = {
   url: "https://www.zentrack.nl",
   logo: "https://www.zentrack.nl/zentrack-logo-dark.png",
   description:
-    "ZenTrack automatiseert voorraadbeheer voor Nederlandse huisartspraktijken via WhatsApp. AI-factuurscanner, expiratie-alerts en NPA-accreditatie documentatie.",
+    "ZenTrack is een digitale collega voor inkoop, voorraad en vervaldatums in Nederlandse huisartsenpraktijken. Facturen worden automatisch gelezen, bestellingen keur je goed met één JA via WhatsApp, en alles is vastgelegd.",
   foundingDate: "2025",
   address: {
     "@type": "PostalAddress",
@@ -24,6 +26,7 @@ const organizationSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
+    email: "info@zentrack.nl",
     availableLanguage: "Dutch",
   },
   sameAs: [
@@ -37,10 +40,10 @@ const softwareApplicationSchema = {
   "@id": "https://www.zentrack.nl/#software",
   name: "ZenTrack",
   applicationCategory: "BusinessApplication",
-  applicationSubCategory: "Voorraadbeheer Software",
+  applicationSubCategory: "Inkoop- en voorraadbeheer voor huisartsenpraktijken",
   operatingSystem: "Web, WhatsApp",
   description:
-    "Automatisch voorraadbeheer via WhatsApp voor huisartspraktijken. Upload facturen, track voorraad, ontvang expiratie-alerts en bereid NPA-visitaties voor.",
+    "Digitale collega voor de huisartsenpraktijk: gratis inkoop-check op je eigen facturen, bestelvoorstellen die je goedkeurt met één JA via WhatsApp, voorraad die zichzelf bijtelt, vervaldatum-alerts vooraf en een doorzoekbaar factuurarchief.",
   url: "https://www.zentrack.nl",
   provider: {
     "@type": "Organization",
@@ -49,69 +52,44 @@ const softwareApplicationSchema = {
   offers: [
     {
       "@type": "Offer",
-      name: "Kleine praktijk",
-      price: "79",
+      name: "Gratis inkoop-check",
+      price: "0",
       priceCurrency: "EUR",
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: "79",
-        priceCurrency: "EUR",
-        unitText: "maand",
-        referenceQuantity: {
-          "@type": "QuantitativeValue",
-          value: "1",
-          unitCode: "MON",
-        },
-      },
-      description: "Voor de solo- of duopraktijk — de complete voorraad- en bestelflow; jij bestelt, ZenTrack helpt",
+      description:
+        "Upload je facturen en zie waar je te veel betaalt — vrijblijvend, zonder creditcard. Hoe meer maanden facturen (liefst 12), hoe scherper het rapport.",
       url: "https://app.zentrack.nl/sign-up",
     },
     {
       "@type": "Offer",
-      name: "Groepspraktijk",
-      price: "149",
+      name: "ZenTrack Compleet",
+      price: "99",
       priceCurrency: "EUR",
       priceSpecification: {
         "@type": "UnitPriceSpecification",
-        price: "149",
+        price: "99",
         priceCurrency: "EUR",
-        unitText: "maand",
+        unitText: "per locatie per maand",
         referenceQuantity: {
           "@type": "QuantitativeValue",
           value: "1",
           unitCode: "MON",
         },
       },
-      description: "Voor meerdere huisartsen op één locatie — ZenTrack zet bestellingen kant-en-klaar, koppelt al je leveranciers, leert je praktijk kennen en biedt team- en rollenbeheer",
-      url: "https://app.zentrack.nl/sign-up",
-    },
-    {
-      "@type": "Offer",
-      name: "Zorggroep",
-      price: "249",
-      priceCurrency: "EUR",
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: "249",
-        priceCurrency: "EUR",
-        unitText: "maand",
-        referenceQuantity: {
-          "@type": "QuantitativeValue",
-          value: "1",
-          unitCode: "MON",
-        },
-      },
-      description: "Voor zorggroepen en ketens — maatwerk per locatie",
+      description:
+        "Eén product met alles erin, per locatie (bezoekadres): bestelvoorstellen met JA-goedkeuring via WhatsApp, prijsbewaking met leveranciersnamen, vervaldatum-alerts, pakbon-controle, visitatie-bewijsrapport en onbeperkt team. Founding-tarief €79 per maand bij 12 maanden. 60-dagen-leveringsgarantie.",
       url: "https://app.zentrack.nl/sign-up",
     },
   ],
   featureList: [
-    "AI-factuurscanner via WhatsApp",
-    "Real-time voorraadbeheer per kast en locatie",
-    "Automatische expiratie-alerts (30/60/90 dagen)",
-    "Inzicht in je eigen inkoopkosten",
-    "NPA 3.0 accreditatie documentatie (Principe 13: middelen)",
-    "Pakbon verificatie in 30 seconden",
+    "Gratis inkoop-check: zie op je eigen facturen waar je te veel betaalt",
+    "Facturen automatisch inlezen (foto of PDF)",
+    "Bestelvoorstellen klaargezet — goedkeuren met één JA via WhatsApp",
+    "Vervaldatum-alerts 30, 14 en 7 dagen vooraf én op de dag zelf, met kastlocatie",
+    "Pakbon-foto: levering automatisch gecheckt tegen de bestelling",
+    "Voorraad telt zichzelf bij via facturen en pakbonnen",
+    "Alles vastgelegd: goedkeuringen en facturen doorzoekbaar terug te vinden",
+    "Datums en documenten voor de visitatie-voorbereiding, met bewijsrapport",
+    "Chat met je eigen cijfers, in dashboard en WhatsApp",
   ],
   screenshot: "https://www.zentrack.nl/zentrack-logo-dark.png",
 }
@@ -123,7 +101,7 @@ const websiteSchema = {
   name: "ZenTrack",
   url: "https://www.zentrack.nl",
   description:
-    "Slim voorraadbeheer voor Nederlandse huisartspraktijken",
+    "Slim inkoop- en voorraadbeheer voor Nederlandse huisartsenpraktijken",
   publisher: {
     "@type": "Organization",
     "@id": "https://www.zentrack.nl/#organization",
@@ -137,42 +115,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Moet ik ALLE producten scannen bij binnenkomst?",
+      name: "Wat is de gratis inkoop-check?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Nee, dat hoeft niet. ZenTrack werkt flexibel. Scan je wel? Dan heb je exacte vervaldatums. Scan je niet? Dan schatten we het verbruik. Veel praktijken scannen alleen dure of kritieke items.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Werkt dit met mijn huidige leveranciers?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Ja — wij zijn onafhankelijk en werken met vrijwel elke leverancier. Welke leverancier het ook is: jij uploadt de factuur, wij verwerken de data.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Hoe zit het met privacy (AVG)?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Veiligheid staat voorop. Onze data staat in EU-datacenters (Frankfurt/Amsterdam) die ISO 27001-gecertificeerd zijn, en we verwerken geen patientgegevens. Je houdt zelf de regie: ZenTrack bestelt nooit zonder jouw akkoord.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Wat is de Expiratie Radar?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "De Expiratie Radar is een gratis tool die vervaldatums van je medische producten bijhoudt. Je voegt producten toe via WhatsApp en ZenTrack waarschuwt je automatisch als iets bijna verloopt.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is de Expiratie Radar echt gratis?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Ja, 100% gratis voor maximaal 25 producten, gedurende 6 maanden, voor de eerste 100 praktijken. Geen creditcard nodig, geen verplichtingen.",
+        text: "Je uploadt je leveranciersfacturen en ZenTrack laat zien waar je te veel betaalt en hoeveel je kunt besparen. Begin met één factuur voor een eerste signaal; met 12 maanden facturen krijg je een volwaardig besparingsrapport. Vrijblijvend, geen creditcard nodig. Bij welke leverancier het goedkoper kan, zie je met het abonnement.",
       },
     },
     {
@@ -180,15 +126,55 @@ const faqSchema = {
       name: "Wat kost ZenTrack?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "ZenTrack heeft een gratis Expiratie Radar (tot 25 producten). De Kleine praktijk (EUR 79 per maand) bevat de complete voorraad- en bestelflow voor de solo- of duopraktijk. De Groepspraktijk (EUR 149 per maand) voegt daar automatisch bestellingen klaarzetten, onbeperkt leveranciers koppelen, een meelerende assistent en team- en rollenbeheer aan toe. Voor zorggroepen met meerdere locaties is er maatwerk. Gratis starten, geen creditcard nodig.",
+        text: "De inkoop-check is gratis. ZenTrack Compleet — met alles erin — kost EUR 99 per locatie per maand (maandelijks opzegbaar); het founding-tarief is EUR 79 per maand bij 12 maanden. Vanaf 5 locaties geldt 15% korting; voor zorggroepen met 20 of meer locaties is er een partnerschap op maat. Team en facturen zijn altijd onbeperkt.",
       },
     },
     {
       "@type": "Question",
-      name: "Hoe werkt voorraadbeheer via WhatsApp?",
+      name: "Wat is de 60-dagen-leveringsgarantie?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Stuur een foto van je leveranciersfactuur naar ZenTrack via WhatsApp. De AI-factuurscanner leest automatisch alle producten, hoeveelheden en prijzen uit. Je voorraad wordt direct bijgewerkt en je ontvangt alerts bij bijna verlopen producten.",
+        text: "Na 60 dagen maken we de balans op: heeft ZenTrack minder besparing aangewezen dan het abonnement tot dan kostte, dan mag je per direct stoppen en betalen we je het verschil terug. Voorwaarde is dat je binnen 30 dagen je volledige inkoopadministratie van de afgelopen 12 maanden hebt geüpload. De tijdwinst van je team rekenen we niet eens mee.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Wat telt als een locatie?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Elk bezoekadres met een eigen voorraad telt als één locatie. Een gezondheidscentrum met drie vestigingen heeft dus drie ZenTrack-locaties. Binnen een locatie zijn team en facturen onbeperkt.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Bestelt ZenTrack automatisch?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nee — ZenTrack bestelt nooit zonder jouw akkoord. ZenTrack zet het bestelvoorstel kant-en-klaar en jij keurt goed met één JA via WhatsApp. Bij aangesloten webshops plaatsen we de bestelling daarna direct voor je; bij overige leveranciers ligt hij verzendklaar zodat je hem zelf met één klik verstuurt.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Werkt dit met mijn huidige leveranciers?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ja — wij zijn onafhankelijk en lezen facturen van vrijwel elke leverancier. Welke leverancier het ook is: jij uploadt de factuur, wij verwerken de data.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Hoe zit het met privacy (AVG)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Jouw cijfers zijn van jou: andere praktijken zien nooit jouw facturen, prijzen of naam, en we verkopen niets door. ZenTrack wordt wel slimmer van geanonimiseerde patronen van alle gebruikers — nooit herleidbaar. De data staat op ISO 27001-gecertificeerde EU-infrastructuur (Frankfurt/Amsterdam), we verwerken geen patiëntgegevens en koppelen bewust niet met je HIS. Een verwerkersovereenkomst is op aanvraag beschikbaar.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Hoe werkt de vervaldatum-bewaking?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Je team stuurt een foto van de verpakking en ZenTrack leest de vervaldatum. Je krijgt automatisch een WhatsApp-waarschuwing 30, 14 en 7 dagen vooraf én op de dag zelf — met de kastlocatie erbij. Onderdeel van het ZenTrack Compleet-abonnement.",
       },
     },
   ],

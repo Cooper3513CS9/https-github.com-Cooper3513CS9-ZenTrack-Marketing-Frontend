@@ -45,14 +45,14 @@ export default function FactuurScannerPage() {
                   <Camera className="w-3 h-3 text-emerald-600" />
                   <span className="font-bold text-[10px] text-emerald-800">FACTUUR FOTO</span>
                 </div>
-                <p className="text-slate-700">Factuur van Mediq ontvangen.</p>
+                <p className="text-slate-700">Factuur van je groothandel ontvangen.</p>
               </div>
             </div>
             <div className="flex justify-start">
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
                 <p className="font-bold text-slate-800 mb-1">Factuur herkend!</p>
                 <div className="space-y-1 text-slate-600">
-                  <p>Leverancier: <span className="font-bold text-slate-800">Mediq</span></p>
+                  <p>Leverancier: <span className="font-bold text-slate-800">Medische Groothandel B.V.</span></p>
                   <p>Factuurnr: <span className="font-mono text-[10px] bg-slate-100 px-1 rounded">MED-2026-4821</span></p>
                   <p>Bedrag: <span className="font-bold text-emerald-600">€847,50</span></p>
                 </div>
@@ -73,7 +73,7 @@ export default function FactuurScannerPage() {
                   <Upload className="w-3 h-3 text-emerald-600" />
                   <span className="font-bold text-[10px] text-emerald-800">PDF UPLOAD</span>
                 </div>
-                <p className="text-slate-700">Digitale factuur van Henry Schein.</p>
+                <p className="text-slate-700">Digitale factuur van je leverancier.</p>
               </div>
             </div>
             <div className="flex justify-start">

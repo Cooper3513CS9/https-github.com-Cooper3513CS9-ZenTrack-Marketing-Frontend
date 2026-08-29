@@ -45,11 +45,8 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate }) => {
               <li><a href="/#waarom" className="hover:text-emerald-400 transition-colors">Waarom ZenTrack</a></li>
               <li><a href="/#hoe-het-werkt" className="hover:text-emerald-400 transition-colors">Hoe het werkt</a></li>
               <li>
-                <Link href="/expiratie-radar" className="hover:text-emerald-400 transition-colors flex items-center gap-2">
+                <Link href="/expiratie-radar" className="hover:text-emerald-400 transition-colors">
                   Expiratie Radar
-                  <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-bold bg-emerald-600 text-white">
-                    Gratis
-                  </span>
                 </Link>
               </li>
               <li><a href="/#prijzen" className="hover:text-emerald-400 transition-colors">Prijzen</a></li>
@@ -74,18 +71,18 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate }) => {
             <ul className="space-y-3 text-sm">
               <li><a href="/#over-ons" className="hover:text-emerald-400 transition-colors">Over Ons</a></li>
               <li>
-                  <button onClick={() => onNavigate('legal-terms')} className="hover:text-emerald-400 transition-colors text-left">
+                  <Link href="/legal/terms" className="hover:text-emerald-400 transition-colors">
                       Algemene Voorwaarden
-                  </button>
+                  </Link>
               </li>
               <li>
-                  <button onClick={() => onNavigate('legal-privacy')} className="hover:text-emerald-400 transition-colors text-left">
+                  <Link href="/legal/privacy" className="hover:text-emerald-400 transition-colors">
                       Privacyverklaring
-                  </button>
+                  </Link>
               </li>
               <li className="pt-2 text-slate-500 text-xs">
-                  KvK: i.o.<br/>
-                  BTW: i.o.
+                  KvK: 87779498<br/>
+                  Verwerkersovereenkomst op aanvraag
               </li>
             </ul>
           </div>

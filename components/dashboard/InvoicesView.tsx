@@ -10,10 +10,10 @@ interface Props {
 export const InvoicesView: React.FC<Props> = ({ onBack }) => {
   // Mock data simulating the OCR pipeline described in docs
   const invoices = [
-    { id: 'INV-2025-001', supplier: 'Henry Schein', date: '19-11-2025', amount: '€687,41', status: 'paid', confidence: 100, items: 12 },
+    { id: 'INV-2025-001', supplier: 'Medische Groothandel B.V.', date: '19-11-2025', amount: '€687,41', status: 'paid', confidence: 100, items: 12 },
     { id: 'INV-2025-002', supplier: 'Med Partners', date: '18-11-2025', amount: '€423,38', status: 'processing', confidence: 85, items: 5 },
     { id: 'INV-2025-003', supplier: 'Prolepha', date: '15-11-2025', amount: '€568,11', status: 'verified', confidence: 98, items: 8 },
-    { id: 'INV-2025-004', supplier: 'Medline', date: '12-11-2025', amount: '€1.205,00', status: 'attention', confidence: 65, items: 24 },
+    { id: 'INV-2025-004', supplier: 'Groothandel Noord', date: '12-11-2025', amount: '€1.205,00', status: 'attention', confidence: 65, items: 24 },
   ];
 
   return (

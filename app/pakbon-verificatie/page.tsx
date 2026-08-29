@@ -44,7 +44,7 @@ export default function PakbonVerificatiePage() {
                   <Camera className="w-3 h-3 text-emerald-600" />
                   <span className="font-bold text-[10px] text-emerald-800">PAKBON FOTO</span>
                 </div>
-                <p className="text-slate-700">Net levering van Mediq ontvangen.</p>
+                <p className="text-slate-700">Net een levering ontvangen.</p>
               </div>
             </div>
             <div className="flex justify-start">
@@ -70,7 +70,7 @@ export default function PakbonVerificatiePage() {
                   <Camera className="w-3 h-3 text-emerald-600" />
                   <span className="font-bold text-[10px] text-emerald-800">PAKBON CHECK</span>
                 </div>
-                <p className="text-slate-700">Levering Henry Schein controleren.</p>
+                <p className="text-slate-700">Levering van je leverancier controleren.</p>
               </div>
             </div>
             <div className="flex justify-start">
@@ -81,7 +81,7 @@ export default function PakbonVerificatiePage() {
                   <p className="flex items-center gap-1.5"><X className="w-3 h-3 text-red-500 shrink-0" /> <span className="font-bold text-red-600">Ontbreekt: Hechtmateriaal 3-0</span></p>
                 </div>
                 <div className="mt-2 bg-red-50 p-1.5 rounded border border-red-100 text-[10px] text-red-700 font-bold">
-                  Neem contact op met Henry Schein
+                  Neem contact op met de leverancier
                 </div>
               </div>
             </div>
@@ -103,8 +103,8 @@ export default function PakbonVerificatiePage() {
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
                 <p className="font-bold text-slate-800 mb-2">Leveringsoverzicht</p>
                 <div className="space-y-1.5 text-slate-600">
-                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span> <span>Mediq — 3 leveringen compleet</span></p>
-                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span> <span>Henry Schein — 1 artikel ontbreekt</span></p>
+                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span> <span>Leverancier A — 3 leveringen compleet</span></p>
+                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span> <span>Leverancier B — 1 artikel ontbreekt</span></p>
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-blue-500 shrink-0"></span> <span>Pharmaline — levering onderweg</span></p>
                 </div>
                 <div className="mt-2 bg-orange-50 p-1.5 rounded border border-orange-100 text-[10px] text-orange-700 font-bold">
@@ -366,7 +366,7 @@ export default function PakbonVerificatiePage() {
             <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-slate-500 font-medium">
               <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Gratis inkoop-check</span>
               <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Via WhatsApp</span>
-              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Nederlandse servers</span>
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> EU-servers (Frankfurt/Amsterdam)</span>
             </div>
           </div>
         </section>

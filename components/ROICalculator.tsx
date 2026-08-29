@@ -6,7 +6,7 @@ export const ROICalculator: React.FC = () => {
   // Defaults based on market feedback
   const [monthlySpend, setMonthlySpend] = useState(1000);
   const [hoursPerWeek, setHoursPerWeek] = useState(2);
-  const [hourlyRate, setHourlyRate] = useState(45);
+  const [hourlyRate, setHourlyRate] = useState(29);
   const [emergencyOrders, setEmergencyOrders] = useState(2);
   const [savingsPercentage, setSavingsPercentage] = useState(5); // Default conservative 5%
 

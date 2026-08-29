@@ -24,16 +24,20 @@ export const FAQ: React.FC = () => {
       answer: "Dan app je ons direct. Als early adopter heb je een directe lijn met de founders. Geen ticketsysteem, maar gewoon een antwoord."
     },
     {
-      question: "Wat is de Expiratie Radar?",
-      answer: "De Expiratie Radar is een gratis tool die vervaldatums van je medische producten bijhoudt. Je voegt producten toe via WhatsApp (foto of commando) en ZenTrack waarschuwt je automatisch als iets bijna verloopt. Met het verkeerslicht systeem zie je in een oogopslag welke producten aandacht nodig hebben."
+      question: "Wat is de gratis inkoop-check?",
+      answer: "Je uploadt je leveranciersfacturen en ZenTrack laat zien waar je te veel betaalt en hoeveel je kunt besparen. Begin met één factuur voor een eerste signaal; met 12 maanden facturen krijg je een volwaardig besparingsrapport. Vrijblijvend, geen creditcard, jouw data blijft van jou. Bij wélke leverancier het goedkoper kan, zie je met het abonnement."
     },
     {
-      question: "Is de Expiratie Radar echt gratis?",
-      answer: "Ja, 100% gratis voor maximaal 25 producten, gedurende 6 maanden, voor de eerste 100 praktijken. Geen creditcard nodig, geen verplichtingen. Na 6 maanden of bij meer dan 25 producten kun je upgraden naar een betaald plan, maar dat is volledig optioneel."
+      question: "Wat is de 60-dagen-leveringsgarantie?",
+      answer: "Na 60 dagen maken we samen de balans op: heeft ZenTrack minder besparing aangewezen dan het abonnement tot dan kostte, dan mag je per direct stoppen én betalen we je het verschil terug. Voorwaarde: upload binnen 30 dagen je volledige inkoopadministratie van de afgelopen 12 maanden. De tijdwinst van je team rekenen we niet eens mee — die is de bonus."
     },
     {
-      question: "Hoe voeg ik producten toe aan de Expiratie Radar?",
-      answer: "Er zijn 3 manieren: (1) Stuur een foto van het etiket via WhatsApp — ZenTrack leest automatisch het product en de vervaldatum, (2) Typ het VERVAL commando in WhatsApp (bijv. 'VERVAL handschoenen mrt 2026'), of (3) Voeg producten handmatig toe via het dashboard."
+      question: "Wat telt als een locatie?",
+      answer: "Elk bezoekadres met een eigen voorraad telt als één locatie. Een gezondheidscentrum met drie vestigingen heeft dus drie ZenTrack-locaties. Binnen een locatie zijn team en facturen onbeperkt — iedereen een eigen inlog met een eigen rol."
+    },
+    {
+      question: "Hoe werkt de vervaldatum-bewaking (Expiratie Radar)?",
+      answer: "Je team stuurt een foto van de verpakking via WhatsApp en ZenTrack leest de vervaldatum. Je krijgt automatisch een waarschuwing 30, 14 en 7 dagen vooraf én op de dag zelf — met de kastlocatie erbij, zodat je direct weet waar je moet zijn. Onderdeel van het ZenTrack Compleet-abonnement."
     }
   ];
 

@@ -11,15 +11,15 @@ export const OrdersView: React.FC<Props> = ({ onBack }) => {
   const [activeTab, setActiveTab] = useState<'orders' | 'deliveries'>('orders');
 
   const orders = [
-    { id: '#HS-2025-1236', supplier: 'Henry Schein', date: 'Vandaag, 09:30', status: 'pending', items: 12, total: '€423,50' },
-    { id: '#HS-2025-1235', supplier: 'Medline', date: 'Gisteren, 14:15', status: 'shipped', items: 5, total: '€120,00' },
+    { id: '#HS-2025-1236', supplier: 'Medische Groothandel B.V.', date: 'Vandaag, 09:30', status: 'pending', items: 12, total: '€423,50' },
+    { id: '#HS-2025-1235', supplier: 'Groothandel Noord', date: 'Gisteren, 14:15', status: 'shipped', items: 5, total: '€120,00' },
   ];
 
   const deliveries = [
     { 
       id: 'PB-12346', 
       orderId: '#HS-1235', 
-      supplier: 'Henry Schein', 
+      supplier: 'Medische Groothandel B.V.', 
       date: '18-11-2025', 
       status: 'incomplete', // Mismatch detected
       items: '8/10 geleverd',

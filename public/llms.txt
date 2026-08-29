@@ -1,43 +1,49 @@
 # ZenTrack
 
-> Slim voorraadbeheer voor Nederlandse huisartspraktijken via WhatsApp
+> Digitale collega voor inkoop, voorraad en vervaldatums in Nederlandse huisartsenpraktijken
 
-ZenTrack is een Nederlands SaaS-platform dat voorraadbeheer automatiseert voor huisartspraktijken. Praktijkassistenten uploaden facturen via WhatsApp, waarna ZenTrack automatisch de voorraad bijhoudt, vervaldatums bewaakt en inkoopprijzen vergelijkt bij meerdere leveranciers.
+ZenTrack is een Nederlands SaaS-platform voor huisartsenpraktijken. Het team appt foto's en vragen naar Emma (de assistent), facturen worden automatisch gelezen, bestellingen keurt de praktijk goed met één JA via WhatsApp, en alles is vastgelegd. De gratis inkoop-check laat op de eigen facturen zien waar de praktijk te veel betaalt.
 
 ## Kernfeatures
 
-- **Factuurscanner**: Upload een factuur via WhatsApp, AI (OCR) leest automatisch alle producten, hoeveelheden en prijzen uit
-- **Voorraadbeheer**: Real-time inzicht in voorraad per kast, kamer en locatie — zonder handmatig tellen
-- **Expiratie Radar**: Automatische waarschuwingen bij verlopen of bijna-verlopen medische producten (30/60/90 dagen)
-- **Slim Bestellen**: Vergelijk inkoopprijzen bij meerdere leveranciers, bespaar tot 40% op medische verbruiksartikelen
-- **Pakbon Verificatie**: Controleer leveringen tegen bestellingen in 30 seconden via een foto
-- **NPA Accreditatie**: Automatische documentatie voor NPA 3.0 visitaties (Principe 13: medische middelen geschikt en beschikbaar)
+- **Gratis inkoop-check**: upload je facturen en zie waar je te veel betaalt en hoeveel — begin met 1 factuur, met 12 maanden facturen wordt het een volwaardig besparingsrapport
+- **Factuurscanner**: foto of PDF van een factuur, AI (OCR) leest automatisch alle producten, hoeveelheden en prijzen uit
+- **Bestelvoorstellen**: ZenTrack zet de bestelling kant-en-klaar op basis van verbruik; goedkeuren is één JA via WhatsApp — bij aangesloten webshops plaatst ZenTrack direct, anders ligt hij verzendklaar
+- **Prijsbewaking** (abonnement): doorlopende bewaking van je inkoopprijzen, mét de leverancier waar het goedkoper kan
+- **Voorraadbeheer**: voorraad telt zichzelf bij via facturen en pakbonnen — zonder handmatig tellen
+- **Vervaldatum-bewaking**: foto van de verpakking → automatische WhatsApp-waarschuwing 30, 14 en 7 dagen vooraf én op de dag zelf, met kastlocatie
+- **Pakbon-controle**: foto van de pakbon → levering automatisch gecheckt tegen de bestelling
+- **Alles vastgelegd**: elke goedkeuring met wie-wat-wanneer, alle facturen op één doorzoekbare plek
+- **Visitatie-voorbereiding**: het datums-en-documenten-deel (keuringen, certificaten, vervaldatums) met bewijsrapport voor de visitatie-map
+- **Chat met je eigen cijfers**: vragen in gewone taal, in dashboard én WhatsApp; Emma onthoudt praktijk-afspraken
 
 ## Doelgroep
 
-Nederlandse huisartspraktijken, gezondheidscentra en zorggroepen die tijd willen besparen op voorraadbeheer en medische verbruiksartikelen.
+Nederlandse huisartsenpraktijken, gezondheidscentra en zorggroepen die tijd willen besparen op bestellen, voorraad en vervaldatums — en grip willen op hun inkoopkosten.
 
 ## Prijzen
 
-- Starter: EUR 79/maand (1 praktijk)
-- Professional: EUR 149/maand (meerdere locaties)
-- Enterprise: EUR 249/maand (zorggroepen)
-- 14 dagen gratis proefperiode, geen creditcard nodig
+- Gratis inkoop-check: EUR 0, vrijblijvend, geen creditcard
+- ZenTrack Compleet: EUR 99 per locatie per maand (maandelijks opzegbaar); founding-tarief EUR 79 per maand bij 12 maanden
+- Vanaf 5 locaties: 15% korting; 20+ locaties: zorggroep-partnerschap op maat
+- Eén locatie = één bezoekadres met eigen voorraad; team en facturen onbeperkt
+- 60-dagen-leveringsgarantie: wijst ZenTrack minder besparing aan dan het abonnement kostte, dan stopt de klant per direct en betaalt ZenTrack het verschil terug (voorwaarde: volledige 12 maanden facturen geüpload binnen 30 dagen)
 
 ## Technologie
 
-- WhatsApp-first interface (geen app-installatie nodig)
+- Werkt in de browser en via WhatsApp (geen installatie; WhatsApp is optioneel, de praktijk bepaalt wie koppelt)
 - AI-gestuurde factuurherkenning (OCR)
-- GDPR-compliant, gehost op EU-servers
-- NEN7510 en ISO 27001 beveiligingsstandaarden
-- Geen patiëntgegevens — alleen voorraaddata
+- AVG-proof: geen patiëntgegevens, bewust geen HIS-koppeling, data-export altijd mogelijk
+- Gehost op ISO 27001-gecertificeerde EU-infrastructuur (Frankfurt/Amsterdam)
+- Jouw cijfers blijven van jou; ZenTrack leert alleen van geanonimiseerde, niet-herleidbare patronen
 
 ## Contact
 
 - Website: https://www.zentrack.nl
 - Dashboard: https://app.zentrack.nl
-- WhatsApp: +31 970 580 241 224 (Emma, AI-assistent)
+- E-mail: info@zentrack.nl
 - Adres: Kruisweg 9L, 3513 CS Utrecht, Nederland
+- KvK: 87779498
 
 ## Pagina's
 

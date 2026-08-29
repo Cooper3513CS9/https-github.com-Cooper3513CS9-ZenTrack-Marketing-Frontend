@@ -175,17 +175,17 @@ export default function ExpiratieRadarPage() {
               <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
                 <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-100 text-orange-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
                   <Radar className="w-4 h-4" />
-                  <span>Gratis — Geen creditcard nodig</span>
+                  <span>Onderdeel van ZenTrack Compleet</span>
                 </div>
 
                 <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
                   Expiratie Radar.<br />
-                  <span className="text-emerald-600">Gratis voor elke praktijk.</span>
+                  <span className="text-emerald-600">Nooit meer iets over de datum.</span>
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
-                  Houd vervaldatums bij van 25 producten. Ontvang automatische WhatsApp alerts. Voorkom verlopen medicijnen.
-                  <strong className="text-slate-900 block mt-2">Via WhatsApp. In 5 minuten klaar.</strong>
+                  Foto van de verpakking en de vervaldatum staat erin. Automatische WhatsApp-waarschuwing 30, 14 en 7 dagen vooraf én op de dag zelf — mét kastlocatie.
+                  <strong className="text-slate-900 block mt-2">Je team appt, Emma bewaakt. Nooit meer een visitatie-bevinding op een verlopen ampul.</strong>
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
@@ -193,7 +193,7 @@ export default function ExpiratieRadarPage() {
                     onClick={navigateToRegister}
                     className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2"
                   >
-                    Start Gratis <ArrowRight className="w-5 h-5" />
+                    Start de gratis inkoop-check <ArrowRight className="w-5 h-5" />
                   </button>
                   <a href="#hoe-werkt-radar" className="w-full sm:w-auto px-8 py-4 rounded-xl text-slate-600 font-bold border border-slate-200 hover:bg-slate-50 transition-colors text-center">
                     Hoe werkt het?
@@ -333,88 +333,32 @@ export default function ExpiratieRadarPage() {
           </div>
         </section>
 
-        {/* ===== GRATIS VS BETAALD ===== */}
+        {/* ===== ONDERDEEL VAN ZENTRACK COMPLEET ===== */}
         <section className="py-20 bg-white scroll-mt-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                Begin gratis, <span className="text-emerald-600">groei wanneer je wilt</span>
+                Onderdeel van <span className="text-emerald-600">ZenTrack Compleet</span>
               </h2>
-              <p className="text-lg text-slate-600">De Expiratie Radar is gratis. Wil je meer? Upgrade op elk moment.</p>
+              <p className="text-lg text-slate-600">De Expiratie Radar zit in het abonnement — samen met bestelvoorstellen, voorraad, pakbon-controle en het visitatie-bewijsrapport.</p>
             </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* FREE */}
-              <div className="bg-emerald-50 rounded-3xl p-8 border-2 border-emerald-200 relative">
-                <div className="absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-                  Gratis
-                </div>
-                <div className="mb-6">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center mb-4 text-emerald-600">
-                    <Radar className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900">Expiratie Radar</h3>
-                  <div className="mt-2">
-                    <span className="text-4xl font-bold text-slate-900">€0</span>
-                    <span className="text-slate-500">/maand</span>
-                  </div>
-                  <p className="text-sm text-slate-500 mt-1">6 maanden gratis · eerste 100 praktijken</p>
-                </div>
-                <button
-                  onClick={navigateToRegister}
-                  className="w-full py-3 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-200 mb-6"
-                >
-                  Start Gratis
-                </button>
-                <div className="space-y-3">
-                  <FeatureCheck text="Tot 25 producten" />
-                  <FeatureCheck text="Verkeerslicht systeem" />
-                  <FeatureCheck text="WhatsApp alerts" />
-                  <FeatureCheck text="Dashboard overzicht" />
-                  <FeatureCheck text="6 maanden gratis (eerste 100 praktijken)" />
-                  <FeatureCheck text="Geen creditcard nodig" />
-                </div>
+            <div className="bg-emerald-50 rounded-3xl p-8 border-2 border-emerald-200 max-w-2xl mx-auto">
+              <div className="space-y-3 mb-8">
+                <FeatureCheck text="Foto van de verpakking — vervaldatum automatisch gelezen" />
+                <FeatureCheck text="WhatsApp-alerts 30, 14 en 7 dagen vooraf én op de dag zelf" />
+                <FeatureCheck text="Kastlocatie in elke melding — je weet direct waar je moet zijn" />
+                <FeatureCheck text="Verkeerslicht-overzicht in het dashboard" />
+                <FeatureCheck text="Bewijsrapport voor je visitatie-map" />
               </div>
-
-              {/* CONTROL */}
-              <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xl relative">
-                <div className="absolute top-0 left-0 w-full h-1.5 bg-emerald-500 rounded-t-3xl"></div>
-                <div className="absolute top-4 right-4 bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-                  Meest Gekozen
-                </div>
-                <div className="mb-6">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center mb-4 text-emerald-600">
-                    <Shield className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900">Control</h3>
-                  <div className="mt-2">
-                    <span className="text-4xl font-bold text-slate-900">€149</span>
-                    <span className="text-slate-500">/maand</span>
-                  </div>
-                  <p className="text-sm text-slate-500 mt-1">14 dagen gratis proberen</p>
-                </div>
-                <button
-                  onClick={navigateToRegister}
-                  className="w-full py-3 rounded-xl border border-slate-300 text-slate-700 font-bold hover:bg-slate-50 transition-colors mb-6"
-                >
-                  Probeer 14 Dagen Gratis
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="/#prijzen" className="flex-1 py-3 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 transition-colors text-center shadow-lg shadow-emerald-200">
+                  Bekijk prijs & garantie
+                </a>
+                <button onClick={navigateToRegister} className="flex-1 py-3 rounded-xl border border-emerald-300 text-emerald-700 font-bold hover:bg-emerald-100 transition-colors">
+                  Eerst de gratis inkoop-check
                 </button>
-                <div className="space-y-3">
-                  <FeatureCheck text="Alles uit Expiratie Radar +" highlighted />
-                  <FeatureCheck text="Onbeperkt producten" />
-                  <FeatureCheck text="FIFO voorraadbeheer" />
-                  <FeatureCheck text="Factuur OCR verwerking" />
-                  <FeatureCheck text="Pakbon verificatie" />
-                  <FeatureCheck text="AI bestelsuggesties" />
-                  <FeatureCheck text="Team toegang (8 users)" />
-                </div>
               </div>
-            </div>
-
-            <div className="text-center mt-8">
-              <a href="/#prijzen" className="text-emerald-600 hover:text-emerald-700 font-bold text-sm transition-colors">
-                Bekijk alle plannen <ChevronRight className="w-4 h-4 inline" />
-              </a>
+              <p className="text-xs text-slate-500 mt-4 text-center">Nog niet klaar voor een abonnement? Start met de gratis inkoop-check: upload je facturen en zie waar je te veel betaalt.</p>
             </div>
           </div>
         </section>
@@ -424,30 +368,30 @@ export default function ExpiratieRadarPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
               <Radar className="w-4 h-4" />
-              <span>100% gratis starten</span>
+              <span>Onderdeel van ZenTrack Compleet</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Start vandaag nog.<br />
-              <span className="text-emerald-400">Geen creditcard nodig.</span>
+              Nooit meer iets<br />
+              <span className="text-emerald-400">over de datum.</span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-              In 5 minuten klaar. Voeg je eerste product toe via WhatsApp en de Expiratie Radar doet de rest.
+              Begin met de gratis inkoop-check — en zie meteen wat ZenTrack Compleet, mét de Expiratie Radar, voor je praktijk doet.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <button
                 onClick={navigateToRegister}
                 className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-900/20 flex items-center justify-center gap-2"
               >
-                Start Gratis <ArrowRight className="w-5 h-5" />
+                Start de gratis inkoop-check <ArrowRight className="w-5 h-5" />
               </button>
               <a href="/#contact" className="w-full sm:w-auto px-8 py-4 rounded-xl text-slate-300 font-bold border border-slate-700 hover:bg-slate-800 transition-colors text-center">
                 Neem contact op
               </a>
             </div>
             <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-slate-500 font-medium">
-              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> 25 producten gratis</span>
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Alerts 30/14/7 dagen vooraf</span>
               <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Via WhatsApp</span>
-              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Nederlandse servers</span>
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> EU-servers (Frankfurt/Amsterdam)</span>
             </div>
           </div>
         </section>

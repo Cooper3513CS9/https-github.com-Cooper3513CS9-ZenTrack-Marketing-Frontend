@@ -17,7 +17,7 @@ export const BlogSection: React.FC = () => {
     {
       category: "Wetgeving & Privacy",
       title: "AVG in de praktijk: Waarom WhatsApp veilig kan zijn",
-      excerpt: "Hoe ZenTrack voldoet aan de NEN7510-norm voor de zorg, en waarom je geen patiëntgegevens via WhatsApp deelt. In gewone taal uitgelegd.",
+      excerpt: "Hoe ZenTrack draait op infrastructuur die aan ISO 27001 en NEN 7510 voldoet, en waarom je geen patiëntgegevens via WhatsApp deelt. In gewone taal uitgelegd.",
       date: "6 mei 2026",
       readTime: "6 min",
       image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",

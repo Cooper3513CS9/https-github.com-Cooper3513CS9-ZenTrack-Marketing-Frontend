@@ -15,7 +15,6 @@ import { AboutSection } from '@/components/AboutSection';
 import { ContactSection } from '@/components/ContactSection';
 import { FAQ } from '@/components/FAQ';
 import { Footer } from '@/components/Footer';
-import { DirectOnboarding } from '@/components/DirectOnboarding';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { CookieConsent } from '@/components/legal/CookieConsent';
 import { GroupSection } from '@/components/GroupSection';
@@ -53,7 +52,6 @@ export default function LandingPage() {
          <GroupSection />
          <ROICalculator />
          <Pricing onRegisterClick={navigateToRegister} />
-         <DirectOnboarding />
          <AboutSection />
          <BlogSection />
          <FAQ />

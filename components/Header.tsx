@@ -21,12 +21,12 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isFeaturesOpen, setIsFeaturesOpen] = useState(false);
 
-  const navItems = [
+  const navItems: { name: string; href: string; badge?: string }[] = [
     { name: 'Waarom', href: '/#waarom' },
     { name: 'Hoe het werkt', href: '/#hoe-het-werkt' },
     // Features dropdown wordt apart gerenderd (na "Hoe het werkt")
     { name: 'Prijzen', href: '/#prijzen' },
-    { name: 'Expiratie Radar', href: '/expiratie-radar', badge: 'Gratis' },
+    { name: 'Expiratie Radar', href: '/expiratie-radar' },
     { name: 'Over Ons', href: '/#over-ons' },
     { name: 'Contact', href: '/#contact' },
   ];

@@ -45,7 +45,7 @@ export const DashboardHome: React.FC<DashboardHomeProps> = ({ user, onNavigate, 
                     <h2 className="text-2xl font-bold mb-2">Maandelijkse Aanvulling</h2>
                     <p className="text-slate-300 text-sm mb-4 max-w-xl">
                         Op basis van je verbruikspatroon (gem. 21 dagen) adviseer ik om nu te bestellen. 
-                        Leverancier <span className="text-white font-semibold">Medline</span> is momenteel het goedkoopst voor deze combinatie.
+                        Leverancier <span className="text-white font-semibold">Groothandel Noord</span> is momenteel het goedkoopst voor deze combinatie.
                     </p>
                     <div className="flex items-center gap-4 text-sm">
                         <div className="bg-slate-800/50 px-3 py-2 rounded-lg border border-slate-700">
@@ -88,7 +88,7 @@ export const DashboardHome: React.FC<DashboardHomeProps> = ({ user, onNavigate, 
                   </div>
                   <div>
                       <h3 className="font-bold text-emerald-900">Bestelling Goedgekeurd!</h3>
-                      <p className="text-sm text-emerald-700">Order #ORD-2025-002 is verstuurd naar Medline. Je ontvangt de bevestiging per mail.</p>
+                      <p className="text-sm text-emerald-700">Order #ORD-2025-002 is verstuurd naar Groothandel Noord. Je ontvangt de bevestiging per mail.</p>
                   </div>
               </div>
               <button onClick={() => onNavigate('orders')} className="text-sm font-bold text-emerald-700 hover:underline">Bekijk status</button>
@@ -144,21 +144,21 @@ export const DashboardHome: React.FC<DashboardHomeProps> = ({ user, onNavigate, 
             <div className="space-y-6">
                <ActivityItem 
                   icon={FileText} 
-                  title="Factuur verwerkt Henry Schein Medical bv" 
+                  title="Factuur verwerkt Medische Groothandel B.V. Medical bv" 
                   amount="€568.11"
                   time="1 week geleden"
                   type="info"
                />
                <ActivityItem 
                   icon={AlertTriangle} 
-                  title="Grote uitgave geregistreerd Henry Schein Medical bv" 
+                  title="Grote uitgave geregistreerd Medische Groothandel B.V. Medical bv" 
                   amount="€568.11"
                   time="1 week geleden"
                   type="warning"
                />
                <ActivityItem 
                   icon={FileText} 
-                  title="Factuur verwerkt Medline Netherlands" 
+                  title="Factuur verwerkt Groothandel Noord Netherlands" 
                   amount="€423.38"
                   time="1 week geleden"
                   type="info"

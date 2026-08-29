@@ -13,7 +13,7 @@ export const SuppliersView: React.FC<Props> = ({ onBack }) => {
   const suppliers: Supplier[] = [
     {
       id: '1',
-      name: 'Henry Schein Medical',
+      name: 'Medische Groothandel B.V. Medical',
       email: 'bestellingen@henryschein.nl',
       phone: '036-5358901',
       lead_time_days: 2,
@@ -23,7 +23,7 @@ export const SuppliersView: React.FC<Props> = ({ onBack }) => {
     },
     {
       id: '2',
-      name: 'Medline Netherlands',
+      name: 'Groothandel Noord Netherlands',
       email: 'orders-nl@medline.com',
       phone: '026-3123456',
       lead_time_days: 3,
