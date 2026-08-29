@@ -50,7 +50,7 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate }) => {
                 </Link>
               </li>
               <li><Link href="/inkoop-check" className="hover:text-emerald-400 transition-colors">Gratis Inkoop-check</Link></li>
-              <li><a href="/#prijzen" className="hover:text-emerald-400 transition-colors">Prijzen</a></li>
+              <li><Link href="/prijzen" className="hover:text-emerald-400 transition-colors">Prijzen</Link></li>
             </ul>
           </div>
 

@@ -90,7 +90,7 @@ export default function InkoopCheckPage() {
               <button onClick={navigateToRegister} className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-600/20 inline-flex items-center gap-2">
                 Start de gratis inkoop-check <ArrowRight className="w-5 h-5" />
               </button>
-              <p className="text-sm text-slate-500 mt-4">Of bekijk eerst <Link href="/#prijzen" className="text-emerald-600 underline">de prijzen en de 60-dagen-leveringsgarantie</Link>.</p>
+              <p className="text-sm text-slate-500 mt-4">Of bekijk eerst <Link href="/prijzen" className="text-emerald-600 underline">de prijzen en de 60-dagen-leveringsgarantie</Link>.</p>
             </div>
           </div>
         </section>
