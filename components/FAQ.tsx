@@ -25,7 +25,7 @@ export const FAQ: React.FC = () => {
     },
     {
       question: "Wat is de gratis inkoop-check?",
-      answer: "Je uploadt je facturen en ZenTrack laat zien waar je te veel betaalt en hoeveel je kunt besparen. Begin met één factuur voor een eerste signaal; met 12 maanden facturen krijg je een volwaardig besparingsrapport. Vrijblijvend, geen creditcard, jouw data blijft van jou. Wáár je die besparing precies pakt, en bestellen met één JA, zit in het abonnement."
+      answer: "Je uploadt je facturen en ZenTrack laat zien waar je te veel betaalt en hoeveel je kunt besparen. Begin met één factuur voor een eerste signaal; met 12 maanden facturen krijg je een volwaardig besparingsrapport. Vrijblijvend, geen creditcard, jouw data blijft van jou. Wáár je die besparing precies pakt zie je met het abonnement; daar zitten ook kant-en-klare bestelvoorstellen bij, die jij met één JA goedkeurt."
     },
     {
       question: "Wat is de 60-dagen-leveringsgarantie?",
