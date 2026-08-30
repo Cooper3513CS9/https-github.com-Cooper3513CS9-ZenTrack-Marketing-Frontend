@@ -20,7 +20,7 @@ export const WhatsAppDemo: React.FC = () => {
       id: '1', 
       text: 'Hoi! Ik ben ZenTrack. Stuur me een foto van een factuur, verzendlabel of scan een QR-code in de kast. 📸', 
       sender: 'bot', 
-      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) 
+      timestamp: new Date().toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' }) 
     }
   ]);
   const [isTyping, setIsTyping] = useState(false);
@@ -201,7 +201,7 @@ const renderWhatsAppText = (text: string) =>
       id: Date.now().toString(),
       text: userText,
       sender: 'user',
-      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      timestamp: new Date().toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' }),
       isImage: true,
       imageType: scenario
     };
@@ -218,7 +218,7 @@ const renderWhatsAppText = (text: string) =>
           id: (Date.now() + 1).toString(),
           text: aiResponse,
           sender: 'bot',
-          timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+          timestamp: new Date().toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' })
         };
         setMessages(prev => [...prev, botMessage]);
         setIsTyping(false);
@@ -230,7 +230,7 @@ const renderWhatsAppText = (text: string) =>
         id: (Date.now() + 1).toString(),
         text: '\u2705 **Verwerking compleet**\n\nDe scan is gelukt en opgeslagen. Details staan in je dashboard.',
         sender: 'bot',
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        timestamp: new Date().toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' })
       }]);
       setIsTyping(false);
     }
@@ -242,7 +242,7 @@ const renderWhatsAppText = (text: string) =>
         id: '1', 
         text: 'Hoi! Ik ben ZenTrack. Stuur me een foto van een factuur, verzendlabel of scan een QR-code in de kast. 📸', 
         sender: 'bot', 
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) 
+        timestamp: new Date().toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' }) 
       }
      ]);
      setUploadingState('idle');
