@@ -9,7 +9,7 @@ ZenTrack is een Nederlands SaaS-platform voor huisartsenpraktijken. Het team app
 - **Gratis inkoop-check**: upload je facturen en zie waar je te veel betaalt en hoeveel — begin met 1 factuur, met 12 maanden facturen wordt het een volwaardig besparingsrapport
 - **Factuurscanner**: foto of PDF van een factuur, AI (OCR) leest automatisch alle producten, hoeveelheden en prijzen uit
 - **Bestelvoorstellen**: ZenTrack zet de bestelling kant-en-klaar op basis van verbruik; goedkeuren is één JA via WhatsApp — bij aangesloten webshops plaatst ZenTrack direct, anders ligt hij verzendklaar
-- **Prijsbewaking** (abonnement): doorlopende bewaking van je inkoopprijzen, mét de leverancier waar het goedkoper kan
+- **Prijsbewaking** (abonnement): doorlopende bewaking van je inkoopprijzen; je ziet precies wáár je die besparing pakt
 - **Voorraadbeheer**: voorraad telt zichzelf bij via facturen en pakbonnen — zonder handmatig tellen
 - **Vervaldatum-bewaking**: foto van de verpakking → automatische WhatsApp-waarschuwing 30, 14 en 7 dagen vooraf én op de dag zelf, met kastlocatie
 - **Pakbon-controle**: foto van de pakbon → levering automatisch gecheckt tegen de bestelling

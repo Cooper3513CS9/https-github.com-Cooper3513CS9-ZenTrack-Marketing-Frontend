@@ -52,7 +52,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
             </div>
             <div className="mt-6 pt-4 border-t border-slate-700">
               <p className="text-[11px] text-slate-500 leading-relaxed">
-                Hoe meer maanden facturen je uploadt (liefst 12), hoe scherper het rapport. Bij welke leverancier het goedkoper kan, zie je met het abonnement.
+                Hoe meer maanden facturen je uploadt (liefst 12), hoe scherper het rapport. Wáár je die besparing precies pakt, zie je met het abonnement.
               </p>
             </div>
           </div>
@@ -78,7 +78,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
             </button>
             <div className="space-y-3 flex-1">
               <FeatureItem text="Bestelvoorstellen staan klaar en goedkeuren is JA appen; bij aangesloten webshops plaatsen wij direct, anders ligt hij verzendklaar" highlighted light />
-              <FeatureItem text="Prijsbewaking mét de namen: zie bij welke leverancier het goedkoper kan" light />
+              <FeatureItem text="Doorlopende prijsbewaking: zie precies wáár je die besparing pakt" light />
               <FeatureItem text="Vervaldatum-alerts via WhatsApp: 30, 14 en 7 dagen vooraf én op de dag zelf, mét kastlocatie" light />
               <FeatureItem text="Pakbon-foto → levering automatisch gecheckt" light />
               <FeatureItem text="Voorraad telt zichzelf bij via facturen en pakbonnen" light />

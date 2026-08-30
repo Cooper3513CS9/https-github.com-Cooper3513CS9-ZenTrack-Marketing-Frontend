@@ -76,7 +76,7 @@ const softwareApplicationSchema = {
         },
       },
       description:
-        "Eén product met alles erin, per locatie (bezoekadres): bestelvoorstellen met JA-goedkeuring via WhatsApp, prijsbewaking met leveranciersnamen, vervaldatum-alerts, pakbon-controle, visitatie-bewijsrapport en onbeperkt team. Founding-tarief €79 per maand bij 12 maanden. 60-dagen-leveringsgarantie.",
+        "Eén product met alles erin, per locatie (bezoekadres): bestelvoorstellen met JA-goedkeuring via WhatsApp, doorlopende prijsbewaking, vervaldatum-alerts, pakbon-controle, visitatie-bewijsrapport en onbeperkt team. Founding-tarief €79 per maand bij 12 maanden. 60-dagen-leveringsgarantie.",
       url: "https://app.zentrack.nl/sign-up",
     },
   ],
@@ -118,7 +118,7 @@ const faqSchema = {
       name: "Wat is de gratis inkoop-check?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Je uploadt je leveranciersfacturen en ZenTrack laat zien waar je te veel betaalt en hoeveel je kunt besparen. Begin met één factuur voor een eerste signaal; met 12 maanden facturen krijg je een volwaardig besparingsrapport. Vrijblijvend, geen creditcard nodig. Bij welke leverancier het goedkoper kan, zie je met het abonnement.",
+        text: "Je uploadt je facturen en ZenTrack laat zien waar je te veel betaalt en hoeveel je kunt besparen. Begin met één factuur voor een eerste signaal; met 12 maanden facturen krijg je een volwaardig besparingsrapport. Vrijblijvend, geen creditcard nodig. Wáár je die besparing precies pakt, en bestellen met één JA, zit in het abonnement.",
       },
     },
     {

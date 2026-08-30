@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: 'Is er een gratis versie van ZenTrack?',
-    a: 'Ja: de inkoop-check is gratis, zonder creditcard of verplichting. Je uploadt je eigen leveranciersfacturen en ziet wat je te veel betaalt en hoeveel. Bestellen, prijsbewaking met leveranciersnamen en de vervaldatum-bewaking via WhatsApp zitten in het abonnement.',
+    a: 'Ja: de inkoop-check is gratis, zonder creditcard of verplichting. Je uploadt je eigen facturen en ziet wat je te veel betaalt en hoeveel. Bestellen, doorlopende prijsbewaking en de vervaldatum-bewaking via WhatsApp zitten in het abonnement.',
   },
   {
     q: 'Hoe werkt de 60-dagen-leveringsgarantie?',

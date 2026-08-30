@@ -61,7 +61,7 @@ export default function InkoopCheckPage() {
                   <Lock className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">3. Jij beslist wat erna komt</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">Het rapport toont wát er te besparen valt en hoevéél. Wil je ook zien wáár het goedkoper kan en het regelen met één JA via WhatsApp? Dat zit in het abonnement, met 60-dagen-leveringsgarantie.</p>
+                <p className="text-sm text-slate-600 leading-relaxed">Het rapport toont wát er te besparen valt en hoevéél. Wil je ook zien welke producten je scherper kunt inkopen en het regelen met één JA via WhatsApp? Dat zit in het abonnement, met 60-dagen-leveringsgarantie.</p>
               </div>
             </div>
           </div>
