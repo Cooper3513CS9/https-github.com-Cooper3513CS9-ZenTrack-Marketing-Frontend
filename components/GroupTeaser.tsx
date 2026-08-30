@@ -23,7 +23,7 @@ export const GroupTeaser: React.FC = () => {
           <div className="shrink-0">
             <Link
               href="/zorggroepen"
-              className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3.5 rounded-xl font-bold transition-colors inline-flex items-center gap-2 shadow-lg shadow-purple-600/20"
+              className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3.5 rounded-xl font-bold transition-colors inline-flex items-center gap-2 shadow-lg shadow-emerald-600/20"
             >
               <Building2 className="w-5 h-5" />
               Bekijk de zorggroep-aanpak
