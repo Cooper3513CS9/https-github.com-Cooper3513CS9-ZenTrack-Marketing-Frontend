@@ -245,6 +245,10 @@ const renderWhatsAppText = (text: string) =>
         timestamp: new Date().toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' }) 
       }
      ]);
+     // Fix 30 aug: isTyping bleef hangen na reset -> alle demo-knoppen
+     // weigerden daarna stilletjes ("demo blijft hangen")
+     setIsTyping(false);
+     setUploadProgress(0);
      setUploadingState('idle');
   };
 
