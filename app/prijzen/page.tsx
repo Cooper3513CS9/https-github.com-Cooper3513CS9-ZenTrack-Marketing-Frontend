@@ -81,7 +81,7 @@ export default function PrijzenPage() {
                 Start de gratis inkoop-check
               </button>
               <p className="text-sm text-slate-500 mt-4">
-                Vragen over meerdere locaties of zorggroepen? Mail <a href="mailto:info@zentrack.nl" className="text-emerald-600 underline">info@zentrack.nl</a> of bel 06-2388-5227.
+                Vragen over meerdere locaties of zorggroepen? Mail <a href="mailto:info@zentrack.nl" className="text-emerald-600 underline">info@zentrack.nl</a> of bel 06-2666-7714.
               </p>
             </div>
           </div>

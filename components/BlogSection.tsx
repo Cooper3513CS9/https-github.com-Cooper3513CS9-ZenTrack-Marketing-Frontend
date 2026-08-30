@@ -106,7 +106,7 @@ export const BlogSection: React.FC = () => {
            </div>
 
            <a
-              href="https://wa.me/31623885227?text=Ik%20heb%20vragen%20over%20ZenTrack"
+              href="https://wa.me/31626667714?text=Ik%20heb%20vragen%20over%20ZenTrack"
               className="relative z-10 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold px-6 py-3 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap"
            >
               Open WhatsApp <ArrowRight className="w-4 h-4" />

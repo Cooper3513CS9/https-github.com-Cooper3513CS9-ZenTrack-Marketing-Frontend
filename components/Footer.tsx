@@ -32,7 +32,7 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate, ctaVar
                   <span>Kruisweg 9L<br/>3513 CS Utrecht</span>
               </p>
               <p className="flex items-center gap-3 hover:text-white transition-colors cursor-pointer">
-                  <Phone className="w-4 h-4 text-emerald-500 shrink-0" /> 06-2388-5227
+                  <Phone className="w-4 h-4 text-emerald-500 shrink-0" /> 06-2666-7714
               </p>
               <p className="flex items-center gap-3 hover:text-white transition-colors cursor-pointer">
                   <Mail className="w-4 h-4 text-emerald-500 shrink-0" /> info@zentrack.nl

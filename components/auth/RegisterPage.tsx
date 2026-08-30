@@ -44,7 +44,7 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onRegisterSuccess, o
             </ul>
           </div>
           <div className="mt-8">
-             <p className="text-xs text-slate-500">Hulp nodig? <br/> WhatsApp Jord: 06-23885227</p>
+             <p className="text-xs text-slate-500">Hulp nodig? <br/> WhatsApp: 06-2666-7714</p>
           </div>
         </div>
 

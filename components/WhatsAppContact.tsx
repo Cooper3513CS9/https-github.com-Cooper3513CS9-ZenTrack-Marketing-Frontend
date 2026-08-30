@@ -4,7 +4,7 @@ import React from 'react';
 import { MessageCircle, Clock, UserCheck, Shield, ArrowRight, Zap } from 'lucide-react';
 
 export const WhatsAppContact: React.FC = () => {
-  const phoneNumber = '31623885227';
+  const phoneNumber = '31626667714';
   const prefilledMessage = encodeURIComponent(
     'Hoi ZenTrack, ik ben geïnteresseerd in een demo voor mijn praktijk. Kunnen we een kort gesprek inplannen?'
   );

@@ -74,7 +74,7 @@ export default function ZorggroepenPage() {
               </Link>
             </div>
             <p className="text-sm text-slate-500 mt-6">
-              Liever direct contact? Mail <a href="mailto:info@zentrack.nl" className="text-purple-400 underline">info@zentrack.nl</a> of bel 06-2388-5227.
+              Liever direct contact? Mail <a href="mailto:info@zentrack.nl" className="text-purple-400 underline">info@zentrack.nl</a> of bel 06-2666-7714.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-slate-500 font-medium">
               <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Eén factuur, overzicht per locatie</span>

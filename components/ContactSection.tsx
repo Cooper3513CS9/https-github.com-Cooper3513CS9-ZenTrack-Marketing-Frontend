@@ -74,7 +74,7 @@ export const ContactSection: React.FC = () => {
                         </div>
                         <div>
                             <p className="font-bold text-slate-900">Telefoon & WhatsApp</p>
-                            <p className="text-slate-600">06-2388-5227</p>
+                            <p className="text-slate-600">06-2666-7714</p>
                             <p className="text-xs text-slate-400">Bereikbaar tijdens kantooruren</p>
                         </div>
                     </div>

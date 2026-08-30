@@ -9,7 +9,7 @@ export const GroupContact: React.FC = () => {
   const [form, setForm] = useState({ firstName: '', lastName: '', email: '', locaties: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
-  const whatsappUrl = `https://wa.me/31623885227?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/31626667714?text=${encodeURIComponent(
     'Hoi ZenTrack, ik wil een strategische sessie plannen voor onze zorggroep.'
   )}`;
   const mailtoFallback = `mailto:info@zentrack.nl?subject=${encodeURIComponent('[Zorggroep] Strategische sessie plannen')}&body=${encodeURIComponent(form.message)}`;
@@ -45,7 +45,7 @@ export const GroupContact: React.FC = () => {
             <div className="space-y-4 mb-8">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-slate-700 hover:text-emerald-700 transition-colors">
                 <span className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 shrink-0"><MessageCircle className="w-5 h-5" /></span>
-                <span><strong>WhatsApp</strong> — 06-2388-5227, meestal binnen een uur antwoord</span>
+                <span><strong>WhatsApp</strong> — 06-2666-7714, meestal binnen een uur antwoord</span>
               </a>
               <a href="mailto:info@zentrack.nl" className="flex items-center gap-3 text-slate-700 hover:text-emerald-700 transition-colors">
                 <span className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 shrink-0"><Mail className="w-5 h-5" /></span>
@@ -53,7 +53,7 @@ export const GroupContact: React.FC = () => {
               </a>
               <span className="flex items-center gap-3 text-slate-700">
                 <span className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 shrink-0"><Phone className="w-5 h-5" /></span>
-                <span><strong>Telefoon</strong> — 06-2388-5227, tijdens kantooruren</span>
+                <span><strong>Telefoon</strong> — 06-2666-7714, tijdens kantooruren</span>
               </span>
             </div>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5A] text-white font-bold px-6 py-3.5 rounded-xl transition-all hover:shadow-lg">
@@ -99,7 +99,7 @@ export const GroupContact: React.FC = () => {
                 {status === 'error' && (
                   <p className="text-sm text-red-600">
                     Versturen lukte niet. Mail ons direct via{' '}
-                    <a href={mailtoFallback} className="underline">info@zentrack.nl</a> of app naar 06-2388-5227.
+                    <a href={mailtoFallback} className="underline">info@zentrack.nl</a> of app naar 06-2666-7714.
                   </p>
                 )}
               </form>
