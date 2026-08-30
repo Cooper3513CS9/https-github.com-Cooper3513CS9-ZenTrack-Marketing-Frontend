@@ -138,7 +138,7 @@ export const GroupSection: React.FC = () => {
 
             <div className="mt-12 pt-8 border-t border-slate-200 text-center">
                <a
-                 href="/#contact"
+                 href="#contact"
                  className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl font-bold transition-all inline-flex items-center gap-3 shadow-lg hover:shadow-xl hover:-translate-y-1"
                >
                   Plan een strategische sessie

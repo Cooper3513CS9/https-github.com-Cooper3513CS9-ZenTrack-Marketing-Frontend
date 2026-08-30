@@ -4,9 +4,9 @@ import React from 'react';
 import { MessageCircle, Clock, UserCheck, Shield, ArrowRight, Zap } from 'lucide-react';
 
 export const WhatsAppContact: React.FC = () => {
-  const phoneNumber = '31610482270';
+  const phoneNumber = '31623885227';
   const prefilledMessage = encodeURIComponent(
-    'Hoi Jord, ik ben geïnteresseerd in een demo van ZenTrack voor mijn praktijk. Kunnen we een kort gesprek inplannen?'
+    'Hoi ZenTrack, ik ben geïnteresseerd in een demo voor mijn praktijk. Kunnen we een kort gesprek inplannen?'
   );
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${prefilledMessage}`;
 
@@ -18,7 +18,7 @@ export const WhatsAppContact: React.FC = () => {
           <MessageCircle className="w-6 h-6" />
         </div>
         <div>
-          <h3 className="font-bold text-white">WhatsApp met Jord</h3>
+          <h3 className="font-bold text-white">WhatsApp met de oprichters</h3>
           <p className="text-xs text-emerald-200">Meestal binnen 1 uur antwoord</p>
         </div>
       </div>
@@ -46,7 +46,7 @@ export const WhatsAppContact: React.FC = () => {
               <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center text-emerald-600 shrink-0">
                 <UserCheck className="w-4 h-4" />
               </div>
-              <p className="text-sm text-slate-600">Persoonlijk contact met Jord, de oprichter</p>
+              <p className="text-sm text-slate-600">Persoonlijk contact met een van de oprichters</p>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center text-emerald-600 shrink-0">

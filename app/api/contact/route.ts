@@ -8,7 +8,7 @@ export const runtime = 'nodejs'
 // zodat de frontend een eerlijke mailto-uitwijk kan tonen (nooit nep-succes).
 
 export async function POST(request: NextRequest) {
-  let body: { firstName?: string; lastName?: string; email?: string; message?: string }
+  let body: { firstName?: string; lastName?: string; email?: string; message?: string; context?: string; locaties?: string }
   try {
     body = await request.json()
   } catch {
@@ -19,6 +19,10 @@ export async function POST(request: NextRequest) {
   const lastName = (body.lastName || '').trim().slice(0, 100)
   const email = (body.email || '').trim().slice(0, 200)
   const message = (body.message || '').trim().slice(0, 5000)
+  // Optionele herkomst (bv. de /zorggroepen-pagina) — bepaalt het mailonderwerp
+  // zodat een zorggroep-lead direct herkenbaar is in de inbox.
+  const isZorggroep = (body.context || '').trim() === 'zorggroep'
+  const locaties = (body.locaties || '').trim().slice(0, 50)
 
   if (!firstName || !email || !/.+@.+\..+/.test(email)) {
     return NextResponse.json({ error: 'Vul naam en een geldig e-mailadres in' }, { status: 400 })
@@ -37,12 +41,13 @@ export async function POST(request: NextRequest) {
         sender: { name: 'ZenTrack Contactformulier', email: 'noreply@zentrack.nl' },
         to: [{ email: 'info@zentrack.nl' }],
         replyTo: { email, name: `${firstName} ${lastName}`.trim() },
-        subject: `Contactformulier: ${firstName} ${lastName}`.trim(),
+        subject: `${isZorggroep ? '[Zorggroep] ' : ''}Contactformulier: ${firstName} ${lastName}`.trim(),
         textContent:
-          `Nieuw bericht via het contactformulier op zentrack.nl\n\n` +
+          `Nieuw bericht via het contactformulier op zentrack.nl${isZorggroep ? ' (zorggroepen-pagina)' : ''}\n\n` +
           `Naam: ${firstName} ${lastName}\n` +
-          `E-mail: ${email}\n\n` +
-          `Bericht:\n${message || '(geen bericht ingevuld)'}`,
+          `E-mail: ${email}\n` +
+          (isZorggroep ? `Aantal locaties: ${locaties || '(niet ingevuld)'}\n` : '') +
+          `\nBericht:\n${message || '(geen bericht ingevuld)'}`,
       }),
     })
 

@@ -7,6 +7,7 @@ import { ArrowRight, Check, Network } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { GroupSection } from '@/components/GroupSection';
+import { GroupContact } from '@/components/GroupContact';
 
 export default function ZorggroepenPage() {
   const router = useRouter();
@@ -14,7 +15,7 @@ export default function ZorggroepenPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header onLoginClick={navigateToLogin} cta={{ label: 'Plan een gesprek', href: '/#contact' }} />
+      <Header onLoginClick={navigateToLogin} cta={{ label: 'Plan een gesprek', href: '#contact' }} />
       <main>
 
         {/* ANTWOORD-EERST */}
@@ -44,6 +45,9 @@ export default function ZorggroepenPage() {
         {/* HET VERHAAL — hergebruikt van de homepage */}
         <GroupSection />
 
+        {/* CONTACT — eigen blok, houdt de zorggroep-lead op deze pagina */}
+        <GroupContact />
+
         {/* CTA */}
         <section className="py-20 bg-slate-900 text-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -57,7 +61,7 @@ export default function ZorggroepenPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <a
-                href="/#contact"
+                href="#contact"
                 className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-900/20 inline-flex items-center justify-center gap-2"
               >
                 Plan een strategische sessie <ArrowRight className="w-5 h-5" />

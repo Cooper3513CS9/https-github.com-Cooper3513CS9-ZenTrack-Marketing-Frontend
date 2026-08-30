@@ -101,7 +101,7 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate, ctaVar
                   <li>• Eén factuur voor alles</li>
                   <li>• Uitrol in uw tempo</li>
                </ul>
-               <a href="/#contact" className="block w-full bg-emerald-600 hover:bg-emerald-500 text-white py-2 rounded-lg text-sm font-semibold transition-colors text-center">
+               <a href="#contact" className="block w-full bg-emerald-600 hover:bg-emerald-500 text-white py-2 rounded-lg text-sm font-semibold transition-colors text-center">
                  Plan een gesprek →
                </a>
             </div>
