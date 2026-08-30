@@ -9,6 +9,8 @@ interface HeaderProps {
   onRegisterClick?: () => void;
   /** Vervangt de standaard "Gratis inkoop-check"-CTA (bv. op /zorggroepen: plan een gesprek). */
   cta?: { label: string; href: string };
+  /** Doel van het "Contact"-menu-item (default homepage-sectie; /zorggroepen: eigen #contact). */
+  contactHref?: string;
 }
 
 const featureDropdownItems = [
@@ -20,7 +22,7 @@ const featureDropdownItems = [
   { name: 'NPA Accreditatie', href: '/npa-accreditatie', icon: ShieldCheck, description: 'Uw NPA-dossier op orde' },
 ];
 
-export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick, cta }) => {
+export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick, cta, contactHref = '/#contact' }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isFeaturesOpen, setIsFeaturesOpen] = useState(false);
 
@@ -31,7 +33,7 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick, c
     { name: 'Prijzen', href: '/#prijzen' },
     { name: 'Voor zorggroepen', href: '/zorggroepen' },
     { name: 'Over Ons', href: '/#over-ons' },
-    { name: 'Contact', href: '/#contact' },
+    { name: 'Contact', href: contactHref },
   ];
 
   const handleMobileNav = () => {

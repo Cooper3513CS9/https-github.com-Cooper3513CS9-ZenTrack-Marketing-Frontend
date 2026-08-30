@@ -15,7 +15,7 @@ export default function ZorggroepenPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header onLoginClick={navigateToLogin} cta={{ label: 'Plan een gesprek', href: '#contact' }} />
+      <Header onLoginClick={navigateToLogin} cta={{ label: 'Plan een gesprek', href: '#contact' }} contactHref="#contact" />
       <main>
 
         {/* ANTWOORD-EERST */}
