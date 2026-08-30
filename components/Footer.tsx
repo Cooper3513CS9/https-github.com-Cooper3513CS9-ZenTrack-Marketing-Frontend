@@ -7,9 +7,11 @@ import { Logo } from './Logo';
 interface FooterProps {
   onLoginClick: () => void;
   onNavigate: (view: string) => void;
+  /** 'gesprek' vervangt het gratis-check-blok door een plan-een-gesprek-blok (bv. /zorggroepen). */
+  ctaVariant?: 'gratis' | 'gesprek';
 }
 
-export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate }) => {
+export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate, ctaVariant = 'gratis' }) => {
   return (
     <footer className="bg-slate-900 text-slate-300 py-16 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -89,19 +91,34 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate }) => {
             </ul>
           </div>
 
-          {/* Kolom 5: CTA block (BEHOUDEN) */}
-          <div id="beta" className="bg-slate-800 p-6 rounded-2xl border border-slate-700">
-             <h4 className="text-white font-bold mb-2">Probeer ZenTrack</h4>
-             <p className="text-xs text-slate-400 mb-4">Start met een gratis inkoop-check: upload je facturen en zie wat je te veel betaalt. Geen creditcard nodig.</p>
-             <ul className="text-xs space-y-2 mb-6 text-slate-300">
-                <li>• 30 min onboarding call</li>
-                <li>• Upload eerste facturen</li>
-                <li>• Direct resultaat</li>
-             </ul>
-             <button onClick={onLoginClick} className="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-2 rounded-lg text-sm font-semibold transition-colors">
-               Gratis Proberen →
-             </button>
-          </div>
+          {/* Kolom 5: CTA block (BEHOUDEN; op /zorggroepen de gesprek-variant) */}
+          {ctaVariant === 'gesprek' ? (
+            <div id="beta" className="bg-slate-800 p-6 rounded-2xl border border-slate-700">
+               <h4 className="text-white font-bold mb-2">ZenTrack voor uw zorggroep</h4>
+               <p className="text-xs text-slate-400 mb-4">Meerdere locaties? We nemen het graag samen door — van eerste locatie tot uitrol.</p>
+               <ul className="text-xs space-y-2 mb-6 text-slate-300">
+                  <li>• Overzicht per locatie</li>
+                  <li>• Eén factuur voor alles</li>
+                  <li>• Uitrol in uw tempo</li>
+               </ul>
+               <a href="/#contact" className="block w-full bg-emerald-600 hover:bg-emerald-500 text-white py-2 rounded-lg text-sm font-semibold transition-colors text-center">
+                 Plan een gesprek →
+               </a>
+            </div>
+          ) : (
+            <div id="beta" className="bg-slate-800 p-6 rounded-2xl border border-slate-700">
+               <h4 className="text-white font-bold mb-2">Probeer ZenTrack</h4>
+               <p className="text-xs text-slate-400 mb-4">Start met een gratis inkoop-check: upload je facturen en zie wat je te veel betaalt. Geen creditcard nodig.</p>
+               <ul className="text-xs space-y-2 mb-6 text-slate-300">
+                  <li>• 30 min onboarding call</li>
+                  <li>• Upload eerste facturen</li>
+                  <li>• Direct resultaat</li>
+               </ul>
+               <button onClick={onLoginClick} className="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-2 rounded-lg text-sm font-semibold transition-colors">
+                 Gratis Proberen →
+               </button>
+            </div>
+          )}
         </div>
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">

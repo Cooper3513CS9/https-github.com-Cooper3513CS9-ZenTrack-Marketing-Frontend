@@ -7,6 +7,8 @@ import { Logo } from './Logo';
 interface HeaderProps {
   onLoginClick: () => void;
   onRegisterClick?: () => void;
+  /** Vervangt de standaard "Gratis inkoop-check"-CTA (bv. op /zorggroepen: plan een gesprek). */
+  cta?: { label: string; href: string };
 }
 
 const featureDropdownItems = [
@@ -18,7 +20,7 @@ const featureDropdownItems = [
   { name: 'NPA Accreditatie', href: '/npa-accreditatie', icon: ShieldCheck, description: 'Uw NPA-dossier op orde' },
 ];
 
-export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick }) => {
+export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick, cta }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isFeaturesOpen, setIsFeaturesOpen] = useState(false);
 
@@ -131,12 +133,21 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
             <button onClick={onLoginClick} className="text-sm font-medium text-slate-600 hover:text-emerald-600">Inloggen</button>
-            <button
-              onClick={onRegisterClick}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all flex items-center gap-2 shadow-lg shadow-emerald-600/20"
-            >
-              Gratis inkoop-check <ArrowRight className="w-4 h-4" />
-            </button>
+            {cta ? (
+              <a
+                href={cta.href}
+                className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all flex items-center gap-2 shadow-lg shadow-emerald-600/20"
+              >
+                {cta.label} <ArrowRight className="w-4 h-4" />
+              </a>
+            ) : (
+              <button
+                onClick={onRegisterClick}
+                className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all flex items-center gap-2 shadow-lg shadow-emerald-600/20"
+              >
+                Gratis inkoop-check <ArrowRight className="w-4 h-4" />
+              </button>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -216,9 +227,15 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
             {/* Login / Register buttons */}
             <div className="pt-4 mt-4 border-t border-slate-100 flex flex-col gap-3">
                 <button onClick={handleLogin} className="text-center py-2 text-slate-600 font-medium">Inloggen</button>
-                <button onClick={() => { setIsMenuOpen(false); setIsFeaturesOpen(false); onRegisterClick?.(); }} className="bg-emerald-600 text-white py-3 rounded-xl text-center font-semibold">
-                    Gratis inkoop-check
-                </button>
+                {cta ? (
+                  <a href={cta.href} onClick={handleMobileNav} className="bg-emerald-600 text-white py-3 rounded-xl text-center font-semibold">
+                      {cta.label}
+                  </a>
+                ) : (
+                  <button onClick={() => { setIsMenuOpen(false); setIsFeaturesOpen(false); onRegisterClick?.(); }} className="bg-emerald-600 text-white py-3 rounded-xl text-center font-semibold">
+                      Gratis inkoop-check
+                  </button>
+                )}
             </div>
           </div>
         </div>

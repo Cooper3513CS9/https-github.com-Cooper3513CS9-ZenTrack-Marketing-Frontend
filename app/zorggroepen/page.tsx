@@ -10,12 +10,11 @@ import { GroupSection } from '@/components/GroupSection';
 
 export default function ZorggroepenPage() {
   const router = useRouter();
-  const navigateToRegister = () => { window.location.href = 'https://app.zentrack.nl/sign-up'; };
   const navigateToLogin = () => { window.location.href = 'https://app.zentrack.nl/sign-in'; };
 
   return (
     <div className="min-h-screen bg-white">
-      <Header onLoginClick={navigateToLogin} onRegisterClick={navigateToRegister} />
+      <Header onLoginClick={navigateToLogin} cta={{ label: 'Plan een gesprek', href: '/#contact' }} />
       <main>
 
         {/* ANTWOORD-EERST */}
@@ -82,7 +81,7 @@ export default function ZorggroepenPage() {
         </section>
 
       </main>
-      <Footer onLoginClick={navigateToRegister} onNavigate={(v) => router.push(v === 'legal-terms' ? '/legal/terms' : '/legal/privacy')} />
+      <Footer ctaVariant="gesprek" onLoginClick={navigateToLogin} onNavigate={(v) => router.push(v === 'legal-terms' ? '/legal/terms' : '/legal/privacy')} />
     </div>
   );
 }
