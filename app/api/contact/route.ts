@@ -47,10 +47,13 @@ export async function POST(request: NextRequest) {
     })
 
     if (!res.ok) {
+      const detail = await res.text().catch(() => '')
+      console.error('[contact] Brevo weigerde:', res.status, detail.slice(0, 300))
       return NextResponse.json({ error: 'mail_unavailable' }, { status: 503 })
     }
     return NextResponse.json({ success: true })
-  } catch {
+  } catch (e) {
+    console.error('[contact] verzending faalde:', e instanceof Error ? e.message : String(e))
     return NextResponse.json({ error: 'mail_unavailable' }, { status: 503 })
   }
 }
