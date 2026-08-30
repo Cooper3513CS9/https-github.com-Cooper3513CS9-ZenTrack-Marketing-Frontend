@@ -31,8 +31,8 @@ export const ROICalculator: React.FC = () => {
     
     const total = Math.round(wasteSavings + timeSavings + emergencySavings);
 
-    // Calculate Payback Period based on Pro Plan (€149/mo = €1788/yr)
-    const subscriptionCost = 1788;
+    // Terugverdientijd op founding-tarief €79/mnd = €948/jr (fix 30 aug: was oud €149-tarief)
+    const subscriptionCost = 948;
     const paybackDays = Math.round((subscriptionCost / total) * 365);
     
     setSavings({
@@ -182,7 +182,7 @@ export const ROICalculator: React.FC = () => {
                       <div className="flex items-center gap-2">
                          <span className="text-xs font-bold text-slate-700">€{hourlyRate}</span>
                          <input 
-                           type="range" min="30" max="80" step="5"
+                           type="range" min="25" max="80" step="1"
                            value={hourlyRate}
                            onChange={(e) => setHourlyRate(parseInt(e.target.value))}
                            className="w-24 h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-slate-500"

@@ -1,0 +1,56 @@
+import { NextRequest, NextResponse } from 'next/server'
+
+export const runtime = 'nodejs'
+
+// Contactformulier → mail naar info@zentrack.nl via Brevo (30 aug 2026).
+// Het oude formulier verstuurde NIETS maar toonde wel een succes-melding;
+// deze route maakt het echt. Zonder geldige BREVO_API_KEY antwoorden we 503
+// zodat de frontend een eerlijke mailto-uitwijk kan tonen (nooit nep-succes).
+
+export async function POST(request: NextRequest) {
+  let body: { firstName?: string; lastName?: string; email?: string; message?: string }
+  try {
+    body = await request.json()
+  } catch {
+    return NextResponse.json({ error: 'Ongeldig verzoek' }, { status: 400 })
+  }
+
+  const firstName = (body.firstName || '').trim().slice(0, 100)
+  const lastName = (body.lastName || '').trim().slice(0, 100)
+  const email = (body.email || '').trim().slice(0, 200)
+  const message = (body.message || '').trim().slice(0, 5000)
+
+  if (!firstName || !email || !/.+@.+\..+/.test(email)) {
+    return NextResponse.json({ error: 'Vul naam en een geldig e-mailadres in' }, { status: 400 })
+  }
+
+  const apiKey = process.env.BREVO_API_KEY
+  if (!apiKey) {
+    return NextResponse.json({ error: 'mail_unavailable' }, { status: 503 })
+  }
+
+  try {
+    const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: { 'api-key': apiKey, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sender: { name: 'ZenTrack Contactformulier', email: 'noreply@zentrack.nl' },
+        to: [{ email: 'info@zentrack.nl' }],
+        replyTo: { email, name: `${firstName} ${lastName}`.trim() },
+        subject: `Contactformulier: ${firstName} ${lastName}`.trim(),
+        textContent:
+          `Nieuw bericht via het contactformulier op zentrack.nl\n\n` +
+          `Naam: ${firstName} ${lastName}\n` +
+          `E-mail: ${email}\n\n` +
+          `Bericht:\n${message || '(geen bericht ingevuld)'}`,
+      }),
+    })
+
+    if (!res.ok) {
+      return NextResponse.json({ error: 'mail_unavailable' }, { status: 503 })
+    }
+    return NextResponse.json({ success: true })
+  } catch {
+    return NextResponse.json({ error: 'mail_unavailable' }, { status: 503 })
+  }
+}
