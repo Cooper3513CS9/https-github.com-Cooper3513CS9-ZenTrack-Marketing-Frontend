@@ -17,7 +17,7 @@ import { FAQ } from '@/components/FAQ';
 import { Footer } from '@/components/Footer';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { CookieConsent } from '@/components/legal/CookieConsent';
-import { GroupSection } from '@/components/GroupSection';
+import { GroupTeaser } from '@/components/GroupTeaser';
 import { OnboardingSteps } from '@/components/OnboardingSteps';
 import { HomeFaqStructuredData } from '@/components/StructuredData';
 
@@ -50,8 +50,8 @@ export default function LandingPage() {
          <WhatsAppDemo />
          <Features />
          <ManagerDashboardSection />
-         <GroupSection />
          <ROICalculator />
+         <GroupTeaser />
          <Pricing onRegisterClick={navigateToRegister} />
          <AboutSection />
          <FAQ />

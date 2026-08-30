@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import { Check, Building2, Zap, FileSearch, ArrowRight, Info, ShieldCheck } from 'lucide-react';
 
 interface PricingProps {
@@ -102,9 +103,9 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
               <span className="text-2xl font-bold text-white">Staffelkorting op aanvraag</span>
             </div>
             <p className="text-sm font-semibold text-purple-300 mb-6 min-h-[40px]">Meer locaties, beter tarief. Zorggroepen: partnerschap op maat.</p>
-            <a href="#contact" className="w-full py-3 rounded-xl border border-purple-500/50 text-white font-bold hover:bg-purple-600 hover:border-purple-600 transition-colors mb-8 flex items-center justify-center gap-2">
-              Plan een gesprek <ArrowRight className="w-4 h-4" />
-            </a>
+            <Link href="/zorggroepen" className="w-full py-3 rounded-xl border border-purple-500/50 text-white font-bold hover:bg-purple-600 hover:border-purple-600 transition-colors mb-8 flex items-center justify-center gap-2">
+              Bekijk de zorggroep-aanpak <ArrowRight className="w-4 h-4" />
+            </Link>
             <div className="space-y-3 flex-1">
               <FeatureItem text="Eén factuur voor alle locaties" />
               <FeatureItem text="Overzicht en verantwoording per locatie" />

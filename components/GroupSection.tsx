@@ -2,13 +2,6 @@ import React from 'react';
 import { Building2, ArrowRight, Globe, TrendingUp, Network, FileSpreadsheet, AlertCircle, ShieldCheck, Heart, CheckCircle2 } from 'lucide-react';
 
 export const GroupSection: React.FC = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section id="zorggroepen" className="py-24 bg-slate-50 border-t border-slate-200 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -146,13 +139,13 @@ export const GroupSection: React.FC = () => {
             </div>
 
             <div className="mt-12 pt-8 border-t border-slate-200 text-center">
-               <button
-                 onClick={scrollToContact}
-                 className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-bold transition-all flex items-center gap-3 shadow-lg hover:shadow-xl hover:-translate-y-1"
+               <a
+                 href="/#contact"
+                 className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-bold transition-all inline-flex items-center gap-3 shadow-lg hover:shadow-xl hover:-translate-y-1"
                >
                   Plan een strategische sessie
                   <ArrowRight className="w-5 h-5" />
-               </button>
+               </a>
             </div>
           </div>
         </div>

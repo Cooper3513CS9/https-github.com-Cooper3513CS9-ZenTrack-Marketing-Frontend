@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, ArrowRight, ChevronDown, ScanLine, PackageCheck, Boxes, TrendingDown, ShieldCheck } from 'lucide-react';
+import { Menu, X, ArrowRight, ChevronDown, ScanLine, PackageCheck, Boxes, TrendingDown, ShieldCheck, Radar } from 'lucide-react';
 import { Logo } from './Logo';
 
 interface HeaderProps {
@@ -14,6 +14,7 @@ const featureDropdownItems = [
   { name: 'Pakbon Verificatie', href: '/pakbon-verificatie', icon: PackageCheck, description: 'Leveringen direct controleren' },
   { name: 'Voorraad Beheer', href: '/voorraad-beheer', icon: Boxes, description: 'Real-time per locatie' },
   { name: 'Slim Bestellen', href: '/slim-bestellen', icon: TrendingDown, description: 'Inzicht uit je eigen factuurhistorie' },
+  { name: 'Expiratie Radar', href: '/expiratie-radar', icon: Radar, description: 'Vervaldatum-alerts via WhatsApp' },
   { name: 'NPA Accreditatie', href: '/npa-accreditatie', icon: ShieldCheck, description: 'Uw NPA-dossier op orde' },
 ];
 
@@ -26,7 +27,7 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
     { name: 'Hoe het werkt', href: '/#hoe-het-werkt' },
     // Features dropdown wordt apart gerenderd (na "Hoe het werkt")
     { name: 'Prijzen', href: '/#prijzen' },
-    { name: 'Expiratie Radar', href: '/expiratie-radar' },
+    { name: 'Voor zorggroepen', href: '/zorggroepen' },
     { name: 'Over Ons', href: '/#over-ons' },
     { name: 'Contact', href: '/#contact' },
   ];
@@ -52,7 +53,7 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
             <span className="text-xl font-bold text-slate-900 tracking-tight">ZenTrack</span>
           </Link>
 
-          {/* Desktop Nav — volgorde: Waarom → Hoe het werkt → Features ▾ → Prijzen → Expiratie Radar [Gratis] → Over Ons → Contact */}
+          {/* Desktop Nav — volgorde: Waarom → Hoe het werkt → Features ▾ → Prijzen → Voor zorggroepen → Over Ons → Contact */}
           <nav className="hidden md:flex items-center space-x-6">
             {/* Waarom + Hoe het werkt (eerste 2 items, vóór Features dropdown) */}
             {navItems.slice(0, 2).map((item) => (
@@ -110,7 +111,7 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
               </div>
             </div>
 
-            {/* Prijzen + Expiratie Radar [Gratis] + Over Ons + Contact (items na Features dropdown) */}
+            {/* Prijzen + Voor zorggroepen + Over Ons + Contact (items na Features dropdown) */}
             {navItems.slice(2).map((item) => (
               <a
                 key={item.name}
@@ -195,7 +196,7 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
               )}
             </div>
 
-            {/* Prijzen + Expiratie Radar [Gratis] + Over Ons + Contact */}
+            {/* Prijzen + Voor zorggroepen + Over Ons + Contact */}
             {navItems.slice(2).map((item) => (
               <a
                 key={item.name}
