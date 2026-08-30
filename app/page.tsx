@@ -19,7 +19,6 @@ import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { CookieConsent } from '@/components/legal/CookieConsent';
 import { GroupSection } from '@/components/GroupSection';
 import { OnboardingSteps } from '@/components/OnboardingSteps';
-import { BlogSection } from '@/components/BlogSection';
 import { HomeFaqStructuredData } from '@/components/StructuredData';
 
 export default function LandingPage() {
@@ -55,7 +54,6 @@ export default function LandingPage() {
          <ROICalculator />
          <Pricing onRegisterClick={navigateToRegister} />
          <AboutSection />
-         <BlogSection />
          <FAQ />
          <ContactSection />
        </main>

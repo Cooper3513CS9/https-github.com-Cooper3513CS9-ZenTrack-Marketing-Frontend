@@ -133,7 +133,7 @@ export const ROICalculator: React.FC = () => {
                      min="0" max="30" step="1"
                      value={savingsPercentage}
                      onChange={(e) => setSavingsPercentage(parseInt(e.target.value))}
-                     className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-purple-500"
+                     className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600"
                    />
                 </div>
 
@@ -185,7 +185,7 @@ export const ROICalculator: React.FC = () => {
                            type="range" min="25" max="80" step="1"
                            value={hourlyRate}
                            onChange={(e) => setHourlyRate(parseInt(e.target.value))}
-                           className="w-24 h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-slate-500"
+                           className="w-24 h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
                          />
                       </div>
                    </div>

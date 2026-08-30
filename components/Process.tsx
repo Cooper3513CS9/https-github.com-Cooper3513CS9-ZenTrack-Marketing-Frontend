@@ -10,9 +10,9 @@ const timelineSteps = [
     title: "Facturen & Verbruik",
     description: "De post komt binnen. Je maakt een foto van een factuur of een doosje hechtmateriaal. ZenTrack herkent het product en de steriele datum direct.",
     icon: FileText,
-    color: "bg-blue-500",
-    textColor: "text-blue-600",
-    borderColor: "border-blue-200",
+    color: "bg-emerald-500",
+    textColor: "text-emerald-600",
+    borderColor: "border-emerald-200",
     action: "📸 Klik & Klaar"
   },
   {
@@ -32,9 +32,9 @@ const timelineSteps = [
     title: "Levering & Tracking",
     description: "Ping! 'Je bestelling wordt bezorgd.' Bij aankomst scan je de pakbon in de doos. ZenTrack checkt direct of er items missen in de levering.",
     icon: ClipboardCheck,
-    color: "bg-purple-500",
-    textColor: "text-purple-600",
-    borderColor: "border-purple-200",
+    color: "bg-emerald-500",
+    textColor: "text-emerald-600",
+    borderColor: "border-emerald-200",
     action: "📦 Track & Verify"
   },
   {

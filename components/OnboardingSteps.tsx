@@ -10,7 +10,7 @@ export const OnboardingSteps: React.FC = () => {
       title: "Meld uw praktijk aan",
       description: "Maak binnen 2 minuten een veilig account aan. U krijgt direct toegang tot uw eigen ZenTrack omgeving.",
       icon: UserPlus,
-      color: "bg-blue-100 text-blue-600"
+      color: "bg-emerald-100 text-emerald-600"
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ export const OnboardingSteps: React.FC = () => {
       title: "Ontvang uw inkoop-check",
       description: "Zie direct wat u te veel betaalt en waar u kunt besparen. Hoe meer facturen, hoe scherper het beeld.",
       icon: MessageSquare,
-      color: "bg-purple-100 text-purple-600"
+      color: "bg-emerald-100 text-emerald-600"
     }
   ];
 

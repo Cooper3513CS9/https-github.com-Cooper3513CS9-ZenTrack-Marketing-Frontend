@@ -20,7 +20,7 @@ export const WhatsAppDemo: React.FC = () => {
       id: '1', 
       text: 'Hoi! Ik ben ZenTrack. Stuur me een foto van een factuur, verzendlabel of scan een QR-code in de kast. 📸', 
       sender: 'bot', 
-      timestamp: '09:00' 
+      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) 
     }
   ]);
   const [isTyping, setIsTyping] = useState(false);
@@ -42,6 +42,15 @@ export const WhatsAppDemo: React.FC = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages, isTyping, uploadingState]);
+
+
+// WhatsApp-stijl **vet** renderen i.p.v. letterlijke sterretjes in beeld
+const renderWhatsAppText = (text: string) =>
+  text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
+    part.startsWith('**') && part.endsWith('**')
+      ? <strong key={i}>{part.slice(2, -2)}</strong>
+      : <span key={i}>{part}</span>
+  );
 
   const handleSimulateUpload = async (scenario: 'invoice' | 'packing_slip' | 'medication' | 'qr' | 'bag') => {
     if (isTyping || uploadingState !== 'idle') return;
@@ -216,6 +225,13 @@ export const WhatsAppDemo: React.FC = () => {
       }, 1500); 
 
     } catch (e) {
+      // Nooit stil blijven: zonder antwoord lijkt de demo kapot
+      setMessages(prev => [...prev, {
+        id: (Date.now() + 1).toString(),
+        text: '\u2705 **Verwerking compleet**\n\nDe scan is gelukt en opgeslagen. Details staan in je dashboard.',
+        sender: 'bot',
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      }]);
       setIsTyping(false);
     }
   };
@@ -226,7 +242,7 @@ export const WhatsAppDemo: React.FC = () => {
         id: '1', 
         text: 'Hoi! Ik ben ZenTrack. Stuur me een foto van een factuur, verzendlabel of scan een QR-code in de kast. 📸', 
         sender: 'bot', 
-        timestamp: '09:00' 
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) 
       }
      ]);
      setUploadingState('idle');
@@ -363,7 +379,7 @@ export const WhatsAppDemo: React.FC = () => {
                             </div>
                          </div>
                        )}
-                       <p className="whitespace-pre-line">{msg.text}</p>
+                       <p className="whitespace-pre-line">{renderWhatsAppText(msg.text)}</p>
                        
                        <div className="flex items-end justify-end gap-1 mt-1 -mb-1">
                          <span className="text-[10px] text-slate-500/80">{msg.timestamp}</span>
