@@ -105,7 +105,7 @@ export default function PakbonVerificatiePage() {
                 <div className="space-y-1.5 text-slate-600">
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span> <span>Leverancier A — 3 leveringen compleet</span></p>
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span> <span>Leverancier B — 1 artikel ontbreekt</span></p>
-                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-blue-500 shrink-0"></span> <span>Pharmaline — levering onderweg</span></p>
+                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span> <span>Pharmaline — levering onderweg</span></p>
                 </div>
                 <div className="mt-2 bg-orange-50 p-1.5 rounded border border-orange-100 text-[10px] text-orange-700 font-bold">
                   1 open mismatch — actie vereist
@@ -152,14 +152,14 @@ export default function PakbonVerificatiePage() {
                     <button
                       key={i}
                       onClick={() => setActiveScenario(i)}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-teal-500' : 'w-1.5 bg-slate-300'}`}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-emerald-500' : 'w-1.5 bg-slate-300'}`}
                     />
                   ))}
                 </div>
               </div>
 
               <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
-                <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-100 text-teal-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+                <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
                   <PackageCheck className="w-4 h-4" />
                   <span>Automatische levering controle</span>
                 </div>
@@ -219,17 +219,17 @@ export default function PakbonVerificatiePage() {
                   icon: AlertTriangle,
                   title: 'Ontbrekende artikelen pas later ontdekt',
                   desc: 'Je merkt het pas als je het product nodig heeft. De leverancier zegt: "te laat om te claimen".',
-                  color: 'text-orange-500',
-                  bg: 'bg-orange-50',
-                  border: 'border-orange-100',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
                 {
                   icon: Clock,
                   title: 'Verkeerde aantallen betaald',
                   desc: '8 dozen besteld, 7 geleverd, 8 betaald. Zonder pakbon-factuur vergelijking betaalt je voor lucht.',
-                  color: 'text-yellow-600',
-                  bg: 'bg-yellow-50',
-                  border: 'border-yellow-100',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-6 border ${item.border}`}>
@@ -262,14 +262,14 @@ export default function PakbonVerificatiePage() {
                   title: 'Pakbon fotograferen',
                   desc: 'Maak een foto van de pakbon bij ontvangst van de levering. Via WhatsApp of het dashboard.',
                   icon: Camera,
-                  color: 'bg-teal-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '2',
                   title: 'Automatische vergelijking',
                   desc: 'ZenTrack vergelijkt de pakbon met je factuur en bestelling. Aantallen, producten, artikelnummers.',
                   icon: PackageSearch,
-                  color: 'bg-orange-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '3',

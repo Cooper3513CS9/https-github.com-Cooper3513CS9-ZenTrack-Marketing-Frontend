@@ -233,17 +233,17 @@ export default function ExpiratieRadarPage() {
                   icon: AlertTriangle,
                   title: 'Verlopen tijdens een consult',
                   desc: 'Adrenaline pen verlopen, hechtmateriaal over datum. Je ontdekt het pas als je het nodig hebt.',
-                  color: 'text-orange-500',
-                  bg: 'bg-orange-50',
-                  border: 'border-orange-100',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
                 {
                   icon: Clock,
                   title: 'Elke week kastjes checken',
                   desc: 'De assistente loopt wekelijks alle kasten langs. Kost uren per maand, en toch mis je dingen.',
-                  color: 'text-yellow-600',
-                  bg: 'bg-yellow-50',
-                  border: 'border-yellow-100',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-6 border ${item.border}`}>
@@ -276,7 +276,7 @@ export default function ExpiratieRadarPage() {
                   title: 'Product toevoegen',
                   desc: 'Stuur een foto van het etiket via WhatsApp, typ het VERVAL commando, of voeg het toe via het dashboard.',
                   icon: Camera,
-                  color: 'bg-blue-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '2',

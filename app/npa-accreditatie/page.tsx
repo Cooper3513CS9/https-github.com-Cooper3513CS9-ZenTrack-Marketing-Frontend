@@ -79,11 +79,11 @@ export default function NpaAccreditatiePage() {
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
                 <p className="font-bold text-slate-800 mb-2">Dossier overzicht</p>
                 <div className="space-y-1.5 text-slate-600">
-                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-blue-500 shrink-0" /> <span>Voorraadbeheer documentatie ✓</span></p>
-                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-blue-500 shrink-0" /> <span>Expiratie controle logboek ✓</span></p>
-                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-blue-500 shrink-0" /> <span>Leverancier audit trail ✓</span></p>
+                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-emerald-500 shrink-0" /> <span>Voorraadbeheer documentatie ✓</span></p>
+                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-emerald-500 shrink-0" /> <span>Expiratie controle logboek ✓</span></p>
+                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-emerald-500 shrink-0" /> <span>Leverancier audit trail ✓</span></p>
                 </div>
-                <div className="mt-2 bg-blue-50 p-1.5 rounded border border-blue-100 text-[10px] text-blue-700 font-bold">
+                <div className="mt-2 bg-emerald-50 p-1.5 rounded border border-emerald-100 text-[10px] text-emerald-700 font-bold">
                   Overzicht beschikbaar in dashboard
                 </div>
               </div>
@@ -107,7 +107,7 @@ export default function NpaAccreditatiePage() {
                 <p className="font-bold text-slate-800 mb-2">Aandachtspunten NPA</p>
                 <div className="space-y-1.5 text-slate-600">
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span> <span>Spoedmedicatie check verloopt over 2 weken</span></p>
-                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-yellow-500 shrink-0"></span> <span>Jaarlijkse sterilisatie controle (maart)</span></p>
+                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span> <span>Jaarlijkse sterilisatie controle (maart)</span></p>
                 </div>
                 <div className="mt-2 bg-emerald-50 p-1.5 rounded border border-emerald-100 text-[10px] text-emerald-700">
                   <span className="font-bold">4 NPA domeinen</span> gedekt. 2 aandachtspunten.
@@ -154,14 +154,14 @@ export default function NpaAccreditatiePage() {
                     <button
                       key={i}
                       onClick={() => setActiveScenario(i)}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-violet-500' : 'w-1.5 bg-slate-300'}`}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-emerald-500' : 'w-1.5 bg-slate-300'}`}
                     />
                   ))}
                 </div>
               </div>
 
               <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
-                <div className="inline-flex items-center gap-2 bg-violet-50 border border-violet-100 text-violet-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+                <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
                   <ShieldCheck className="w-4 h-4" />
                   <span>NPA-conforme werkprocessen</span>
                 </div>
@@ -221,17 +221,17 @@ export default function NpaAccreditatiePage() {
                   icon: AlertTriangle,
                   title: 'Documentatie niet op orde',
                   desc: 'Wanneer zijn de spoedmedicijnen voor het laatst gecontroleerd? Wie heeft de sterilisatie uitgevoerd? Geen bewijs.',
-                  color: 'text-orange-500',
-                  bg: 'bg-orange-50',
-                  border: 'border-orange-100',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
                 {
                   icon: Clock,
                   title: 'Dubbel werk voor kwaliteit',
                   desc: 'Eerst het werk doen, dan apart de documentatie invullen. Twee keer werk, en het wordt vergeten.',
-                  color: 'text-yellow-600',
-                  bg: 'bg-yellow-50',
-                  border: 'border-yellow-100',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-6 border ${item.border}`}>
@@ -264,14 +264,14 @@ export default function NpaAccreditatiePage() {
                   title: 'Gebruik ZenTrack normaal',
                   desc: 'Scan facturen, check pakbonnen, beheer voorraad. De documentatie wordt automatisch aangemaakt.',
                   icon: BookOpen,
-                  color: 'bg-violet-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '2',
                   title: 'Audit trail groeit mee',
                   desc: 'Elke actie wordt vastgelegd: wie, wat, wanneer. Complete traceerbaarheid zonder extra werk.',
                   icon: FileCheck,
-                  color: 'bg-orange-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '3',
@@ -306,9 +306,9 @@ export default function NpaAccreditatiePage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { label: 'Voorraadregistratie', desc: 'Compleet logboek', icon: '📋', bg: 'bg-blue-50', border: 'border-blue-200' },
-                { label: 'Expiratie Controle', desc: 'Alle checks vastgelegd', icon: '📅', bg: 'bg-emerald-50', border: 'border-emerald-200' },
-                { label: 'Leverancierbeheer', desc: 'Inkoop audit trail', icon: '🏢', bg: 'bg-purple-50', border: 'border-purple-200' },
+                { label: 'Voorraadregistratie', desc: 'Compleet logboek', icon: '📋', bg: 'bg-emerald-50', border: 'border-emerald-200' },
+                { label: 'Expiratie Controle', desc: 'Alle checks vastgelegd', icon: '📅', bg: 'bg-orange-50', border: 'border-orange-200' },
+                { label: 'Leverancierbeheer', desc: 'Inkoop audit trail', icon: '🏢', bg: 'bg-emerald-50', border: 'border-emerald-200' },
                 { label: 'Spoedmedicatie', desc: 'Controle logboek', icon: '🚨', bg: 'bg-red-50', border: 'border-red-200' },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-5 border ${item.border} text-center`}>

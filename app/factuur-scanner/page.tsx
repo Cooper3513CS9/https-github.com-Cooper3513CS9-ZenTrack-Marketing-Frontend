@@ -84,7 +84,7 @@ export default function FactuurScannerPage() {
                   <p className="flex items-center gap-1.5"><Check className="w-3 h-3 text-emerald-500 shrink-0" /> <span>Prijzen opgeslagen</span></p>
                   <p className="flex items-center gap-1.5"><Check className="w-3 h-3 text-emerald-500 shrink-0" /> <span>Voorraad bijgewerkt</span></p>
                 </div>
-                <div className="mt-2 bg-blue-50 p-1.5 rounded border border-blue-100 text-[10px] text-blue-700 font-bold">
+                <div className="mt-2 bg-emerald-50 p-1.5 rounded border border-emerald-100 text-[10px] text-emerald-700 font-bold">
                   Alle prijzen opgeslagen in je dossier
                 </div>
               </div>
@@ -107,7 +107,7 @@ export default function FactuurScannerPage() {
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
                 <p className="font-bold text-slate-800 mb-2">Expiratie Overzicht</p>
                 <div className="space-y-1.5 text-slate-600">
-                  <p className="flex items-center justify-between"><span>Handschoenen L</span> <span className="font-bold text-amber-600">14 dagen</span></p>
+                  <p className="flex items-center justify-between"><span>Handschoenen L</span> <span className="font-bold text-orange-600">14 dagen</span></p>
                   <p className="flex items-center justify-between"><span>NaCl 0,9%</span> <span className="font-bold text-emerald-600">48 dagen</span></p>
                   <p className="flex items-center justify-between"><span>Hechtmateriaal</span> <span className="font-bold text-emerald-600">62 dagen</span></p>
                 </div>
@@ -159,7 +159,7 @@ export default function FactuurScannerPage() {
                     <button
                       key={i}
                       onClick={() => setActiveScenario(i)}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-blue-500' : 'w-1.5 bg-slate-300'}`}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-emerald-500' : 'w-1.5 bg-slate-300'}`}
                     />
                   ))}
                 </div>
@@ -167,7 +167,7 @@ export default function FactuurScannerPage() {
 
               {/* Text Content */}
               <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
-                <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+                <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
                   <ScanLine className="w-4 h-4" />
                   <span>Facturen automatisch inlezen</span>
                 </div>
@@ -227,17 +227,17 @@ export default function FactuurScannerPage() {
                   icon: AlertTriangle,
                   title: 'Prijswijzigingen missen',
                   desc: 'Leveranciers verhogen stilletjes de prijs. Zonder een overzicht van alle factuurprijzen merk je het pas maanden later.',
-                  color: 'text-orange-500',
-                  bg: 'bg-orange-50',
-                  border: 'border-orange-100',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
                 {
                   icon: Clock,
                   title: 'Geen inkoopoverzicht',
                   desc: 'Hoeveel geeft je uit per leverancier? Per productcategorie? Zonder data geen inzicht — en geen besparingen.',
-                  color: 'text-yellow-600',
-                  bg: 'bg-yellow-50',
-                  border: 'border-yellow-100',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-6 border ${item.border}`}>
@@ -270,14 +270,14 @@ export default function FactuurScannerPage() {
                   title: 'Factuur uploaden',
                   desc: 'Maak een foto via WhatsApp of upload een PDF via het dashboard. Zelfs scheef gefotografeerde facturen worden herkend.',
                   icon: Camera,
-                  color: 'bg-blue-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '2',
                   title: 'AI herkent alles',
                   desc: 'Productnamen, prijzen, aantallen, leverancier en factuurnummer worden automatisch herkend.',
                   icon: Eye,
-                  color: 'bg-orange-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '3',
@@ -312,9 +312,9 @@ export default function FactuurScannerPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { label: 'Productnamen', desc: 'Exacte match met catalogus', icon: '📦', bg: 'bg-blue-50', border: 'border-blue-200' },
+                { label: 'Productnamen', desc: 'Exacte match met catalogus', icon: '📦', bg: 'bg-emerald-50', border: 'border-emerald-200' },
                 { label: 'Prijzen', desc: 'Per stuk en totaal', icon: '💰', bg: 'bg-emerald-50', border: 'border-emerald-200' },
-                { label: 'Leveranciers', desc: 'Automatisch herkend', icon: '🏢', bg: 'bg-purple-50', border: 'border-purple-200' },
+                { label: 'Leveranciers', desc: 'Automatisch herkend', icon: '🏢', bg: 'bg-emerald-50', border: 'border-emerald-200' },
                 { label: 'Vervaldatums', desc: 'Indien vermeld', icon: '📅', bg: 'bg-orange-50', border: 'border-orange-200' },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-5 border ${item.border} text-center`}>

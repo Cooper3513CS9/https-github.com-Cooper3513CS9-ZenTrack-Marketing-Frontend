@@ -109,9 +109,9 @@ export default function VoorraadBeheerPage() {
                 <div className="space-y-1.5 text-slate-600">
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-red-500 shrink-0"></span> <span className="font-bold text-red-600">Tongspatel</span> <span className="text-[10px]">(op)</span></p>
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span> <span>Hechtmateriaal 3-0</span> <span className="text-[10px]">(2 over)</span></p>
-                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-yellow-500 shrink-0"></span> <span>Desinfectiemiddel</span> <span className="text-[10px]">(1 week)</span></p>
+                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span> <span>Desinfectiemiddel</span> <span className="text-[10px]">(1 week)</span></p>
                 </div>
-                <div className="mt-2 bg-blue-50 p-1.5 rounded border border-blue-100 text-[10px] text-blue-700 font-bold">
+                <div className="mt-2 bg-emerald-50 p-1.5 rounded border border-emerald-100 text-[10px] text-emerald-700 font-bold">
                   3 producten onder minimumvoorraad
                 </div>
               </div>
@@ -156,14 +156,14 @@ export default function VoorraadBeheerPage() {
                     <button
                       key={i}
                       onClick={() => setActiveScenario(i)}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-indigo-500' : 'w-1.5 bg-slate-300'}`}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-emerald-500' : 'w-1.5 bg-slate-300'}`}
                     />
                   ))}
                 </div>
               </div>
 
               <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
-                <div className="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-100 text-indigo-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+                <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
                   <Boxes className="w-4 h-4" />
                   <span>Per kast, kamer en locatie</span>
                 </div>
@@ -223,17 +223,17 @@ export default function VoorraadBeheerPage() {
                   icon: AlertTriangle,
                   title: 'Pas bij gebruik ontdekken dat iets op is',
                   desc: 'Midden in een consult geen handschoenen meer. Of de assistente loopt naar een lege kast.',
-                  color: 'text-orange-500',
-                  bg: 'bg-orange-50',
-                  border: 'border-orange-100',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
                 {
                   icon: Clock,
                   title: 'Uren kwijt aan voorraadtellingen',
                   desc: 'Elke week alle kasten langs. Per kamer, per kast, per plank. Kost 1-3 uur per telling.',
-                  color: 'text-yellow-600',
-                  bg: 'bg-yellow-50',
-                  border: 'border-yellow-100',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-6 border ${item.border}`}>
@@ -266,14 +266,14 @@ export default function VoorraadBeheerPage() {
                   title: 'Producten toevoegen',
                   desc: 'Scan een barcode, upload een factuur of voeg handmatig toe. Koppel aan kast, kamer of locatie.',
                   icon: QrCode,
-                  color: 'bg-indigo-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '2',
                   title: 'Automatisch bijwerken',
                   desc: 'Bij elke factuur, pakbon of telling wordt de voorraad automatisch aangepast. Geen handmatig werk.',
                   icon: Package,
-                  color: 'bg-orange-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '3',
@@ -308,9 +308,9 @@ export default function VoorraadBeheerPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { label: 'Behandelkamers', desc: 'Per kamer overzicht', icon: '🏥', bg: 'bg-blue-50', border: 'border-blue-200' },
+                { label: 'Behandelkamers', desc: 'Per kamer overzicht', icon: '🏥', bg: 'bg-emerald-50', border: 'border-emerald-200' },
                 { label: 'Voorraadkast', desc: 'Centrale opslag', icon: '🗄️', bg: 'bg-emerald-50', border: 'border-emerald-200' },
-                { label: 'Spreekkamers', desc: 'Huisarts materiaal', icon: '🩺', bg: 'bg-purple-50', border: 'border-purple-200' },
+                { label: 'Spreekkamers', desc: 'Huisarts materiaal', icon: '🩺', bg: 'bg-emerald-50', border: 'border-emerald-200' },
                 { label: 'Spoedkast', desc: 'Noodmedicatie', icon: '🚨', bg: 'bg-red-50', border: 'border-red-200' },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-5 border ${item.border} text-center`}>

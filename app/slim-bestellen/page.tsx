@@ -80,9 +80,9 @@ export default function SlimBestellenPage() {
                 <div className="space-y-1.5 text-slate-600">
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-red-500 shrink-0"></span> <span className="font-bold">Handschoenen M</span> <span className="text-[10px] text-red-500">(op!)</span></p>
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span> <span>Injectienaald 21G</span> <span className="text-[10px] text-orange-500">(bijna op)</span></p>
-                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-yellow-500 shrink-0"></span> <span>Pleisterstrips</span> <span className="text-[10px] text-slate-400">(3 dozen)</span></p>
+                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span> <span>Pleisterstrips</span> <span className="text-[10px] text-slate-400">(3 dozen)</span></p>
                 </div>
-                <div className="mt-2 bg-blue-50 p-1.5 rounded border border-blue-100 text-[10px] text-blue-700 font-bold">
+                <div className="mt-2 bg-emerald-50 p-1.5 rounded border border-emerald-100 text-[10px] text-emerald-700 font-bold">
                   Tip: Je bestelt deze 3 producten vaak samen — alles in één keer?
                 </div>
               </div>
@@ -155,14 +155,14 @@ export default function SlimBestellenPage() {
                     <button
                       key={i}
                       onClick={() => setActiveScenario(i)}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-amber-500' : 'w-1.5 bg-slate-300'}`}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-emerald-500' : 'w-1.5 bg-slate-300'}`}
                     />
                   ))}
                 </div>
               </div>
 
               <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
-                <div className="inline-flex items-center gap-2 bg-amber-50 border border-amber-100 text-amber-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+                <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
                   <TrendingDown className="w-4 h-4" />
                   <span>Duizenden+ producten in database</span>
                 </div>
@@ -222,17 +222,17 @@ export default function SlimBestellenPage() {
                   icon: AlertTriangle,
                   title: 'Geen inzicht in wat je betaalt',
                   desc: 'Voor hetzelfde product lopen leveranciersprijzen tientallen procenten uiteen. Maar wie heeft tijd om dat bij te houden?',
-                  color: 'text-orange-500',
-                  bg: 'bg-orange-50',
-                  border: 'border-orange-100',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
                 {
                   icon: ClipboardList,
                   title: 'Elke praktijk is een eiland',
                   desc: 'Zonder marktreferentie weet je niet of je prijs eerlijk is — je ziet alleen je eigen factuur.',
-                  color: 'text-yellow-600',
-                  bg: 'bg-yellow-50',
-                  border: 'border-yellow-100',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-6 border ${item.border}`}>
@@ -265,14 +265,14 @@ export default function SlimBestellenPage() {
                   title: 'Verbruik wordt bijgehouden',
                   desc: 'Via facturen en voorraadtellingen leert ZenTrack wat je gebruikt, hoeveel en wanneer.',
                   icon: BarChart3,
-                  color: 'bg-amber-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '2',
                   title: 'Weet of je een eerlijke prijs betaalt',
                   desc: 'ZenTrack toetst je prijzen aan een marktreferentie. Je ziet direct of je te veel betaalt — veilig en zonder gedoe.',
                   icon: Search,
-                  color: 'bg-orange-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '3',
@@ -307,10 +307,10 @@ export default function SlimBestellenPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { label: 'Prijsinzicht', desc: 'Zie of je een marktconforme prijs betaalt', icon: '💰', bg: 'bg-amber-50', border: 'border-amber-200' },
+                { label: 'Prijsinzicht', desc: 'Zie of je een marktconforme prijs betaalt', icon: '💰', bg: 'bg-emerald-50', border: 'border-emerald-200' },
                 { label: 'Verbruiksanalyse', desc: 'Weet wat je verbruikt', icon: '📊', bg: 'bg-emerald-50', border: 'border-emerald-200' },
-                { label: 'Bestelherinnering', desc: 'Nooit meer te laat bestellen', icon: '🔔', bg: 'bg-blue-50', border: 'border-blue-200' },
-                { label: 'Marktinzicht', desc: 'Prijzen getoetst aan de markt', icon: '🤝', bg: 'bg-purple-50', border: 'border-purple-200' },
+                { label: 'Bestelherinnering', desc: 'Nooit meer te laat bestellen', icon: '🔔', bg: 'bg-emerald-50', border: 'border-emerald-200' },
+                { label: 'Marktinzicht', desc: 'Prijzen getoetst aan de markt', icon: '🤝', bg: 'bg-emerald-50', border: 'border-emerald-200' },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-5 border ${item.border} text-center`}>
                   <div className="text-2xl mb-3">{item.icon}</div>
