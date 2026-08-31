@@ -183,7 +183,7 @@ export default function VoorraadBeheerPage() {
                     onClick={navigateToRegister}
                     className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2"
                   >
-                    Gratis Proberen <ArrowRight className="w-5 h-5" />
+                    Start de gratis inkoop-check <ArrowRight className="w-5 h-5" />
                   </button>
                   <a href="#hoe-werkt-het" className="w-full sm:w-auto px-8 py-4 rounded-xl text-slate-600 font-bold border border-slate-200 hover:bg-slate-50 transition-colors text-center">
                     Hoe werkt het?
@@ -388,7 +388,7 @@ export default function VoorraadBeheerPage() {
                 onClick={navigateToRegister}
                 className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-900/20 flex items-center justify-center gap-2"
               >
-                Gratis Proberen <ArrowRight className="w-5 h-5" />
+                Start de gratis inkoop-check <ArrowRight className="w-5 h-5" />
               </button>
               <a href="/#contact" className="w-full sm:w-auto px-8 py-4 rounded-xl text-slate-300 font-bold border border-slate-700 hover:bg-slate-800 transition-colors text-center">
                 Neem contact op

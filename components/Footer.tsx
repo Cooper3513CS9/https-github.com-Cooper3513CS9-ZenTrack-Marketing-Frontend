@@ -115,7 +115,7 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate, ctaVar
                   <li>• Direct resultaat</li>
                </ul>
                <button onClick={onLoginClick} className="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-2 rounded-lg text-sm font-semibold transition-colors">
-                 Gratis Proberen →
+                 Start de gratis inkoop-check →
                </button>
             </div>
           )}
