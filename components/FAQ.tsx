@@ -28,7 +28,7 @@ export const FAQ: React.FC = () => {
       answer: "Je uploadt je facturen en ZenTrack laat zien waar je te veel betaalt en hoeveel je kunt besparen. Begin met één factuur voor een eerste signaal; met 12 maanden facturen krijg je een volwaardig besparingsrapport. Vrijblijvend, geen creditcard, jouw data blijft van jou. Wáár je die besparing precies pakt zie je met het abonnement; daar zitten ook kant-en-klare bestelvoorstellen bij, die jij met één JA goedkeurt."
     },
     {
-      question: "Wat is de 60-dagen-leveringsgarantie?",
+      question: "Wat is de 60-dagen-garantie?",
       answer: "Na 60 dagen maken we samen de balans op: heeft ZenTrack minder besparing aangewezen dan het abonnement tot dan kostte, dan mag je per direct stoppen én betalen we je het verschil terug. Voorwaarde: upload binnen 30 dagen je volledige inkoopadministratie van de afgelopen 12 maanden. De tijdwinst van je team rekenen we niet eens mee. Die is de bonus."
     },
     {

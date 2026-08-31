@@ -50,7 +50,7 @@ export const ROICalculator: React.FC = () => {
               <span>Besparingscalculator</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              Reken uit wat je laat liggen.
+              Bereken wat slimmer voorraadbeheer kan opleveren.
             </h2>
             <p className="text-lg text-slate-600 mb-12 leading-relaxed">
                Naast directe kosten verliezen praktijken veel geld aan 'onzichtbare' posten: spoedleveringen, verlopen voorraad en dure administratieve uren.
@@ -82,7 +82,7 @@ export const ROICalculator: React.FC = () => {
           <div className="flex-1 w-full max-w-xl bg-slate-50 rounded-[2.5rem] p-8 border border-slate-200 shadow-2xl relative overflow-hidden">
              {/* Payback Badge - Dynamic Colors */}
              <div className={`absolute -top-1 right-0 px-4 py-1.5 rounded-l-xl font-bold text-xs uppercase tracking-wider shadow-sm border-l border-b animate-fade-in ${getBadgeStyle(savings.paybackDays)}`}>
-                Terugverdiend in {savings.paybackDays} dagen
+                Geschatte terugverdientijd: {savings.paybackDays} dagen
              </div>
 
              <div className="space-y-8 mb-8 mt-14">
@@ -182,9 +182,7 @@ export const ROICalculator: React.FC = () => {
              <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
                 <div className="flex items-center gap-2 mb-2 text-slate-500 text-sm font-medium">
-                    <TrendingUp className="w-4 h-4 text-emerald-600" />
-                    Jouw potentiële winst
-                </div>
+                    <TrendingUp className="w-4 h-4 text-emerald-600" />Geschatte jaarlijkse besparing</div>
                 <div className="flex items-baseline gap-1 text-slate-900">
                     <span className="text-5xl font-bold tracking-tight">€{savings.total.toLocaleString('nl-NL')}</span>
                     <span className="text-lg font-medium text-slate-400">/jaar</span>
@@ -204,6 +202,7 @@ export const ROICalculator: React.FC = () => {
                         <p className="font-bold text-slate-700 text-sm">€{savings.emergency}</p>
                     </div>
                 </div>
+                <p className="text-[11px] text-slate-400 mt-4 text-center">Indicatieve berekening op basis van de ingevulde gegevens. Werkelijke resultaten verschillen per praktijk.</p>
              </div>
           </div>
 

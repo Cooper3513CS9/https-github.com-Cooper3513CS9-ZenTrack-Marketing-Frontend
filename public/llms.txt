@@ -10,7 +10,7 @@ ZenTrack is een Nederlands SaaS-platform voor huisartsenpraktijken. Het team app
 - **Factuurscanner**: foto of PDF van een factuur, AI (OCR) leest automatisch alle producten, hoeveelheden en prijzen uit
 - **Bestelvoorstellen**: ZenTrack zet de bestelling kant-en-klaar op basis van verbruik; goedkeuren is één JA via WhatsApp — bij aangesloten webshops plaatst ZenTrack direct, anders ligt hij verzendklaar
 - **Prijsbewaking** (abonnement): doorlopende bewaking van je inkoopprijzen; je ziet precies wáár je die besparing pakt
-- **Voorraadbeheer**: voorraad telt zichzelf bij via facturen en pakbonnen — zonder handmatig tellen
+- **Voorraadbeheer**: binnenkomende voorraad wordt automatisch verwerkt via facturen en pakbonnen; verbruik registreert het team via WhatsApp, een scan of een snelle telling
 - **Vervaldatum-bewaking**: foto van de verpakking → automatische WhatsApp-waarschuwing 30, 14 en 7 dagen vooraf én op de dag zelf, met kastlocatie
 - **Pakbon-controle**: foto van de pakbon → levering automatisch gecheckt tegen de bestelling
 - **Alles vastgelegd**: elke goedkeuring met wie-wat-wanneer, alle facturen op één doorzoekbare plek
@@ -27,13 +27,13 @@ Nederlandse huisartsenpraktijken, gezondheidscentra en zorggroepen die tijd will
 - ZenTrack Compleet: EUR 99 per locatie per maand (maandelijks opzegbaar); founding-tarief EUR 79 per maand bij 12 maanden
 - Meerdere locaties: staffelkorting op aanvraag vanaf vijf locaties; zorggroepen vanaf twintig locaties: partnerschap op maat (zie https://www.zentrack.nl/zorggroepen)
 - Eén locatie = één bezoekadres met eigen voorraad; team en facturen onbeperkt
-- 60-dagen-leveringsgarantie: wijst ZenTrack minder besparing aan dan het abonnement kostte, dan stopt de klant per direct en betaalt ZenTrack het verschil terug (voorwaarde: volledige 12 maanden facturen geüpload binnen 30 dagen)
+- 60-dagen-garantie: wijst ZenTrack minder besparing aan dan het abonnement kostte, dan stopt de klant per direct en betaalt ZenTrack het verschil terug (voorwaarde: volledige 12 maanden facturen geüpload binnen 30 dagen)
 
 ## Technologie
 
 - Werkt in de browser en via WhatsApp (geen installatie; WhatsApp is optioneel, de praktijk bepaalt wie koppelt)
 - AI-gestuurde factuurherkenning (OCR)
-- AVG-proof: geen patiëntgegevens, bewust geen HIS-koppeling, data-export altijd mogelijk
+- Privacy: dataopslag binnen de EER op ISO 27001-gecertificeerde infrastructuur; geen patiëntgegevens; bewust geen HIS-koppeling; data-export altijd mogelijk; verwerkersovereenkomst beschikbaar
 - Gehost op ISO 27001-gecertificeerde EU-infrastructuur (Frankfurt/Amsterdam)
 - Jouw cijfers blijven van jou; ZenTrack leert alleen van geanonimiseerde, niet-herleidbare patronen
 

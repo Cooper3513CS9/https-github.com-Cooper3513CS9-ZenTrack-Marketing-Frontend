@@ -10,7 +10,7 @@ import { Pricing } from '@/components/Pricing';
 const faqs = [
   {
     q: 'Wat kost ZenTrack?',
-    a: 'ZenTrack kost €99 per locatie per maand (lijstprijs, maandelijks opzegbaar). Founding-praktijken betalen €79 per maand bij een looptijd van 12 maanden. Alles zit erin: er zijn geen pakketten of losse modules.',
+    a: 'ZenTrack kost €99 per locatie per maand, exclusief btw en maandelijks opzegbaar. Founding-praktijken betalen €79 per maand (excl. btw) bij een looptijd van 12 maanden, per kwartaal gefactureerd. Alles zit erin: er zijn geen pakketten of losse modules.',
   },
   {
     q: 'Wat telt als een locatie?',
@@ -21,7 +21,7 @@ const faqs = [
     a: 'Ja: de inkoop-check is gratis, zonder creditcard of verplichting. Je uploadt je eigen facturen en ziet wat je te veel betaalt en hoeveel. Bestellen, doorlopende prijsbewaking en de vervaldatum-bewaking via WhatsApp zitten in het abonnement.',
   },
   {
-    q: 'Hoe werkt de 60-dagen-leveringsgarantie?',
+    q: 'Hoe werkt de 60-dagen-garantie?',
     a: 'Na 60 dagen maken we samen de balans op. Heeft ZenTrack minder besparing aangewezen dan het abonnement tot dan kostte, dan mag je per direct stoppen en betalen we het verschil terug. Voorwaarde: upload binnen 30 dagen je volledige inkoopadministratie van de afgelopen 12 maanden, zodat we eerlijk kunnen rekenen.',
   },
   {
@@ -50,12 +50,12 @@ export default function PrijzenPage() {
               Wat kost ZenTrack?
             </h1>
             <p className="text-lg md:text-xl text-slate-700 leading-relaxed">
-              ZenTrack kost <strong>€99 per locatie per maand</strong> (maandelijks opzegbaar).
+              ZenTrack kost <strong>€99 per locatie per maand</strong> (excl. btw, maandelijks opzegbaar).
               Founding-praktijken betalen <strong>€79 per maand</strong> bij 12 maanden.
               De <Link href="/inkoop-check" className="text-emerald-600 underline">inkoop-check</Link> is gratis.
             </p>
             <p className="text-base text-slate-600 mt-4 leading-relaxed">
-              Er geldt een 60-dagen-leveringsgarantie: wijzen wij minder besparing aan dan het abonnement tot dan kostte,
+              Er geldt een 60-dagen-garantie: wijzen wij minder besparing aan dan het abonnement tot dan kostte,
               dan krijg je het verschil terug en mag je per direct stoppen.
             </p>
           </div>

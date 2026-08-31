@@ -199,7 +199,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
             
             <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
               Voorraad, bestellen en vervaldatums geregeld: je team appt een foto en Emma, je digitale collega, doet de rest. Jij keurt goed met één JA, en alles is vastgelegd voor de visitatie-map.
-              <strong className="text-slate-900 block mt-2">Start met de gratis inkoop-check: zie op je eigen facturen waar je te veel betaalt.</strong>
+              <strong className="text-slate-900 block mt-2">Start met je eigen facturen: de gratis inkoop-check laat zien waar je besparingskansen zitten.</strong>
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
@@ -210,8 +210,8 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
                 Start de gratis inkoop-check
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <a href="#features" className="w-full sm:w-auto px-8 py-4 rounded-xl text-slate-600 font-bold border border-slate-200 hover:bg-slate-50 transition-colors text-center">
-                Bekijk features
+              <a href="#demo" className="w-full sm:w-auto px-8 py-4 rounded-xl text-slate-600 font-bold border border-slate-200 hover:bg-slate-50 transition-colors text-center">
+                Bekijk ZenTrack in actie
               </a>
             </div>
 

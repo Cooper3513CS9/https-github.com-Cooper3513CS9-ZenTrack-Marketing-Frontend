@@ -19,7 +19,7 @@ const features = [
     ctaText: 'Meer info',
   },
   {
-    title: 'Factuur Scanner',
+    title: 'Factuurscanner',
     description: 'Maak een foto of upload een PDF. AI herkent producten, prijzen en leveranciers in 30 seconden.',
     href: '/factuur-scanner',
     icon: ScanLine,
@@ -45,7 +45,7 @@ const features = [
     ctaText: 'Meer info',
   },
   {
-    title: 'Voorraad Beheer',
+    title: 'Voorraadbeheer',
     description: 'Real-time inzicht per behandelkamer en locatie. Voorraadstand altijd actueel via WhatsApp.',
     href: '/voorraad-beheer',
     icon: Boxes,
@@ -58,7 +58,7 @@ const features = [
     ctaText: 'Meer info',
   },
   {
-    title: 'Slim Bestellen',
+    title: 'Slim bestellen',
     description: 'ZenTrack leert van je eigen factuurhistorie en herinnert je wanneer het tijd is om bij te bestellen, én wat je de vorige keer betaalde.',
     href: '/slim-bestellen',
     icon: TrendingDown,
@@ -71,7 +71,7 @@ const features = [
     ctaText: 'Meer info',
   },
   {
-    title: 'NPA Accreditatie',
+    title: 'Visitatie & kwaliteitsdossier',
     description: 'Alles met een keurings- of vervaldatum bewaakt, met bewijsrapport voor je visitatie-map. Het datums-deel is altijd aantoonbaar op orde.',
     href: '/npa-accreditatie',
     icon: ShieldCheck,
@@ -85,7 +85,7 @@ const features = [
   },
   {
     title: 'Besparingscalculator',
-    description: 'Wat levert ZenTrack uw praktijk op? Reken het uit met je eigen cijfers, in 30 seconden.',
+    description: 'Wat levert ZenTrack je praktijk op? Reken het uit met je eigen cijfers, in 30 seconden.',
     href: '/#calculator',
     icon: Calculator,
     iconBg: 'bg-emerald-100',
@@ -109,7 +109,7 @@ export const Features: React.FC = () => {
             Alles in één platform
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            Wat kan ZenTrack voor <span className="text-emerald-600">uw praktijk</span>?
+            Wat regelt ZenTrack voor <span className="text-emerald-600">je praktijk</span>?
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Van factuurverwerking tot expiratiebeheer: ontdek alle mogelijkheden en start vandaag.
@@ -122,8 +122,8 @@ export const Features: React.FC = () => {
             <UserCheck className="w-5 h-5" />
           </div>
           <p className="text-slate-700 text-sm">
-            <strong className="text-slate-900">Jij beslist altijd.</strong> ZenTrack stelt voor, jij geeft de &apos;Go&apos;.
-            <span className="text-emerald-600 font-medium"> Emma is je assistent, niet je baas.</span>
+            <strong className="text-slate-900">Emma doet voorstellen. Jij controleert en geeft akkoord.</strong>
+            <span className="text-emerald-600 font-medium"> Zonder jouw toestemming wordt niets besteld.</span>
           </p>
         </div>
 
@@ -192,7 +192,7 @@ export const Features: React.FC = () => {
                 <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
               </div>
               <h4 className="font-bold text-slate-900">Bestellen wordt JA appen</h4>
-              <p className="text-sm text-slate-500 mt-1">ZenTrack zet de bestelling klaar voordat jij weet dat het op is. Jij keurt goed met één JA via WhatsApp. Er gaat nooit iets de deur uit zonder jouw akkoord.</p>
+              <p className="text-sm text-slate-500 mt-1">ZenTrack voorspelt wanneer bijbestellen nodig is en zet een voorstel voor je klaar. Jij keurt goed met één JA via WhatsApp. Er gaat nooit iets de deur uit zonder jouw akkoord.</p>
             </div>
           </div>
 

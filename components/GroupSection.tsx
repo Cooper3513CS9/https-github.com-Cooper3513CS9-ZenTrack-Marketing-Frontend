@@ -86,6 +86,7 @@ export const GroupSection: React.FC = () => {
                    </div>
                 </div>
              </div>
+             <p className="text-xs text-slate-400 mt-3 text-center">Illustratief dashboardvoorbeeld met fictieve locaties en bedragen.</p>
           </div>
 
           {/* Text Side - The 3 Pillars */}

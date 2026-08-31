@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Prijzen: wat kost ZenTrack?',
-  description: 'ZenTrack kost €99 per locatie per maand (maandelijks opzegbaar); founding-praktijken betalen €79. De inkoop-check is gratis. Met 60-dagen-leveringsgarantie: wijzen wij minder besparing aan dan het abonnement kostte, dan krijg je het verschil terug.',
+  description: 'ZenTrack kost €99 per locatie per maand (excl. btw, maandelijks opzegbaar); founding-praktijken betalen €79. De inkoop-check is gratis. Met 60-dagen-garantie: wijzen wij minder besparing aan dan het abonnement kostte, dan krijg je het verschil terug.',
   keywords: [
     'zentrack prijzen',
     'wat kost praktijksoftware',
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Prijzen | ZenTrack',
-    description: 'Eén product, één prijs per locatie: €99 per maand (founding €79). Gratis inkoop-check om mee te starten, met 60-dagen-leveringsgarantie.',
+    description: 'Eén product, één prijs per locatie: €99 per maand (founding €79). Gratis inkoop-check om mee te starten, met 60-dagen-garantie.',
     type: 'website',
     locale: 'nl_NL',
   },
@@ -29,7 +29,7 @@ const faqSchema = {
       name: 'Wat kost ZenTrack?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'ZenTrack kost €99 per locatie per maand (lijstprijs, maandelijks opzegbaar). Founding-praktijken betalen €79 per maand bij een looptijd van 12 maanden. Alles zit erin: er zijn geen pakketten of losse modules.',
+        text: 'ZenTrack kost €99 per locatie per maand, exclusief btw en maandelijks opzegbaar. Founding-praktijken betalen €79 per maand (excl. btw) bij een looptijd van 12 maanden, per kwartaal gefactureerd. Alles zit erin: er zijn geen pakketten of losse modules.',
       },
     },
     {
@@ -50,7 +50,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Hoe werkt de 60-dagen-leveringsgarantie?',
+      name: 'Hoe werkt de 60-dagen-garantie?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Na 60 dagen maken we samen de balans op. Heeft ZenTrack minder besparing aangewezen dan het abonnement tot dan kostte, dan mag je per direct stoppen en betalen we het verschil terug. Voorwaarde: upload binnen 30 dagen je volledige inkoopadministratie van de afgelopen 12 maanden, zodat we eerlijk kunnen rekenen.',

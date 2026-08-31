@@ -188,7 +188,7 @@ export default function PakbonVerificatiePage() {
 
                 <div className="mt-10 flex flex-wrap items-center justify-center md:justify-start gap-6 text-sm text-slate-500 font-medium">
                   <span className="flex items-center gap-2"><PackageSearch className="w-4 h-4" /> Directe mismatch detectie</span>
-                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> GDPR Compliant</span>
+                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> Geen patiëntgegevens</span>
                   <span className="flex items-center gap-2"><Smartphone className="w-4 h-4" /> Via WhatsApp</span>
                 </div>
               </div>
@@ -314,7 +314,7 @@ export default function PakbonVerificatiePage() {
                   <FeatureX text="Ontbrekende artikelen pas bij gebruik ontdekt" />
                   <FeatureX text="Te laat om te claimen bij de leverancier" />
                   <FeatureX text="Betalen voor niet-geleverde producten" />
-                  <FeatureX text="Geen audit trail van leveringen" />
+                  <FeatureX text="Geen logboek van leveringen" />
                 </div>
               </div>
 

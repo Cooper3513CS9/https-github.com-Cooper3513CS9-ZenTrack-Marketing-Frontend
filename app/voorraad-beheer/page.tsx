@@ -77,7 +77,7 @@ export default function VoorraadBeheerPage() {
             </div>
             <div className="flex justify-start">
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
-                <p className="font-bold text-slate-800 mb-1">Handschoenen Nitryl M</p>
+                <p className="font-bold text-slate-800 mb-1">Handschoenen nitril M</p>
                 <div className="space-y-1 text-slate-600">
                   <p>Locatie: <span className="font-bold text-slate-800">Behandelkamer 2, Kast B</span></p>
                   <p>Voorraad: <span className="font-bold text-emerald-600">8 dozen</span></p>
@@ -174,8 +174,8 @@ export default function VoorraadBeheerPage() {
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
-                  ZenTrack geeft real-time inzicht in je voorraad per kast, kamer en locatie. Automatisch bijgewerkt bij elke factuur en telling.
-                  <strong className="text-slate-900 block mt-2">Altijd weten wat er is. Via WhatsApp of dashboard.</strong>
+                  ZenTrack geeft inzicht in je voorraad per kast, kamer en locatie. Binnenkomende voorraad wordt automatisch verwerkt vanuit facturen en pakbonnen; verbruik registreert je team met een foto of scan via WhatsApp, of een snelle telling.
+                  <strong className="text-slate-900 block mt-2">Zo weet je wat er is — via WhatsApp of dashboard.</strong>
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
@@ -192,7 +192,7 @@ export default function VoorraadBeheerPage() {
 
                 <div className="mt-10 flex flex-wrap items-center justify-center md:justify-start gap-6 text-sm text-slate-500 font-medium">
                   <span className="flex items-center gap-2"><MapPin className="w-4 h-4" /> Per kast en locatie</span>
-                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> GDPR Compliant</span>
+                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> Geen patiëntgegevens</span>
                   <span className="flex items-center gap-2"><Smartphone className="w-4 h-4" /> Via WhatsApp</span>
                 </div>
               </div>

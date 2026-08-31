@@ -56,7 +56,7 @@ const softwareApplicationSchema = {
       price: "0",
       priceCurrency: "EUR",
       description:
-        "Upload je facturen en zie waar je te veel betaalt — vrijblijvend, zonder creditcard. Hoe meer maanden facturen (liefst 12), hoe scherper het rapport.",
+        "Upload je facturen en zie waar je besparingskansen zitten — vrijblijvend, zonder creditcard. Hoe meer maanden facturen (liefst 12), hoe scherper het rapport.",
       url: "https://app.zentrack.nl/sign-up",
     },
     {
@@ -76,17 +76,17 @@ const softwareApplicationSchema = {
         },
       },
       description:
-        "Eén product met alles erin, per locatie (bezoekadres): bestelvoorstellen met JA-goedkeuring via WhatsApp, doorlopende prijsbewaking, vervaldatum-alerts, pakbon-controle, visitatie-bewijsrapport en onbeperkt team. Founding-tarief €79 per maand bij 12 maanden. 60-dagen-leveringsgarantie.",
+        "Eén product met alles erin, per locatie (bezoekadres): bestelvoorstellen met JA-goedkeuring via WhatsApp, doorlopende prijsbewaking, vervaldatum-alerts, pakbon-controle, visitatie-bewijsrapport en onbeperkt team. Founding-tarief €79 per maand bij 12 maanden. 60-dagen-garantie.",
       url: "https://app.zentrack.nl/sign-up",
     },
   ],
   featureList: [
-    "Gratis inkoop-check: zie op je eigen facturen waar je te veel betaalt",
+    "Gratis inkoop-check: zie op je eigen facturen waar je besparingskansen zitten",
     "Facturen automatisch inlezen (foto of PDF)",
     "Bestelvoorstellen klaargezet — goedkeuren met één JA via WhatsApp",
     "Vervaldatum-alerts 30, 14 en 7 dagen vooraf én op de dag zelf, met kastlocatie",
     "Pakbon-foto: levering automatisch gecheckt tegen de bestelling",
-    "Voorraad telt zichzelf bij via facturen en pakbonnen",
+    "Binnenkomende voorraad automatisch verwerkt via facturen en pakbonnen",
     "Alles vastgelegd: goedkeuringen en facturen doorzoekbaar terug te vinden",
     "Datums en documenten voor de visitatie-voorbereiding, met bewijsrapport",
     "Chat met je eigen cijfers, in dashboard en WhatsApp",
@@ -118,7 +118,7 @@ const faqSchema = {
       name: "Wat is de gratis inkoop-check?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Je uploadt je facturen en ZenTrack laat zien waar je te veel betaalt en hoeveel je kunt besparen. Begin met één factuur voor een eerste signaal; met 12 maanden facturen krijg je een volwaardig besparingsrapport. Vrijblijvend, geen creditcard nodig. Wáár je die besparing precies pakt zie je met het abonnement; daar zitten ook kant-en-klare bestelvoorstellen bij, die jij met één JA goedkeurt.",
+        text: "Je uploadt je facturen en ZenTrack laat zien waar je besparingskansen zitten en hoeveel je kunt besparen. Begin met één factuur voor een eerste signaal; met 12 maanden facturen krijg je een volwaardig besparingsrapport. Vrijblijvend, geen creditcard nodig. Wáár je die besparing precies pakt zie je met het abonnement; daar zitten ook kant-en-klare bestelvoorstellen bij, die jij met één JA goedkeurt.",
       },
     },
     {
@@ -131,7 +131,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Wat is de 60-dagen-leveringsgarantie?",
+      name: "Wat is de 60-dagen-garantie?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Na 60 dagen maken we de balans op: heeft ZenTrack minder besparing aangewezen dan het abonnement tot dan kostte, dan mag je per direct stoppen en betalen we je het verschil terug. Voorwaarde is dat je binnen 30 dagen je volledige inkoopadministratie van de afgelopen 12 maanden hebt geüpload. De tijdwinst van je team rekenen we niet eens mee.",

@@ -61,11 +61,11 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate, ctaVar
           <div>
             <h4 className="text-white font-semibold mb-6">Features</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/factuur-scanner" className="hover:text-emerald-400 transition-colors">Factuur Scanner</Link></li>
+              <li><Link href="/factuur-scanner" className="hover:text-emerald-400 transition-colors">Factuurscanner</Link></li>
               <li><Link href="/pakbon-verificatie" className="hover:text-emerald-400 transition-colors">Pakbon Verificatie</Link></li>
-              <li><Link href="/voorraad-beheer" className="hover:text-emerald-400 transition-colors">Voorraad Beheer</Link></li>
-              <li><Link href="/slim-bestellen" className="hover:text-emerald-400 transition-colors">Slim Bestellen</Link></li>
-              <li><Link href="/npa-accreditatie" className="hover:text-emerald-400 transition-colors">NPA Accreditatie</Link></li>
+              <li><Link href="/voorraad-beheer" className="hover:text-emerald-400 transition-colors">Voorraadbeheer</Link></li>
+              <li><Link href="/slim-bestellen" className="hover:text-emerald-400 transition-colors">Slim bestellen</Link></li>
+              <li><Link href="/npa-accreditatie" className="hover:text-emerald-400 transition-colors">Visitatie & kwaliteitsdossier</Link></li>
             </ul>
           </div>
 
@@ -123,7 +123,7 @@ export const Footer: React.FC<FooterProps> = ({ onLoginClick, onNavigate, ctaVar
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
           <p>© 2026 ZenTrack. Alle rechten voorbehouden.</p>
-          <p>Data in EU-datacenters (Frankfurt/Amsterdam) • AVG-conform • Geen patiëntgegevens</p>
+          <p>Dataopslag binnen de EER op ISO 27001-gecertificeerde infrastructuur • Geen patiëntgegevens • Verwerkersovereenkomst beschikbaar</p>
         </div>
       </div>
     </footer>

@@ -14,12 +14,12 @@ interface HeaderProps {
 }
 
 const featureDropdownItems = [
-  { name: 'Factuur Scanner', href: '/factuur-scanner', icon: ScanLine, description: 'AI-gestuurde factuurverwerking' },
+  { name: 'Factuurscanner', href: '/factuur-scanner', icon: ScanLine, description: 'AI-gestuurde factuurverwerking' },
   { name: 'Pakbon Verificatie', href: '/pakbon-verificatie', icon: PackageCheck, description: 'Leveringen direct controleren' },
-  { name: 'Voorraad Beheer', href: '/voorraad-beheer', icon: Boxes, description: 'Real-time per locatie' },
-  { name: 'Slim Bestellen', href: '/slim-bestellen', icon: TrendingDown, description: 'Inzicht uit je eigen factuurhistorie' },
+  { name: 'Voorraadbeheer', href: '/voorraad-beheer', icon: Boxes, description: 'Real-time per locatie' },
+  { name: 'Slim bestellen', href: '/slim-bestellen', icon: TrendingDown, description: 'Inzicht uit je eigen factuurhistorie' },
   { name: 'Expiratie Radar', href: '/expiratie-radar', icon: Radar, description: 'Vervaldatum-alerts via WhatsApp' },
-  { name: 'NPA Accreditatie', href: '/npa-accreditatie', icon: ShieldCheck, description: 'Uw NPA-dossier op orde' },
+  { name: 'Visitatie & kwaliteitsdossier', href: '/npa-accreditatie', icon: ShieldCheck, description: 'Dossieropbouw voor je visitatie' },
 ];
 
 export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick, cta, contactHref = '/#contact' }) => {

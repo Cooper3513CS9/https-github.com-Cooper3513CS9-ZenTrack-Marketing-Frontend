@@ -49,7 +49,7 @@ export default function ExpiratieRadarPage() {
             </div>
             <div className="flex justify-start">
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
-                <p className="font-bold text-slate-800 mb-1">Handschoenen Nitryl M</p>
+                <p className="font-bold text-slate-800 mb-1">Handschoenen nitril M</p>
                 <div className="space-y-1 text-slate-600">
                   <p>Batch: <span className="font-mono text-[10px] bg-slate-100 px-1 rounded">LOT-L524</span></p>
                   <p>Houdbaar tot: <span className="font-bold text-emerald-600">Maart 2027</span></p>
@@ -180,12 +180,12 @@ export default function ExpiratieRadarPage() {
 
                 <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
                   Expiratie Radar.<br />
-                  <span className="text-emerald-600">Nooit meer iets over de datum.</span>
+                  <span className="text-emerald-600">Zie op tijd wat bijna verloopt.</span>
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
                   Foto van de verpakking en de vervaldatum staat erin. Automatische WhatsApp-waarschuwing 30, 14 en 7 dagen vooraf én op de dag zelf, mét kastlocatie.
-                  <strong className="text-slate-900 block mt-2">Je team appt, Emma bewaakt. Nooit meer een visitatie-bevinding op een verlopen ampul.</strong>
+                  <strong className="text-slate-900 block mt-2">Je team appt, Emma bewaakt. Verklein de kans op verlopen producten — met aantoonbaar vastgelegde controles.</strong>
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
@@ -202,7 +202,7 @@ export default function ExpiratieRadarPage() {
 
                 <div className="mt-10 flex flex-wrap items-center justify-center md:justify-start gap-6 text-sm text-slate-500 font-medium">
                   <span className="flex items-center gap-2"><Smartphone className="w-4 h-4" /> Via WhatsApp</span>
-                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> GDPR Compliant</span>
+                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> Geen patiëntgegevens</span>
                   <span className="flex items-center gap-2"><Clock className="w-4 h-4" /> 5 min setup</span>
                 </div>
               </div>
@@ -288,7 +288,7 @@ export default function ExpiratieRadarPage() {
                 {
                   step: '3',
                   title: 'Automatische alerts',
-                  desc: 'Je krijgt een WhatsApp bericht als een product bijna verloopt. Op tijd bijbestellen, zonder na te denken.',
+                  desc: 'Je krijgt een WhatsApp-bericht als een product bijna verloopt. Je ziet tijdig welke actie nodig is: gebruiken, verplaatsen, vervangen of bijbestellen.',
                   icon: MessageCircle,
                   color: 'bg-emerald-500',
                 },

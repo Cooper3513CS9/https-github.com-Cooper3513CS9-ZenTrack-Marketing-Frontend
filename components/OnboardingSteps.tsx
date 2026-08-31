@@ -7,22 +7,22 @@ export const OnboardingSteps: React.FC = () => {
   const steps = [
     {
       id: 1,
-      title: "Meld uw praktijk aan",
-      description: "Maak binnen 2 minuten een veilig account aan. U krijgt direct toegang tot uw eigen ZenTrack omgeving.",
+      title: "Meld je praktijk aan",
+      description: "Maak binnen 2 minuten een veilig account aan. Je krijgt direct toegang tot je eigen ZenTrack-omgeving.",
       icon: UserPlus,
       color: "bg-emerald-100 text-emerald-600"
     },
     {
       id: 2,
-      title: "Upload uw facturen van het afgelopen kwartaal",
-      description: "Sleep uw PDF-facturen in uw dashboard — wij lezen bestelhistoriek en leveranciers automatisch in. Minder bij de hand? Begin gewoon met wat u heeft.",
+      title: "Upload je facturen van het afgelopen kwartaal",
+      description: "Sleep je PDF-facturen in je dashboard — wij lezen bestelgeschiedenis en leveranciers automatisch in. Minder bij de hand? Begin gewoon met wat je hebt.",
       icon: UploadCloud,
       color: "bg-emerald-100 text-emerald-600"
     },
     {
       id: 3,
-      title: "Ontvang uw inkoop-check",
-      description: "Zie direct wat u te veel betaalt en waar u kunt besparen. Hoe meer facturen, hoe scherper het beeld.",
+      title: "Ontvang je inkoop-check",
+      description: "Zie direct een indicatie van wat je te veel betaalt. Hoe meer facturen, hoe scherper het beeld.",
       icon: MessageSquare,
       color: "bg-emerald-100 text-emerald-600"
     }
@@ -32,7 +32,7 @@ export const OnboardingSteps: React.FC = () => {
     <section className="py-16 bg-white border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Hoe start u met ZenTrack?</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Hoe start je met ZenTrack?</h2>
           <p className="text-slate-500 mt-2">Van aanmelden tot inzicht in 3 simpele stappen.</p>
         </div>
 

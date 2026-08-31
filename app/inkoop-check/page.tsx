@@ -24,15 +24,15 @@ export default function InkoopCheckPage() {
               <span>Gratis, zonder creditcard of verplichting</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
-              De gratis inkoop-check.<br />
-              <span className="text-emerald-600">Betaal je niet te veel?</span>
+              Waar zitten jouw<br />
+              <span className="text-emerald-600">inkoopkansen?</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto">
-              Upload je eigen leveranciersfacturen en zie zwart-op-wit wat je te veel betaalt en hoeveel je kunt besparen.
+              Upload je leveranciersfacturen en ontdek welke producten ook elders verkrijgbaar zijn, in welke categorieën ZenTrack lagere prijzen heeft gevonden — en een indicatie van het bedrag.
               <strong className="text-slate-900 block mt-2">Jouw facturen, jouw cijfers, jouw data.</strong>
             </p>
             <button onClick={navigateToRegister} className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-600/20 inline-flex items-center gap-2">
-              Start de gratis check <ArrowRight className="w-5 h-5" />
+              Analyseer mijn facturen gratis <ArrowRight className="w-5 h-5" />
             </button>
           </div>
         </section>
@@ -46,24 +46,28 @@ export default function InkoopCheckPage() {
                 <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 mb-4">
                   <Upload className="w-6 h-6" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">1. Begin met één factuur</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">Sleep één factuur (PDF of foto) en zie binnen twee minuten een eerste signaal: welke producten herkend zijn en waar je op déze factuur al te veel betaalt.</p>
+                <h3 className="font-bold text-slate-900 mb-2">1. Upload je eerste factuur</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">Upload een PDF of foto. ZenTrack herkent de leverancier, producten, aantallen en prijzen en laat binnen enkele minuten een eerste analyse zien.</p>
               </div>
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
                 <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 mb-4">
                   <LineChart className="w-6 h-6" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">2. Upload meer maanden</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">Met een kwartaal krijg je een jaar-indicatie; met 12 maanden facturen een volwaardig besparingsrapport op basis van jouw échte volumes. Hoe completer, hoe scherper.</p>
+                <h3 className="font-bold text-slate-900 mb-2">2. Maak de analyse betrouwbaarder</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">Met meer facturen vindt ZenTrack meer vergelijkbare producten en wordt de indicatie scherper: een kwartaal geeft een jaar-indicatie, twaalf maanden een volwaardig besparingsrapport op jouw échte volumes.</p>
               </div>
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
                 <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 mb-4">
                   <Lock className="w-6 h-6" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2">3. Jij beslist wat erna komt</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">Het rapport toont wát er te besparen valt en hoevéél. Wil je ook zien welke producten je scherper kunt inkopen en het regelen met één JA via WhatsApp? Dat zit in het abonnement, met 60-dagen-leveringsgarantie.</p>
+                <h3 className="font-bold text-slate-900 mb-2">3. Bekijk waar kansen liggen</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">De gratis check toont hoeveel besparingskansen er zijn, in welke categorieën, en een indicatie van het bedrag. Met ZenTrack Compleet zie je om welke producten, merken en leveranciers het gaat — en regel je het met één JA via WhatsApp, met 60-dagen-garantie.</p>
               </div>
             </div>
+            <p className="text-xs text-slate-500 mt-6 text-center max-w-2xl mx-auto">
+              De vergelijking gebruikt periodiek ververste lijstprijzen van vergelijkbare producten.
+              Elke besparing is een indicatie — definitief wordt hij pas wanneer je daadwerkelijk anders bestelt.
+            </p>
           </div>
         </section>
 
@@ -88,9 +92,9 @@ export default function InkoopCheckPage() {
             </div>
             <div className="text-center mt-10">
               <button onClick={navigateToRegister} className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-600/20 inline-flex items-center gap-2">
-                Start de gratis inkoop-check <ArrowRight className="w-5 h-5" />
+                Analyseer mijn facturen gratis <ArrowRight className="w-5 h-5" />
               </button>
-              <p className="text-sm text-slate-500 mt-4">Of bekijk eerst <Link href="/prijzen" className="text-emerald-600 underline">de prijzen en de 60-dagen-leveringsgarantie</Link>.</p>
+              <p className="text-sm text-slate-500 mt-4">Of bekijk eerst <Link href="/prijzen" className="text-emerald-600 underline">de prijzen en de 60-dagen-garantie</Link>.</p>
             </div>
           </div>
         </section>

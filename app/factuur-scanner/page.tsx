@@ -58,7 +58,7 @@ export default function FactuurScannerPage() {
                 </div>
                 <div className="mt-2 bg-emerald-50 p-1.5 rounded border border-emerald-100 text-[10px] text-emerald-700">
                   <p className="font-bold">12 producten herkend</p>
-                  <p className="text-slate-500">Voorraad automatisch bijgewerkt</p>
+                  <p className="text-slate-500">Binnenkomende voorraad automatisch verwerkt</p>
                 </div>
               </div>
             </div>
@@ -173,8 +173,8 @@ export default function FactuurScannerPage() {
                 </div>
 
                 <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
-                  Stop met Handmatig<br />
-                  <span className="text-emerald-600">Facturen Overtypen.</span>
+                  Nooit meer facturen<br />
+                  <span className="text-emerald-600">regel voor regel overtypen.</span>
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
@@ -234,7 +234,7 @@ export default function FactuurScannerPage() {
                 {
                   icon: Clock,
                   title: 'Geen inkoopoverzicht',
-                  desc: 'Hoeveel geeft je uit per leverancier? Per productcategorie? Zonder data geen inzicht — en geen besparingen.',
+                  desc: 'Hoeveel geef je uit per leverancier? Per productcategorie? Zonder data geen inzicht — en geen besparingen.',
                   color: 'text-red-500',
                   bg: 'bg-red-50',
                   border: 'border-red-100',
@@ -259,7 +259,7 @@ export default function FactuurScannerPage() {
                 <span>3 simpele stappen</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-                Zo werkt de <span className="text-emerald-600">Factuur Scanner</span>
+                Zo werkt de <span className="text-emerald-600">Factuurscanner</span>
               </h2>
             </div>
 
@@ -274,7 +274,7 @@ export default function FactuurScannerPage() {
                 },
                 {
                   step: '2',
-                  title: 'AI herkent alles',
+                  title: 'De belangrijkste gegevens herkend',
                   desc: 'Productnamen, prijzen, aantallen, leverancier en factuurnummer worden automatisch herkend.',
                   icon: Eye,
                   color: 'bg-emerald-500',
@@ -312,7 +312,7 @@ export default function FactuurScannerPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { label: 'Productnamen', desc: 'Exacte match met catalogus', icon: '📦', bg: 'bg-emerald-50', border: 'border-emerald-200' },
+                { label: 'Productnamen', desc: 'Gekoppeld aan de productdatabase', icon: '📦', bg: 'bg-emerald-50', border: 'border-emerald-200' },
                 { label: 'Prijzen', desc: 'Per stuk en totaal', icon: '💰', bg: 'bg-emerald-50', border: 'border-emerald-200' },
                 { label: 'Leveranciers', desc: 'Automatisch herkend', icon: '🏢', bg: 'bg-emerald-50', border: 'border-emerald-200' },
                 { label: 'Vervaldatums', desc: 'Indien vermeld', icon: '📅', bg: 'bg-orange-50', border: 'border-orange-200' },
@@ -350,7 +350,7 @@ export default function FactuurScannerPage() {
                   <FeatureX text="Typefouten in productnamen en bedragen" />
                   <FeatureX text="Prijsverschillen ontdek je pas maanden later" />
                   <FeatureX text="Geen overzicht van inkoop per leverancier" />
-                  <FeatureX text="Geen audit trail — wie heeft wat verwerkt?" />
+                  <FeatureX text="Geen logboek — wie heeft wat verwerkt?" />
                 </div>
               </div>
 
@@ -367,8 +367,8 @@ export default function FactuurScannerPage() {
                   <FeatureCheck text="Factuur verwerkt in seconden — niet minuten" highlighted />
                   <FeatureCheck text="AI herkent producten, prijzen en leveranciers" />
                   <FeatureCheck text="Prijzen per product opgeslagen voor inzicht" />
-                  <FeatureCheck text="Voorraad automatisch bijgewerkt na scan" />
-                  <FeatureCheck text="Volledig audit trail van elke factuur" />
+                  <FeatureCheck text="Binnenkomende voorraad automatisch verwerkt na scan" />
+                  <FeatureCheck text="Doorzoekbaar logboek van iedere verwerkte factuur" />
                 </div>
               </div>
             </div>

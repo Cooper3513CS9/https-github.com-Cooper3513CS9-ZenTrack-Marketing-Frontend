@@ -36,7 +36,7 @@ export default function ZorggroepenPage() {
             <p className="text-base text-slate-600 mt-4 leading-relaxed">
               Eén locatie (bezoekadres) telt als één ZenTrack. Vanaf vijf locaties geldt een staffelkorting
               op aanvraag; voor grotere zorggroepen maken we een partnerschap op maat. En de{' '}
-              <Link href="/prijzen" className="text-purple-700 underline">60-dagen-leveringsgarantie</Link> geldt ook hier:
+              <Link href="/prijzen" className="text-purple-700 underline">60-dagen-garantie</Link> geldt ook hier:
               wijzen wij minder besparing aan dan het abonnement kostte, dan krijgt u het verschil terug.
             </p>
           </div>

@@ -18,7 +18,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Eén product. Eén prijs per locatie.</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Eén compleet abonnement per locatie.</h2>
           <p className="text-slate-400 text-lg">Start met de gratis inkoop-check. Upgrade wanneer jij er klaar voor bent.</p>
           <p className="text-slate-500 text-sm mt-3 max-w-2xl mx-auto">Een praktijk is al gauw uren per week kwijt aan bestellen, voorraad en vervaldatums. Kostbare tijd van je team.</p>
         </div>
@@ -35,7 +35,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                 <FileSearch className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-white">Inkoop-check</h3>
-              <p className="text-slate-400 text-sm mt-2 min-h-[60px]">Zie op je eigen facturen waar je te veel betaalt. Vrijblijvend, jouw data blijft van jou.</p>
+              <p className="text-slate-400 text-sm mt-2 min-h-[60px]">Zie op je eigen facturen waar je besparingskansen zitten. Vrijblijvend, jouw data blijft van jou.</p>
             </div>
             <div className="mb-4">
               <span className="text-4xl font-bold text-white">€0</span>
@@ -46,7 +46,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
             </button>
             <div className="space-y-3 flex-1">
               <FeatureItem text="Facturen automatisch ingelezen" />
-              <FeatureItem text="Besparingsrapport: wat betaal je te veel, en hoeveel" />
+              <FeatureItem text="Besparingsrapport: indicatie van wat je te veel betaalt — en hoeveel" />
               <FeatureItem text="Uitgaven per leverancier en categorie" />
               <FeatureItem text="Vraag het je assistent: chat over je eigen cijfers" />
               <FeatureItem text="Geen creditcard, geen verplichting" />
@@ -70,9 +70,9 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
             </div>
             <div className="mb-1">
               <span className="text-4xl font-bold text-slate-900">€79</span>
-              <span className="text-slate-500">/mnd per locatie</span>
+              <span className="text-slate-500">/mnd per locatie · excl. btw</span>
             </div>
-            <p className="text-xs text-slate-500 mb-4">Founding-tarief (12 maanden) · daarna geldt de lijstprijs van €99, maandelijks opzegbaar</p>
+            <p className="text-xs text-slate-500 mb-4">Founding-tarief · excl. btw · looptijd 12 maanden · per kwartaal gefactureerd — daarna lijstprijs €99/mnd, maandelijks opzegbaar</p>
             <p className="text-sm font-semibold text-emerald-700 mb-6 min-h-[40px]">ZenTrack zet je bestelling klaar. Jij keurt goed met één JA via WhatsApp.</p>
             <button onClick={onRegisterClick} className="w-full py-3 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-200 mb-8">
               Begin met de gratis check
@@ -82,7 +82,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
               <FeatureItem text="Doorlopende prijsbewaking: zie precies wáár je die besparing pakt" light />
               <FeatureItem text="Vervaldatum-alerts via WhatsApp: 30, 14 en 7 dagen vooraf én op de dag zelf, mét kastlocatie" light />
               <FeatureItem text="Pakbon-foto → levering automatisch gecheckt" light />
-              <FeatureItem text="Voorraad telt zichzelf bij via facturen en pakbonnen" light />
+              <FeatureItem text="Binnenkomende voorraad automatisch verwerkt via facturen en pakbonnen" light />
               <FeatureItem text="Alles vastgelegd: wie keurde wat goed, alle facturen doorzoekbaar" light />
               <FeatureItem text="Datums & documenten voor je visitatie-map, met bewijsrapport" light />
               <FeatureItem text="Emma in dashboard én WhatsApp (jij bepaalt wie), en ze onthoudt jullie afspraken" light />
@@ -114,7 +114,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
           </div>
         </div>
 
-        {/* LEVERINGSGARANTIE */}
+        {/* 60-DAGEN-GARANTIE */}
         <div className="mt-12 max-w-3xl mx-auto">
           <div className="bg-slate-800/60 rounded-2xl p-6 border border-emerald-500/30">
             <div className="flex items-start gap-3">
@@ -122,7 +122,7 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="font-bold text-white text-sm mb-2">De 60-dagen-leveringsgarantie</h4>
+                <h4 className="font-bold text-white text-sm mb-2">De 60-dagen-garantie</h4>
                 <p className="text-sm text-slate-400 leading-relaxed">
                   Na 60 dagen maken we samen de balans op. Hebben wij minder besparing aangewezen dan je abonnement tot dan kostte?
                   Dan mag je per direct stoppen én betalen we je het verschil terug.
