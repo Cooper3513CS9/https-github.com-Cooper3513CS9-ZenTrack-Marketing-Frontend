@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: 'Hoe werkt de 60-dagen-garantie?',
-    a: 'Na 60 dagen maken we samen de balans op. Heeft ZenTrack minder besparing aangewezen dan het abonnement tot dan kostte, dan mag je per direct stoppen en betalen we het verschil terug. Voorwaarde: upload binnen 30 dagen je volledige inkoopadministratie van de afgelopen 12 maanden, zodat we eerlijk kunnen rekenen.',
+    a: 'Na 60 dagen maken we samen de balans op. Heeft ZenTrack minder besparing aangewezen dan het abonnement tot dan kostte, dan mag je per direct stoppen en betalen we het verschil terug. Voorwaarde: upload binnen 30 dagen je volledige inkoopadministratie van de afgelopen 12 maanden, zodat we eerlijk kunnen rekenen. De tijdwinst van je team rekenen we niet eens mee — die is de bonus.',
   },
   {
     q: 'Wij hebben meerdere locaties. Wat kost dat?',
@@ -56,7 +56,7 @@ export default function PrijzenPage() {
             </p>
             <p className="text-base text-slate-600 mt-4 leading-relaxed">
               Er geldt een 60-dagen-garantie: wijzen wij minder besparing aan dan het abonnement tot dan kostte,
-              dan krijg je het verschil terug en mag je per direct stoppen.
+              dan krijg je het verschil terug en mag je per direct stoppen. De tijdwinst van je team rekenen we daarbij niet eens mee — die is de bonus.
             </p>
           </div>
         </section>

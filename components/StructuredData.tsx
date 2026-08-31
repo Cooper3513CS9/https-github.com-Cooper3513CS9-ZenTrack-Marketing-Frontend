@@ -134,7 +134,7 @@ const faqSchema = {
       name: "Wat is de 60-dagen-garantie?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Na 60 dagen maken we de balans op: heeft ZenTrack minder besparing aangewezen dan het abonnement tot dan kostte, dan mag je per direct stoppen en betalen we je het verschil terug. Voorwaarde is dat je binnen 30 dagen je volledige inkoopadministratie van de afgelopen 12 maanden hebt geüpload. De tijdwinst van je team rekenen we niet eens mee.",
+        text: "Na 60 dagen maken we de balans op: heeft ZenTrack minder besparing aangewezen dan het abonnement tot dan kostte, dan mag je per direct stoppen en betalen we je het verschil terug. Voorwaarde is dat je binnen 30 dagen je volledige inkoopadministratie van de afgelopen 12 maanden hebt geüpload. De tijdwinst van je team rekenen we niet eens mee. De tijdwinst van het team telt daarbij niet eens mee — die is de bonus.",
       },
     },
     {
