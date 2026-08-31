@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Calculator, Clock, Euro, TrendingUp, AlertCircle } from 'lucide-react';
 
 export const ROICalculator: React.FC = () => {
@@ -10,39 +10,26 @@ export const ROICalculator: React.FC = () => {
   const [emergencyOrders, setEmergencyOrders] = useState(2);
   const [savingsPercentage, setSavingsPercentage] = useState(5); // Default conservative 5%
 
-  const [savings, setSavings] = useState({
-    waste: 0,
-    time: 0,
-    emergency: 0,
-    total: 0,
-    paybackDays: 0
-  });
-
-  useEffect(() => {
-    // 1. Waste/Price Optimization: Variable % savings on spend
-    const wasteSavings = (monthlySpend * 12) * (savingsPercentage / 100);
-    
-    // 2. Time Savings: ZenTrack automates ~70%
-    const timeSavings = (hoursPerWeek * 52 * hourlyRate) * 0.70;
-
-    // 3. Emergency Orders (Spoedkosten):
-    // Avg cost of rush order = €12.50 shipping + €25 handling/stress/disruption = €37.50
-    const emergencySavings = (emergencyOrders * 12) * 37.50;
-    
-    const total = Math.round(wasteSavings + timeSavings + emergencySavings);
-
-    // Terugverdientijd op founding-tarief €79/mnd = €948/jr (fix 30 aug: was oud €149-tarief)
-    const subscriptionCost = 948;
-    const paybackDays = Math.round((subscriptionCost / total) * 365);
-    
-    setSavings({
-      waste: Math.round(wasteSavings),
-      time: Math.round(timeSavings),
-      emergency: Math.round(emergencySavings),
-      total: total,
-      paybackDays: paybackDays < 365 ? paybackDays : 365
-    });
-  }, [monthlySpend, hoursPerWeek, hourlyRate, emergencyOrders, savingsPercentage]);
+  // Direct afgeleid uit de sliders — géén state+effect: dat rendert server-side
+  // €0 en "0 dagen" (pal boven Pricing) tot React gehydrateerd is.
+  // 1. Waste/Price Optimization: Variable % savings on spend
+  const wasteSavings = (monthlySpend * 12) * (savingsPercentage / 100);
+  // 2. Time Savings: ZenTrack automates ~70%
+  const timeSavings = (hoursPerWeek * 52 * hourlyRate) * 0.70;
+  // 3. Emergency Orders (Spoedkosten):
+  // Avg cost of rush order = €12.50 shipping + €25 handling/stress/disruption = €37.50
+  const emergencySavings = (emergencyOrders * 12) * 37.50;
+  const total = Math.round(wasteSavings + timeSavings + emergencySavings);
+  // Terugverdientijd op founding-tarief €79/mnd = €948/jr (fix 30 aug: was oud €149-tarief)
+  const subscriptionCost = 948;
+  const paybackDaysRaw = total > 0 ? Math.round((subscriptionCost / total) * 365) : 365;
+  const savings = {
+    waste: Math.round(wasteSavings),
+    time: Math.round(timeSavings),
+    emergency: Math.round(emergencySavings),
+    total,
+    paybackDays: paybackDaysRaw < 365 ? paybackDaysRaw : 365,
+  };
 
   // Helper for dynamic badge styling
   const getBadgeStyle = (days: number) => {
@@ -58,7 +45,7 @@ export const ROICalculator: React.FC = () => {
           
           {/* Text Side */}
           <div className="flex-1">
-            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
               <Calculator className="w-4 h-4" />
               <span>Besparingscalculator</span>
             </div>
