@@ -61,7 +61,7 @@ export default function InkoopCheckPage() {
                   <Lock className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">3. Bekijk waar kansen liggen</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">De gratis check toont hoeveel besparingskansen er zijn, in welke categorieën, en een indicatie van het bedrag. Met ZenTrack Compleet zie je om welke producten, merken en leveranciers het gaat — en regel je het met één JA via WhatsApp, met 60-dagen-garantie.</p>
+                <p className="text-sm text-slate-600 leading-relaxed">De gratis check toont hoeveel besparingskansen er zijn, in welke categorieën, en een indicatie van het bedrag. Met ZenTrack Compleet zie je om welke producten, merken en leveranciers het gaat — en krijg je kant-en-klare bestelvoorstellen die je goedkeurt met één JA via WhatsApp. Bij aangesloten webshops plaatsen wij de bestelling daarna direct. Mét 60-dagen-garantie.</p>
               </div>
             </div>
             <p className="text-xs text-slate-500 mt-6 text-center max-w-2xl mx-auto">
