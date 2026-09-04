@@ -373,14 +373,14 @@ export default function SlimBestellenPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
               <TrendingDown className="w-4 h-4" />
-              <span>Altijd een marktconforme prijs</span>
+              <span>Prijzen getoetst aan periodiek verzamelde lijstprijzen</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Slim bestellen?<br />
               <span className="text-emerald-400">Samen sterker inkopen.</span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-              ZenTrack houdt uw inkoop tegen het licht en laat zien waar het beter kan. Zo weet u zeker dat u nooit te veel betaalt.
+              ZenTrack houdt uw inkoop tegen het licht en laat zien waar het beter kan. Zo ziet u of uw prijs in de pas loopt met wat wij elders zien.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <button

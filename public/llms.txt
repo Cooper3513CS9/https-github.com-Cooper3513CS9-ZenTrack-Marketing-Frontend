@@ -6,7 +6,7 @@ ZenTrack is een Nederlands SaaS-platform dat voorraadbeheer automatiseert voor h
 
 ## Kernfeatures
 
-- **Factuurscanner**: Upload een factuur via WhatsApp, AI (OCR) leest automatisch alle producten, hoeveelheden en prijzen uit
+- **Factuurscanner**: Upload een factuur in het dashboard, AI (OCR) leest automatisch alle producten, hoeveelheden en prijzen uit. WhatsApp is voor foto's van verpakkingen en pakbonnen, niet voor facturen
 - **Voorraadbeheer**: Real-time inzicht in voorraad per kast, kamer en locatie — zonder handmatig tellen
 - **Expiratie Radar**: Automatische waarschuwingen bij verlopen of bijna-verlopen medische producten (30/60/90 dagen)
 - **Slim Bestellen**: Vergelijk inkoopprijzen bij meerdere leveranciers, bespaar tot 40% op medische verbruiksartikelen

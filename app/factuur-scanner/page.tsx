@@ -196,7 +196,7 @@ export default function FactuurScannerPage() {
 
                 <div className="mt-10 flex flex-wrap items-center justify-center md:justify-start gap-6 text-sm text-slate-500 font-medium">
                   <span className="flex items-center gap-2"><Zap className="w-4 h-4" /> Snel verwerkt</span>
-                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> AVG Proof</span>
+                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> Geen patiëntdata</span>
                   <span className="flex items-center gap-2"><Smartphone className="w-4 h-4" /> Via WhatsApp</span>
                 </div>
               </div>
@@ -268,7 +268,7 @@ export default function FactuurScannerPage() {
                 {
                   step: '1',
                   title: 'Factuur uploaden',
-                  desc: 'Maak een foto via WhatsApp of upload een PDF via het dashboard. Zelfs scheef gefotografeerde facturen worden herkend.',
+                  desc: 'Sleep de PDF in je dashboard — of maak een foto van een papieren factuur en upload die. Zelfs scheef gefotografeerde facturen worden herkend.',
                   icon: Camera,
                   color: 'bg-blue-500',
                 },
@@ -387,7 +387,7 @@ export default function FactuurScannerPage() {
               <span className="text-emerald-400">Probeer de Factuur Scanner.</span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-              Upload uw eerste factuur via WhatsApp en zie direct het resultaat. Alle producten, prijzen en leveranciers — automatisch herkend.
+              Upload uw eerste factuur in het dashboard en zie direct het resultaat. Alle producten, prijzen en leveranciers — automatisch herkend.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <button

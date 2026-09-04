@@ -34,7 +34,7 @@ export const CookieConsent: React.FC = () => {
              <Cookie className="w-6 h-6 text-emerald-600" />
            </div>
            <div className="max-w-2xl">
-             <h4 className="font-bold text-slate-900 text-sm mb-1">Wij gebruiken cookies (AVG Proof)</h4>
+             <h4 className="font-bold text-slate-900 text-sm mb-1">Wij gebruiken cookies (Geen patiëntdata)</h4>
              <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
                ZenTrack gebruikt functionele cookies om de website te laten werken en anonieme statistieken om onze service te verbeteren. 
                Wij delen <strong className="text-slate-900">nooit</strong> data met derden voor advertentiedoeleinden.

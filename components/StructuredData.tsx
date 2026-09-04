@@ -106,7 +106,7 @@ const softwareApplicationSchema = {
     },
   ],
   featureList: [
-    "AI-factuurscanner via WhatsApp",
+    "AI-factuurscanner voor leveranciersfacturen",
     "Real-time voorraadbeheer per kast en locatie",
     "Automatische expiratie-alerts (30/60/90 dagen)",
     "Inzicht in je eigen inkoopkosten",
@@ -188,7 +188,7 @@ const faqSchema = {
       name: "Hoe werkt voorraadbeheer via WhatsApp?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Stuur een foto van je leveranciersfactuur naar ZenTrack via WhatsApp. De AI-factuurscanner leest automatisch alle producten, hoeveelheden en prijzen uit. Je voorraad wordt direct bijgewerkt en je ontvangt alerts bij bijna verlopen producten.",
+        text: "Upload je leveranciersfactuur in het ZenTrack-dashboard. De AI-factuurscanner leest automatisch alle producten, hoeveelheden en prijzen uit. Je voorraad wordt direct bijgewerkt en je ontvangt alerts bij bijna verlopen producten.",
       },
     },
   ],

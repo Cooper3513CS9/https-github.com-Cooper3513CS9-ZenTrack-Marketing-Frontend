@@ -65,14 +65,35 @@ export const PrivacyPolicy: React.FC<Props> = ({ onBack }) => {
                             <Server className="w-6 h-6 text-slate-600" />
                         </div>
                         <p className="text-slate-600 text-sm leading-relaxed">
-                            Al onze data wordt opgeslagen op beveiligde servers binnen de <strong>Europese Economische Ruimte (EER)</strong>. 
-                            Wij maken gebruik van datacenters in Frankfurt (Duitsland) en Amsterdam (Nederland) die voldoen aan ISO 27001 en NEN 7510 normen.
+                            Uw praktijkgegevens, facturen en foto&apos;s worden opgeslagen binnen de <strong>Europese Economische Ruimte</strong>,
+                            in een datacenter in Frankfurt (Duitsland) op <strong>ISO 27001-gecertificeerde infrastructuur</strong>.
                         </p>
                     </div>
                 </section>
 
                 <section>
-                    <h2 className="text-xl font-bold text-slate-900 mb-3">4. Verwerkersovereenkomst</h2>
+                    <h2 className="text-xl font-bold text-slate-900 mb-3">4. Wie wij inschakelen</h2>
+                    <p className="text-slate-600 text-sm leading-relaxed mb-3">
+                        Wij schakelen de volgende partijen in om de dienst te leveren. Met elk van hen hebben wij afspraken
+                        over de verwerking van uw gegevens.
+                    </p>
+                    <ul className="list-disc list-inside text-slate-600 text-sm space-y-2 leading-relaxed">
+                        <li><strong>Opslag en database</strong> — Supabase, datacenter Frankfurt (EER).</li>
+                        <li><strong>Applicatie-hosting</strong> — Vercel, regio Frankfurt (EER).</li>
+                        <li><strong>Tekstherkenning van facturen en foto&apos;s</strong> — Mistral AI, Frankrijk (EER).</li>
+                        <li><strong>WhatsApp-berichten</strong> — Bird (MessageBird), Nederland (EER).</li>
+                        <li><strong>E-mail</strong> — Brevo (EER).</li>
+                        <li>
+                            <strong>De assistent in het dashboard en in WhatsApp</strong> maakt gebruik van een taalmodel dat
+                            via OpenRouter wordt uitgevoerd. Daarbij worden gegevens <strong>buiten de EER (Verenigde Staten)</strong>
+                            verwerkt. Wij sturen daar geen patiëntgegevens naartoe: berichten worden vooraf gefilterd op
+                            persoonsgegevens van patiënten, en u wordt gevraagd die niet in te voeren.
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 className="text-xl font-bold text-slate-900 mb-3">5. Verwerkersovereenkomst</h2>
                     <p className="text-slate-600 text-sm leading-relaxed">
                         Voor huisartsenpraktijken fungeren wij als 'Verwerker' in de zin van de AVG. 
                         Bij het afsluiten van een abonnement wordt automatisch onze standaard Verwerkersovereenkomst van kracht, 
@@ -81,12 +102,12 @@ export const PrivacyPolicy: React.FC<Props> = ({ onBack }) => {
                 </section>
 
                 <section>
-                    <h2 className="text-xl font-bold text-slate-900 mb-3">5. Contact</h2>
+                    <h2 className="text-xl font-bold text-slate-900 mb-3">6. Contact</h2>
                     <p className="text-slate-600 text-sm leading-relaxed">
-                        Voor vragen over privacy of het uitoefenen van uw rechten (inzage, correctie, verwijdering) kunt u contact opnemen met onze Functionaris Gegevensbescherming:
+                        Voor vragen over privacy of het uitoefenen van uw rechten (inzage, correctie, verwijdering) kunt u contact met ons opnemen:
                         <br/><br/>
-                        <strong>ZenTrack (i.o.)</strong><br/>
-                        T.a.v. Privacy Officer<br/>
+                        <strong>KlantFans</strong> (KvK 87779498), handelend onder de naam ZenTrack<br/>
+                        T.a.v. privacy<br/>
                         Kruisweg 9L<br/>
                         3513 CS Utrecht<br/>
                         privacy@zentrack.nl

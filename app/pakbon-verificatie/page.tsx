@@ -330,7 +330,7 @@ export default function PakbonVerificatiePage() {
                   <FeatureCheck text="Controle in 30 seconden via WhatsApp foto" highlighted />
                   <FeatureCheck text="Directe melding bij ontbrekende artikelen" />
                   <FeatureCheck text="Automatische factuur-pakbon vergelijking" />
-                  <FeatureCheck text="Nooit meer betalen voor niet-geleverd" />
+                  <FeatureCheck text="Zie meteen wat er ontbreekt" />
                   <FeatureCheck text="Complete leveringshistorie als bewijs" />
                 </div>
               </div>
@@ -343,7 +343,7 @@ export default function PakbonVerificatiePage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
               <PackageCheck className="w-4 h-4" />
-              <span>Nooit meer ontbrekende leveringen</span>
+              <span>Zie meteen wat er ontbreekt</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Levering ontvangen?<br />
