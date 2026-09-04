@@ -373,7 +373,7 @@ export default function SlimBestellenPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
               <TrendingDown className="w-4 h-4" />
-              <span>Prijzen getoetst aan periodiek verzamelde lijstprijzen</span>
+              <span>Weet wat je betaalt</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Slim bestellen?<br />

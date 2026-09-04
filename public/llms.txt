@@ -2,7 +2,7 @@
 
 > Digitale collega voor inkoop, voorraad en vervaldatums in Nederlandse huisartsenpraktijken
 
-ZenTrack is een Nederlands SaaS-platform voor huisartsenpraktijken. Het team appt foto's en vragen naar Emma (de assistent), facturen worden automatisch gelezen, bestellingen keurt de praktijk goed met één JA via WhatsApp, en alles is vastgelegd. De gratis inkoop-check laat op de eigen facturen zien waar de praktijk te veel betaalt.
+ZenTrack is een Nederlands SaaS-platform voor huisartsenpraktijken. Het team houdt vervaldatums bij met een foto via WhatsApp, facturen worden automatisch gelezen, bestellingen keurt de praktijk goed met één JA via WhatsApp, en alles is vastgelegd. De gratis inkoop-check laat op de eigen facturen zien waar de praktijk te veel betaalt.
 
 ## Kernfeatures
 
