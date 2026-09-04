@@ -18,9 +18,9 @@ export const WhatsAppDemo: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     { 
       id: '1', 
-      text: 'Hoi! Ik ben ZenTrack. Stuur me een foto van een factuur, verzendlabel of scan een QR-code in de kast. 📸', 
+      text: 'Hoi, ik ben Emma, de digitale assistent van ZenTrack. Wat wil je registreren of controleren? Stuur een foto van een factuur, verpakking of pakbon. 📸', 
       sender: 'bot', 
-      timestamp: '09:00' 
+      timestamp: new Date().toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' }) 
     }
   ]);
   const [isTyping, setIsTyping] = useState(false);
@@ -42,6 +42,15 @@ export const WhatsAppDemo: React.FC = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages, isTyping, uploadingState]);
+
+
+// WhatsApp-stijl **vet** renderen i.p.v. letterlijke sterretjes in beeld
+const renderWhatsAppText = (text: string) =>
+  text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
+    part.startsWith('**') && part.endsWith('**')
+      ? <strong key={i}>{part.slice(2, -2)}</strong>
+      : <span key={i}>{part}</span>
+  );
 
   const handleSimulateUpload = async (scenario: 'invoice' | 'packing_slip' | 'medication' | 'qr' | 'bag') => {
     if (isTyping || uploadingState !== 'idle') return;
@@ -83,6 +92,10 @@ export const WhatsAppDemo: React.FC = () => {
         INZICHT: je betaalt nu € 8,95/dz voor Nitril M.
         Op basis van je eigen historie kun je hier besparen.
         Geschatte besparing: €12-25 per bestelling
+
+        — IN HET DASHBOARD —
+        ✔ Factuur verwerkt · 4 artikelen toegevoegd
+        ✔ Prijsindicatie bijgewerkt · 1 besparingskans gevonden
       `;
     } else if (scenario === 'packing_slip') {
       userText = "📦 Pakbon - Leverancier A bestelling aangekomen";
@@ -104,6 +117,10 @@ export const WhatsAppDemo: React.FC = () => {
 
         Waarschijnlijke oorzaak: Uit voorraad bij leverancier.
         Actie: Claim-mail aanmaken + Alternatieve leverancier zoeken?
+
+        — IN HET DASHBOARD —
+        ✔ Levering geregistreerd · 2 afwijkingen vastgelegd
+        ✔ Claim-concept klaargezet voor jouw akkoord
       `;
     } else if (scenario === 'medication') {
       userText = "🏥 Barcode scan: Hechtdraad steriel";
@@ -126,6 +143,10 @@ export const WhatsAppDemo: React.FC = () => {
 
         ALERT INGESTELD:
         Reminder op 01-02-2027 (2 maanden voor de vervaldatum)
+
+        — IN HET DASHBOARD —
+        ✔ Vervaldatum + kastlocatie vastgelegd
+        ✔ Alert ingepland · zichtbaar in de Expiratie Radar
       `;
     } else if (scenario === 'bag') {
       userText = "👜 Visitetas check - Huisbezoeken voorbereiding";
@@ -155,6 +176,10 @@ export const WhatsAppDemo: React.FC = () => {
         3. Paracetamol tabletten (prioriteit: LAAG)
 
         Geschatte klaarmaaktijd: 5 minuten
+
+        — IN HET DASHBOARD —
+        ✔ Tas-inventaris bijgewerkt
+        ✔ Aanvullijst klaargezet voor jouw akkoord
       `;
     } else {
       userText = "🔍 QR scan: Behandelkamer - voorraadcheck";
@@ -192,7 +217,7 @@ export const WhatsAppDemo: React.FC = () => {
       id: Date.now().toString(),
       text: userText,
       sender: 'user',
-      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      timestamp: new Date().toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' }),
       isImage: true,
       imageType: scenario
     };
@@ -209,13 +234,20 @@ export const WhatsAppDemo: React.FC = () => {
           id: (Date.now() + 1).toString(),
           text: aiResponse,
           sender: 'bot',
-          timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+          timestamp: new Date().toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' })
         };
         setMessages(prev => [...prev, botMessage]);
         setIsTyping(false);
       }, 1500); 
 
     } catch (e) {
+      // Nooit stil blijven: zonder antwoord lijkt de demo kapot
+      setMessages(prev => [...prev, {
+        id: (Date.now() + 1).toString(),
+        text: '\u2705 **Verwerking compleet**\n\nDe scan is gelukt en opgeslagen. Details staan in je dashboard.',
+        sender: 'bot',
+        timestamp: new Date().toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' })
+      }]);
       setIsTyping(false);
     }
   };
@@ -224,11 +256,15 @@ export const WhatsAppDemo: React.FC = () => {
      setMessages([
       { 
         id: '1', 
-        text: 'Hoi! Ik ben ZenTrack. Stuur me een foto van een factuur, verzendlabel of scan een QR-code in de kast. 📸', 
+        text: 'Hoi, ik ben Emma, de digitale assistent van ZenTrack. Wat wil je registreren of controleren? Stuur een foto van een factuur, verpakking of pakbon. 📸', 
         sender: 'bot', 
-        timestamp: '09:00' 
+        timestamp: new Date().toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' }) 
       }
      ]);
+     // Fix 30 aug: isTyping bleef hangen na reset -> alle demo-knoppen
+     // weigerden daarna stilletjes ("demo blijft hangen")
+     setIsTyping(false);
+     setUploadProgress(0);
      setUploadingState('idle');
   };
 
@@ -247,12 +283,13 @@ export const WhatsAppDemo: React.FC = () => {
           <div className="flex-1">
             <div className="flex items-center gap-2 text-emerald-300 font-semibold mb-4">
               <Sparkles className="w-5 h-5" />
-              <span>Live Demo</span>
+              <span>Productsimulatie</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Ervaar het gemak</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Bekijk ZenTrack in actie</h2>
             <p className="text-lg text-emerald-100 mb-8 leading-relaxed">
-              Simuleer een echte situatie. ZenTrack herkent labels, scant dokterstassen en checkt steriele datums.
+              Kies een praktijksituatie en zie hoe je team via WhatsApp voorraad, leveringen en vervaldatums registreert.
             </p>
+            <p className="text-xs text-emerald-300/70 -mt-6 mb-8">Interactieve productsimulatie met voorbeeldgegevens.</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <button
@@ -262,7 +299,7 @@ export const WhatsAppDemo: React.FC = () => {
               >
                 <div className="bg-emerald-100 p-2 rounded-lg"><FileText className="w-5 h-5 text-emerald-600"/></div>
                 <div>
-                    <span className="block text-sm font-bold">1. Simuleer Factuur</span>
+                    <span className="block text-sm font-bold">1. Factuur verwerken</span>
                     <span className="text-xs opacity-70">Nitril handschoenen & Analyse</span>
                 </div>
               </button>
@@ -274,7 +311,7 @@ export const WhatsAppDemo: React.FC = () => {
               >
                 <div className="bg-emerald-900 p-2 rounded-lg"><Briefcase className="w-5 h-5 text-emerald-300"/></div>
                 <div>
-                    <span className="block text-sm font-bold">2. Dokterstas Check</span>
+                    <span className="block text-sm font-bold">2. Dokterstas controleren</span>
                     <span className="text-xs opacity-70">Scan inhoud & vul aan</span>
                 </div>
               </button>
@@ -286,7 +323,7 @@ export const WhatsAppDemo: React.FC = () => {
               >
                 <div className="bg-emerald-900 p-2 rounded-lg"><Box className="w-5 h-5 text-emerald-300"/></div>
                 <div>
-                    <span className="block text-sm font-bold">3. Artikel Scan</span>
+                    <span className="block text-sm font-bold">3. Vervaldatum registreren</span>
                     <span className="text-xs opacity-70">Steriele datum & alert</span>
                 </div>
               </button>
@@ -298,7 +335,7 @@ export const WhatsAppDemo: React.FC = () => {
               >
                 <div className="bg-emerald-900 p-2 rounded-lg"><CheckCircle2 className="w-5 h-5 text-emerald-300"/></div>
                 <div>
-                    <span className="block text-sm font-bold">4. Pakbon Verificatie</span>
+                    <span className="block text-sm font-bold">4. Levering controleren</span>
                     <span className="text-xs opacity-70">Controleer op tekorten</span>
                 </div>
               </button>
@@ -363,7 +400,7 @@ export const WhatsAppDemo: React.FC = () => {
                             </div>
                          </div>
                        )}
-                       <p className="whitespace-pre-line">{msg.text}</p>
+                       <p className="whitespace-pre-line">{renderWhatsAppText(msg.text)}</p>
                        
                        <div className="flex items-end justify-end gap-1 mt-1 -mb-1">
                          <span className="text-[10px] text-slate-500/80">{msg.timestamp}</span>

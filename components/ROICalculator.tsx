@@ -1,48 +1,35 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Calculator, Clock, Euro, TrendingUp, AlertCircle } from 'lucide-react';
 
 export const ROICalculator: React.FC = () => {
   // Defaults based on market feedback
   const [monthlySpend, setMonthlySpend] = useState(1000);
   const [hoursPerWeek, setHoursPerWeek] = useState(2);
-  const [hourlyRate, setHourlyRate] = useState(45);
+  const [hourlyRate, setHourlyRate] = useState(29);
   const [emergencyOrders, setEmergencyOrders] = useState(2);
   const [savingsPercentage, setSavingsPercentage] = useState(5); // Default conservative 5%
 
-  const [savings, setSavings] = useState({
-    waste: 0,
-    time: 0,
-    emergency: 0,
-    total: 0,
-    paybackDays: 0
-  });
-
-  useEffect(() => {
-    // 1. Waste/Price Optimization: Variable % savings on spend
-    const wasteSavings = (monthlySpend * 12) * (savingsPercentage / 100);
-    
-    // 2. Time Savings: ZenTrack automates ~70%
-    const timeSavings = (hoursPerWeek * 52 * hourlyRate) * 0.70;
-
-    // 3. Emergency Orders (Spoedkosten):
-    // Avg cost of rush order = €12.50 shipping + €25 handling/stress/disruption = €37.50
-    const emergencySavings = (emergencyOrders * 12) * 37.50;
-    
-    const total = Math.round(wasteSavings + timeSavings + emergencySavings);
-
-    // Calculate Payback Period based on Pro Plan (€149/mo = €1788/yr)
-    const subscriptionCost = 1788;
-    const paybackDays = Math.round((subscriptionCost / total) * 365);
-    
-    setSavings({
-      waste: Math.round(wasteSavings),
-      time: Math.round(timeSavings),
-      emergency: Math.round(emergencySavings),
-      total: total,
-      paybackDays: paybackDays < 365 ? paybackDays : 365
-    });
-  }, [monthlySpend, hoursPerWeek, hourlyRate, emergencyOrders, savingsPercentage]);
+  // Direct afgeleid uit de sliders — géén state+effect: dat rendert server-side
+  // €0 en "0 dagen" (pal boven Pricing) tot React gehydrateerd is.
+  // 1. Waste/Price Optimization: Variable % savings on spend
+  const wasteSavings = (monthlySpend * 12) * (savingsPercentage / 100);
+  // 2. Time Savings: ZenTrack automates ~70%
+  const timeSavings = (hoursPerWeek * 52 * hourlyRate) * 0.70;
+  // 3. Emergency Orders (Spoedkosten):
+  // Avg cost of rush order = €12.50 shipping + €25 handling/stress/disruption = €37.50
+  const emergencySavings = (emergencyOrders * 12) * 37.50;
+  const total = Math.round(wasteSavings + timeSavings + emergencySavings);
+  // Terugverdientijd op founding-tarief €79/mnd = €948/jr (fix 30 aug: was oud €149-tarief)
+  const subscriptionCost = 948;
+  const paybackDaysRaw = total > 0 ? Math.round((subscriptionCost / total) * 365) : 365;
+  const savings = {
+    waste: Math.round(wasteSavings),
+    time: Math.round(timeSavings),
+    emergency: Math.round(emergencySavings),
+    total,
+    paybackDays: paybackDaysRaw < 365 ? paybackDaysRaw : 365,
+  };
 
   // Helper for dynamic badge styling
   const getBadgeStyle = (days: number) => {
@@ -58,12 +45,12 @@ export const ROICalculator: React.FC = () => {
           
           {/* Text Side */}
           <div className="flex-1">
-            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
               <Calculator className="w-4 h-4" />
               <span>Besparingscalculator</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              Reken uit wat je laat liggen.
+              Bereken wat slimmer voorraadbeheer kan opleveren.
             </h2>
             <p className="text-lg text-slate-600 mb-12 leading-relaxed">
                Naast directe kosten verliezen praktijken veel geld aan 'onzichtbare' posten: spoedleveringen, verlopen voorraad en dure administratieve uren.
@@ -95,7 +82,7 @@ export const ROICalculator: React.FC = () => {
           <div className="flex-1 w-full max-w-xl bg-slate-50 rounded-[2.5rem] p-8 border border-slate-200 shadow-2xl relative overflow-hidden">
              {/* Payback Badge - Dynamic Colors */}
              <div className={`absolute -top-1 right-0 px-4 py-1.5 rounded-l-xl font-bold text-xs uppercase tracking-wider shadow-sm border-l border-b animate-fade-in ${getBadgeStyle(savings.paybackDays)}`}>
-                Terugverdiend in {savings.paybackDays} dagen
+                Geschatte terugverdientijd: {savings.paybackDays} dagen
              </div>
 
              <div className="space-y-8 mb-8 mt-14">
@@ -133,7 +120,7 @@ export const ROICalculator: React.FC = () => {
                      min="0" max="30" step="1"
                      value={savingsPercentage}
                      onChange={(e) => setSavingsPercentage(parseInt(e.target.value))}
-                     className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-purple-500"
+                     className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600"
                    />
                 </div>
 
@@ -182,10 +169,10 @@ export const ROICalculator: React.FC = () => {
                       <div className="flex items-center gap-2">
                          <span className="text-xs font-bold text-slate-700">€{hourlyRate}</span>
                          <input 
-                           type="range" min="30" max="80" step="5"
+                           type="range" min="25" max="80" step="1"
                            value={hourlyRate}
                            onChange={(e) => setHourlyRate(parseInt(e.target.value))}
-                           className="w-24 h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-slate-500"
+                           className="w-24 h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
                          />
                       </div>
                    </div>
@@ -195,9 +182,7 @@ export const ROICalculator: React.FC = () => {
              <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
                 <div className="flex items-center gap-2 mb-2 text-slate-500 text-sm font-medium">
-                    <TrendingUp className="w-4 h-4 text-emerald-600" />
-                    Jouw potentiële winst
-                </div>
+                    <TrendingUp className="w-4 h-4 text-emerald-600" />Geschatte jaarlijkse besparing</div>
                 <div className="flex items-baseline gap-1 text-slate-900">
                     <span className="text-5xl font-bold tracking-tight">€{savings.total.toLocaleString('nl-NL')}</span>
                     <span className="text-lg font-medium text-slate-400">/jaar</span>
@@ -217,6 +202,7 @@ export const ROICalculator: React.FC = () => {
                         <p className="font-bold text-slate-700 text-sm">€{savings.emergency}</p>
                     </div>
                 </div>
+                <p className="text-[11px] text-slate-400 mt-4 text-center">Indicatieve berekening op basis van de ingevulde gegevens. Werkelijke resultaten verschillen per praktijk.</p>
              </div>
           </div>
 

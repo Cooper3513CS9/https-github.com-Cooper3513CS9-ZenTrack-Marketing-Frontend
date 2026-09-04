@@ -20,7 +20,7 @@ export const PainPoints: React.FC = () => {
     {
       title: "Het 'Lege Doos' Moment",
       pain: "Je grijpt mis tijdens een behandeling. De doos is leeg en er staat niets in de kast. Gevolg: spoedbestellingen en frustratie in het team.",
-      gain: "Nooit meer misgrijpen. ZenTrack ziet het verbruikspatroon en waarschuwt je proactief *voordat* het op is. Altijd voorraad.",
+      gain: "ZenTrack ziet het verbruikspatroon en waarschuwt je proactief *voordat* het op is. Meer zekerheid over kritieke voorraad.",
       icon: AlertOctagon
     },
     {

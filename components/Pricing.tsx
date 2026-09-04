@@ -1,334 +1,175 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { Check, Rocket, Building2, Users, Zap, Shield, Radar, ArrowRight, Info } from 'lucide-react';
+import { Check, Building2, Zap, FileSearch, ArrowRight, Info, ShieldCheck } from 'lucide-react';
 
 interface PricingProps {
   onRegisterClick: () => void;
 }
 
 export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
-  const [activeTab, setActiveTab] = useState<'solo' | 'group'>('solo');
-
-  // Enterprise Calculator Logic
-  const [locations, setLocations] = useState(15);
-  const [enterpriseData, setEnterpriseData] = useState({
-      pricePerLoc: 0,
-      dashboardFee: 0,
-      monthlyTotal: 0,
-      yearlyTotal: 0,
-      savings: 0,
-      roi: 0
-  });
-
-  useEffect(() => {
-      let pricePerLoc = 49;
-      let dashboardFee = 0;
-
-      // Tier Logic
-      if (locations < 10) { // Tier 1 (2-9)
-          pricePerLoc = 69;
-          dashboardFee = 299;
-      } else if (locations < 25) { // Tier 2 (10-24)
-          pricePerLoc = 59;
-          dashboardFee = 499;
-      } else if (locations < 50) { // Tier 3 (25-49)
-          pricePerLoc = 49;
-          dashboardFee = 699;
-      } else { // Tier 4 (50+)
-          pricePerLoc = 39;
-          dashboardFee = 999;
-      }
-
-      const monthlyTotal = (locations * pricePerLoc) + dashboardFee;
-      const yearlyTotal = monthlyTotal * 12;
-
-      // ROI Calculation (Conservative: ~3x return estimate)
-      const estimatedSavings = yearlyTotal * 3;
-      const roi = Math.round(((estimatedSavings - yearlyTotal) / yearlyTotal) * 100);
-
-      setEnterpriseData({
-          pricePerLoc,
-          dashboardFee,
-          monthlyTotal,
-          yearlyTotal,
-          savings: Math.round(estimatedSavings),
-          roi
-      });
-  }, [locations]);
-
   return (
     <section id="prijzen" className="py-20 bg-slate-900 text-white relative overflow-hidden scroll-mt-24">
-       {/* Background accent */}
+      {/* Background accent */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        {/* Pilot Offer Banner */}
-        <div className="mb-16 bg-gradient-to-r from-emerald-900/50 to-slate-800/50 rounded-3xl p-1 border border-emerald-500/30">
-            <div className="bg-slate-900/80 backdrop-blur rounded-[22px] p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-                <div className="flex items-center gap-4">
-                    <div className="p-3 bg-emerald-500/20 text-emerald-400 rounded-xl">
-                        <Rocket className="w-6 h-6" />
-                    </div>
-                    <div>
-                        <h3 className="font-bold text-white text-lg">Early Adopter Worden?</h3>
-                        <p className="text-slate-400 text-sm">Word een van de eerste praktijken. Start gratis en ontvang 50% korting in je eerste jaar.</p>
-                    </div>
-                </div>
-                <button onClick={onRegisterClick} className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 rounded-xl font-bold text-sm transition-colors shadow-lg shadow-emerald-900/20 whitespace-nowrap">
-                    Word Early Adopter →
-                </button>
-            </div>
-        </div>
-
         <div className="text-center mb-12">
-           <h2 className="text-3xl md:text-5xl font-bold mb-4">Transparante Prijzen</h2>
-           <p className="text-slate-400 text-lg">Start gratis. Upgrade wanneer je er klaar voor bent.</p>
-           <p className="text-slate-500 text-sm mt-3 max-w-2xl mx-auto">Een praktijk besteedt gemiddeld 3+ uur per week aan voorraad en bestellen — meer dan €400 per maand aan kostbare uren.</p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Eén compleet abonnement per locatie.</h2>
+          <p className="text-slate-400 text-lg">Start met de gratis inkoop-check. Upgrade wanneer jij er klaar voor bent.</p>
+          <p className="text-slate-500 text-sm mt-3 max-w-2xl mx-auto">Een praktijk is al gauw uren per week kwijt aan bestellen, voorraad en vervaldatums. Kostbare tijd van je team.</p>
         </div>
 
-        {/* Tabs */}
-        <div className="flex justify-center mb-12">
-            <div className="bg-slate-800 p-1.5 rounded-xl flex gap-1">
-                <button
-                    onClick={() => setActiveTab('solo')}
-                    className={`px-6 py-3 rounded-lg font-bold text-sm transition-all flex items-center gap-2 ${activeTab === 'solo' ? 'bg-white text-slate-900 shadow-lg' : 'text-slate-400 hover:text-white'}`}
-                >
-                    <Users className="w-4 h-4" /> Solo Praktijk
-                </button>
-                <button
-                    onClick={() => setActiveTab('group')}
-                    className={`px-6 py-3 rounded-lg font-bold text-sm transition-all flex items-center gap-2 ${activeTab === 'group' ? 'bg-purple-600 text-white shadow-lg' : 'text-slate-400 hover:text-white'}`}
-                >
-                    <Building2 className="w-4 h-4" /> Zorggroep & Ketens
-                </button>
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+          {/* KAART 1: GRATIS INKOOP-CHECK */}
+          <div className="bg-slate-800/50 rounded-3xl p-8 border-2 border-emerald-500/40 hover:border-emerald-400 transition-colors flex flex-col relative">
+            <div className="absolute -top-3 -right-3 bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">
+              Gratis
             </div>
+            <div className="mb-6">
+              <div className="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center mb-4 text-emerald-600">
+                <FileSearch className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-white">Inkoop-check</h3>
+              <p className="text-slate-400 text-sm mt-2 min-h-[60px]">Zie op je eigen facturen waar je besparingskansen zitten. Vrijblijvend, jouw data blijft van jou.</p>
+            </div>
+            <div className="mb-4">
+              <span className="text-4xl font-bold text-white">€0</span>
+            </div>
+            <p className="text-sm font-semibold text-emerald-400 mb-6 min-h-[40px]">Sleep één factuur en zie binnen 2 minuten wat wij zien.</p>
+            <button onClick={onRegisterClick} className="w-full py-3 rounded-xl border border-emerald-500/50 text-white font-bold hover:bg-emerald-600 hover:border-emerald-600 transition-colors mb-8 flex items-center justify-center gap-2">
+              Start de gratis check <ArrowRight className="w-4 h-4" />
+            </button>
+            <div className="space-y-3 flex-1">
+              <FeatureItem text="Facturen automatisch ingelezen" />
+              <FeatureItem text="Besparingsrapport: indicatie van wat je te veel betaalt — en hoeveel" />
+              <FeatureItem text="Uitgaven per leverancier en categorie" />
+              <FeatureItem text="Vraag het je assistent: chat over je eigen cijfers" />
+              <FeatureItem text="Geen creditcard, geen verplichting" />
+            </div>
+            <div className="mt-6 pt-4 border-t border-slate-700">
+              <p className="text-[11px] text-slate-500 leading-relaxed">
+                Hoe meer maanden facturen je uploadt (liefst 12), hoe scherper het rapport. Wáár je die besparing precies pakt, zie je met het abonnement.
+              </p>
+            </div>
+          </div>
+
+          {/* KAART 2: ZENTRACK COMPLEET (hero) */}
+          <div className="bg-white text-slate-900 rounded-3xl p-8 border border-emerald-500 shadow-xl relative transform lg:-translate-y-4 flex flex-col">
+            <div className="absolute top-0 left-0 w-full h-1.5 bg-emerald-500"></div>
+            <div className="mb-6">
+              <div className="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center mb-4 text-emerald-600">
+                <Zap className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900">ZenTrack Compleet</h3>
+              <p className="text-slate-500 text-sm mt-2 min-h-[60px]">Alles erin. Eén prijs per locatie, team en facturen onbeperkt.</p>
+            </div>
+            <div className="mb-1">
+              <span className="text-4xl font-bold text-slate-900">€79</span>
+              <span className="text-slate-500">/mnd per locatie · excl. btw</span>
+            </div>
+            <p className="text-xs text-slate-500 mb-4">Founding-tarief · excl. btw · looptijd 12 maanden · per kwartaal gefactureerd — daarna lijstprijs €99/mnd, maandelijks opzegbaar</p>
+            <p className="text-sm font-semibold text-emerald-700 mb-6 min-h-[40px]">ZenTrack zet je bestelling klaar. Jij keurt goed met één JA via WhatsApp.</p>
+            <button onClick={onRegisterClick} className="w-full py-3 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-200 mb-8">
+              Begin met de gratis check
+            </button>
+            <div className="space-y-3 flex-1">
+              <FeatureItem text="Bestelvoorstellen staan klaar en goedkeuren is JA appen; bij aangesloten webshops plaatsen wij direct, anders ligt hij verzendklaar" highlighted light />
+              <FeatureItem text="Doorlopende prijsbewaking: zie precies wáár je die besparing pakt" light />
+              <FeatureItem text="Vervaldatum-alerts via WhatsApp: 30, 14 en 7 dagen vooraf én op de dag zelf, mét kastlocatie" light />
+              <FeatureItem text="Pakbon-foto → levering automatisch gecheckt" light />
+              <FeatureItem text="Binnenkomende voorraad automatisch verwerkt via facturen en pakbonnen" light />
+              <FeatureItem text="Alles vastgelegd: wie keurde wat goed, alle facturen doorzoekbaar" light />
+              <FeatureItem text="Datums & documenten voor je visitatie-map, met bewijsrapport" light />
+              <FeatureItem text="Emma in dashboard én WhatsApp (jij bepaalt wie), en ze onthoudt jullie afspraken" light />
+              <FeatureItem text="Team onbeperkt, ieder een eigen rol" light />
+            </div>
+          </div>
+
+          {/* KAART 3: MEERDERE LOCATIES */}
+          <div className="bg-slate-800/50 rounded-3xl p-8 border border-dashed border-purple-500/40 hover:border-purple-500 transition-colors flex flex-col">
+            <div className="mb-6">
+              <div className="w-12 h-12 bg-purple-900/50 rounded-2xl flex items-center justify-center mb-4 text-purple-400">
+                <Building2 className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-white">Meerdere locaties</h3>
+              <p className="text-slate-400 text-sm mt-2 min-h-[60px]">Gezondheidscentra, ketens en zorggroepen. Elke locatie (bezoekadres) telt als één ZenTrack.</p>
+            </div>
+            <div className="mb-4">
+              <span className="text-2xl font-bold text-white">Staffelkorting op aanvraag</span>
+            </div>
+            <p className="text-sm font-semibold text-purple-300 mb-6 min-h-[40px]">Meer locaties, beter tarief. Zorggroepen: partnerschap op maat.</p>
+            <Link href="/zorggroepen" className="w-full py-3 rounded-xl border border-purple-500/50 text-white font-bold hover:bg-purple-600 hover:border-purple-600 transition-colors mb-8 flex items-center justify-center gap-2">
+              Bekijk de zorggroep-aanpak <ArrowRight className="w-4 h-4" />
+            </Link>
+            <div className="space-y-3 flex-1">
+              <FeatureItem text="Eén factuur voor alle locaties" />
+              <FeatureItem text="Overzicht en verantwoording per locatie" />
+              <FeatureItem text="Uitrol locatie voor locatie, in jullie tempo" />
+            </div>
+          </div>
         </div>
 
-        {/* CONTENT: SOLO (3 Tiers) */}
-        {activeTab === 'solo' && (
-            <div className="animate-fade-in">
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {/* PLAN 0: GRATIS (Expiratie Radar) */}
-                    <div className="bg-slate-800/50 rounded-3xl p-8 border-2 border-orange-500/40 hover:border-orange-400 transition-colors flex flex-col relative">
-                        <div className="absolute -top-3 -right-3 bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">
-                            Gratis
-                        </div>
-                        <div className="mb-6">
-                            <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center mb-4 text-orange-600">
-                                <Radar className="w-6 h-6" />
-                            </div>
-                            <h3 className="text-xl font-bold text-white">Expiratie Radar</h3>
-                            <p className="text-slate-400 text-sm mt-2 min-h-[60px]">Nooit meer verlopen voorraad. Gratis starten.</p>
-                        </div>
-                        <div className="mb-4">
-                            <span className="text-4xl font-bold text-white">€0</span>
-                            <span className="text-slate-500">/mnd</span>
-                        </div>
-                        <p className="text-sm font-semibold text-emerald-400 mb-6 min-h-[40px]">Jij voegt toe, ZenTrack waarschuwt op tijd.</p>
-                        <Link
-                            href="/expiratie-radar"
-                            className="w-full py-3 rounded-xl border border-orange-500/50 text-white font-bold hover:bg-orange-600 hover:border-orange-600 transition-colors mb-8 flex items-center justify-center gap-2"
-                        >
-                            Start Gratis <ArrowRight className="w-4 h-4" />
-                        </Link>
-                        <div className="space-y-3 flex-1">
-                            <FeatureItem text="Tot 25 producten tracken" />
-                            <FeatureItem text="Vervaldatum alerts (WhatsApp)" />
-                            <FeatureItem text="30-60-90 dagen waarschuwing" />
-                            <FeatureItem text="Handmatig invoeren of scannen" />
-                            <FeatureItem text="6 maanden gratis (eerste 100 praktijken)" />
-                        </div>
-                        <div className="mt-6 pt-4 border-t border-slate-700">
-                            <p className="text-[11px] text-slate-500 leading-relaxed">
-                                Gratis tot 25 producten, max 6 maanden, voor de eerste 100 praktijken. Meer nodig? Upgrade naar Kleine praktijk vanaf €79/mnd.
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* PLAN 1: PROTECT */}
-                    <div className="bg-slate-800/50 rounded-3xl p-8 border border-slate-700 hover:border-slate-500 transition-colors flex flex-col">
-                        <div className="mb-6">
-                            <div className="w-12 h-12 bg-slate-700 rounded-2xl flex items-center justify-center mb-4 text-slate-300">
-                                <Shield className="w-6 h-6" />
-                            </div>
-                            <h3 className="text-xl font-bold text-white">Kleine praktijk</h3>
-                            <p className="text-slate-400 text-sm mt-2 min-h-[60px]">Voor de solo- of duopraktijk. Nooit meer misgrijpen — visitatie-proof.</p>
-                        </div>
-                        <div className="mb-4">
-                            <span className="text-4xl font-bold text-white">€79</span>
-                            <span className="text-slate-500">/mnd</span>
-                        </div>
-                        <p className="text-sm font-semibold text-emerald-400 mb-6 min-h-[40px]">Jij bestelt zelf, ZenTrack bewaakt en denkt mee.</p>
-                        <button onClick={onRegisterClick} className="w-full py-3 rounded-xl border border-slate-600 text-white font-bold hover:bg-slate-700 transition-colors mb-8">
-                            Start
-                        </button>
-                        <div className="space-y-3 flex-1">
-                            <FeatureItem text="Onbeperkt producten" highlighted />
-                            <FeatureItem text="Facturen automatisch inlezen" />
-                            <FeatureItem text="Pakbon-controle: zie wat ontbreekt" />
-                            <FeatureItem text="Voorraad & Expiratie Radar" />
-                            <FeatureItem text="Bestellen via WhatsApp (met Emma)" />
-                            <FeatureItem text="Slim bestel-advies" />
-                            <FeatureItem text="1 leverancier koppelen" />
-                            <FeatureItem text="NPA-accreditatie dossier" />
-                        </div>
-                    </div>
-
-                    {/* PLAN 2: CONTROL (Popular) */}
-                    <div className="bg-white text-slate-900 rounded-3xl p-8 border border-emerald-500 shadow-xl relative transform lg:-translate-y-4 flex flex-col">
-                        <div className="absolute top-0 left-0 w-full h-1.5 bg-emerald-500"></div>
-                        <div className="absolute top-4 right-4 bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-                            Aanbevolen
-                        </div>
-                        <div className="mb-6">
-                            <div className="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center mb-4 text-emerald-600">
-                                <Zap className="w-6 h-6" />
-                            </div>
-                            <h3 className="text-xl font-bold text-slate-900">Groepspraktijk</h3>
-                            <p className="text-slate-500 text-sm mt-2 min-h-[60px]">Meerdere huisartsen, één locatie. Nooit meer dubbel besteld.</p>
-                        </div>
-                        <div className="mb-4">
-                            <span className="text-4xl font-bold text-slate-900">€149</span>
-                            <span className="text-slate-500">/mnd</span>
-                        </div>
-                        <p className="text-sm font-semibold text-emerald-700 mb-6 min-h-[40px]">ZenTrack werkt vóór je: de bestelling staat klaar, jij tikt JA.</p>
-                        <button onClick={onRegisterClick} className="w-full py-3 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-200 mb-8">
-                            Start
-                        </button>
-                        <div className="space-y-3 flex-1">
-                            <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Alles uit Kleine praktijk, plus:</p>
-                            <FeatureItem text="Nooit meer dubbel (of niet) besteld: het hele team ziet wat er loopt, één iemand keurt goed" highlighted light />
-                            <FeatureItem text="Auto-opvolgen: ZenTrack zet je bestelling kant-en-klaar, jij tikt JA" light />
-                            <FeatureItem text="Onbeperkt leveranciers — al je portalen in één flow" light />
-                            <FeatureItem text="Voorraad per behandelkamer + transfers" light />
-                            <FeatureItem text="Emma leert je praktijk kennen" light />
-                            <FeatureItem text="Kostenrapportage per kamer/leverancier" light />
-                            <FeatureItem text="Prioriteit support" light />
-                        </div>
-                    </div>
-
-                    {/* Meerdere locaties → Zorggroep-tab (maatwerk) */}
-                    <div className="bg-slate-800/50 rounded-3xl p-8 border border-dashed border-purple-500/40 hover:border-purple-500 transition-colors flex flex-col justify-center text-center">
-                        <div className="w-12 h-12 bg-purple-900/50 rounded-2xl flex items-center justify-center mb-4 text-purple-400 mx-auto">
-                            <Building2 className="w-6 h-6" />
-                        </div>
-                        <h3 className="text-xl font-bold text-white">Meerdere locaties?</h3>
-                        <p className="text-slate-400 text-sm mt-2 mb-6">Zorggroepen en ketens: centrale inkoop en maatwerk per locatie.</p>
-                        <button onClick={() => setActiveTab('group')} className="w-full py-3 rounded-xl border border-purple-500/50 text-white font-bold hover:bg-purple-600 hover:border-purple-600 transition-colors">
-                            Bekijk Zorggroep →
-                        </button>
-                    </div>
-                </div>
-
-                {/* Upgrade Path Explainer */}
-                <div className="mt-12 max-w-3xl mx-auto">
-                    <div className="bg-slate-800/60 rounded-2xl p-6 border border-slate-700">
-                        <div className="flex items-start gap-3">
-                            <div className="p-2 bg-blue-500/20 text-blue-400 rounded-lg mt-0.5 shrink-0">
-                                <Info className="w-4 h-4" />
-                            </div>
-                            <div>
-                                <h4 className="font-bold text-white text-sm mb-2">Welk plan past bij jou?</h4>
-                                <ul className="space-y-1.5 text-sm text-slate-400">
-                                    <li className="flex items-start gap-2">
-                                        <Check className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />
-                                        <span><strong className="text-slate-300">Gratis starten</strong> — De Expiratie Radar voor maximaal 25 producten, max 6 maanden, voor de eerste 100 praktijken. Geen creditcard nodig.</span>
-                                    </li>
-                                    <li className="flex items-start gap-2">
-                                        <Check className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />
-                                        <span><strong className="text-slate-300">Kleine praktijk (€79/mnd)</strong> — De complete voorraad- en bestelflow voor de solo- of duopraktijk. Jij houdt de regie, ZenTrack doet het zware werk.</span>
-                                    </li>
-                                    <li className="flex items-start gap-2">
-                                        <Check className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />
-                                        <span><strong className="text-slate-300">Groepspraktijk (€149/mnd)</strong> — ZenTrack zet je bestellingen kant-en-klaar, koppelt al je leveranciers en leert je praktijk kennen. Met team- en rollenbeheer voor meerdere huisartsen op één locatie.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        {/* 60-DAGEN-GARANTIE */}
+        <div className="mt-12 max-w-3xl mx-auto">
+          <div className="bg-slate-800/60 rounded-2xl p-6 border border-emerald-500/30">
+            <div className="flex items-start gap-3">
+              <div className="p-2 bg-emerald-500/20 text-emerald-400 rounded-lg mt-0.5 shrink-0">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
+              <div>
+                <h4 className="font-bold text-white text-sm mb-2">De 60-dagen-garantie</h4>
+                <p className="text-sm text-slate-400 leading-relaxed">
+                  Na 60 dagen maken we samen de balans op. Hebben wij minder besparing aangewezen dan je abonnement tot dan kostte?
+                  Dan mag je per direct stoppen én betalen we je het verschil terug.
+                  <span className="text-slate-300"> Voorbeeld: abonnement kostte €158, wij wezen €110 aan. Je krijgt €48 terug en je bent vrij.</span>
+                </p>
+                <p className="text-xs text-slate-500 mt-3 leading-relaxed">
+                  Voorwaarde: upload binnen 30 dagen je volledige inkoopadministratie van de afgelopen 12 maanden (alle leveranciers), zodat we eerlijk kunnen rekenen.
+                  De tijdwinst van je team rekenen we niet eens mee. Die is de bonus. Volledige voorwaarden in onze algemene voorwaarden.
+                </p>
+              </div>
             </div>
-        )}
+          </div>
+        </div>
 
-        {/* CONTENT: GROUP (Calculator) */}
-        {activeTab === 'group' && (
-            <div className="max-w-4xl mx-auto animate-fade-in">
-                <div className="bg-slate-800 rounded-3xl p-8 border border-slate-700 shadow-2xl relative">
-                    <div className="mb-8 text-center">
-                        <div className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-purple-500/30">
-                            <Building2 className="w-4 h-4" /> Zorggroep Calculator
-                        </div>
-                        <h3 className="text-2xl font-bold text-white mb-2">Schaalvoordeel voor Zorggroepen</h3>
-                        <p className="text-slate-400 text-sm">Hoe meer locaties, hoe lager de prijs per praktijk.</p>
-                    </div>
-
-                    {/* Slider */}
-                    <div className="mb-8 bg-slate-900/50 p-6 rounded-2xl border border-slate-600">
-                        <div className="flex justify-between items-end mb-4">
-                            <label className="text-sm font-bold text-slate-300">Aantal Locaties</label>
-                            <span className="text-3xl font-bold text-white bg-slate-700 px-3 py-1 rounded-lg min-w-[3ch] text-center">{locations}</span>
-                        </div>
-                        <input
-                            type="range"
-                            min="2" max="100"
-                            value={locations}
-                            onChange={(e) => setLocations(parseInt(e.target.value))}
-                            className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-purple-500"
-                        />
-                        <div className="flex justify-between text-xs text-slate-500 mt-2">
-                            <span>2</span>
-                            <span>50</span>
-                            <span>100+</span>
-                        </div>
-                    </div>
-
-                    {/* Calculation Result */}
-                    <div className="grid grid-cols-2 gap-4 mb-8">
-                        <div className="p-4 bg-slate-700/30 rounded-xl border border-slate-600">
-                            <p className="text-xs text-slate-400 mb-1">Prijs per locatie</p>
-                            <p className="text-xl font-bold text-white">€{enterpriseData.pricePerLoc}</p>
-                        </div>
-                        <div className="p-4 bg-slate-700/30 rounded-xl border border-slate-600">
-                            <p className="text-xs text-slate-400 mb-1">Manager Dashboard</p>
-                            <p className="text-xl font-bold text-white">€{enterpriseData.dashboardFee}</p>
-                        </div>
-                    </div>
-
-                    <div className="mb-8 pt-6 border-t border-slate-700">
-                        <div className="flex justify-between items-center mb-2">
-                            <span className="text-lg font-bold text-white">Totaal per maand</span>
-                            <span className="text-2xl font-bold text-purple-400">€{enterpriseData.monthlyTotal.toLocaleString('nl-NL')}</span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                            <span className="text-sm text-slate-400">Indicatieve jaarlijkse besparing *</span>
-                            <span className="text-sm font-bold text-emerald-400">~ €{enterpriseData.savings.toLocaleString('nl-NL')}</span>
-                        </div>
-                        <p className="text-[10px] text-slate-500 mt-2">* Indicatie op basis van branchegemiddelden. Werkelijke besparing verschilt per praktijk.</p>
-                    </div>
-
-                    <button onClick={onRegisterClick} className="w-full py-4 rounded-xl bg-purple-600 text-white font-bold hover:bg-purple-500 transition-colors shadow-lg shadow-purple-900/20">
-                        Vraag Offerte Aan
-                    </button>
-
-                    <div className="mt-6 text-center">
-                        <p className="text-xs text-slate-400 mb-2">Budget beperkt?</p>
-                        <button className="text-sm font-bold text-slate-300 hover:text-white border-b border-dashed border-slate-500 pb-0.5 hover:border-white transition-colors">
-                            Bekijk de &quot;Analytics Only&quot; optie (€499/mnd)
-                        </button>
-                    </div>
-                </div>
+        {/* Uitleg */}
+        <div className="mt-8 max-w-3xl mx-auto">
+          <div className="bg-slate-800/60 rounded-2xl p-6 border border-slate-700">
+            <div className="flex items-start gap-3">
+              <div className="p-2 bg-blue-500/20 text-blue-400 rounded-lg mt-0.5 shrink-0">
+                <Info className="w-4 h-4" />
+              </div>
+              <div>
+                <h4 className="font-bold text-white text-sm mb-2">Zo werkt het</h4>
+                <ul className="space-y-1.5 text-sm text-slate-400">
+                  <li className="flex items-start gap-2">
+                    <Check className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />
+                    <span><strong className="text-slate-300">Stap 1: gratis inkoop-check.</strong> Upload je facturen en zie wat je te veel betaalt. Geen verplichting, jouw data blijft van jou.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />
+                    <span><strong className="text-slate-300">Stap 2: pas upgraden als het uit kan.</strong> De check laat éérst zien wat er te halen valt. Je koopt nooit blind.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />
+                    <span><strong className="text-slate-300">Eén tarief, alles erin.</strong> Geen pakketten of verborgen modules: het verschil zit alleen in het aantal locaties.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-        )}
+          </div>
+        </div>
 
         {/* Trust Badges */}
         <div className="mt-20 pt-10 border-t border-slate-800 flex flex-wrap justify-center gap-8 md:gap-16 text-slate-500 text-sm font-medium">
-            <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Direct opzegbaar</span>
-            <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Geen setup kosten</span>
-            <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Data op Nederlandse servers</span>
+          <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Eerst bewijs, dan betalen</span>
+          <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Geen setup-kosten</span>
+          <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Data op EU-servers (Frankfurt/Amsterdam)</span>
         </div>
 
       </div>
@@ -337,10 +178,10 @@ export const Pricing: React.FC<PricingProps> = ({ onRegisterClick }) => {
 };
 
 const FeatureItem: React.FC<{ text: string; highlighted?: boolean; light?: boolean }> = ({ text, highlighted, light }) => (
-    <div className="flex items-start gap-3">
-        <div className={`mt-1 p-0.5 rounded-full ${highlighted ? 'bg-emerald-100 text-emerald-600' : light ? 'bg-slate-200 text-slate-500' : 'bg-slate-700 text-slate-400'}`}>
-            <Check className="w-3 h-3" />
-        </div>
-        <span className={`text-sm ${highlighted ? (light ? 'text-slate-900 font-semibold' : 'text-white font-semibold') : light ? 'text-slate-600' : 'text-slate-300'}`}>{text}</span>
+  <div className="flex items-start gap-3">
+    <div className={`mt-1 p-0.5 rounded-full ${highlighted ? 'bg-emerald-100 text-emerald-600' : light ? 'bg-slate-200 text-slate-500' : 'bg-slate-700 text-slate-400'}`}>
+      <Check className="w-3 h-3" />
     </div>
+    <span className={`text-sm ${highlighted ? (light ? 'text-slate-900 font-semibold' : 'text-white font-semibold') : light ? 'text-slate-600' : 'text-slate-300'}`}>{text}</span>
+  </div>
 );

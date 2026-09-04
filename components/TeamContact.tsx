@@ -41,8 +41,8 @@ export const TeamContact: React.FC = () => {
                         <a href="mailto:jord@zentrack.nl" className="flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium">
                             <Mail className="w-4 h-4" /> Email Ons
                         </a>
-                        <a href="https://wa.me/31623885227" className="flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium">
-                            <MessageCircle className="w-4 h-4" /> WhatsApp (06-2388-5227)
+                        <a href="https://wa.me/31626667714" className="flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium">
+                            <MessageCircle className="w-4 h-4" /> WhatsApp (06-2666-7714)
                         </a>
                     </div>
                 </div>

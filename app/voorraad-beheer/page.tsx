@@ -77,7 +77,7 @@ export default function VoorraadBeheerPage() {
             </div>
             <div className="flex justify-start">
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
-                <p className="font-bold text-slate-800 mb-1">Handschoenen Nitryl M</p>
+                <p className="font-bold text-slate-800 mb-1">Handschoenen nitril M</p>
                 <div className="space-y-1 text-slate-600">
                   <p>Locatie: <span className="font-bold text-slate-800">Behandelkamer 2, Kast B</span></p>
                   <p>Voorraad: <span className="font-bold text-emerald-600">8 dozen</span></p>
@@ -109,9 +109,9 @@ export default function VoorraadBeheerPage() {
                 <div className="space-y-1.5 text-slate-600">
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-red-500 shrink-0"></span> <span className="font-bold text-red-600">Tongspatel</span> <span className="text-[10px]">(op)</span></p>
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span> <span>Hechtmateriaal 3-0</span> <span className="text-[10px]">(2 over)</span></p>
-                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-yellow-500 shrink-0"></span> <span>Desinfectiemiddel</span> <span className="text-[10px]">(1 week)</span></p>
+                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span> <span>Desinfectiemiddel</span> <span className="text-[10px]">(1 week)</span></p>
                 </div>
-                <div className="mt-2 bg-blue-50 p-1.5 rounded border border-blue-100 text-[10px] text-blue-700 font-bold">
+                <div className="mt-2 bg-emerald-50 p-1.5 rounded border border-emerald-100 text-[10px] text-emerald-700 font-bold">
                   3 producten onder minimumvoorraad
                 </div>
               </div>
@@ -156,14 +156,14 @@ export default function VoorraadBeheerPage() {
                     <button
                       key={i}
                       onClick={() => setActiveScenario(i)}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-indigo-500' : 'w-1.5 bg-slate-300'}`}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-emerald-500' : 'w-1.5 bg-slate-300'}`}
                     />
                   ))}
                 </div>
               </div>
 
               <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
-                <div className="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-100 text-indigo-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+                <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
                   <Boxes className="w-4 h-4" />
                   <span>Per kast, kamer en locatie</span>
                 </div>
@@ -174,8 +174,8 @@ export default function VoorraadBeheerPage() {
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
-                  ZenTrack geeft real-time inzicht in uw voorraad per kast, kamer en locatie. Automatisch bijgewerkt bij elke factuur en telling.
-                  <strong className="text-slate-900 block mt-2">Altijd weten wat er is. Via WhatsApp of dashboard.</strong>
+                  ZenTrack geeft inzicht in je voorraad per kast, kamer en locatie. Binnenkomende voorraad wordt automatisch verwerkt vanuit facturen en pakbonnen; verbruik registreert je team met een foto of scan via WhatsApp, of een snelle telling.
+                  <strong className="text-slate-900 block mt-2">Zo weet je wat er is — via WhatsApp of dashboard.</strong>
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
@@ -183,7 +183,7 @@ export default function VoorraadBeheerPage() {
                     onClick={navigateToRegister}
                     className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2"
                   >
-                    Gratis Proberen <ArrowRight className="w-5 h-5" />
+                    Start de gratis inkoop-check <ArrowRight className="w-5 h-5" />
                   </button>
                   <a href="#hoe-werkt-het" className="w-full sm:w-auto px-8 py-4 rounded-xl text-slate-600 font-bold border border-slate-200 hover:bg-slate-50 transition-colors text-center">
                     Hoe werkt het?
@@ -192,7 +192,7 @@ export default function VoorraadBeheerPage() {
 
                 <div className="mt-10 flex flex-wrap items-center justify-center md:justify-start gap-6 text-sm text-slate-500 font-medium">
                   <span className="flex items-center gap-2"><MapPin className="w-4 h-4" /> Per kast en locatie</span>
-                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> GDPR Compliant</span>
+                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> Geen patiëntgegevens</span>
                   <span className="flex items-center gap-2"><Smartphone className="w-4 h-4" /> Via WhatsApp</span>
                 </div>
               </div>
@@ -223,17 +223,17 @@ export default function VoorraadBeheerPage() {
                   icon: AlertTriangle,
                   title: 'Pas bij gebruik ontdekken dat iets op is',
                   desc: 'Midden in een consult geen handschoenen meer. Of de assistente loopt naar een lege kast.',
-                  color: 'text-orange-500',
-                  bg: 'bg-orange-50',
-                  border: 'border-orange-100',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
                 {
                   icon: Clock,
                   title: 'Uren kwijt aan voorraadtellingen',
                   desc: 'Elke week alle kasten langs. Per kamer, per kast, per plank. Kost 1-3 uur per telling.',
-                  color: 'text-yellow-600',
-                  bg: 'bg-yellow-50',
-                  border: 'border-yellow-100',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-6 border ${item.border}`}>
@@ -266,14 +266,14 @@ export default function VoorraadBeheerPage() {
                   title: 'Producten toevoegen',
                   desc: 'Scan een barcode, upload een factuur of voeg handmatig toe. Koppel aan kast, kamer of locatie.',
                   icon: QrCode,
-                  color: 'bg-indigo-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '2',
                   title: 'Automatisch bijwerken',
                   desc: 'Bij elke factuur, pakbon of telling wordt de voorraad automatisch aangepast. Geen handmatig werk.',
                   icon: Package,
-                  color: 'bg-orange-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '3',
@@ -308,9 +308,9 @@ export default function VoorraadBeheerPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { label: 'Behandelkamers', desc: 'Per kamer overzicht', icon: '🏥', bg: 'bg-blue-50', border: 'border-blue-200' },
+                { label: 'Behandelkamers', desc: 'Per kamer overzicht', icon: '🏥', bg: 'bg-emerald-50', border: 'border-emerald-200' },
                 { label: 'Voorraadkast', desc: 'Centrale opslag', icon: '🗄️', bg: 'bg-emerald-50', border: 'border-emerald-200' },
-                { label: 'Spreekkamers', desc: 'Huisarts materiaal', icon: '🩺', bg: 'bg-purple-50', border: 'border-purple-200' },
+                { label: 'Spreekkamers', desc: 'Huisarts materiaal', icon: '🩺', bg: 'bg-emerald-50', border: 'border-emerald-200' },
                 { label: 'Spoedkast', desc: 'Noodmedicatie', icon: '🚨', bg: 'bg-red-50', border: 'border-red-200' },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-5 border ${item.border} text-center`}>
@@ -374,21 +374,21 @@ export default function VoorraadBeheerPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
               <Boxes className="w-4 h-4" />
-              <span>Altijd weten wat u op voorraad heeft</span>
+              <span>Altijd weten wat je op voorraad heeft</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Weg met Excel.<br />
               <span className="text-emerald-400">Welkom bij real-time inzicht.</span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-              Begin met uw eerste factuur of barcodescan. ZenTrack bouwt automatisch uw voorraadinzicht op.
+              Begin met je eerste factuur of barcodescan. ZenTrack bouwt automatisch je voorraadinzicht op.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <button
                 onClick={navigateToRegister}
                 className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-900/20 flex items-center justify-center gap-2"
               >
-                Gratis Proberen <ArrowRight className="w-5 h-5" />
+                Start de gratis inkoop-check <ArrowRight className="w-5 h-5" />
               </button>
               <a href="/#contact" className="w-full sm:w-auto px-8 py-4 rounded-xl text-slate-300 font-bold border border-slate-700 hover:bg-slate-800 transition-colors text-center">
                 Neem contact op
@@ -397,7 +397,7 @@ export default function VoorraadBeheerPage() {
             <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-slate-500 font-medium">
               <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Gratis inkoop-check</span>
               <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Via WhatsApp</span>
-              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Nederlandse servers</span>
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> EU-servers (Frankfurt/Amsterdam)</span>
             </div>
           </div>
         </section>

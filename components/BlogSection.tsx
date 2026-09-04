@@ -8,7 +8,7 @@ export const BlogSection: React.FC = () => {
     {
       category: "Inzicht",
       title: "De verborgen kosten van 'grijze' voorraad",
-      excerpt: "Uit brancheonderzoek blijkt dat tot 15% van medische verbruiksartikelen verloopt voordat het gebruikt wordt. Wat betekent dit financieel voor uw praktijk?",
+      excerpt: "Uit brancheonderzoek blijkt dat tot 15% van medische verbruiksartikelen verloopt voordat het gebruikt wordt. Wat betekent dit financieel voor je praktijk?",
       date: "20 mei 2026",
       readTime: "4 min",
       image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800",
@@ -17,7 +17,7 @@ export const BlogSection: React.FC = () => {
     {
       category: "Wetgeving & Privacy",
       title: "AVG in de praktijk: Waarom WhatsApp veilig kan zijn",
-      excerpt: "Hoe ZenTrack voldoet aan de NEN7510-norm voor de zorg, en waarom je geen patiëntgegevens via WhatsApp deelt. In gewone taal uitgelegd.",
+      excerpt: "Hoe ZenTrack draait op infrastructuur die aan ISO 27001 en NEN 7510 voldoet, en waarom je geen patiëntgegevens via WhatsApp deelt. In gewone taal uitgelegd.",
       date: "6 mei 2026",
       readTime: "6 min",
       image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
@@ -106,7 +106,7 @@ export const BlogSection: React.FC = () => {
            </div>
 
            <a
-              href="https://wa.me/31623885227?text=Ik%20heb%20vragen%20over%20ZenTrack"
+              href="https://wa.me/31626667714?text=Ik%20heb%20vragen%20over%20ZenTrack"
               className="relative z-10 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold px-6 py-3 rounded-xl transition-all flex items-center gap-2 whitespace-nowrap"
            >
               Open WhatsApp <ArrowRight className="w-4 h-4" />

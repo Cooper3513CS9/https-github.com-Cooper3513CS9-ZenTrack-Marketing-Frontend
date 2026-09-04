@@ -73,16 +73,16 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
                         <p className="font-bold text-slate-800 mb-1">✅ Analyse Compleet</p>
                         <p className="text-slate-600 mb-2">12 artikelen herkend. Totaal: €423,50.</p>
                         
-                        <div className="bg-blue-50 p-2 rounded border border-blue-100">
-                           <p className="font-bold text-blue-700 flex items-center gap-1 mb-1">
+                        <div className="bg-emerald-50 p-2 rounded border border-emerald-100">
+                           <p className="font-bold text-emerald-700 flex items-center gap-1 mb-1">
                               <Sparkles className="w-3 h-3" /> Optimalisatie kans
                            </p>
-                           <p className="text-blue-800 leading-snug">
+                           <p className="text-emerald-800 leading-snug">
                               Voor <span className="italic">Nitril Handschoenen M</span> is op basis van je eigen historie een besparing mogelijk.
                            </p>
                            <div className="mt-2 flex gap-2">
-                              <span className="text-[10px] bg-white border border-blue-200 px-2 py-1 rounded text-blue-600 cursor-pointer">Details?</span>
-                              <span className="text-[10px] bg-blue-600 text-white px-2 py-1 rounded cursor-pointer">Regel het</span>
+                              <span className="text-[10px] bg-white border border-emerald-200 px-2 py-1 rounded text-emerald-700 cursor-pointer">Details?</span>
+                              <span className="text-[10px] bg-emerald-600 text-white px-2 py-1 rounded cursor-pointer">Regel het</span>
                            </div>
                         </div>
                      </div>
@@ -156,7 +156,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
           
           {/* 1. PHONE VISUAL (Mobile First - Appears on top on mobile) */}
-          <div className="w-full md:w-1/2 flex justify-center order-1 md:order-2">
+          <div className="w-full md:w-1/2 flex justify-center order-2 md:order-2">
             <div className="relative w-[260px] md:w-[320px] h-[520px] md:h-[640px] bg-slate-900 rounded-[2.5rem] border-[8px] border-slate-800 shadow-2xl overflow-hidden ring-1 ring-slate-900/50">
                {/* Notch */}
                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-slate-800 rounded-b-2xl z-20"></div>
@@ -186,20 +186,20 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
           </div>
 
           {/* 2. TEXT CONTENT (Appears below on mobile) */}
-          <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
+          <div className="w-full md:w-1/2 text-center md:text-left order-1 md:order-1">
             <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
               <CheckCircle2 className="w-4 h-4" />
               <span>Gebouwd voor Nederlandse Huisartspraktijken</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
-              Slim voorraadbeheer. <br/>
+              Slim voorraadbeheer.<br/>
               <span className="text-emerald-600">Gewoon via WhatsApp.</span>
             </h1>
             
             <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
-              Maak een foto van een factuur, product of pakbon en ZenTrack regelt de rest. Geen nieuwe software leren, geen inlogcodes zoeken. 
-              <strong className="text-slate-900 block mt-2">Jij houdt de regie op het dashboard.</strong>
+              Voorraad, bestellen en vervaldatums geregeld: je team appt een foto en Emma, je digitale collega, doet de rest. Jij keurt goed met één JA, en alles is vastgelegd voor de visitatie-map.
+              <strong className="text-slate-900 block mt-2">Start met je eigen facturen: de gratis inkoop-check laat zien waar je besparingskansen zitten.</strong>
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
@@ -207,11 +207,11 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
                 onClick={onCtaClick}
                 className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2"
               >
-                Start Gratis & Veilig
+                Start de gratis inkoop-check
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <a href="#features" className="w-full sm:w-auto px-8 py-4 rounded-xl text-slate-600 font-bold border border-slate-200 hover:bg-slate-50 transition-colors text-center">
-                Bekijk features
+              <a href="#demo" className="w-full sm:w-auto px-8 py-4 rounded-xl text-slate-600 font-bold border border-slate-200 hover:bg-slate-50 transition-colors text-center">
+                Bekijk ZenTrack in actie
               </a>
             </div>
 

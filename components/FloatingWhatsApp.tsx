@@ -31,7 +31,7 @@ export const FloatingWhatsApp: React.FC = () => {
       </div>
 
       <a
-        href="https://wa.me/31623885227?text=Hi%20ZenTrack,%20ik%20heb%20een%20vraag%20over..."
+        href="https://wa.me/31626667714?text=Hi%20ZenTrack,%20ik%20heb%20een%20vraag%20over..."
         target="_blank"
         rel="noopener noreferrer"
         className="bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-xl shadow-emerald-900/20 transition-all hover:scale-110 flex items-center justify-center group"

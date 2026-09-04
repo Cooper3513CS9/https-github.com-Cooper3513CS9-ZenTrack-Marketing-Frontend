@@ -19,7 +19,7 @@ export const ManagerDashboardSection: React.FC = () => {
             </div>
             
             <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-              Het <span className="text-blue-400">Control Center</span><br />
+              Het <span className="text-blue-400">centrale dashboard</span><br />
               terwijl je team mobiel werkt.
             </h2>
             

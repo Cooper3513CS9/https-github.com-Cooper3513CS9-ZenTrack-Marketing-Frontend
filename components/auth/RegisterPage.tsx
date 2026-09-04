@@ -38,13 +38,13 @@ export const RegisterPage: React.FC<RegisterPageProps> = ({ onRegisterSuccess, o
               Maak een account aan en begin direct met het automatiseren van uw voorraadbeheer.
             </p>
             <ul className="space-y-3 text-sm text-slate-300">
-              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div> 14 dagen gratis</li>
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div> Gratis inkoop-check</li>
               <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div> Geen betaalgegevens nodig</li>
               <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div> Setup in 5 minuten</li>
             </ul>
           </div>
           <div className="mt-8">
-             <p className="text-xs text-slate-500">Hulp nodig? <br/> WhatsApp Jord: 06-23885227</p>
+             <p className="text-xs text-slate-500">Hulp nodig? <br/> WhatsApp: 06-2666-7714</p>
           </div>
         </div>
 

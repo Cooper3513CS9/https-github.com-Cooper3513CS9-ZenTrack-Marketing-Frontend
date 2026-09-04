@@ -17,10 +17,40 @@ export const ContactSection: React.FC = () => {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [sendFailed, setSendFailed] = useState(false);
+  const [sending, setSending] = useState(false);
+
+  // Fix 30 aug 2026: het formulier verstuurde niets maar toonde wel succes.
+  // Nu echt POSTen; als de mail-route niet kan versturen tonen we een
+  // eerlijke mailto-uitwijk in plaats van nep-succes.
+  const handleSubmit = async (e: React.FormEvent) => {
       e.preventDefault();
-      setSubmitted(true);
+      setSending(true);
+      setSendFailed(false);
+      try {
+          const res = await fetch('/api/contact', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                  firstName: formState.firstName,
+                  lastName: formState.lastName,
+                  email: formState.email,
+                  message: formState.message,
+              }),
+          });
+          if (res.ok) {
+              setSubmitted(true);
+          } else {
+              setSendFailed(true);
+          }
+      } catch {
+          setSendFailed(true);
+      } finally {
+          setSending(false);
+      }
   };
+
+  const mailtoFallback = `mailto:info@zentrack.nl?subject=${encodeURIComponent('Vraag via zentrack.nl')}&body=${encodeURIComponent(formState.message || '')}`;
 
   return (
     <section id="contact" className="py-20 bg-white scroll-mt-24">
@@ -44,7 +74,7 @@ export const ContactSection: React.FC = () => {
                         </div>
                         <div>
                             <p className="font-bold text-slate-900">Telefoon & WhatsApp</p>
-                            <p className="text-slate-600">06-10482270</p>
+                            <p className="text-slate-600">06-2666-7714</p>
                             <p className="text-xs text-slate-400">Bereikbaar tijdens kantooruren</p>
                         </div>
                     </div>
@@ -101,8 +131,8 @@ export const ContactSection: React.FC = () => {
                                 <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6 text-emerald-600">
                                     <CheckCircle className="w-8 h-8" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-slate-900 mb-2">Bedankt voor uw bericht!</h3>
-                                <p className="text-slate-600">We hebben uw aanvraag ontvangen.</p>
+                                <h3 className="text-2xl font-bold text-slate-900 mb-2">Bedankt voor je bericht!</h3>
+                                <p className="text-slate-600">We hebben je bericht ontvangen en reageren zo snel mogelijk.</p>
                                 <button onClick={() => setSubmitted(false)} className="mt-8 text-emerald-600 font-medium hover:underline">
                                     Nog een bericht sturen
                                 </button>
@@ -127,8 +157,15 @@ export const ContactSection: React.FC = () => {
                                     <label className="block text-sm font-medium text-slate-700 mb-2">Bericht</label>
                                     <textarea rows={4} className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200" value={formState.message} onChange={e => setFormState({...formState, message: e.target.value})}></textarea>
                                 </div>
-                                <button type="submit" className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition-colors">
-                                    Verstuur bericht
+                                {sendFailed && (
+                                    <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800">
+                                        Versturen lukte even niet. Mail ons direct op{' '}
+                                        <a href={mailtoFallback} className="font-semibold underline">info@zentrack.nl</a>
+                                        {' '}(je bericht staat dan al klaar).
+                                    </div>
+                                )}
+                                <button type="submit" disabled={sending} className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition-colors disabled:opacity-60">
+                                    {sending ? 'Bezig met versturen...' : 'Verstuur bericht'}
                                 </button>
                             </form>
                         )}

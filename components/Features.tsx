@@ -7,25 +7,25 @@ import { Radar, ScanLine, PackageCheck, Boxes, TrendingDown, ShieldCheck, UserCh
 const features = [
   {
     title: 'Expiratie Radar',
-    description: 'Houd vervaldatums bij van 25 producten. Automatische WhatsApp alerts voordat iets verloopt.',
+    description: 'Foto van de verpakking en de vervaldatum staat erin. WhatsApp-alert 30, 14 en 7 dagen vooraf, mét kastlocatie.',
     href: '/expiratie-radar',
     icon: Radar,
     iconBg: 'bg-orange-100',
     iconColor: 'text-orange-600',
     ctaColor: 'text-emerald-600',
-    cardBorder: 'border-2 border-orange-200',
-    cardBg: 'bg-orange-50/30',
-    isHighlighted: true,
-    ctaText: 'Start Gratis',
+    cardBorder: 'border border-slate-200',
+    cardBg: 'bg-white',
+    isHighlighted: false,
+    ctaText: 'Meer info',
   },
   {
-    title: 'Factuur Scanner',
+    title: 'Factuurscanner',
     description: 'Maak een foto of upload een PDF. AI herkent producten, prijzen en leveranciers in 30 seconden.',
     href: '/factuur-scanner',
     icon: ScanLine,
-    iconBg: 'bg-blue-100',
-    iconColor: 'text-blue-600',
-    ctaColor: 'text-blue-600',
+    iconBg: 'bg-emerald-100',
+    iconColor: 'text-emerald-600',
+    ctaColor: 'text-emerald-600',
     cardBorder: 'border border-slate-200',
     cardBg: 'bg-white',
     isHighlighted: false,
@@ -36,48 +36,48 @@ const features = [
     description: 'Scan de pakbon bij levering. ZenTrack vergelijkt direct met de factuur en meldt ontbrekende artikelen.',
     href: '/pakbon-verificatie',
     icon: PackageCheck,
-    iconBg: 'bg-teal-100',
-    iconColor: 'text-teal-600',
-    ctaColor: 'text-teal-600',
+    iconBg: 'bg-emerald-100',
+    iconColor: 'text-emerald-600',
+    ctaColor: 'text-emerald-600',
     cardBorder: 'border border-slate-200',
     cardBg: 'bg-white',
     isHighlighted: false,
     ctaText: 'Meer info',
   },
   {
-    title: 'Voorraad Beheer',
+    title: 'Voorraadbeheer',
     description: 'Real-time inzicht per behandelkamer en locatie. Voorraadstand altijd actueel via WhatsApp.',
     href: '/voorraad-beheer',
     icon: Boxes,
-    iconBg: 'bg-indigo-100',
-    iconColor: 'text-indigo-600',
-    ctaColor: 'text-indigo-600',
+    iconBg: 'bg-emerald-100',
+    iconColor: 'text-emerald-600',
+    ctaColor: 'text-emerald-600',
     cardBorder: 'border border-slate-200',
     cardBg: 'bg-white',
     isHighlighted: false,
     ctaText: 'Meer info',
   },
   {
-    title: 'Slim Bestellen',
-    description: 'ZenTrack leert van je eigen factuurhistorie en herinnert u wanneer het tijd is om bij te bestellen — én wat u de vorige keer betaalde.',
+    title: 'Slim bestellen',
+    description: 'ZenTrack leert van je eigen factuurhistorie en herinnert je wanneer het tijd is om bij te bestellen, én wat je de vorige keer betaalde.',
     href: '/slim-bestellen',
     icon: TrendingDown,
-    iconBg: 'bg-amber-100',
-    iconColor: 'text-amber-600',
-    ctaColor: 'text-amber-600',
+    iconBg: 'bg-emerald-100',
+    iconColor: 'text-emerald-600',
+    ctaColor: 'text-emerald-600',
     cardBorder: 'border border-slate-200',
     cardBg: 'bg-white',
     isHighlighted: false,
     ctaText: 'Meer info',
   },
   {
-    title: 'NPA Accreditatie',
-    description: 'Uw NPA-dossier groeit automatisch mee. Voorraad, expiraties en leveringen — altijd gedocumenteerd.',
+    title: 'Visitatie & kwaliteitsdossier',
+    description: 'Alles met een keurings- of vervaldatum bewaakt, met bewijsrapport voor je visitatie-map. Het datums-deel is altijd aantoonbaar op orde.',
     href: '/npa-accreditatie',
     icon: ShieldCheck,
-    iconBg: 'bg-violet-100',
-    iconColor: 'text-violet-600',
-    ctaColor: 'text-violet-600',
+    iconBg: 'bg-emerald-100',
+    iconColor: 'text-emerald-600',
+    ctaColor: 'text-emerald-600',
     cardBorder: 'border border-slate-200',
     cardBg: 'bg-white',
     isHighlighted: false,
@@ -85,14 +85,14 @@ const features = [
   },
   {
     title: 'Besparingscalculator',
-    description: 'Wat levert ZenTrack uw praktijk op? Reken het uit met uw eigen cijfers — in 30 seconden.',
+    description: 'Wat levert ZenTrack je praktijk op? Reken het uit met je eigen cijfers, in 30 seconden.',
     href: '/#calculator',
     icon: Calculator,
     iconBg: 'bg-emerald-100',
     iconColor: 'text-emerald-600',
     ctaColor: 'text-emerald-600',
-    cardBorder: 'border-2 border-emerald-200',
-    cardBg: 'bg-emerald-50/30',
+    cardBorder: 'border border-slate-200',
+    cardBg: 'bg-white',
     isHighlighted: false,
     ctaText: 'Bereken uw besparing',
   },
@@ -109,10 +109,10 @@ export const Features: React.FC = () => {
             Alles in één platform
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            Wat kan ZenTrack voor <span className="text-emerald-600">uw praktijk</span>?
+            Wat regelt ZenTrack voor <span className="text-emerald-600">je praktijk</span>?
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Van factuurverwerking tot expiratiebeheer — ontdek alle mogelijkheden en start vandaag.
+            Van factuurverwerking tot expiratiebeheer: ontdek alle mogelijkheden en start vandaag.
           </p>
         </div>
 
@@ -122,8 +122,8 @@ export const Features: React.FC = () => {
             <UserCheck className="w-5 h-5" />
           </div>
           <p className="text-slate-700 text-sm">
-            <strong className="text-slate-900">Jij beslist altijd.</strong> ZenTrack stelt voor, jij geeft de &apos;Go&apos;.
-            <span className="text-emerald-600 font-medium"> Emma is je assistent, niet je baas.</span>
+            <strong className="text-slate-900">Emma doet voorstellen. Jij controleert en geeft akkoord.</strong>
+            <span className="text-emerald-600 font-medium"> Zonder jouw toestemming wordt niets besteld.</span>
           </p>
         </div>
 
@@ -135,7 +135,7 @@ export const Features: React.FC = () => {
               <Link key={feature.href} href={feature.href} className="group">
                 <div className={`relative ${feature.cardBg} ${feature.cardBorder} rounded-2xl p-6 h-full flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}>
 
-                  {/* Gratis Badge for Expiratie Radar */}
+                  {/* Optionele uitlicht-badge (momenteel geen kaart uitgelicht) */}
                   {feature.isHighlighted && (
                     <span className="absolute -top-3 -right-3 bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">
                       Gratis
@@ -191,8 +191,8 @@ export const Features: React.FC = () => {
               <div className="absolute -left-[2.4rem] w-6 h-6 rounded-full bg-white border-4 border-emerald-500 shadow-sm flex items-center justify-center">
                 <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
               </div>
-              <h4 className="font-bold text-slate-900">Toekomst: Automatisch Bestellen</h4>
-              <p className="text-sm text-slate-500 mt-1">ZenTrack zet de bestelling klaar voordat jij weet dat het op is. Jij klikt alleen op &apos;Akkoord&apos;.</p>
+              <h4 className="font-bold text-slate-900">Bestellen wordt JA appen</h4>
+              <p className="text-sm text-slate-500 mt-1">ZenTrack voorspelt wanneer bijbestellen nodig is en zet een voorstel voor je klaar. Jij keurt goed met één JA via WhatsApp. Er gaat nooit iets de deur uit zonder jouw akkoord.</p>
             </div>
           </div>
 

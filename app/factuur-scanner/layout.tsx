@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Factuur Scanner Huisarts: Facturen Automatisch Inlezen | ZenTrack',
+  title: 'Factuur Scanner Huisarts: Facturen Automatisch Inlezen',
   description: 'Factuurscanner voor huisartspraktijken. Sleep een factuur in je dashboard, ZenTrack herkent binnen 30 seconden alle producten, prijzen en leveranciers. Geen handmatig overtypen meer.',
   keywords: [
     'factuur scanner huisarts',

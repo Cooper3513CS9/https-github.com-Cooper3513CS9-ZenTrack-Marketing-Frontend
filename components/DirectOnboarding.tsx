@@ -51,7 +51,7 @@ export const DirectOnboarding: React.FC<DirectOnboardingProps> = () => {
                {/* Mobile Button */}
               <div className="lg:hidden">
                 <a
-                  href="https://wa.me/31623885227?text=Hi%20ZenTrack,%20ik%20wil%20graag%20starten!"
+                  href="https://wa.me/31626667714?text=Hi%20ZenTrack,%20ik%20wil%20graag%20starten!"
                   className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white text-lg font-bold py-4 rounded-xl flex items-center justify-center gap-3 shadow-lg shadow-emerald-900/20 transition-transform active:scale-95"
                 >
                   <Smartphone className="w-6 h-6" />

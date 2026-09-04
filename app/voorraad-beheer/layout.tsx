@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Voorraadbeheer Huisartspraktijk: Real-time Zonder Excel | ZenTrack',
+  title: 'Voorraadbeheer Huisartspraktijk: Real-time Zonder Excel',
   description: 'Voorraadbeheer in huisartspraktijken kost gemiddeld 1-3 uur per week aan handmatig tellen en bestellen. ZenTrack vervangt Excel-lijsten door real-time tracking per kast, kamer en locatie via WhatsApp.',
   keywords: [
     'voorraadbeheer huisartspraktijk',

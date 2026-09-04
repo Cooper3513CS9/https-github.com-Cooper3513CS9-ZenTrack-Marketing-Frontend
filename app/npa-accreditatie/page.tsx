@@ -79,11 +79,11 @@ export default function NpaAccreditatiePage() {
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
                 <p className="font-bold text-slate-800 mb-2">Dossier overzicht</p>
                 <div className="space-y-1.5 text-slate-600">
-                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-blue-500 shrink-0" /> <span>Voorraadbeheer documentatie ✓</span></p>
-                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-blue-500 shrink-0" /> <span>Expiratie controle logboek ✓</span></p>
-                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-blue-500 shrink-0" /> <span>Leverancier audit trail ✓</span></p>
+                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-emerald-500 shrink-0" /> <span>Voorraadbeheer documentatie ✓</span></p>
+                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-emerald-500 shrink-0" /> <span>Expiratie controle logboek ✓</span></p>
+                  <p className="flex items-center gap-1.5"><FileCheck className="w-3 h-3 text-emerald-500 shrink-0" /> <span>Leveranciers-logboek ✓</span></p>
                 </div>
-                <div className="mt-2 bg-blue-50 p-1.5 rounded border border-blue-100 text-[10px] text-blue-700 font-bold">
+                <div className="mt-2 bg-emerald-50 p-1.5 rounded border border-emerald-100 text-[10px] text-emerald-700 font-bold">
                   Overzicht beschikbaar in dashboard
                 </div>
               </div>
@@ -107,7 +107,7 @@ export default function NpaAccreditatiePage() {
                 <p className="font-bold text-slate-800 mb-2">Aandachtspunten NPA</p>
                 <div className="space-y-1.5 text-slate-600">
                   <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span> <span>Spoedmedicatie check verloopt over 2 weken</span></p>
-                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-yellow-500 shrink-0"></span> <span>Jaarlijkse sterilisatie controle (maart)</span></p>
+                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span> <span>Jaarlijkse sterilisatie controle (maart)</span></p>
                 </div>
                 <div className="mt-2 bg-emerald-50 p-1.5 rounded border border-emerald-100 text-[10px] text-emerald-700">
                   <span className="font-bold">4 NPA domeinen</span> gedekt. 2 aandachtspunten.
@@ -154,26 +154,29 @@ export default function NpaAccreditatiePage() {
                     <button
                       key={i}
                       onClick={() => setActiveScenario(i)}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-violet-500' : 'w-1.5 bg-slate-300'}`}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-emerald-500' : 'w-1.5 bg-slate-300'}`}
                     />
                   ))}
                 </div>
               </div>
 
               <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
-                <div className="inline-flex items-center gap-2 bg-violet-50 border border-violet-100 text-violet-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+                <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
                   <ShieldCheck className="w-4 h-4" />
-                  <span>NPA-conforme werkprocessen</span>
+                  <span>Aantoonbare voorraad- en vervaldatumcontroles</span>
                 </div>
 
                 <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
-                  Uw NPA-Dossier Groeit Automatisch Mee.<br />
-                  <span className="text-emerald-600">Zonder Paniek voor de Visitatie.</span>
+                  Bouw tijdens het dagelijkse werk<br />
+                  <span className="text-emerald-600">aan je kwaliteitsdossier.</span>
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
-                  ZenTrack legt automatisch uw voorraad, expiraties en leveringen vast — de basis voor uw NPA-accreditatie. Geen extra werk.
-                  <strong className="text-slate-900 block mt-2">Wij vullen de mappen, u doet de zorg.</strong>
+                  ZenTrack registreert voorraadcontroles, vervaldatums, leveringen en gebruikersacties. Zo heb je minder voorbereidingswerk wanneer een visitatie nadert.
+                  <strong className="text-slate-900 block mt-2">ZenTrack verzamelt de registraties; jouw praktijk houdt de inhoudelijke controle.</strong>
+                </p>
+                <p className="text-xs text-slate-500 mb-8 max-w-xl mx-auto md:mx-0">
+                  ZenTrack ondersteunt de voorbereiding en dossiervorming, maar vervangt geen formele kwaliteitscontrole en garandeert geen accreditatie.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
@@ -181,7 +184,7 @@ export default function NpaAccreditatiePage() {
                     onClick={navigateToRegister}
                     className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2"
                   >
-                    Gratis Proberen <ArrowRight className="w-5 h-5" />
+                    Start de gratis inkoop-check <ArrowRight className="w-5 h-5" />
                   </button>
                   <a href="#hoe-werkt-het" className="w-full sm:w-auto px-8 py-4 rounded-xl text-slate-600 font-bold border border-slate-200 hover:bg-slate-50 transition-colors text-center">
                     Hoe werkt het?
@@ -189,8 +192,8 @@ export default function NpaAccreditatiePage() {
                 </div>
 
                 <div className="mt-10 flex flex-wrap items-center justify-center md:justify-start gap-6 text-sm text-slate-500 font-medium">
-                  <span className="flex items-center gap-2"><Award className="w-4 h-4" /> NPA Ready</span>
-                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> AVG-proof • Geen patiëntgegevens</span>
+                  <span className="flex items-center gap-2"><Award className="w-4 h-4" /> Dossieropbouw voor visitatie</span>
+                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> Geen patiëntgegevens • Verwerkersovereenkomst beschikbaar</span>
                   <span className="flex items-center gap-2"><Smartphone className="w-4 h-4" /> Via WhatsApp</span>
                 </div>
               </div>
@@ -221,17 +224,17 @@ export default function NpaAccreditatiePage() {
                   icon: AlertTriangle,
                   title: 'Documentatie niet op orde',
                   desc: 'Wanneer zijn de spoedmedicijnen voor het laatst gecontroleerd? Wie heeft de sterilisatie uitgevoerd? Geen bewijs.',
-                  color: 'text-orange-500',
-                  bg: 'bg-orange-50',
-                  border: 'border-orange-100',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
                 {
                   icon: Clock,
                   title: 'Dubbel werk voor kwaliteit',
                   desc: 'Eerst het werk doen, dan apart de documentatie invullen. Twee keer werk, en het wordt vergeten.',
-                  color: 'text-yellow-600',
-                  bg: 'bg-yellow-50',
-                  border: 'border-yellow-100',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-6 border ${item.border}`}>
@@ -253,7 +256,7 @@ export default function NpaAccreditatiePage() {
                 <span>3 simpele stappen</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-                Zo werkt <span className="text-emerald-600">NPA Accreditatie</span>
+                Zo bouwt <span className="text-emerald-600">je kwaliteitsdossier</span> zich op
               </h2>
             </div>
 
@@ -264,14 +267,14 @@ export default function NpaAccreditatiePage() {
                   title: 'Gebruik ZenTrack normaal',
                   desc: 'Scan facturen, check pakbonnen, beheer voorraad. De documentatie wordt automatisch aangemaakt.',
                   icon: BookOpen,
-                  color: 'bg-violet-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '2',
                   title: 'Audit trail groeit mee',
                   desc: 'Elke actie wordt vastgelegd: wie, wat, wanneer. Complete traceerbaarheid zonder extra werk.',
                   icon: FileCheck,
-                  color: 'bg-orange-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '3',
@@ -306,9 +309,9 @@ export default function NpaAccreditatiePage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { label: 'Voorraadregistratie', desc: 'Compleet logboek', icon: '📋', bg: 'bg-blue-50', border: 'border-blue-200' },
-                { label: 'Expiratie Controle', desc: 'Alle checks vastgelegd', icon: '📅', bg: 'bg-emerald-50', border: 'border-emerald-200' },
-                { label: 'Leverancierbeheer', desc: 'Inkoop audit trail', icon: '🏢', bg: 'bg-purple-50', border: 'border-purple-200' },
+                { label: 'Voorraadregistratie', desc: 'Compleet logboek', icon: '📋', bg: 'bg-emerald-50', border: 'border-emerald-200' },
+                { label: 'Expiratie Controle', desc: 'Alle checks vastgelegd', icon: '📅', bg: 'bg-orange-50', border: 'border-orange-200' },
+                { label: 'Leverancierbeheer', desc: 'Inkoop-logboek', icon: '🏢', bg: 'bg-emerald-50', border: 'border-emerald-200' },
                 { label: 'Spoedmedicatie', desc: 'Controle logboek', icon: '🚨', bg: 'bg-red-50', border: 'border-red-200' },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-5 border ${item.border} text-center`}>
@@ -326,7 +329,7 @@ export default function NpaAccreditatiePage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                Zonder vs. met <span className="text-emerald-600">NPA Accreditatie</span>
+                Zonder vs. mét <span className="text-emerald-600">ZenTrack</span>
               </h2>
             </div>
 
@@ -353,12 +356,12 @@ export default function NpaAccreditatiePage() {
                   <div className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center">
                     <Check className="w-5 h-5 text-emerald-600" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900">Met NPA Accreditatie</h3>
+                  <h3 className="text-lg font-bold text-slate-900">Met ZenTrack</h3>
                 </div>
                 <div className="space-y-3">
                   <FeatureCheck text="Audit-dossier bouwt zich automatisch op" highlighted />
                   <FeatureCheck text="Automatische documentatie uit dagelijks gebruik" />
-                  <FeatureCheck text="Complete audit trail met timestamps" />
+                  <FeatureCheck text="Doorzoekbaar logboek met tijdstempels" />
                   <FeatureCheck text="NPA documentatie altijd actueel" />
                   <FeatureCheck text="Proactieve herinneringen voor controles" />
                 </div>
@@ -379,14 +382,14 @@ export default function NpaAccreditatiePage() {
               <span className="text-emerald-400">voor de NPA visitatie.</span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-              Gebruik ZenTrack voor uw dagelijkse voorraadbeheer. Uw NPA-dossier wordt automatisch opgebouwd uit elke factuur en controle.
+              Gebruik ZenTrack voor je dagelijkse voorraadbeheer. Relevante registraties worden automatisch verzameld voor je kwaliteitsdossier.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <button
                 onClick={navigateToRegister}
                 className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-900/20 flex items-center justify-center gap-2"
               >
-                Gratis Proberen <ArrowRight className="w-5 h-5" />
+                Start de gratis inkoop-check <ArrowRight className="w-5 h-5" />
               </button>
               <a href="/#contact" className="w-full sm:w-auto px-8 py-4 rounded-xl text-slate-300 font-bold border border-slate-700 hover:bg-slate-800 transition-colors text-center">
                 Neem contact op
@@ -395,7 +398,7 @@ export default function NpaAccreditatiePage() {
             <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-slate-500 font-medium">
               <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Gratis inkoop-check</span>
               <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Via WhatsApp</span>
-              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Nederlandse servers</span>
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> EU-servers (Frankfurt/Amsterdam)</span>
             </div>
           </div>
         </section>

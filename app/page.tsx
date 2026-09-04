@@ -15,12 +15,11 @@ import { AboutSection } from '@/components/AboutSection';
 import { ContactSection } from '@/components/ContactSection';
 import { FAQ } from '@/components/FAQ';
 import { Footer } from '@/components/Footer';
-import { DirectOnboarding } from '@/components/DirectOnboarding';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { CookieConsent } from '@/components/legal/CookieConsent';
-import { GroupSection } from '@/components/GroupSection';
+import { GroupTeaser } from '@/components/GroupTeaser';
 import { OnboardingSteps } from '@/components/OnboardingSteps';
-import { BlogSection } from '@/components/BlogSection';
+import { HomeFaqStructuredData } from '@/components/StructuredData';
 
 export default function LandingPage() {
   const router = useRouter();
@@ -41,6 +40,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans relative">
+      <HomeFaqStructuredData />
       <Header onLoginClick={navigateToLogin} onRegisterClick={navigateToRegister} />
       <main>
          <Hero onCtaClick={navigateToRegister} />
@@ -50,12 +50,10 @@ export default function LandingPage() {
          <WhatsAppDemo />
          <Features />
          <ManagerDashboardSection />
-         <GroupSection />
          <ROICalculator />
+         <GroupTeaser />
          <Pricing onRegisterClick={navigateToRegister} />
-         <DirectOnboarding />
          <AboutSection />
-         <BlogSection />
          <FAQ />
          <ContactSection />
        </main>

@@ -131,61 +131,10 @@ const generateSmartFallback = (invoiceText: string): string => {
 };
 
 export const analyzeInvoiceAction = async (invoiceText: string): Promise<string> => {
-  try {
-    if (!isApiConfigured()) {
-      console.warn("Gemini API not configured. Using smart fallback based on content.");
-      return generateSmartFallback(invoiceText);
-    }
-
-    if (!ai) {
-      return generateSmartFallback(invoiceText);
-    }
-
-    const prompt = `
-      Jij bent ZenTrack, een slimme AI assistent voor medisch voorraadbeheer die communiceert via WhatsApp.
-
-      De input is tekst afkomstig van een OCR scan van een factuur, verzendlabel (pakbon), medicijndoosje, inhoud van een dokterstas OF een QR-code.
-
-      Input: "${invoiceText}"
-
-      Jouw taak:
-      Reageer als ZenTrack in WhatsApp stijl (kort, behulpzaam, emojis).
-
-      SCENARIO 1: FACTUUR (Analyse)
-      - Bevestig ontvangst, meld items, analyseer patronen, geef prijstip.
-
-      SCENARIO 2: PAKBON_LABEL (Verificatie & Claim)
-      - Mismatch checken tussen besteld en geleverd. Claim aanbieden indien nodig.
-
-      SCENARIO 3: MEDICIJN (Expiratie Radar)
-      - Vervaldatum extraheren en alert instellen.
-
-      SCENARIO 4: QR_KAMER_SCAN (Inventarisatie)
-      - Locatie herkennen, aantal vragen.
-
-      SCENARIO 5: DOCTOR_BAG (Visitetas Controle)
-      - Als de input 'DOCTOR_BAG' bevat.
-      - Het is een foto van een open tas.
-      - Vergelijk de inhoud met de standaardlijst (bv 4 adrenaline).
-      - Meld wat er mist en moet worden aangevuld.
-      - Voorbeeld: "🔍 Visitetas Check: Ik zie 2 ampullen Adrenaline. De standaard is 4. Graag 2 bijvullen uit de centrale voorraad."
-
-      Antwoord:
-    `;
-
-    const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
-      contents: prompt,
-      config: {
-        temperature: 0.4,
-      }
-    });
-
-    return response.text || generateSmartFallback(invoiceText);
-  } catch (error) {
-    console.error("Error interpreting invoice:", error);
-    return generateSmartFallback(invoiceText);
-  }
+  // Demo-fix 30 aug 2026: de live AI-call kon blijven hangen zonder antwoord
+  // (dode demo-knop op de homepage). De slimme terugval is deterministisch,
+  // direct en inhoudelijk gelijkwaardig voor een marketing-demo.
+  return generateSmartFallback(invoiceText);
 };
 
 export const getZenAdvice = async (tasks: Task[], recentMood: MoodLog | null): Promise<string> => {

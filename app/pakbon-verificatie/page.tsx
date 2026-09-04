@@ -44,7 +44,7 @@ export default function PakbonVerificatiePage() {
                   <Camera className="w-3 h-3 text-emerald-600" />
                   <span className="font-bold text-[10px] text-emerald-800">PAKBON FOTO</span>
                 </div>
-                <p className="text-slate-700">Net levering van Mediq ontvangen.</p>
+                <p className="text-slate-700">Net een levering ontvangen.</p>
               </div>
             </div>
             <div className="flex justify-start">
@@ -70,7 +70,7 @@ export default function PakbonVerificatiePage() {
                   <Camera className="w-3 h-3 text-emerald-600" />
                   <span className="font-bold text-[10px] text-emerald-800">PAKBON CHECK</span>
                 </div>
-                <p className="text-slate-700">Levering Henry Schein controleren.</p>
+                <p className="text-slate-700">Levering van je leverancier controleren.</p>
               </div>
             </div>
             <div className="flex justify-start">
@@ -81,7 +81,7 @@ export default function PakbonVerificatiePage() {
                   <p className="flex items-center gap-1.5"><X className="w-3 h-3 text-red-500 shrink-0" /> <span className="font-bold text-red-600">Ontbreekt: Hechtmateriaal 3-0</span></p>
                 </div>
                 <div className="mt-2 bg-red-50 p-1.5 rounded border border-red-100 text-[10px] text-red-700 font-bold">
-                  Neem contact op met Henry Schein
+                  Neem contact op met de leverancier
                 </div>
               </div>
             </div>
@@ -103,9 +103,9 @@ export default function PakbonVerificatiePage() {
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
                 <p className="font-bold text-slate-800 mb-2">Leveringsoverzicht</p>
                 <div className="space-y-1.5 text-slate-600">
-                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span> <span>Mediq — 3 leveringen compleet</span></p>
-                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span> <span>Henry Schein — 1 artikel ontbreekt</span></p>
-                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-blue-500 shrink-0"></span> <span>Pharmaline — levering onderweg</span></p>
+                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span> <span>Leverancier A — 3 leveringen compleet</span></p>
+                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-orange-500 shrink-0"></span> <span>Leverancier B — 1 artikel ontbreekt</span></p>
+                  <p className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span> <span>Pharmaline — levering onderweg</span></p>
                 </div>
                 <div className="mt-2 bg-orange-50 p-1.5 rounded border border-orange-100 text-[10px] text-orange-700 font-bold">
                   1 open mismatch — actie vereist
@@ -152,14 +152,14 @@ export default function PakbonVerificatiePage() {
                     <button
                       key={i}
                       onClick={() => setActiveScenario(i)}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-teal-500' : 'w-1.5 bg-slate-300'}`}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-emerald-500' : 'w-1.5 bg-slate-300'}`}
                     />
                   ))}
                 </div>
               </div>
 
               <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
-                <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-100 text-teal-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+                <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
                   <PackageCheck className="w-4 h-4" />
                   <span>Automatische levering controle</span>
                 </div>
@@ -170,7 +170,7 @@ export default function PakbonVerificatiePage() {
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
-                  Maak een foto van de pakbon — ZenTrack vergelijkt automatisch met uw facturen en voorraad.
+                  Maak een foto van de pakbon — ZenTrack vergelijkt automatisch met je facturen en voorraad.
                   <strong className="text-slate-900 block mt-2">Ontbrekende artikelen? Direct een melding.</strong>
                 </p>
 
@@ -179,7 +179,7 @@ export default function PakbonVerificatiePage() {
                     onClick={navigateToRegister}
                     className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2"
                   >
-                    Gratis Proberen <ArrowRight className="w-5 h-5" />
+                    Start de gratis inkoop-check <ArrowRight className="w-5 h-5" />
                   </button>
                   <a href="#hoe-werkt-het" className="w-full sm:w-auto px-8 py-4 rounded-xl text-slate-600 font-bold border border-slate-200 hover:bg-slate-50 transition-colors text-center">
                     Hoe werkt het?
@@ -188,7 +188,7 @@ export default function PakbonVerificatiePage() {
 
                 <div className="mt-10 flex flex-wrap items-center justify-center md:justify-start gap-6 text-sm text-slate-500 font-medium">
                   <span className="flex items-center gap-2"><PackageSearch className="w-4 h-4" /> Directe mismatch detectie</span>
-                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> GDPR Compliant</span>
+                  <span className="flex items-center gap-2"><Shield className="w-4 h-4" /> Geen patiëntgegevens</span>
                   <span className="flex items-center gap-2"><Smartphone className="w-4 h-4" /> Via WhatsApp</span>
                 </div>
               </div>
@@ -203,7 +203,7 @@ export default function PakbonVerificatiePage() {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
                 Herkenbaar? <span className="text-red-500">Dit gaat mis.</span>
               </h2>
-              <p className="text-lg text-slate-600">Ontbrekende leveringen kosten u geld en tijd — elke week.</p>
+              <p className="text-lg text-slate-600">Ontbrekende leveringen kosten je geld en tijd — elke week.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {[
@@ -218,18 +218,18 @@ export default function PakbonVerificatiePage() {
                 {
                   icon: AlertTriangle,
                   title: 'Ontbrekende artikelen pas later ontdekt',
-                  desc: 'U merkt het pas als u het product nodig heeft. De leverancier zegt: "te laat om te claimen".',
-                  color: 'text-orange-500',
-                  bg: 'bg-orange-50',
-                  border: 'border-orange-100',
+                  desc: 'Je merkt het pas als je het product nodig heeft. De leverancier zegt: "te laat om te claimen".',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
                 {
                   icon: Clock,
                   title: 'Verkeerde aantallen betaald',
-                  desc: '8 dozen besteld, 7 geleverd, 8 betaald. Zonder pakbon-factuur vergelijking betaalt u voor lucht.',
-                  color: 'text-yellow-600',
-                  bg: 'bg-yellow-50',
-                  border: 'border-yellow-100',
+                  desc: '8 dozen besteld, 7 geleverd, 8 betaald. Zonder pakbon-factuur vergelijking betaalt je voor lucht.',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-6 border ${item.border}`}>
@@ -262,14 +262,14 @@ export default function PakbonVerificatiePage() {
                   title: 'Pakbon fotograferen',
                   desc: 'Maak een foto van de pakbon bij ontvangst van de levering. Via WhatsApp of het dashboard.',
                   icon: Camera,
-                  color: 'bg-teal-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '2',
                   title: 'Automatische vergelijking',
-                  desc: 'ZenTrack vergelijkt de pakbon met uw factuur en bestelling. Aantallen, producten, artikelnummers.',
+                  desc: 'ZenTrack vergelijkt de pakbon met je factuur en bestelling. Aantallen, producten, artikelnummers.',
                   icon: PackageSearch,
-                  color: 'bg-orange-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '3',
@@ -314,7 +314,7 @@ export default function PakbonVerificatiePage() {
                   <FeatureX text="Ontbrekende artikelen pas bij gebruik ontdekt" />
                   <FeatureX text="Te laat om te claimen bij de leverancier" />
                   <FeatureX text="Betalen voor niet-geleverde producten" />
-                  <FeatureX text="Geen audit trail van leveringen" />
+                  <FeatureX text="Geen logboek van leveringen" />
                 </div>
               </div>
 
@@ -350,14 +350,14 @@ export default function PakbonVerificatiePage() {
               <span className="text-emerald-400">Controleer in 30 seconden.</span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-              Foto maken, versturen, klaar. ZenTrack vergelijkt automatisch met uw facturen en meldt afwijkingen.
+              Foto maken, versturen, klaar. ZenTrack vergelijkt automatisch met je facturen en meldt afwijkingen.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <button
                 onClick={navigateToRegister}
                 className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-900/20 flex items-center justify-center gap-2"
               >
-                Gratis Proberen <ArrowRight className="w-5 h-5" />
+                Start de gratis inkoop-check <ArrowRight className="w-5 h-5" />
               </button>
               <a href="/#contact" className="w-full sm:w-auto px-8 py-4 rounded-xl text-slate-300 font-bold border border-slate-700 hover:bg-slate-800 transition-colors text-center">
                 Neem contact op
@@ -366,7 +366,7 @@ export default function PakbonVerificatiePage() {
             <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-slate-500 font-medium">
               <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Gratis inkoop-check</span>
               <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Via WhatsApp</span>
-              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> Nederlandse servers</span>
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500" /> EU-servers (Frankfurt/Amsterdam)</span>
             </div>
           </div>
         </section>

@@ -45,20 +45,20 @@ export default function FactuurScannerPage() {
                   <Camera className="w-3 h-3 text-emerald-600" />
                   <span className="font-bold text-[10px] text-emerald-800">FACTUUR FOTO</span>
                 </div>
-                <p className="text-slate-700">Factuur van Mediq ontvangen.</p>
+                <p className="text-slate-700">Factuur van je groothandel ontvangen.</p>
               </div>
             </div>
             <div className="flex justify-start">
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
                 <p className="font-bold text-slate-800 mb-1">Factuur herkend!</p>
                 <div className="space-y-1 text-slate-600">
-                  <p>Leverancier: <span className="font-bold text-slate-800">Mediq</span></p>
+                  <p>Leverancier: <span className="font-bold text-slate-800">Medische Groothandel B.V.</span></p>
                   <p>Factuurnr: <span className="font-mono text-[10px] bg-slate-100 px-1 rounded">MED-2026-4821</span></p>
                   <p>Bedrag: <span className="font-bold text-emerald-600">€847,50</span></p>
                 </div>
                 <div className="mt-2 bg-emerald-50 p-1.5 rounded border border-emerald-100 text-[10px] text-emerald-700">
                   <p className="font-bold">12 producten herkend</p>
-                  <p className="text-slate-500">Voorraad automatisch bijgewerkt</p>
+                  <p className="text-slate-500">Binnenkomende voorraad automatisch verwerkt</p>
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@ export default function FactuurScannerPage() {
                   <Upload className="w-3 h-3 text-emerald-600" />
                   <span className="font-bold text-[10px] text-emerald-800">PDF UPLOAD</span>
                 </div>
-                <p className="text-slate-700">Digitale factuur van Henry Schein.</p>
+                <p className="text-slate-700">Digitale factuur van je leverancier.</p>
               </div>
             </div>
             <div className="flex justify-start">
@@ -84,8 +84,8 @@ export default function FactuurScannerPage() {
                   <p className="flex items-center gap-1.5"><Check className="w-3 h-3 text-emerald-500 shrink-0" /> <span>Prijzen opgeslagen</span></p>
                   <p className="flex items-center gap-1.5"><Check className="w-3 h-3 text-emerald-500 shrink-0" /> <span>Voorraad bijgewerkt</span></p>
                 </div>
-                <div className="mt-2 bg-blue-50 p-1.5 rounded border border-blue-100 text-[10px] text-blue-700 font-bold">
-                  Alle prijzen opgeslagen in uw dossier
+                <div className="mt-2 bg-emerald-50 p-1.5 rounded border border-emerald-100 text-[10px] text-emerald-700 font-bold">
+                  Alle prijzen opgeslagen in je dossier
                 </div>
               </div>
             </div>
@@ -107,7 +107,7 @@ export default function FactuurScannerPage() {
               <div className="bg-white p-2.5 rounded-lg rounded-tl-none max-w-[90%] shadow-sm text-xs border border-slate-100">
                 <p className="font-bold text-slate-800 mb-2">Expiratie Overzicht</p>
                 <div className="space-y-1.5 text-slate-600">
-                  <p className="flex items-center justify-between"><span>Handschoenen L</span> <span className="font-bold text-amber-600">14 dagen</span></p>
+                  <p className="flex items-center justify-between"><span>Handschoenen L</span> <span className="font-bold text-orange-600">14 dagen</span></p>
                   <p className="flex items-center justify-between"><span>NaCl 0,9%</span> <span className="font-bold text-emerald-600">48 dagen</span></p>
                   <p className="flex items-center justify-between"><span>Hechtmateriaal</span> <span className="font-bold text-emerald-600">62 dagen</span></p>
                 </div>
@@ -159,7 +159,7 @@ export default function FactuurScannerPage() {
                     <button
                       key={i}
                       onClick={() => setActiveScenario(i)}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-blue-500' : 'w-1.5 bg-slate-300'}`}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${activeScenario === i ? 'w-6 bg-emerald-500' : 'w-1.5 bg-slate-300'}`}
                     />
                   ))}
                 </div>
@@ -167,14 +167,14 @@ export default function FactuurScannerPage() {
 
               {/* Text Content */}
               <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
-                <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+                <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
                   <ScanLine className="w-4 h-4" />
                   <span>Facturen automatisch inlezen</span>
                 </div>
 
                 <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
-                  Stop met Handmatig<br />
-                  <span className="text-emerald-600">Facturen Overtypen.</span>
+                  Nooit meer facturen<br />
+                  <span className="text-emerald-600">regel voor regel overtypen.</span>
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
@@ -187,7 +187,7 @@ export default function FactuurScannerPage() {
                     onClick={navigateToRegister}
                     className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2"
                   >
-                    Gratis Proberen <ArrowRight className="w-5 h-5" />
+                    Start de gratis inkoop-check <ArrowRight className="w-5 h-5" />
                   </button>
                   <a href="#hoe-werkt-het" className="w-full sm:w-auto px-8 py-4 rounded-xl text-slate-600 font-bold border border-slate-200 hover:bg-slate-50 transition-colors text-center">
                     Hoe werkt het?
@@ -227,17 +227,17 @@ export default function FactuurScannerPage() {
                   icon: AlertTriangle,
                   title: 'Prijswijzigingen missen',
                   desc: 'Leveranciers verhogen stilletjes de prijs. Zonder een overzicht van alle factuurprijzen merk je het pas maanden later.',
-                  color: 'text-orange-500',
-                  bg: 'bg-orange-50',
-                  border: 'border-orange-100',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
                 {
                   icon: Clock,
                   title: 'Geen inkoopoverzicht',
-                  desc: 'Hoeveel geeft u uit per leverancier? Per productcategorie? Zonder data geen inzicht — en geen besparingen.',
-                  color: 'text-yellow-600',
-                  bg: 'bg-yellow-50',
-                  border: 'border-yellow-100',
+                  desc: 'Hoeveel geef je uit per leverancier? Per productcategorie? Zonder data geen inzicht — en geen besparingen.',
+                  color: 'text-red-500',
+                  bg: 'bg-red-50',
+                  border: 'border-red-100',
                 },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-6 border ${item.border}`}>
@@ -259,7 +259,7 @@ export default function FactuurScannerPage() {
                 <span>3 simpele stappen</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-                Zo werkt de <span className="text-emerald-600">Factuur Scanner</span>
+                Zo werkt de <span className="text-emerald-600">Factuurscanner</span>
               </h2>
             </div>
 
@@ -270,19 +270,19 @@ export default function FactuurScannerPage() {
                   title: 'Factuur uploaden',
                   desc: 'Sleep de PDF in je dashboard — of maak een foto van een papieren factuur en upload die. Zelfs scheef gefotografeerde facturen worden herkend.',
                   icon: Camera,
-                  color: 'bg-blue-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '2',
-                  title: 'AI herkent alles',
+                  title: 'De belangrijkste gegevens herkend',
                   desc: 'Productnamen, prijzen, aantallen, leverancier en factuurnummer worden automatisch herkend.',
                   icon: Eye,
-                  color: 'bg-orange-500',
+                  color: 'bg-emerald-500',
                 },
                 {
                   step: '3',
                   title: 'Voorraad bijgewerkt',
-                  desc: 'Producten worden automatisch aan uw voorraad toegevoegd. Prijzen worden opgeslagen voor inzicht per leverancier.',
+                  desc: 'Producten worden automatisch aan je voorraad toegevoegd. Prijzen worden opgeslagen voor inzicht per leverancier.',
                   icon: CheckCircle2,
                   color: 'bg-emerald-500',
                 },
@@ -312,9 +312,9 @@ export default function FactuurScannerPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { label: 'Productnamen', desc: 'Exacte match met catalogus', icon: '📦', bg: 'bg-blue-50', border: 'border-blue-200' },
+                { label: 'Productnamen', desc: 'Gekoppeld aan de productdatabase', icon: '📦', bg: 'bg-emerald-50', border: 'border-emerald-200' },
                 { label: 'Prijzen', desc: 'Per stuk en totaal', icon: '💰', bg: 'bg-emerald-50', border: 'border-emerald-200' },
-                { label: 'Leveranciers', desc: 'Automatisch herkend', icon: '🏢', bg: 'bg-purple-50', border: 'border-purple-200' },
+                { label: 'Leveranciers', desc: 'Automatisch herkend', icon: '🏢', bg: 'bg-emerald-50', border: 'border-emerald-200' },
                 { label: 'Vervaldatums', desc: 'Indien vermeld', icon: '📅', bg: 'bg-orange-50', border: 'border-orange-200' },
               ].map((item, i) => (
                 <div key={i} className={`${item.bg} rounded-2xl p-5 border ${item.border} text-center`}>
@@ -350,7 +350,7 @@ export default function FactuurScannerPage() {
                   <FeatureX text="Typefouten in productnamen en bedragen" />
                   <FeatureX text="Prijsverschillen ontdek je pas maanden later" />
                   <FeatureX text="Geen overzicht van inkoop per leverancier" />
-                  <FeatureX text="Geen audit trail — wie heeft wat verwerkt?" />
+                  <FeatureX text="Geen logboek — wie heeft wat verwerkt?" />
                 </div>
               </div>
 
@@ -367,8 +367,8 @@ export default function FactuurScannerPage() {
                   <FeatureCheck text="Factuur verwerkt in seconden — niet minuten" highlighted />
                   <FeatureCheck text="AI herkent producten, prijzen en leveranciers" />
                   <FeatureCheck text="Prijzen per product opgeslagen voor inzicht" />
-                  <FeatureCheck text="Voorraad automatisch bijgewerkt na scan" />
-                  <FeatureCheck text="Volledig audit trail van elke factuur" />
+                  <FeatureCheck text="Binnenkomende voorraad automatisch verwerkt na scan" />
+                  <FeatureCheck text="Doorzoekbaar logboek van iedere verwerkte factuur" />
                 </div>
               </div>
             </div>
@@ -387,14 +387,14 @@ export default function FactuurScannerPage() {
               <span className="text-emerald-400">Probeer de Factuur Scanner.</span>
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
-              Upload uw eerste factuur in het dashboard en zie direct het resultaat. Alle producten, prijzen en leveranciers — automatisch herkend.
+              Upload je eerste factuur in het dashboard en zie direct het resultaat. Alle producten, prijzen en leveranciers — automatisch herkend.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <button
                 onClick={navigateToRegister}
                 className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg shadow-emerald-900/20 flex items-center justify-center gap-2"
               >
-                Gratis Proberen <ArrowRight className="w-5 h-5" />
+                Start de gratis inkoop-check <ArrowRight className="w-5 h-5" />
               </button>
               <a href="/#contact" className="w-full sm:w-auto px-8 py-4 rounded-xl text-slate-300 font-bold border border-slate-700 hover:bg-slate-800 transition-colors text-center">
                 Neem contact op

@@ -1,34 +1,39 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, ArrowRight, ChevronDown, ScanLine, PackageCheck, Boxes, TrendingDown, ShieldCheck } from 'lucide-react';
+import { Menu, X, ArrowRight, ChevronDown, ScanLine, PackageCheck, Boxes, TrendingDown, ShieldCheck, Radar } from 'lucide-react';
 import { Logo } from './Logo';
 
 interface HeaderProps {
   onLoginClick: () => void;
   onRegisterClick?: () => void;
+  /** Vervangt de standaard "Gratis inkoop-check"-CTA (bv. op /zorggroepen: plan een gesprek). */
+  cta?: { label: string; href: string };
+  /** Doel van het "Contact"-menu-item (default homepage-sectie; /zorggroepen: eigen #contact). */
+  contactHref?: string;
 }
 
 const featureDropdownItems = [
-  { name: 'Factuur Scanner', href: '/factuur-scanner', icon: ScanLine, description: 'AI-gestuurde factuurverwerking' },
+  { name: 'Factuurscanner', href: '/factuur-scanner', icon: ScanLine, description: 'AI-gestuurde factuurverwerking' },
   { name: 'Pakbon Verificatie', href: '/pakbon-verificatie', icon: PackageCheck, description: 'Leveringen direct controleren' },
-  { name: 'Voorraad Beheer', href: '/voorraad-beheer', icon: Boxes, description: 'Real-time per locatie' },
-  { name: 'Slim Bestellen', href: '/slim-bestellen', icon: TrendingDown, description: 'Inzicht uit je eigen factuurhistorie' },
-  { name: 'NPA Accreditatie', href: '/npa-accreditatie', icon: ShieldCheck, description: 'Uw NPA-dossier op orde' },
+  { name: 'Voorraadbeheer', href: '/voorraad-beheer', icon: Boxes, description: 'Real-time per locatie' },
+  { name: 'Slim bestellen', href: '/slim-bestellen', icon: TrendingDown, description: 'Inzicht uit je eigen factuurhistorie' },
+  { name: 'Expiratie Radar', href: '/expiratie-radar', icon: Radar, description: 'Vervaldatum-alerts via WhatsApp' },
+  { name: 'Visitatie & kwaliteitsdossier', href: '/npa-accreditatie', icon: ShieldCheck, description: 'Dossieropbouw voor je visitatie' },
 ];
 
-export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick }) => {
+export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick, cta, contactHref = '/#contact' }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isFeaturesOpen, setIsFeaturesOpen] = useState(false);
 
-  const navItems = [
+  const navItems: { name: string; href: string; badge?: string }[] = [
     { name: 'Waarom', href: '/#waarom' },
     { name: 'Hoe het werkt', href: '/#hoe-het-werkt' },
     // Features dropdown wordt apart gerenderd (na "Hoe het werkt")
     { name: 'Prijzen', href: '/#prijzen' },
-    { name: 'Expiratie Radar', href: '/expiratie-radar', badge: 'Gratis' },
+    { name: 'Voor zorggroepen', href: '/zorggroepen' },
     { name: 'Over Ons', href: '/#over-ons' },
-    { name: 'Contact', href: '/#contact' },
+    { name: 'Contact', href: contactHref },
   ];
 
   const handleMobileNav = () => {
@@ -52,7 +57,7 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
             <span className="text-xl font-bold text-slate-900 tracking-tight">ZenTrack</span>
           </Link>
 
-          {/* Desktop Nav — volgorde: Waarom → Hoe het werkt → Features ▾ → Prijzen → Expiratie Radar [Gratis] → Over Ons → Contact */}
+          {/* Desktop Nav — volgorde: Waarom → Hoe het werkt → Features ▾ → Prijzen → Voor zorggroepen → Over Ons → Contact */}
           <nav className="hidden md:flex items-center space-x-6">
             {/* Waarom + Hoe het werkt (eerste 2 items, vóór Features dropdown) */}
             {navItems.slice(0, 2).map((item) => (
@@ -110,7 +115,7 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
               </div>
             </div>
 
-            {/* Prijzen + Expiratie Radar [Gratis] + Over Ons + Contact (items na Features dropdown) */}
+            {/* Prijzen + Voor zorggroepen + Over Ons + Contact (items na Features dropdown) */}
             {navItems.slice(2).map((item) => (
               <a
                 key={item.name}
@@ -130,12 +135,21 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
             <button onClick={onLoginClick} className="text-sm font-medium text-slate-600 hover:text-emerald-600">Inloggen</button>
-            <button
-              onClick={onRegisterClick}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all flex items-center gap-2 shadow-lg shadow-emerald-600/20"
-            >
-              Gratis proberen <ArrowRight className="w-4 h-4" />
-            </button>
+            {cta ? (
+              <a
+                href={cta.href}
+                className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all flex items-center gap-2 shadow-lg shadow-emerald-600/20"
+              >
+                {cta.label} <ArrowRight className="w-4 h-4" />
+              </a>
+            ) : (
+              <button
+                onClick={onRegisterClick}
+                className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all flex items-center gap-2 shadow-lg shadow-emerald-600/20"
+              >
+                Gratis inkoop-check <ArrowRight className="w-4 h-4" />
+              </button>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -195,7 +209,7 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
               )}
             </div>
 
-            {/* Prijzen + Expiratie Radar [Gratis] + Over Ons + Contact */}
+            {/* Prijzen + Voor zorggroepen + Over Ons + Contact */}
             {navItems.slice(2).map((item) => (
               <a
                 key={item.name}
@@ -215,9 +229,15 @@ export const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick })
             {/* Login / Register buttons */}
             <div className="pt-4 mt-4 border-t border-slate-100 flex flex-col gap-3">
                 <button onClick={handleLogin} className="text-center py-2 text-slate-600 font-medium">Inloggen</button>
-                <button onClick={() => { setIsMenuOpen(false); setIsFeaturesOpen(false); onRegisterClick?.(); }} className="bg-emerald-600 text-white py-3 rounded-xl text-center font-semibold">
-                    Gratis proberen
-                </button>
+                {cta ? (
+                  <a href={cta.href} onClick={handleMobileNav} className="bg-emerald-600 text-white py-3 rounded-xl text-center font-semibold">
+                      {cta.label}
+                  </a>
+                ) : (
+                  <button onClick={() => { setIsMenuOpen(false); setIsFeaturesOpen(false); onRegisterClick?.(); }} className="bg-emerald-600 text-white py-3 rounded-xl text-center font-semibold">
+                      Gratis inkoop-check
+                  </button>
+                )}
             </div>
           </div>
         </div>

@@ -1,14 +1,14 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Expiratie Radar: Gratis Vervaldatum Tracking Medicijnen | ZenTrack',
-  description: 'Gratis vervaldatum tracking voor medische producten in huisartspraktijken. Track tot 25 producten, ontvang WhatsApp alerts bij bijna-verlopen medicijnen. Voorkom productverspilling door verlopen houdbaarheidsdatums.',
+  title: 'Expiratie Radar: Vervaldatum-bewaking via WhatsApp',
+  description: 'Vervaldatum-bewaking voor huisartsenpraktijken: foto van de verpakking, automatische WhatsApp-alerts 30, 14 en 7 dagen vooraf met kastlocatie. Onderdeel van ZenTrack Compleet — start met de gratis inkoop-check.',
   keywords: [
     'vervaldatum tracking medicijnen',
     'expiratie radar huisarts',
     'verlopen medicijnen voorkomen',
     'houdbaarheidsdatum medische producten',
-    'gratis vervaldatum tracking',
+    'vervaldatum alerts whatsapp',
     'WhatsApp alerts medicijnen',
     'FIFO medicijnen huisarts',
     'steriel materiaal houdbaarheid',
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     'medische producten verlopen',
   ],
   openGraph: {
-    title: 'Expiratie Radar: Gratis Vervaldatum Tracking | ZenTrack',
-    description: 'Voorkom verlopen medicijnen. Gratis tracking voor 25 producten met automatische WhatsApp alerts.',
+    title: 'Expiratie Radar: Vervaldatum-bewaking via WhatsApp | ZenTrack',
+    description: 'Voorkom verlopen medicijnen: automatische WhatsApp-alerts vooraf, met kastlocatie. Onderdeel van ZenTrack Compleet.',
     type: 'website',
     locale: 'nl_NL',
   },
